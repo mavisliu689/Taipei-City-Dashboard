@@ -140,32 +140,34 @@ func (GreenRecycle) TableName() string { return "green_recycles" }
 
 /* ----- Handlers ----- */
 
+// 全部 GetAll* 都用 make 初始化空 slice,避免 0 筆時序列化成 JSON null。
+
 func GetAllGreenParks() ([]GreenPark, error) {
-	var rows []GreenPark
+	rows := make([]GreenPark, 0)
 	err := DBDashboard.Order("id").Find(&rows).Error
 	return rows, err
 }
 
 func GetAllGreenRestaurants() ([]GreenRestaurant, error) {
-	var rows []GreenRestaurant
+	rows := make([]GreenRestaurant, 0)
 	err := DBDashboard.Order("id").Find(&rows).Error
 	return rows, err
 }
 
 func GetAllGreenHotels() ([]GreenHotel, error) {
-	var rows []GreenHotel
+	rows := make([]GreenHotel, 0)
 	err := DBDashboard.Order("id").Find(&rows).Error
 	return rows, err
 }
 
 func GetAllGreenWalkpaths() ([]GreenWalkpath, error) {
-	var rows []GreenWalkpath
+	rows := make([]GreenWalkpath, 0)
 	err := DBDashboard.Order("serial_number").Find(&rows).Error
 	return rows, err
 }
 
 func GetAllGreenRecycles() ([]GreenRecycle, error) {
-	var rows []GreenRecycle
+	rows := make([]GreenRecycle, 0)
 	err := DBDashboard.Order("id").Find(&rows).Error
 	return rows, err
 }

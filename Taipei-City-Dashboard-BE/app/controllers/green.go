@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"TaipeiCityDashboardBE/app/models"
+	"TaipeiCityDashboardBE/logs"
 
 	"github.com/gin-gonic/gin"
 )
@@ -45,7 +46,8 @@ GET /api/v1/green/park
 func ListParks(c *gin.Context) {
 	parks, err := models.GetAllGreenParks()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": err.Error()})
+		logs.FError("ListParks DB query failed: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": "internal error"})
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(parks), "data": parks})
@@ -58,7 +60,8 @@ GET /api/v1/green/restaurant
 func ListRestaurants(c *gin.Context) {
 	restaurants, err := models.GetAllGreenRestaurants()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": err.Error()})
+		logs.FError("ListRestaurants DB query failed: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": "internal error"})
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(restaurants), "data": restaurants})
@@ -71,7 +74,8 @@ GET /api/v1/green/hotel
 func ListHotels(c *gin.Context) {
 	hotels, err := models.GetAllGreenHotels()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": err.Error()})
+		logs.FError("ListHotels DB query failed: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": "internal error"})
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(hotels), "data": hotels})
@@ -84,7 +88,8 @@ GET /api/v1/green/walkpath
 func ListWalkpaths(c *gin.Context) {
 	walkpaths, err := models.GetAllGreenWalkpaths()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": err.Error()})
+		logs.FError("ListWalkpaths DB query failed: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": "internal error"})
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(walkpaths), "data": walkpaths})
@@ -97,7 +102,8 @@ GET /api/v1/green/recycle
 func ListRecycles(c *gin.Context) {
 	points, err := models.GetAllGreenRecycles()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": err.Error()})
+		logs.FError("ListRecycles DB query failed: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": "internal error"})
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(points), "data": points})
