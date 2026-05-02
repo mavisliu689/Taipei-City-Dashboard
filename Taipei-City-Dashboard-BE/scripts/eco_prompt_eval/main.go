@@ -382,6 +382,102 @@ func cases() []testCase {
 				return okText, fmt.Sprintf("no tool, refusal=%v", okText)
 			},
 		},
+		{
+			id:   "C9",
+			desc: "順路 ubike (預期: required_categories=[ubike])",
+			userMsg: "從台北車站到台北101，順路一個 youbike 站",
+			expect:  "plan_eco_route, required_categories=[ubike]",
+			checkFn: func(name string, args map[string]interface{}, _ string) (bool, string) {
+				if name != "plan_eco_route" {
+					return false, fmt.Sprintf("expected plan_eco_route, got %q", name)
+				}
+				req, _ := args["required_categories"].([]interface{})
+				if len(req) != 1 || req[0] != "ubike" {
+					return false, fmt.Sprintf("required_categories=%v, want [ubike]", req)
+				}
+				return true, fmt.Sprintf("required_categories=%v", req)
+			},
+		},
+		{
+			id:   "C10",
+			desc: "中途丟回收 (預期: required_categories=[recycle])",
+			userMsg: "從台北市政府走到大安區，中途要丟個回收",
+			expect:  "plan_eco_route, required_categories=[recycle]",
+			checkFn: func(name string, args map[string]interface{}, _ string) (bool, string) {
+				if name != "plan_eco_route" {
+					return false, fmt.Sprintf("expected plan_eco_route, got %q", name)
+				}
+				req, _ := args["required_categories"].([]interface{})
+				if len(req) != 1 || req[0] != "recycle" {
+					return false, fmt.Sprintf("required_categories=%v, want [recycle]", req)
+				}
+				return true, fmt.Sprintf("required_categories=%v", req)
+			},
+		},
+		{
+			id:   "C11",
+			desc: "順路咖啡廳 (預期: required_categories=[restaurant])",
+			userMsg: "從台北101到象山，順路找個咖啡廳",
+			expect:  "plan_eco_route, required_categories=[restaurant]",
+			checkFn: func(name string, args map[string]interface{}, _ string) (bool, string) {
+				if name != "plan_eco_route" {
+					return false, fmt.Sprintf("expected plan_eco_route, got %q", name)
+				}
+				req, _ := args["required_categories"].([]interface{})
+				if len(req) != 1 || req[0] != "restaurant" {
+					return false, fmt.Sprintf("required_categories=%v, want [restaurant]", req)
+				}
+				return true, fmt.Sprintf("required_categories=%v", req)
+			},
+		},
+		{
+			id:   "C12",
+			desc: "無順路語意 — regression: required 不應出現",
+			userMsg: "從信義區走到大安區",
+			expect:  "plan_eco_route, 沒有 required_categories 或為空",
+			checkFn: func(name string, args map[string]interface{}, _ string) (bool, string) {
+				if name != "plan_eco_route" {
+					return false, fmt.Sprintf("expected plan_eco_route, got %q", name)
+				}
+				req, hasReq := args["required_categories"].([]interface{})
+				if hasReq && len(req) > 0 {
+					return false, fmt.Sprintf("regression: required_categories=%v 不該出現", req)
+				}
+				return true, "no required_categories ✓"
+			},
+		},
+		{
+			id:   "C13",
+			desc: "多類別 (預期: required_categories=[park,recycle])",
+			userMsg: "從台北車站到台北101，經過一個公園跟一個回收站",
+			expect:  "plan_eco_route, required_categories 包含 park 和 recycle",
+			checkFn: func(name string, args map[string]interface{}, _ string) (bool, string) {
+				if name != "plan_eco_route" {
+					return false, fmt.Sprintf("expected plan_eco_route, got %q", name)
+				}
+				req, _ := args["required_categories"].([]interface{})
+				cats := make([]string, 0, len(req))
+				for _, x := range req {
+					if s, ok := x.(string); ok {
+						cats = append(cats, s)
+					}
+				}
+				okPark := false
+				okRecycle := false
+				for _, c := range cats {
+					if c == "park" {
+						okPark = true
+					}
+					if c == "recycle" {
+						okRecycle = true
+					}
+				}
+				if !okPark || !okRecycle {
+					return false, fmt.Sprintf("required_categories=%v, want [park, recycle]", cats)
+				}
+				return true, fmt.Sprintf("required_categories=%v", cats)
+			},
+		},
 	}
 }
 

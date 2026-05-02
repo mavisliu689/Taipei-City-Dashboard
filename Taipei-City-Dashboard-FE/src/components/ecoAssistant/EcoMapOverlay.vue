@@ -47,6 +47,50 @@ const POI_TYPE_ICONS = {
 	ubike: "pedal_bike",
 };
 
+const POI_TYPE_LABELS = {
+	park: "公園綠地",
+	restaurant: "環保餐廳",
+	hotel: "環保旅館",
+	recycle: "回收站",
+	ubike: "YouBike 站點",
+};
+
+const POI_ROW_ICONS = {
+	address: "place",
+	district: "map",
+	city: "location_city",
+};
+
+function escapeHtml(s) {
+	if (s == null) return "";
+	return String(s).replace(/[&<>"']/g, (c) => ({
+		"&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;",
+	}[c]));
+}
+
+function buildPopupHTML(p, type) {
+	const cat = POI_TYPE_LABELS[type] || type || "POI";
+	const accent = POI_TYPE_COLORS[type] || "#66bb6a";
+	const rows = [];
+	if (p.address) rows.push(["address", p.address]);
+	if (p.district) rows.push(["district", p.district]);
+	if (p.city && !p.district) rows.push(["city", p.city]);
+	const rowsHtml = rows
+		.map(([k, v]) => `
+			<div class="eco-pop__row">
+				<span class="material-icons-round eco-pop__row-icon">${POI_ROW_ICONS[k] || "info"}</span>
+				<span class="eco-pop__row-value">${escapeHtml(v)}</span>
+			</div>`)
+		.join("");
+	return `
+		<div class="eco-pop" style="--accent:${accent};">
+			<div class="eco-pop__cat">${escapeHtml(cat)}</div>
+			<div class="eco-pop__name">${escapeHtml(p.name || "(未命名)")}</div>
+			${rows.length ? `<div class="eco-pop__rows">${rowsHtml}</div>` : ""}
+		</div>
+	`;
+}
+
 // 由 store 提供的 visibility，與 RouteCard UI 共享
 const visibility = ecoStore.layerVisibility;
 
@@ -219,7 +263,8 @@ function makePoiMarkerEl(type, name) {
 	const color = POI_TYPE_COLORS[type] || "#888";
 	const icon = POI_TYPE_ICONS[type] || "place";
 	const wrapper = document.createElement("div");
-	wrapper.style.cssText = "display:flex;flex-direction:column;align-items:center;pointer-events:none;";
+	// pointer-events:auto + cursor:pointer 讓 hover/click 可被 marker 捕捉
+	wrapper.style.cssText = "display:flex;flex-direction:column;align-items:center;pointer-events:auto;cursor:pointer;";
 	const circle = document.createElement("div");
 	circle.style.cssText = `
 		width: 30px; height: 30px; border-radius: 50%;
@@ -243,9 +288,73 @@ function makePoiMarkerEl(type, name) {
 	return wrapper;
 }
 
+// hover popup (跟隨滑鼠進出, 隨時換 marker), pinned popup (click 釘住)
+let hoverPopup = null;
+let pinnedPopup = null;
+
+function ensurePopupInstances() {
+	if (!hoverPopup) {
+		hoverPopup = new mapboxGl.Popup({
+			closeButton: false,
+			closeOnClick: false,
+			offset: 26,
+			className: "eco-poi-popup",
+			maxWidth: "260px",
+		});
+	}
+	if (!pinnedPopup) {
+		pinnedPopup = new mapboxGl.Popup({
+			closeButton: true,
+			closeOnClick: false,
+			offset: 26,
+			className: "eco-poi-popup eco-poi-popup--pinned",
+			maxWidth: "260px",
+		});
+	}
+}
+
+function attachPoiInteractivity(markerEl, marker, poi, type, map) {
+	ensurePopupInstances();
+	markerEl.addEventListener("mouseenter", () => {
+		// 已釘住同一點不再開 hover (避免閃爍)
+		if (pinnedPopup.isOpen() && pinnedPopup._lngLat
+			&& pinnedPopup._lngLat.lng === marker.getLngLat().lng
+			&& pinnedPopup._lngLat.lat === marker.getLngLat().lat) return;
+		hoverPopup
+			.setLngLat(marker.getLngLat())
+			.setHTML(buildPopupHTML(poi, type))
+			.addTo(map);
+	});
+	markerEl.addEventListener("mouseleave", () => {
+		hoverPopup.remove();
+	});
+	markerEl.addEventListener("click", (e) => {
+		e.stopPropagation();
+		hoverPopup.remove();
+		const ll = marker.getLngLat();
+		const samePinned = pinnedPopup.isOpen() && pinnedPopup._lngLat
+			&& pinnedPopup._lngLat.lng === ll.lng
+			&& pinnedPopup._lngLat.lat === ll.lat;
+		if (samePinned) {
+			pinnedPopup.remove();
+		} else {
+			pinnedPopup
+				.setLngLat(ll)
+				.setHTML(buildPopupHTML(poi, type))
+				.addTo(map);
+		}
+	});
+}
+
+function removeAllPopups() {
+	if (hoverPopup) hoverPopup.remove();
+	if (pinnedPopup) pinnedPopup.remove();
+}
+
 function removePoiMarkers() {
 	for (const m of poiMarkers) m.remove();
 	poiMarkers = [];
+	removeAllPopups();
 }
 
 function ensurePoiMarkers(map, result) {
@@ -257,9 +366,11 @@ function ensurePoiMarkers(map, result) {
 			const key = `${p.lat}|${p.lng}|${p.name}`;
 			if (seen.has(key)) continue;
 			seen.add(key);
-			const m = new mapboxGl.Marker({ element: makePoiMarkerEl(p.type, p.name) })
+			const el = makePoiMarkerEl(p.type, p.name);
+			const m = new mapboxGl.Marker({ element: el })
 				.setLngLat([p.lng, p.lat])
 				.addTo(map);
+			attachPoiInteractivity(el, m, p, p.type, map);
 			poiMarkers.push(m);
 		}
 	}
@@ -268,6 +379,7 @@ function ensurePoiMarkers(map, result) {
 function removeSearchPoiMarkers() {
 	for (const m of searchPoiMarkers) m.remove();
 	searchPoiMarkers = [];
+	removeAllPopups();
 }
 
 function ensureSearchPoiMarkers(map, search) {
@@ -277,9 +389,11 @@ function ensureSearchPoiMarkers(map, search) {
 	let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
 	for (const p of search.items) {
 		if (p.lat == null || p.lng == null) continue;
-		const m = new mapboxGl.Marker({ element: makePoiMarkerEl(p.category, p.name) })
+		const el = makePoiMarkerEl(p.category, p.name);
+		const m = new mapboxGl.Marker({ element: el })
 			.setLngLat([p.lng, p.lat])
 			.addTo(map);
+		attachPoiInteractivity(el, m, p, p.category, map);
 		searchPoiMarkers.push(m);
 		minLng = Math.min(minLng, p.lng);
 		minLat = Math.min(minLat, p.lat);
@@ -512,3 +626,117 @@ onBeforeUnmount(() => {
 <template>
 	<!-- 純行為元件，不渲染 DOM (UI 已搬到 RouteCard / MapPickerControl) -->
 </template>
+
+<style lang="scss">
+// 非 scoped — mapbox popup 注入到 .mapboxgl-popup 容器, scoped 樣式選不到
+.eco-poi-popup {
+	z-index: 12;
+
+	// 隱藏預設箭頭, 自己畫 — 預設 tip 顏色蓋不掉漸層
+	.mapboxgl-popup-tip {
+		display: none;
+	}
+
+	.mapboxgl-popup-content {
+		padding: 0;
+		background: transparent;
+		border: none;
+		box-shadow: none;
+		filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55))
+			drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+		// 讓 popup 浮現有微淡入動效
+		animation: ecoPopFadeIn 140ms ease-out both;
+	}
+
+	.mapboxgl-popup-close-button {
+		color: #b9f6ca;
+		font-size: 18px;
+		line-height: 1;
+		padding: 2px 8px;
+		right: 6px;
+		top: 6px;
+		border-radius: 8px;
+		background: rgba(0, 0, 0, 0.35);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		z-index: 2;
+		transition: background 0.15s, color 0.15s;
+
+		&:hover {
+			background: rgba(102, 187, 106, 0.28);
+			color: #fff;
+		}
+	}
+}
+
+@keyframes ecoPopFadeIn {
+	from { opacity: 0; transform: translateY(4px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+.eco-pop {
+	font-family: inherit;
+	color: #f1faf3;
+	min-width: 200px;
+	max-width: 260px;
+	padding: 12px 14px;
+	border-radius: 12px;
+	background: rgba(22, 28, 26, 0.94);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
+	&__cat {
+		display: inline-block;
+		padding: 2px 9px;
+		border-radius: 999px;
+		background: color-mix(in srgb, var(--accent) 18%, transparent);
+		color: color-mix(in srgb, var(--accent) 30%, #ffffff);
+		font-size: 10.5px;
+		font-weight: 700;
+		letter-spacing: 0.3px;
+		white-space: nowrap;
+		margin-bottom: 8px;
+	}
+
+	&__name {
+		font-size: 15px;
+		font-weight: 700;
+		color: #fff;
+		line-height: 1.35;
+		letter-spacing: 0.2px;
+		word-break: break-word;
+		margin-bottom: 2px;
+	}
+
+	&__rows {
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		gap: 8px;
+		font-size: 12.5px;
+		line-height: 1.45;
+	}
+
+	&__row-icon {
+		font-size: 14px !important;
+		color: color-mix(in srgb, var(--accent) 55%, #ffffff 45%);
+		opacity: 0.9;
+		margin-top: 2px;
+		flex: none;
+	}
+
+	&__row-value {
+		color: #d8e8d9;
+		word-break: break-word;
+		flex: 1;
+		min-width: 0;
+	}
+}
+</style>

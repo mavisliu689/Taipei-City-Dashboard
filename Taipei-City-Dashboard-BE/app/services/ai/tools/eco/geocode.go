@@ -128,7 +128,7 @@ const taipeiProximity = "121.5170,25.0478"
 // Lookup order:
 //  1. 拒絕「我目前位置」之類關鍵字 (回 ErrCurrentLocation)
 //  2. 內建 dictionary (~30 條雙北重點)
-//  3. Mock data POI 名稱比對 (2,592 筆精準座標, 含實際公園/餐廳/步道)
+//  3. Mock data POI 名稱比對 (~5,700 筆精準座標, 含 YouBike/公園/餐廳/旅館/回收)
 //  4. Mapbox Forward Geocoding (含 sanity check: 結果必須在雙北 bbox)
 //  5. ErrUnknownPlace
 func Geocode(name string) (lat, lng float64, err error) {

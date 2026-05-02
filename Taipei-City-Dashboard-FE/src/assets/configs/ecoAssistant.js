@@ -296,7 +296,7 @@ export const ECO_TOOL_SCHEMAS = [
 ];
 
 /**
- * 綠能助手專用 chat 端點 — 走 BE wrapper /ai/chat/eco
+ * 小碳寶專用 chat 端點 — 走 BE wrapper /ai/chat/eco
  *
  * 安全強化:
  *  - BE 端強制注入 ECO_SYSTEM_PROMPT + ECO_TOOL_SCHEMAS, FE 送的 system/tool

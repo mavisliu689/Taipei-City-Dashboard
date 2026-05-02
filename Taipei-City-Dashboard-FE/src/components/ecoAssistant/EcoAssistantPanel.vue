@@ -79,7 +79,7 @@ function tier2Suggestions(taskKey) {
 				{ label: "公園", action: "send", text: `${origin}附近的公園` },
 				{ label: "環保餐廳", action: "send", text: `${origin}附近的環保餐廳` },
 				{ label: "回收站", action: "send", text: "沿途有什麼回收站" },
-				{ label: "步道", action: "send", text: `${origin}附近的步道` },
+				{ label: "環保旅館", action: "send", text: `${origin}附近的環保旅館` },
 				{ label: "YouBike", action: "send", text: `${origin}附近的 YouBike 站` },
 			];
 		case "carbon":
@@ -110,13 +110,14 @@ const tier2Label = computed(() => {
 });
 
 // 沒路線時的破冰範例 — 不分層, 直接平鋪
+// 第一條範例特意用「順路 X」展示新支援的 required_categories 功能
 const welcomeChips = [
+	{ label: "從台北車站到台北101，順路一個 YouBike 站", action: "send", text: "從台北車站到台北101，順路一個 YouBike 站" },
 	{ label: "從台北市政府走到新北市政府", action: "send", text: "從台北市政府走到新北市政府" },
 	{ label: "信義區的環保餐廳", action: "send", text: "信義區的環保餐廳" },
 	{ label: "台北車站附近的公園", action: "send", text: "台北車站附近的公園" },
 	{ label: "大安區附近的回收站", action: "send", text: "大安區附近的回收站" },
 	{ label: "中山區附近的 YouBike 站", action: "send", text: "中山區附近的 YouBike 站" },
-	{ label: "中山區附近的環保咖啡廳", action: "send", text: "中山區附近的環保咖啡廳" },
 ];
 
 function isCarbonQuery(text) {
@@ -296,6 +297,8 @@ watch(() => store.currentRoute, (route) => {
 					/>
 				</div>
 				<p class="eco-panel__welcome-greet">嗨，我是雙北小碳寶！</p>
+				<p class="eco-panel__welcome-sub">幫你規劃低碳路線、找環保 POI、算減碳量</p>
+				<p class="eco-panel__welcome-sub eco-panel__welcome-sub--small">支援「從 A 到 B 順路經過一個 X」（X = YouBike / 公園 / 餐廳 / 回收站 / 旅館）</p>
 				<p class="eco-panel__welcome-sub">試試問我：</p>
 			</div>
 			<EcoMessageList :messages="store.messages" />
@@ -424,7 +427,7 @@ watch(() => store.currentRoute, (route) => {
 				v-model="inputText"
 				class="eco-panel__input"
 				rows="2"
-				placeholder="輸入你想去的地方..."
+				placeholder="例：從台北車站到台北101，順路一個 YouBike"
 				:disabled="store.isStreaming"
 				@keydown="handleKeydown"
 			/>
@@ -604,7 +607,15 @@ watch(() => store.currentRoute, (route) => {
 	&__welcome-sub {
 		color: #aaa;
 		font-size: 12px;
-		margin: 0;
+		margin: 0 0 4px;
+
+		&--small {
+			color: #888;
+			font-size: 11px;
+			line-height: 1.5;
+			max-width: 280px;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__suggestions {

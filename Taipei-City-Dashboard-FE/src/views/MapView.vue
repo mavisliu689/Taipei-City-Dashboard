@@ -1,10 +1,10 @@
 <!-- Developed By Taipei Urban Intelligence Center 2023-2024 -->
-<!-- 
+<!--
 Lead Developer:  Igor Ho (Full Stack Engineer)
 Data Pipelines:  Iima Yu (Data Scientist)
 Design and UX: Roy Lin (Fmr. Consultant), Chu Chen (Researcher)
 Systems: Ann Shih (Systems Engineer)
-Testing: Jack Huang (Data Scientist), Ian Huang (Data Analysis Intern) 
+Testing: Jack Huang (Data Scientist), Ian Huang (Data Analysis Intern)
 -->
 <!-- Department of Information Technology, Taipei City Government -->
 
@@ -156,7 +156,7 @@ function popularBasicLayerGA(map_config) {
 <template>
   <div class="map">
     <div class="hide-if-mobile">
-      <!-- 0. 綠能助手結果 (AI 對話產生的路線/景點以圖層形式呈現) — 限「靠北儀表板」 -->
+      <!-- 0. 小碳寶結果 (AI 對話產生的路線/景點以圖層形式呈現) — 限「靠北儀表板」 -->
       <div
         v-if="contentStore.currentDashboard.index === KAOBEI_DASHBOARD_META.index"
         class="map-charts eco-layer-mount"

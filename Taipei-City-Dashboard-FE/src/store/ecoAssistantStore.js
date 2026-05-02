@@ -12,10 +12,118 @@ import { useAuthStore } from "./authStore";
 const API_BASE = import.meta.env.VITE_API_URL || "/api/dev";
 
 /**
+ * 已知 / 可信賴的雙北地名集合 (high-confidence 判定用)。
+ * 加入規則: 名稱明確不會混淆 (有專名 prefix), 不能是「公園」「捷運站」這種泛稱。
+ * 跟 BE placeDictionary 對齊概念, 不必精確同步 — 字典外的會降到 medium 由 LLM 處理。
+ */
+const KNOWN_PLACES = new Set([
+	// FE Geocode_dictionary
+	"台北市政府", "市府", "北市府",
+	"新北市政府", "新北市府", "板橋市政府",
+	// 常見地標
+	"台北車站", "台北101", "象山", "象山公園",
+	"中正紀念堂", "國父紀念館", "陽明山", "淡水", "板橋",
+	"西門", "西門町", "東區", "信義商圈",
+	"松山機場", "南港車站", "台北小巨蛋",
+	// 雙北行政區 (作為「附近 / 區中心」使用是 OK 的, 但精確度比地標低)
+	"信義區", "大安區", "中山區", "松山區", "萬華區", "中正區",
+	"大同區", "北投區", "士林區", "內湖區", "南港區", "文山區",
+	"板橋區", "新莊區", "三重區", "中和區", "永和區", "汐止區",
+	"淡水區", "新店區",
+]);
+
+/**
+ * 泛稱黑名單 — endpoint 等於這些字串就是模糊指代, 應該反問或交給 LLM 處理。
+ * 規則: 沒有專名 prefix 的通用詞 (公園 ≠ 象山公園)。
+ */
+const AMBIGUOUS_TERMS = new Set([
+	"公園", "捷運站", "車站", "夜市", "餐廳", "咖啡廳", "便利商店",
+	"台北捷運站", "新北捷運站", "捷運", "MRT",
+	"附近", "這裡", "那裡",
+]);
+
+function isKnownPlace(name) {
+	if (!name) return false;
+	return KNOWN_PLACES.has(name.trim());
+}
+
+function isAmbiguousTerm(name) {
+	if (!name) return true;
+	return AMBIGUOUS_TERMS.has(name.trim());
+}
+
+/**
+ * 行程脈絡偵測 — 「兩天一夜 / 過夜 / 住宿」這類字眼意味著 user 不只要路線,
+ * 還要旅館推薦; 「找個吃的 / 順路吃飯」要餐廳; 等等。
+ * 這裡只回 boolean flags, 不直接 fetch — 由 send() 把 flags 加進 intent_hint
+ * 引導 LLM 呼叫對應 tool (避免 LLM 忘記 system prompt 規則)。
+ */
+export function detectTripContext(text) {
+	if (!text) return { wantsHotel: false, wantsMeal: false };
+	return {
+		wantsHotel: /兩天一夜|三天兩夜|過夜|住宿|找飯店|找旅館|住一晚|要訂房|找住的/.test(text),
+		wantsMeal: /順路吃|找個吃|吃飯|午餐|晚餐|找餐廳|找咖啡/.test(text),
+	};
+}
+
+/**
+ * 路徑意圖信心分層:
+ *   - high: regex 命中, 起終點都在 KNOWN_PLACES → 可直打 BE plan-route
+ *   - medium: regex 命中但有一端不在字典或屬於泛稱 → 帶 hint 給 LLM, 不直打
+ *   - low: regex 沒命中 → 完全交給 LLM tool calling
+ *
+ * 回傳形狀:
+ *   { confidence: "high" | "medium", origin, destination }
+ *   { confidence: "low" }
+ */
+export function classifyRouteIntent(text) {
+	const intent = detectRouteIntent(text);
+	if (!intent) return { confidence: "low" };
+	const { origin, destination } = intent;
+	const originOk = isKnownPlace(origin) && !isAmbiguousTerm(origin);
+	const destOk = isKnownPlace(destination) && !isAmbiguousTerm(destination);
+	if (originOk && destOk) {
+		return { confidence: "high", origin, destination };
+	}
+	return { confidence: "medium", origin, destination };
+}
+
+/**
+ * 旅遊時長 / 時段 / 客氣詞前綴 — 不影響地點抽取, 但會干擾 regex anchor, 需先 strip。
+ * 規則: 只 strip 連續出現在「整句最前面」的, 中間出現不動 (避免誤刪地名)。
+ */
+const MODIFIER_PREFIXES = [
+	"兩天一夜", "三天兩夜", "一日遊", "半日遊", "週末", "假日", "平日", "當天來回",
+	"早上", "上午", "中午", "下午", "傍晚", "晚上", "今天", "明天", "後天",
+	"我想", "我要", "我計畫", "我打算", "麻煩", "請", "幫我", "規劃", "幫忙",
+];
+
+function stripModifierPrefix(text) {
+	let s = text;
+	let changed = true;
+	// 逐次剝, 因為可能多個 modifier 連著 (如「明天早上」「週末 麻煩」)
+	while (changed) {
+		changed = false;
+		const trimmed = s.replace(/^[\s,，、]+/, "");
+		for (const p of MODIFIER_PREFIXES) {
+			if (trimmed.startsWith(p)) {
+				s = trimmed.slice(p.length);
+				changed = true;
+				break;
+			}
+		}
+		if (!changed) s = trimmed;
+	}
+	return s;
+}
+
+/**
  * 偵測「從 A 到 B」「A 走到 B」「A 至 B」之類的路徑規劃意圖。
  * 回 {origin, destination} 或 null。
  */
 export function detectRouteIntent(text) {
+	if (!text) return null;
+	const normalized = stripModifierPrefix(text);
 	const patterns = [
 		/從\s*([^到走至→]{2,20}?)\s*(?:走到|到|至|→)\s*([^的，。！？\s]{2,20})/,
 		/^([^到走至→\s的，。！？]{2,20}?)\s*走到\s*([^的，。！？\s]{2,20})$/,
@@ -25,7 +133,7 @@ export function detectRouteIntent(text) {
 		/^([^到走至→\s的，。！？]{2,20}?)\s*到\s*([^的，。！？\s]{2,20})$/,
 	];
 	for (const re of patterns) {
-		const m = text.match(re);
+		const m = normalized.match(re);
 		if (m) return { origin: m[1].trim(), destination: m[2].trim() };
 	}
 	return null;
@@ -377,6 +485,12 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 			this.session = null;
 			this.currentRoute = null;
 			this.errorMessage = "";
+			// 清除地圖上殘留的 search POI marker 與手動起終點
+			// 否則 refresh 鈕只會清掉文字, 地圖一片綠樹擦不掉
+			this.currentSearchPOIs = null;
+			this.manualOrigin = null;
+			this.manualDest = null;
+			this.pickMode = "idle";
 		},
 		cancelStream() {
 			if (this._currentStream) {
@@ -421,7 +535,10 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 
 			this.errorMessage = "";
 			this.currentSearchPOIs = null;
-			this.messages.push({ role: "user", content: text });
+			// userMsg.content 是顯示給使用者看的乾淨原文; apiContent (若有) 是
+			// 實際送給 LLM 的版本, 可能附帶 <intent_hint> 引導 tool calling
+			const userMsg = { role: "user", content: text };
+			this.messages.push(userMsg);
 			// 預先放一個空白 assistant 訊息，串流時逐 chunk 累加
 			const assistantIndex = this.messages.length;
 			this.messages.push({ role: "assistant", content: "" });
@@ -436,12 +553,36 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 				return;
 			}
 
-			// 並行呼叫: 路徑意圖直打 BE 拿結構化資料 (供 RouteCard / 未來地圖)
-			const intent = detectRouteIntent(text);
-			if (intent) {
-				this._planFromIntent(intent, token).catch((e) => {
-					console.warn("plan-route fetch failed:", e.message);
-				});
+			// 路徑意圖信心分層:
+			//   high   → 兩端皆已知地名, 直打 BE plan-route 省 LLM 一輪 tool call 延遲
+			//   medium → regex 命中但有泛稱 (例「台北捷運站」), 不直打;
+			//            送給 LLM 的 user content 附 <intent_hint>, 引導 LLM
+			//            呼叫 plan_eco_route 或反問, 而不是憑空亂回
+			//   low    → 完全交給 LLM tool calling, FE 不做任何 NLP
+			const cls = classifyRouteIntent(text);
+			const trip = detectTripContext(text);
+			const tripCats = [];
+			if (trip.wantsHotel) tripCats.push("hotel");
+			if (trip.wantsMeal) tripCats.push("restaurant");
+			const tripHint = tripCats.length
+				? `\n額外提示: 使用者語意需要 ${tripCats.join(", ")} 推薦, 規劃路線後務必再呼叫 find_eco_pois categories=[${tripCats.map((c) => `"${c}"`).join(",")}] 補上, 不要漏掉。`
+				: "";
+
+			if (cls.confidence === "high") {
+				this._planFromIntent({ origin: cls.origin, destination: cls.destination }, token)
+					.catch((e) => console.warn("plan-route fetch failed:", e.message));
+				// high 也可能漏 trip context (LLM 拿到結構化結果就停了), 仍補 hint 提醒
+				if (tripHint) {
+					userMsg.apiContent = `${text}\n\n<intent_hint>${tripHint.trim()}</intent_hint>`;
+				}
+			} else if (cls.confidence === "medium") {
+				userMsg.apiContent =
+					`${text}\n\n<intent_hint>看似 origin="${cls.origin}", destination="${cls.destination}", `
+					+ `但有一端不在已知地名清單。請呼叫 plan_eco_route 工具或反問使用者澄清, `
+					+ `不要憑空生成路線距離 / 分鐘 / 經過點。${tripHint}</intent_hint>`;
+			} else if (tripHint) {
+				// low 也可能有 trip context (例「找環保旅館」沒 A→B 結構)
+				userMsg.apiContent = `${text}\n\n<intent_hint>${tripHint.trim()}</intent_hint>`;
 			}
 
 			// POI 意圖也直打 BE — 不依賴 LLM 加 META 標記, 確保地圖一定有 marker
@@ -475,7 +616,9 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 			const HISTORY_CAP = 12;
 			const all = this.messages.slice(0, -1);
 			const trimmed = all.length > HISTORY_CAP ? all.slice(-HISTORY_CAP) : all;
-			const apiMessages = trimmed.map((m) => ({ role: m.role, content: m.content }));
+			// medium-confidence 的 user 訊息會帶 apiContent (含 <intent_hint>), 用它送給 LLM;
+			// 顯示用的 content 保持原文乾淨
+			const apiMessages = trimmed.map((m) => ({ role: m.role, content: m.apiContent || m.content }));
 
 			this._currentStream = chatTwai({
 				messages: apiMessages,

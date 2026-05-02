@@ -18,6 +18,11 @@ type PlanOptions struct {
 	// 用於使用者在地圖上手動點選或拖曳起終點時。
 	OriginCoord *Coord
 	DestCoord   *Coord
+	// RequiredCategories 強制 balanced/greenest 路線至少各包含 1 個指定類別 POI。
+	// 例: 使用者「經過一個 youbike 站」→ ["ubike"]; 「順路找咖啡廳」→ ["restaurant"]。
+	// shortest 保留 0 繞路語意, 不受此參數影響。
+	// 走廊內若無對應類別 POI, 該類別會被跳過, 透過 UnmetRequired 回傳。
+	RequiredCategories []string
 }
 
 const (
@@ -56,6 +61,9 @@ type PlanResult struct {
 	EndCoord          Coord          `json:"end_coord"`
 	ShortestDistanceM float64        `json:"shortest_distance_m"`
 	Routes            []RouteVariant `json:"routes"`
+	// UnmetRequired 列出走廊內找不到 POI 的 RequiredCategories, 給 LLM 誠實回覆使用者。
+	// 例: 使用者要求 ["ubike"] 但走廊 1km 內無 ubike 站, 此欄會是 ["ubike"]。
+	UnmetRequired []string `json:"unmet_required,omitempty"`
 }
 
 // Coord is a (lat, lng) pair returned to the frontend.
@@ -67,9 +75,9 @@ type Coord struct {
 // 各類別綠點權重（影響評分中「綠點豐富度」項目）
 var categoryWeight = map[string]int{
 	"park":       10,
-	"trail":      8,
 	"hotel":      6,
 	"restaurant": 3,
+	"ubike":      3,
 	"recycle":    2,
 }
 
@@ -109,9 +117,12 @@ func PlanEcoRoute(pts []POI, origin, destination string, opt PlanOptions) (*Plan
 	originPt := []float64{oLng, oLat}
 	destPt := []float64{dLng, dLat}
 
+	required := normalizeRequired(opt.RequiredCategories)
+	unmet := findUnmetCategories(candidates, required)
+
 	shortest := buildShortestRoute(directDist, originPt, destPt)
-	balanced := buildBalancedRoute(directDist, candidates, originPt, destPt)
-	greenest := buildGreenestRoute(directDist, candidates, opt.MaxGreenPoints, originPt, destPt)
+	balanced := buildBalancedRoute(directDist, candidates, required, originPt, destPt)
+	greenest := buildGreenestRoute(directDist, candidates, opt.MaxGreenPoints, required, originPt, destPt)
 
 	// 用真實步行距離 (shortest variant) 作為最短參考
 	shortestM := shortest.DistanceM
@@ -126,7 +137,46 @@ func PlanEcoRoute(pts []POI, origin, destination string, opt PlanOptions) (*Plan
 		EndCoord:          Coord{Lat: dLat, Lng: dLng},
 		ShortestDistanceM: shortestM,
 		Routes:            []RouteVariant{shortest, balanced, greenest},
+		UnmetRequired:     unmet,
 	}, nil
+}
+
+// normalizeRequired lower-cases & dedupes required categories.
+func normalizeRequired(in []string) []string {
+	if len(in) == 0 {
+		return nil
+	}
+	seen := make(map[string]struct{}, len(in))
+	out := make([]string, 0, len(in))
+	for _, c := range in {
+		if c == "" {
+			continue
+		}
+		if _, ok := seen[c]; ok {
+			continue
+		}
+		seen[c] = struct{}{}
+		out = append(out, c)
+	}
+	return out
+}
+
+// findUnmetCategories returns required categories with zero candidates in the corridor.
+func findUnmetCategories(candidates []scoredPOI, required []string) []string {
+	if len(required) == 0 {
+		return nil
+	}
+	have := make(map[string]bool, len(required))
+	for _, c := range candidates {
+		have[c.POI.Category] = true
+	}
+	var unmet []string
+	for _, c := range required {
+		if !have[c] {
+			unmet = append(unmet, c)
+		}
+	}
+	return unmet
 }
 
 func poisAlongCorridor(pts []POI, oLat, oLng, dLat, dLng, bufferKm float64) []scoredPOI {
@@ -165,12 +215,12 @@ func buildShortestRoute(distKm float64, origin, dest []float64) RouteVariant {
 	return v
 }
 
-func buildBalancedRoute(distKm float64, candidates []scoredPOI, origin, dest []float64) RouteVariant {
-	return assembleVariant("balanced", "平衡路徑", distKm, pickTopN(candidates, 2), origin, dest)
+func buildBalancedRoute(distKm float64, candidates []scoredPOI, required []string, origin, dest []float64) RouteVariant {
+	return assembleVariant("balanced", "平衡路徑", distKm, pickWithRequired(candidates, 2, required), origin, dest)
 }
 
-func buildGreenestRoute(distKm float64, candidates []scoredPOI, maxPts int, origin, dest []float64) RouteVariant {
-	return assembleVariant("greenest", "最綠路徑", distKm, pickTopN(candidates, maxPts), origin, dest)
+func buildGreenestRoute(distKm float64, candidates []scoredPOI, maxPts int, required []string, origin, dest []float64) RouteVariant {
+	return assembleVariant("greenest", "最綠路徑", distKm, pickWithRequired(candidates, maxPts, required), origin, dest)
 }
 
 // assembleVariant builds a route variant. Real road distance/duration come
@@ -220,6 +270,55 @@ func pickTopN(candidates []scoredPOI, n int) []scoredPOI {
 		return candidates
 	}
 	return candidates[:n]
+}
+
+// pickWithRequired guarantees each required category contributes at least 1
+// pick (lowest detour of that category) before falling back to top-N by detour.
+// Caller must pass `candidates` already sorted by Detour ascending. The result
+// preserves detour-ascending order for downstream geometry/score consistency.
+// If no required categories are given, behaves identical to pickTopN.
+func pickWithRequired(candidates []scoredPOI, n int, required []string) []scoredPOI {
+	if len(required) == 0 {
+		return pickTopN(candidates, n)
+	}
+	if n <= 0 || len(candidates) == 0 {
+		return nil
+	}
+
+	chosen := make(map[int]struct{}, n)
+	// step 1: 為每個 required 類別挑一個最低 detour 的 POI (找不到就跳過)
+	for _, cat := range required {
+		for i, c := range candidates {
+			if _, used := chosen[i]; used {
+				continue
+			}
+			if c.POI.Category == cat {
+				chosen[i] = struct{}{}
+				break
+			}
+		}
+		if len(chosen) >= n {
+			break
+		}
+	}
+	// step 2: 剩餘名額用 top-N by detour 補滿
+	for i := range candidates {
+		if len(chosen) >= n {
+			break
+		}
+		if _, used := chosen[i]; used {
+			continue
+		}
+		chosen[i] = struct{}{}
+	}
+	// step 3: 依原本的 detour 升序輸出 (candidates 已預排, 用 index 順序即可)
+	out := make([]scoredPOI, 0, len(chosen))
+	for i := range candidates {
+		if _, used := chosen[i]; used {
+			out = append(out, candidates[i])
+		}
+	}
+	return out
 }
 
 func sumDetour(picks []scoredPOI) float64 {

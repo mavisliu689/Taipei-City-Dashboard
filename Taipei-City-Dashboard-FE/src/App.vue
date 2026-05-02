@@ -1,10 +1,10 @@
 <!-- Developed By Taipei Urban Intelligence Center 2023-2024 -->
-<!-- 
+<!--
 Lead Developer:  Igor Ho (Full Stack Engineer)
 Data Pipelines:  Iima Yu (Data Scientist)
 Design and UX: Roy Lin (Fmr. Consultant), Chu Chen (Researcher)
 Systems: Ann Shih (Systems Engineer)
-Testing: Jack Huang (Data Scientist), Ian Huang (Data Analysis Intern) 
+Testing: Jack Huang (Data Scientist), Ian Huang (Data Analysis Intern)
 -->
 <!-- Department of Information Technology, Taipei City Government -->
 
@@ -80,7 +80,7 @@ const formattedTimeToUpdate = computed(() => {
 	return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 });
 
-// 小碳寶（綠能助手）只在「靠北儀表板」的地圖頁顯示
+// 小碳寶（小碳寶）只在「靠北儀表板」的地圖頁顯示
 const showEcoAssistant = computed(
 	() =>
 		authStore.currentPath === "mapview" &&

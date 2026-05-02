@@ -18,8 +18,10 @@ import {
 	calcDiningSavingG,
 	calcLodgingSavingG,
 	calcTransportSavingG,
+	classifyRouteIntent,
 	detectPOIIntent,
 	detectRouteIntent,
+	detectTripContext,
 	parseMetaMarker,
 	stripMetaLine,
 	useEcoAssistantStore,
@@ -98,6 +100,19 @@ describe("ecoAssistantStore", () => {
 		expect(s.session).toBeNull();
 	});
 
+	it("should_clear_search_pois_and_manual_points_when_reset", () => {
+		const s = useEcoAssistantStore();
+		s.currentSearchPOIs = { categories: ["park"], items: [{ name: "x", lat: 25, lng: 121 }] };
+		s.manualOrigin = { lat: 25.04, lng: 121.56 };
+		s.manualDest = { lat: 25.01, lng: 121.46 };
+		s.pickMode = "origin";
+		s.reset();
+		expect(s.currentSearchPOIs).toBeNull();
+		expect(s.manualOrigin).toBeNull();
+		expect(s.manualDest).toBeNull();
+		expect(s.pickMode).toBe("idle");
+	});
+
 	it("should cancel previous stream and accept new send when streaming", async () => {
 		const s = useEcoAssistantStore();
 		const cancel = vi.fn();
@@ -115,12 +130,101 @@ describe("ecoAssistantStore", () => {
 		expect(s.messages[0].content).toBe("new question");
 	});
 
+	// classifyRouteIntent — 信心分層 (high / medium / low) 取代「regex 命中就直打 BE」
+	it("should_return_high_confidence_when_both_endpoints_known", () => {
+		expect(classifyRouteIntent("從台北市政府到新北市政府"))
+			.toMatchObject({ confidence: "high", origin: "台北市政府", destination: "新北市政府" });
+		expect(classifyRouteIntent("台北車站到台北101"))
+			.toMatchObject({ confidence: "high", origin: "台北車站", destination: "台北101" });
+		expect(classifyRouteIntent("象山到淡水"))
+			.toMatchObject({ confidence: "high", origin: "象山", destination: "淡水" });
+	});
+
+	it("should_return_medium_confidence_when_endpoint_unknown_or_ambiguous", () => {
+		// 「台北捷運站」是泛稱, 字典沒有 → medium
+		expect(classifyRouteIntent("從象山公園到台北捷運站"))
+			.toMatchObject({ confidence: "medium", origin: "象山公園", destination: "台北捷運站" });
+		// 純「公園」「車站」做 endpoint 也算泛稱
+		expect(classifyRouteIntent("從台北車站到公園"))
+			.toMatchObject({ confidence: "medium", destination: "公園" });
+		// modifier 前綴會被 normalize 掉, 仍能命中 regex; 但泛稱 endpoint → medium
+		expect(classifyRouteIntent("兩天一夜 象山公園 到 台北捷運站"))
+			.toMatchObject({ confidence: "medium", origin: "象山公園", destination: "台北捷運站" });
+	});
+
+	it("should_return_low_when_regex_does_not_match", () => {
+		expect(classifyRouteIntent("信義區的環保餐廳"))
+			.toMatchObject({ confidence: "low" });
+		expect(classifyRouteIntent("")).toMatchObject({ confidence: "low" });
+		// 完全沒有路線意圖的閒聊
+		expect(classifyRouteIntent("hi")).toMatchObject({ confidence: "low" });
+	});
+
 	it("should ignore duplicate consecutive send (same content)", async () => {
 		const s = useEcoAssistantStore();
 		s.messages = [{ role: "user", content: "重複的問題" }];
 		await s.send("重複的問題");
 		expect(s.messages).toHaveLength(1); // 沒有 push 第二次
 		expect(chatTwai).not.toHaveBeenCalled();
+	});
+
+	// 信心分層三路徑 — 確保 send() 不會回到「regex 命中就直打 BE」的舊行為
+	it("should_send_clean_user_text_when_low_confidence", async () => {
+		const s = useEcoAssistantStore();
+		chatTwai.mockReturnValue({ cancel: vi.fn(), promise: Promise.resolve("好") });
+		await s.send("信義區的環保餐廳"); // POI 意圖, 不是 route → low
+		const sent = chatTwai.mock.calls[0][0].messages;
+		expect(sent[sent.length - 1].content).toBe("信義區的環保餐廳"); // 沒附 hint
+		// fetch (plan-route) 不應被呼叫 (POI 走另一個 fetch path, 但 plan-route 不該被呼叫)
+		const planFetches = global.fetch.mock.calls.filter((c) => String(c[0]).includes("plan-route"));
+		expect(planFetches).toHaveLength(0);
+	});
+
+	it("should_inject_intent_hint_when_medium_confidence_without_calling_plan_route", async () => {
+		const s = useEcoAssistantStore();
+		chatTwai.mockReturnValue({ cancel: vi.fn(), promise: Promise.resolve("好") });
+		await s.send("從象山公園到台北捷運站"); // 終點是泛稱 → medium
+		// displayed user message 仍乾淨
+		expect(s.messages[0]).toMatchObject({ role: "user", content: "從象山公園到台北捷運站" });
+		// 但送給 LLM 的最後一則 user content 帶 hint
+		const sent = chatTwai.mock.calls[0][0].messages;
+		expect(sent[sent.length - 1].content).toContain("intent_hint");
+		expect(sent[sent.length - 1].content).toContain("象山公園");
+		expect(sent[sent.length - 1].content).toContain("台北捷運站");
+		// medium 不直打 plan-route
+		const planFetches = global.fetch.mock.calls.filter((c) => String(c[0]).includes("plan-route"));
+		expect(planFetches).toHaveLength(0);
+	});
+
+	it("should_detect_trip_context_for_overnight_keywords", () => {
+		expect(detectTripContext("兩天一夜 象山公園 到 台北捷運站")).toMatchObject({ wantsHotel: true });
+		expect(detectTripContext("過夜 想找飯店")).toMatchObject({ wantsHotel: true });
+		expect(detectTripContext("順路吃飯")).toMatchObject({ wantsMeal: true });
+		expect(detectTripContext("從 A 到 B")).toMatchObject({ wantsHotel: false, wantsMeal: false });
+	});
+
+	it("should_inject_hotel_hint_when_overnight_keyword_present", async () => {
+		const s = useEcoAssistantStore();
+		chatTwai.mockReturnValue({ cancel: vi.fn(), promise: Promise.resolve("好") });
+		await s.send("兩天一夜 象山公園 到 台北捷運站"); // medium + 兩天一夜
+		const sent = chatTwai.mock.calls[0][0].messages;
+		const last = sent[sent.length - 1].content;
+		expect(last).toContain("intent_hint");
+		expect(last).toContain("hotel");
+		expect(last).toContain("find_eco_pois");
+		// displayed 仍乾淨
+		expect(s.messages[0].content).toBe("兩天一夜 象山公園 到 台北捷運站");
+	});
+
+	it("should_call_plan_route_directly_when_high_confidence", async () => {
+		const s = useEcoAssistantStore();
+		chatTwai.mockReturnValue({ cancel: vi.fn(), promise: Promise.resolve("好") });
+		await s.send("從台北市政府到新北市政府"); // 兩端都在 KNOWN_PLACES → high
+		const planFetches = global.fetch.mock.calls.filter((c) => String(c[0]).includes("plan-route"));
+		expect(planFetches.length).toBeGreaterThanOrEqual(1);
+		// LLM 收到的訊息不帶 hint (high 不需要)
+		const sent = chatTwai.mock.calls[0][0].messages;
+		expect(sent[sent.length - 1].content).not.toContain("intent_hint");
 	});
 });
 
@@ -348,6 +452,11 @@ describe("detectRouteIntent", () => {
 		["信義區→大安區", "信義區", "大安區"],
 		["以力科技到新北青年局", "以力科技", "新北青年局"],
 		["板橋車站到象山公園", "板橋車站", "象山公園"],
+		// modifier 前綴 (旅遊時長 / 時段 / 客氣詞) 必須被 strip 掉再抽地點
+		["兩天一夜 象山公園 到 台北捷運站", "象山公園", "台北捷運站"],
+		["週末 從台北車站到淡水", "台北車站", "淡水"],
+		["麻煩 規劃 板橋 到 信義區", "板橋", "信義區"],
+		["明天早上 象山 到 101", "象山", "101"],
 	])("matches '%s' → origin=%s destination=%s", (text, origin, destination) => {
 		expect(detectRouteIntent(text)).toEqual({ origin, destination });
 	});

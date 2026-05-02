@@ -39,14 +39,16 @@ func SetDataPath(path string) {
 
 // PlanEcoRouteTool wraps PlanEcoRoute for AI tool calling.
 // args JSON: { "origin": "...", "destination": "...", "max_hop_km": 1.5,
-//   "origin_coord": {"lat":..,"lng":..}, "destination_coord": {...} }
+//   "origin_coord": {"lat":..,"lng":..}, "destination_coord": {...},
+//   "required_categories": ["ubike"]  // optional; balanced/greenest 路線將強制經過 }
 func PlanEcoRouteTool(_ context.Context, args string) (string, error) {
 	var in struct {
-		Origin           string  `json:"origin"`
-		Destination      string  `json:"destination"`
-		MaxHopKm         float64 `json:"max_hop_km"`
-		OriginCoord      *Coord  `json:"origin_coord"`
-		DestinationCoord *Coord  `json:"destination_coord"`
+		Origin             string   `json:"origin"`
+		Destination        string   `json:"destination"`
+		MaxHopKm           float64  `json:"max_hop_km"`
+		OriginCoord        *Coord   `json:"origin_coord"`
+		DestinationCoord   *Coord   `json:"destination_coord"`
+		RequiredCategories []string `json:"required_categories"`
 	}
 	if err := json.Unmarshal([]byte(args), &in); err != nil {
 		return "", fmt.Errorf("plan_eco_route: invalid args: %w", err)
@@ -56,9 +58,10 @@ func PlanEcoRouteTool(_ context.Context, args string) (string, error) {
 		return "", fmt.Errorf("plan_eco_route: load dataset: %w", err)
 	}
 	res, err := PlanEcoRoute(pts, in.Origin, in.Destination, PlanOptions{
-		CorridorBufferKm: in.MaxHopKm,
-		OriginCoord:      in.OriginCoord,
-		DestCoord:        in.DestinationCoord,
+		CorridorBufferKm:   in.MaxHopKm,
+		OriginCoord:        in.OriginCoord,
+		DestCoord:          in.DestinationCoord,
+		RequiredCategories: in.RequiredCategories,
 	})
 	if err != nil {
 		return "", err

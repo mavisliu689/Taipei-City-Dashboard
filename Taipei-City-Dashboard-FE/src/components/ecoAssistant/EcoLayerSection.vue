@@ -35,7 +35,7 @@ const items = computed(() => {
 		for (const r of route.value.routes) {
 			out.push({
 				key: r.route_id,
-				label: `綠能助手・${r.label}`,
+				label: `小碳寶・${r.label}`,
 				meta: `${(r.distance_m / 1000).toFixed(1)} km · ${r.estimated_minutes} 分 · 綠點 ${r.green_points_passed.length}`,
 				color: ROUTE_META[r.route_id]?.color || "#888",
 				icon: ROUTE_META[r.route_id]?.icon || "route",
@@ -47,7 +47,7 @@ const items = computed(() => {
 		}
 		out.push({
 			key: "pois",
-			label: "綠能助手・沿途景點",
+			label: "小碳寶・沿途景點",
 			meta: `${seen.size} 個景點 marker`,
 			color: "#66bb6a",
 			icon: "place",
@@ -57,7 +57,7 @@ const items = computed(() => {
 		const cats = (search.value.categories || []).map((c) => CATEGORY_LABELS[c] || c).join("・");
 		out.push({
 			key: "search",
-			label: `綠能助手・搜尋結果 (${cats || "POI"})`,
+			label: `小碳寶・搜尋結果 (${cats || "POI"})`,
 			meta: `${search.value.items?.length || 0} 個結果，半徑 ${search.value.radius} km`,
 			color: "#fdd835",
 			icon: "search",
@@ -78,7 +78,7 @@ function toggle(key) {
 	>
 		<div class="eco-layer-section__title">
 			<span class="material-icons-round">eco</span>
-			<span>綠能助手結果</span>
+			<span>小碳寶結果</span>
 			<span class="eco-layer-section__od">
 				{{ route.start_name }} → {{ route.end_name }}
 			</span>
