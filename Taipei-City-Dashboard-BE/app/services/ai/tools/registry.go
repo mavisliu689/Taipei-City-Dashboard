@@ -2,6 +2,7 @@ package tools
 
 import (
 	"TaipeiCityDashboardBE/app/models"
+	"TaipeiCityDashboardBE/app/services/ai/tools/eco"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -17,6 +18,11 @@ func init() {
 	// Register demo tools
 	Register("get_current_time", GetCurrentTime)
 	Register("get_population_summary", GetPopulationSummary)
+
+	// Register eco-route tools (carbon-reduction route assistant for 雙北 dashboard)
+	Register("plan_eco_route", eco.PlanEcoRouteTool)
+	Register("find_eco_pois", eco.FindEcoPOIsTool)
+	Register("calc_carbon_saving", eco.CalcCarbonSavingTool)
 }
 
 // Register adds a tool to the registry

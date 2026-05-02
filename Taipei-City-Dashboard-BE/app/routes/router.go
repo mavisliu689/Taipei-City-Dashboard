@@ -205,6 +205,9 @@ func configureAIRoutes() {
 	aiRoutes.Use(middleware.IsLoggedIn())
 	{
 		aiRoutes.POST("/chat/twai", controllers.ChatWithTWCC)
+		aiRoutes.POST("/chat/eco", controllers.ChatWithEco)
+		aiRoutes.POST("/eco/plan-route", controllers.PlanEcoRoute)
+		aiRoutes.POST("/eco/find-pois", controllers.FindEcoPOIs)
 	}
 }
 
