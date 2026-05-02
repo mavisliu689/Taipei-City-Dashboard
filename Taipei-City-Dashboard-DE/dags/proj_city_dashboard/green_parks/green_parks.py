@@ -1,13 +1,11 @@
 """
 green_parks DAG
 
-Extract: 並行抓三源
+Extract: 並行抓兩源
   - TPE JSON: parks.gov.taipei (25 個 pm_* metadata 欄位)
   - NTPC 河濱 CSV: c3867812... (3 欄: name, longitude, latitude)
-  - NTPC 鄰里 CSV: 5fe3a136... (7 欄: seqno, name, area, address, management,
-    localcallservice, areacode);上游無座標,使用 get_addr_xy_parallel geocoding 補
 
-Transform: 三源都對齊 GreenPark 26 欄(25 pm_* + city);缺欄補空字串
+Transform: 兩源都對齊 GreenPark 26 欄(25 pm_* + city);缺欄補空字串
 Load: replace into DBDashboard.green_parks
 """
 from operators.common_pipeline import CommonDag
@@ -24,7 +22,6 @@ def _green_parks(**kwargs):
         save_dataframe_to_postgresql,
         update_lasttime_in_data_to_dataset_info,
     )
-    from utils.transform_address import get_addr_xy_parallel
 
     urllib3.disable_warnings()
 
@@ -39,9 +36,6 @@ def _green_parks(**kwargs):
     PARKS_TPE_URL = "https://parks.gov.taipei/parks/api/"
     PARKS_NTPC_RIVERSIDE_URL = (
         "https://data.ntpc.gov.tw/api/datasets/c3867812-6188-4b0a-a487-03bb4d93238d/csv"
-    )
-    PARKS_NTPC_NEIGHBORHOOD_URL = (
-        "https://data.ntpc.gov.tw/api/datasets/5fe3a136-29cc-4695-a17e-6636a32c3342/csv"
     )
 
     # 25 個 pm_* 欄位 + city,跟 BE GreenPark struct 對齊
@@ -129,44 +123,6 @@ def _green_parks(**kwargs):
         print(f"[green_parks] NTPC riverside: {len(parts[-1])} rows")
     except Exception as e:
         print(f"[green_parks] NTPC riverside source failed (will continue): {e}")
-
-    # === 3. NTPC 鄰里 CSV (含 geocoding) ===
-    try:
-        resp = requests.get(PARKS_NTPC_NEIGHBORHOOD_URL, timeout=120, verify=False)
-        resp.raise_for_status()
-        text = resp.content.decode("utf-8-sig", errors="replace")
-        nb_raw = pd.read_csv(io.StringIO(text), header=0)
-        nb_raw = nb_raw.loc[:, ~nb_raw.columns.astype(str).str.startswith("Unnamed")]
-        if nb_raw.shape[1] < 7:
-            raise ValueError(f"鄰里 CSV 欄位數不足:期待 7,實得 {nb_raw.shape[1]}")
-        nb_src = nb_raw.iloc[:, :7].copy()
-        nb_src.columns = ["seqno", "name", "area", "address", "management", "phone", "areacode"]
-        nb_src = nb_src[nb_src["name"].fillna("").astype(str).str.strip() != ""].copy()
-
-        # geocoding:把 address → (lng, lat)。空地址會回 None,後續轉空字串
-        addresses = nb_src["address"].fillna("").astype(str)
-        try:
-            lng_list, lat_list = get_addr_xy_parallel(addresses, sleep_time=0.5)
-        except Exception as ge:
-            # geocoding 整批失敗就退化:座標留空,name/address 等仍寫進 DB
-            print(f"[green_parks] neighborhood geocoding failed, fallback to empty coords: {ge}")
-            lng_list = ["" for _ in range(len(addresses))]
-            lat_list = ["" for _ in range(len(addresses))]
-
-        nb_df = pd.DataFrame({
-            "seq_no": nb_src["seqno"].map(_str),
-            "pm_name": nb_src["name"].map(_str),
-            "pm_location": nb_src["address"].map(_str),
-            "pm_unit": nb_src["management"].map(_str),
-            "pm_phone": nb_src["phone"].map(_str),
-            "pm_type": nb_src["area"].map(_str),
-            "pm_longitude": [_str(v) for v in lng_list],
-            "pm_latitude": [_str(v) for v in lat_list],
-        })
-        parts.append(_normalize(nb_df, "新北市"))
-        print(f"[green_parks] NTPC neighborhood: {len(parts[-1])} rows (geocoded)")
-    except Exception as e:
-        print(f"[green_parks] NTPC neighborhood source failed (will continue): {e}")
 
     if not parts:
         raise RuntimeError("green_parks: 所有資料源都失敗,終止 ETL")

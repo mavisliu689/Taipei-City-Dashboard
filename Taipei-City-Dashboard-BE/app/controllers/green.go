@@ -37,16 +37,15 @@ func (e *upstreamFetchError) Unwrap() error { return e.err }
 // === 外部資料源 URL ===
 
 const (
-	parksAPIURL                 = "https://parks.gov.taipei/parks/api/"
-	parksNtpcRiversideCSVURL    = "https://data.ntpc.gov.tw/api/datasets/c3867812-6188-4b0a-a487-03bb4d93238d/csv"
-	parksNtpcNeighborhoodCSVURL = "https://data.ntpc.gov.tw/api/datasets/5fe3a136-29cc-4695-a17e-6636a32c3342/csv"
-	restaurantsAPIURL           = "https://data.moenv.gov.tw/api/v2/gis_p_11?api_key=e75b1660-e564-4107-aad5-a8be1f905dd9&limit=1000&sort=ImportDate%20desc&format=XML"
-	hotelsAPIURL                = "https://data.moenv.gov.tw/api/v2/gp_p_43?api_key=e75b1660-e564-4107-aad5-a8be1f905dd9&limit=1000&sort=ImportDate%20desc&format=XML"
-	walkpathsCSVURL             = "https://data.taipei/api/dataset/b5726297-d172-4ba7-b5c4-31de38e184e1/resource/0d1d7db3-efc1-40d1-ad24-5a1a1f88e06b/download"
-	recycleTaipeiCSVURL         = "https://data.taipei/api/dataset/1acf38f3-1509-4cb1-898a-9b1d4f31a3af/resource/0263f0ce-403a-45ed-a407-c69285b6cad2/download"
-	recycleNewTaipeiCSVURL      = "https://data.ntpc.gov.tw/api/datasets/a381e1f4-86d0-4575-adb4-8d9b6a75e3c4/csv/file"
-	ubikeCSVURL                 = "https://data.ntpc.gov.tw/api/datasets/010e5b15-3823-4b20-b401-b1cf000550c5/csv/file"
-	ubikeTaipeiJSONURL          = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
+	parksAPIURL              = "https://parks.gov.taipei/parks/api/"
+	parksNtpcRiversideCSVURL = "https://data.ntpc.gov.tw/api/datasets/c3867812-6188-4b0a-a487-03bb4d93238d/csv"
+	restaurantsAPIURL        = "https://data.moenv.gov.tw/api/v2/gis_p_11?api_key=e75b1660-e564-4107-aad5-a8be1f905dd9&limit=1000&sort=ImportDate%20desc&format=XML"
+	hotelsAPIURL             = "https://data.moenv.gov.tw/api/v2/gp_p_43?api_key=e75b1660-e564-4107-aad5-a8be1f905dd9&limit=1000&sort=ImportDate%20desc&format=XML"
+	walkpathsCSVURL          = "https://data.taipei/api/dataset/b5726297-d172-4ba7-b5c4-31de38e184e1/resource/0d1d7db3-efc1-40d1-ad24-5a1a1f88e06b/download"
+	recycleTaipeiCSVURL      = "https://data.taipei/api/dataset/1acf38f3-1509-4cb1-898a-9b1d4f31a3af/resource/0263f0ce-403a-45ed-a407-c69285b6cad2/download"
+	recycleNewTaipeiCSVURL   = "https://data.ntpc.gov.tw/api/datasets/a381e1f4-86d0-4575-adb4-8d9b6a75e3c4/csv/file"
+	ubikeCSVURL              = "https://data.ntpc.gov.tw/api/datasets/010e5b15-3823-4b20-b401-b1cf000550c5/csv/file"
+	ubikeTaipeiJSONURL       = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
 )
 
 // bomChar 用 rune 構造,避免在原始碼中出現會讓 Go 編譯器拒絕的中段 BOM bytes
@@ -147,68 +146,22 @@ func fetchParksNtpcRiverside() ([]models.GreenPark, error) {
 	return parks, nil
 }
 
-// fetchParksNtpcNeighborhood 從新北市開放資料平台抓鄰里公園 CSV
-// (7 欄: seqno, name, area, address, management, localcallservice, areacode)。
-// 上游沒座標,BE 端不做 geocoding,lat/lng 留空字串;Airflow ETL 會在排程時補座標。
-func fetchParksNtpcNeighborhood() ([]models.GreenPark, error) {
-	client := &http.Client{Timeout: 60 * time.Second}
-	resp, err := client.Get(parksNtpcNeighborhoodCSVURL)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("parks NTPC neighborhood CSV returned status %d", resp.StatusCode)
-	}
-
-	csvReader := csv.NewReader(resp.Body)
-	csvReader.LazyQuotes = true
-	csvReader.FieldsPerRecord = -1
-
-	records, err := csvReader.ReadAll()
-	if err != nil {
-		return nil, err
-	}
-
-	parks := make([]models.GreenPark, 0, len(records))
-	for i, row := range records {
-		if i == 0 || len(row) < 7 {
-			continue
-		}
-		name := cleanField(row[1])
-		if name == "" {
-			continue
-		}
-		parks = append(parks, models.GreenPark{
-			SeqNo:    cleanField(row[0]),
-			Name:     name,
-			Type:     cleanField(row[2]), // area 區名
-			Location: cleanField(row[3]), // address
-			Unit:     cleanField(row[4]), // management 管理單位
-			Phone:    cleanField(row[5]), // localcallservice
-			City:     "新北市",
-		})
-	}
-	return parks, nil
-}
-
-// fetchParksFromAPI 並行抓三個來源、合併。
-// 容忍部分失敗:任一邊成功仍回該邊資料(失敗的那邊只 log);三邊都失敗才回 error。
+// fetchParksFromAPI 並行抓兩個來源、合併。
+// 容忍部分失敗:任一邊成功仍回該邊資料(失敗的那邊只 log);兩邊都失敗才回 error。
 func fetchParksFromAPI() ([]models.GreenPark, error) {
 	type result struct {
 		label string
 		parks []models.GreenPark
 		err   error
 	}
-	ch := make(chan result, 3)
+	ch := make(chan result, 2)
 	go func() { p, e := fetchParksTaipei(); ch <- result{"TPE", p, e} }()
 	go func() { p, e := fetchParksNtpcRiverside(); ch <- result{"NTPC-River", p, e} }()
-	go func() { p, e := fetchParksNtpcNeighborhood(); ch <- result{"NTPC-Hood", p, e} }()
 
 	combined := make([]models.GreenPark, 0)
 	var lastErr error
 	gotAny := false
-	for i := 0; i < 3; i++ {
+	for i := 0; i < 2; i++ {
 		r := <-ch
 		if r.err != nil {
 			lastErr = r.err
