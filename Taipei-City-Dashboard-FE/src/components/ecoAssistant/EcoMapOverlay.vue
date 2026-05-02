@@ -35,16 +35,16 @@ const POI_TYPE_COLORS = {
 	park: "#66bb6a",
 	restaurant: "#ff8a65",
 	hotel: "#ba68c8",
-	trail: "#26a69a",
 	recycle: "#fdd835",
+	ubike: "#26a69a",
 };
 
 const POI_TYPE_ICONS = {
 	park: "park",
 	restaurant: "restaurant",
 	hotel: "hotel",
-	trail: "hiking",
 	recycle: "recycling",
+	ubike: "pedal_bike",
 };
 
 // 由 store 提供的 visibility，與 RouteCard UI 共享

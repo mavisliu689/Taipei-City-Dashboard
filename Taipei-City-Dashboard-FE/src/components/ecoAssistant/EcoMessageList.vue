@@ -3,6 +3,7 @@
 import { useEcoAssistantStore } from "../../store/ecoAssistantStore.js";
 
 import CarbonBuddy from "./CarbonBuddy.vue";
+import EcoCarbonCard from "./EcoCarbonCard.vue";
 import EcoRouteCard from "./EcoRouteCard.vue";
 
 const props = defineProps({
@@ -72,6 +73,13 @@ function buddyStateFor(m, i) {
 				class="eco-msg__route-attachment"
 			>
 				<EcoRouteCard :result="m.routeData" />
+			</li>
+			<!-- 減碳卡片: injectCarbonReply 直接 push 結構化資料 -->
+			<li
+				v-if="m.role === 'assistant' && m.carbonData"
+				class="eco-msg__route-attachment"
+			>
+				<EcoCarbonCard :payload="m.carbonData" />
 			</li>
 		</template>
 	</ul>

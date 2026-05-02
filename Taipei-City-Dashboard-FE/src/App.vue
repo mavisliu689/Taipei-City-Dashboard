@@ -37,6 +37,7 @@ import ChatBotIcon from "./components/icons/ChatBotIcon.vue";
 import EcoAssistantButton from "./components/ecoAssistant/EcoAssistantButton.vue";
 import EcoAssistantPanel from "./components/ecoAssistant/EcoAssistantPanel.vue";
 import EcoMapOverlay from "./components/ecoAssistant/EcoMapOverlay.vue";
+import { KAOBEI_DASHBOARD_META } from "./composables/useKaobeiData";
 
 const authStore = useAuthStore();
 const dialogStore = useDialogStore();
@@ -78,6 +79,13 @@ const formattedTimeToUpdate = computed(() => {
 	const seconds = timeToUpdate.value % 60;
 	return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 });
+
+// 小碳寶（綠能助手）只在「靠北儀表板」的地圖頁顯示
+const showEcoAssistant = computed(
+	() =>
+		authStore.currentPath === "mapview" &&
+		contentStore.currentDashboard.index === KAOBEI_DASHBOARD_META.index,
+);
 
 function reloadChartData() {
 	if (!["dashboard", "mapview"].includes(authStore.currentPath)) return;
@@ -306,15 +314,15 @@ onBeforeUnmount(() => {
         </button>
       </div>
     </div>
-    <!-- Eco-route AI assistant: 只在 /mapview (有真實地圖可互動) 顯示 -->
-    <template v-if="authStore.currentPath === 'mapview'">
+    <!-- Eco-route AI assistant: 只在「靠北儀表板」的 /mapview 顯示 -->
+    <template v-if="showEcoAssistant">
       <div class="eco-assistant-container">
         <EcoAssistantPanel />
         <EcoAssistantButton />
       </div>
     </template>
     <!-- Behaviour-only: chat 產生的 marker 仍可拖曳, 不需要 picker UI -->
-    <EcoMapOverlay v-if="authStore.currentPath === 'mapview'" />
+    <EcoMapOverlay v-if="showEcoAssistant" />
   </div>
 </template>
 

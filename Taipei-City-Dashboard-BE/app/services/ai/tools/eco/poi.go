@@ -79,8 +79,13 @@ func FindEcoPOIs(pts []POI, opt FindOptions) []POI {
 		if len(catSet) > 0 && !catSet[p.Category] {
 			continue
 		}
-		if len(distSet) > 0 && !distSet[p.District] {
-			continue
+		if len(distSet) > 0 {
+			// park 的 p.District 存「里」名 (例「長安里」), 必須先還原成「區」
+			// 才能跟 LLM 傳入的 districts=["XX區"] 比對
+			resolved := resolveDistrict(p)
+			if resolved == "" || !distSet[resolved] {
+				continue
+			}
 		}
 		// 需要距離過濾或排序時，跳過缺座標的點
 		if (opt.Center != nil || opt.RadiusKm > 0) && (p.Lat == nil || p.Lng == nil) {

@@ -25,8 +25,8 @@ const CATEGORY_LABELS = {
 	park: "公園",
 	restaurant: "環保餐廳",
 	hotel: "環保旅館",
-	trail: "登山步道",
 	recycle: "回收站",
+	ubike: "YouBike 站點",
 };
 
 const items = computed(() => {

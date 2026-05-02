@@ -28,6 +28,7 @@ import {
 	setKaobeiCityFilter,
 	getKaobeiCityOptions,
 	KAOBEI_COMPONENT_INDICES,
+	KAOBEI_DASHBOARD_META,
 } from "../composables/useKaobeiData";
 
 const contentStore = useContentStore();
@@ -155,8 +156,11 @@ function popularBasicLayerGA(map_config) {
 <template>
   <div class="map">
     <div class="hide-if-mobile">
-      <!-- 0. 綠能助手結果 (AI 對話產生的路線/景點以圖層形式呈現) -->
-      <div class="map-charts eco-layer-mount">
+      <!-- 0. 綠能助手結果 (AI 對話產生的路線/景點以圖層形式呈現) — 限「靠北儀表板」 -->
+      <div
+        v-if="contentStore.currentDashboard.index === KAOBEI_DASHBOARD_META.index"
+        class="map-charts eco-layer-mount"
+      >
         <EcoLayerSection />
       </div>
       <!-- 1. If the dashboard is map-layers -->

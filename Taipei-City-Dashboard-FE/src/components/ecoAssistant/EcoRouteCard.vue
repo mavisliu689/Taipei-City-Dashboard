@@ -42,9 +42,9 @@ function poiIcon(type) {
 	switch (type) {
 		case "park": return "park";
 		case "restaurant": return "restaurant";
-		case "trail": return "hiking";
 		case "hotel": return "hotel";
 		case "recycle": return "recycling";
+		case "ubike": return "pedal_bike";
 		default: return "place";
 	}
 }

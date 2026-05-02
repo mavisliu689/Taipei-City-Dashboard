@@ -10,7 +10,11 @@
 		"build:test": "eslint . --fix && vite build --mode test",
 		"lint": "eslint . --fix",
 		"preview": "vite preview",
-		"build:kaobei": "node scripts/build-kaobei-geojson.mjs"
+		"build:kaobei": "node scripts/build-kaobei-geojson.mjs",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage",
+		"test:e2e": "playwright test"
 	},
 	"dependencies": {
 		"@deck.gl/core": "^9.0.9",
@@ -35,11 +39,18 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.0.0",
+		"@playwright/test": "^1.59.1",
 		"@vitejs/plugin-vue": "^5.0.3",
+		"@vitest/coverage-v8": "^1.6.1",
+		"@vue/test-utils": "^2.4.10",
 		"eslint-plugin-vue": "^9.20.1",
+		"globals": "^17.6.0",
+		"jsdom": "^24.1.3",
+		"msw": "^2.14.2",
 		"sass": "^1.70.0",
 		"vite": "^5.0.12",
-		"vite-plugin-compression": "^0.5.1"
+		"vite-plugin-compression": "^0.5.1",
+		"vitest": "^1.6.1"
 	},
 	"browserslist": [
 		"> 1%",
