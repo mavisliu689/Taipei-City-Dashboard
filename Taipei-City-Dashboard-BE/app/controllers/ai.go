@@ -58,7 +58,12 @@ func ChatWithTWCC(c *gin.Context) {
 		})
 		return
 	}
+	processChatInput(c, &input)
+}
 
+// processChatInput contains the shared chat logic used by both the generic
+// /ai/chat/twai endpoint and the security-hardened /ai/chat/eco wrapper.
+func processChatInput(c *gin.Context, input *AIChatInput) {
 	// 1. Session ID Management
 	sessionID := input.SessionID
 	if sessionID == "" {
@@ -138,6 +143,24 @@ func ChatWithTWCC(c *gin.Context) {
 			"provider":    logEntry.Provider,
 		},
 	})
+}
+
+// ChatWithEco is POST /api/v1/ai/chat/eco — security-hardened wrapper that
+// injects the eco-assistant system prompt + tools server-side. Frontend can
+// only send user / assistant message history; system + tool roles are
+// stripped to prevent prompt injection. Frontend cannot override prompts.
+func ChatWithEco(c *gin.Context) {
+	var input AIChatInput
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"status": "error",
+			"error_code": "INVALID_REQUEST",
+			"message": err.Error(),
+		})
+		return
+	}
+	enrichEcoInput(&input)
+	processChatInput(c, &input)
 }
 
 // ToServiceMessages converts input messages to langchaingo internal format

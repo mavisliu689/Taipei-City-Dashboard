@@ -41,6 +41,7 @@ func ConfigureRoutes() {
 	configureContributorRoutes()
 	configureChatLogRoutes()
 	configureAIRoutes()
+	configureGreenRoutes()
 }
 
 func configureAuthRoutes() {
@@ -204,6 +205,9 @@ func configureAIRoutes() {
 	aiRoutes.Use(middleware.IsLoggedIn())
 	{
 		aiRoutes.POST("/chat/twai", controllers.ChatWithTWCC)
+		aiRoutes.POST("/chat/eco", controllers.ChatWithEco)
+		aiRoutes.POST("/eco/plan-route", controllers.PlanEcoRoute)
+		aiRoutes.POST("/eco/find-pois", controllers.FindEcoPOIs)
 	}
 }
 
@@ -228,3 +232,15 @@ func configureAIRoutes() {
 // 		wsRoutes.PUT("/write/", controllers.WriteMap)
 // 	}
 // }
+
+func configureGreenRoutes() {
+	greenRoutes := RouterGroup.Group("/green")
+	greenRoutes.Use(middleware.LimitAPIRequests(global.ComponentLimitAPIRequestsTimes, global.LimitRequestsDuration))
+	greenRoutes.Use(middleware.LimitTotalRequests(global.ComponentLimitTotalRequestsTimes, global.LimitRequestsDuration))
+	greenRoutes.GET("/park", controllers.ListParks)
+	greenRoutes.GET("/restaurant", controllers.ListRestaurants)
+	greenRoutes.GET("/hotel", controllers.ListHotels)
+	greenRoutes.GET("/walkpath", controllers.ListWalkpaths)
+	greenRoutes.GET("/recycle", controllers.ListRecycles)
+	greenRoutes.GET("/ublike", controllers.ListUblikes)
+}

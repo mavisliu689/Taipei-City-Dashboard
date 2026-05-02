@@ -43,6 +43,17 @@ var migrateDBCmd = &cobra.Command{
 	},
 }
 
+// migrateDashboardDBCmd 為 DBDashboard 上由 ETL 寫入、BE 唯讀的資料表建立空表骨架。
+var migrateDashboardDBCmd = &cobra.Command{
+	Use:   "migrateDashboardDB",
+	Short: "create or update Dashboard DB Schema",
+	Long:  "Create or update Dashboard DB tables (e.g. green_*) used by ETL writes and BE reads.",
+	Run: func(_ *cobra.Command, _ []string) {
+		logs.Info("Start the process of migrate dashboard database schema.")
+		app.MigrateDashboardSchema()
+	},
+}
+
 // initDashboardDBCmd
 var initDashboardDBCmd = &cobra.Command{
 	Use:   "initDashboard",
@@ -57,6 +68,7 @@ var initDashboardDBCmd = &cobra.Command{
 // Execute initializes Cobra and adds the checkExpiredCmd to the root command.
 func Execute() {
 	rootCmd.AddCommand(migrateDBCmd)
+	rootCmd.AddCommand(migrateDashboardDBCmd)
 	rootCmd.AddCommand(initDashboardDBCmd)
 	// Execute the root command and handle any errors.
 	if err := rootCmd.Execute(); err != nil {

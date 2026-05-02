@@ -1,0 +1,1162 @@
+[
+  {
+    "id": "park-111",
+    "name": "黎富公園",
+    "category": "park",
+    "lat": 25.021009,
+    "lng": 121.556702,
+    "address": "富陽街92號前",
+    "city": "臺北市",
+    "district": "黎平里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "公園"
+    ],
+    "extra": {
+      "area_sqm": 900.0,
+      "managing_unit": "信義區公所",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-27239777#707",
+      "facilities": "組合遊具 / 彈跳床,搖滾盤,攀爬組,磨石滑梯,搖搖樂,翹翹板,組合遊具,搖搖樂,搖搖樂,組合遊具,攀爬組,磨石滑梯,翹翹板,鞦韆,組合遊具,翹翹板,木樁區,盪鞦韆,平衡木,彈跳床,搖搖樂,組合遊具,翹翹板,搖搖樂,攀爬組,旋轉飛輪,組合遊具,翹翹板,旋轉台,戲沙坑遊戲桌,磨石滑梯,磨石子滑梯,攀爬組,翹翹板,彈跳床,鳥巢鞦韆,戲沙坑,攀爬組,組合遊具,攀爬組,站立式搖動設備,組合遊具,翹翹板,小",
+      "transit": "捷運：麟光站再步行5分鐘\n公車：富陽街口站 18.72.282.292.556.568.680.685.902.1503.敦化幹線.和平幹線.市民小巴7",
+      "name_en": "Lifu Park"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-836",
+    "name": "安明綠地",
+    "category": "park",
+    "lat": 25.135616,
+    "lng": 121.502133,
+    "address": "光明路157巷2弄1號(七虎公園旁)",
+    "city": "臺北市",
+    "district": "長安里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "綠地"
+    ],
+    "extra": {
+      "area_sqm": 3776.0,
+      "managing_unit": "園藝工程隊(北區分隊)",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-28805456",
+      "facilities": "公園椅",
+      "transit": "公車:搭乘承德幹線於第一銀行站下車步行2分鐘。\n捷運:搭乘捷運淡水線至北投站下車步行約11分鐘。",
+      "name_en": "Anming Green"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-483",
+    "name": "東華公園",
+    "category": "park",
+    "lat": 25.12184,
+    "lng": 121.507072,
+    "address": "東華街二段300巷19號對面",
+    "city": "臺北市",
+    "district": "東華里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "公園"
+    ],
+    "extra": {
+      "area_sqm": 75820.0,
+      "managing_unit": "陽明山公園管理所",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-28832130",
+      "facilities": "雙人漫步機、雙人肩關節康復器、腰背按摩器、上肢牽引器 / 涼亭、公廁",
+      "transit": "捷運唭哩岸站一：216副, 216區, 223, 小21 往致遠三路步行約需15分鐘",
+      "name_en": "Donghua Park"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-257",
+    "name": "景華公園",
+    "category": "park",
+    "lat": 24.99519,
+    "lng": 121.543793,
+    "address": "文山區景華街55號",
+    "city": "臺北市",
+    "district": "景華里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "公園"
+    ],
+    "extra": {
+      "area_sqm": 16802.0,
+      "managing_unit": "南港公園管理所",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-27839452",
+      "facilities": "體健設施(含單槓)、三人壓腿器、單人漫步機、伸腰伸背器、雙人肩關節康復器、雙人大轉輪、運動椅、籃球場、跑道 / 消防防災塔組合遊具、旋轉飛輪、綜合鞦韆組 / 表演舞台、直飲台、水龍頭 / 彈跳床,搖滾盤,攀爬組,磨石滑梯,搖搖樂,翹翹板,組合遊具,搖搖樂,搖搖樂,組合遊具,攀爬組,磨石滑梯,翹翹板,鞦韆,組合遊具,翹翹板,木樁區,盪鞦韆,平衡木,彈跳床,搖搖樂,組合遊具,翹翹板,搖搖樂,攀爬組,旋",
+      "transit": "公車路線：搭284、673、棕2、復興幹線至景興國中。搭市民小巴5\r\n、棕2、673至景華公園",
+      "name_en": "Jing Hua Park"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-434",
+    "name": "新壽公園",
+    "category": "park",
+    "lat": 25.063311,
+    "lng": 121.529922,
+    "address": "吉林路301號對面",
+    "city": "臺北市",
+    "district": "新福里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "公園"
+    ],
+    "extra": {
+      "area_sqm": 1215.0,
+      "managing_unit": "中山區公所",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-25031369#538",
+      "facilities": "雙人滑步機、上肢牽引器、扭腰器、滑雪器 / 組合遊具 / 涼亭、直飲台、廁所 / 彈跳床,搖滾盤,攀爬組,磨石滑梯,搖搖樂,翹翹板,組合遊具,搖搖樂,搖搖樂,組合遊具,攀爬組,磨石滑梯,翹翹板,鞦韆,組合遊具,翹翹板,木樁區,盪鞦韆,平衡木,彈跳床,搖搖樂,組合遊具,翹翹板,搖搖樂,攀爬組,旋轉飛輪,組合遊具,翹翹板,旋轉台,戲沙坑遊戲桌,磨石滑梯,磨石子滑梯,攀爬組,翹翹板,彈跳床,鳥巢鞦韆,戲",
+      "transit": "公車路線：搭685、688、紅57、市民小巴9搭至新壽公園站下車，再步行抵達",
+      "name_en": "Xinshou Park"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-437",
+    "name": "伊通公園",
+    "category": "park",
+    "lat": 25.050159,
+    "lng": 121.534767,
+    "address": "松江路85巷內",
+    "city": "臺北市",
+    "district": "朱園里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "公園"
+    ],
+    "extra": {
+      "area_sqm": 4715.0,
+      "managing_unit": "中山區公所",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-25031369#538",
+      "facilities": "單槓、雙槓、滑步機、雙人大轉輪、上肢牽引器、肩關節復健器 / 組合遊具、蹺蹺板 / 涼亭、羽球場 / 彈跳床,搖滾盤,攀爬組,磨石滑梯,搖搖樂,翹翹板,組合遊具,搖搖樂,搖搖樂,組合遊具,攀爬組,磨石滑梯,翹翹板,鞦韆,組合遊具,翹翹板,木樁區,盪鞦韆,平衡木,彈跳床,搖搖樂,組合遊具,翹翹板,搖搖樂,攀爬組,旋轉飛輪,組合遊具,翹翹板,旋轉台,戲沙坑遊戲桌,磨石滑梯,磨石子滑梯,攀爬組,翹翹板,",
+      "transit": "捷運路線：搭松山新店線搭至松江南京站4號出口步行抵達",
+      "name_en": "Yitong Park"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-357",
+    "name": "力行三號公園",
+    "category": "park",
+    "lat": 25.08543,
+    "lng": 121.53669,
+    "address": "通北街146巷,力行新村附近",
+    "city": "臺北市",
+    "district": "劍潭里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "公園"
+    ],
+    "extra": {
+      "area_sqm": 6321.0,
+      "managing_unit": "中山區公所",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-25031369#538",
+      "facilities": "雙人大轉輪、上肢牽引器、單人滑雪機、腹肌板、伸腰背器、雙人漫步機、單槓 / 組合遊具 / 彈跳床,搖滾盤,攀爬組,磨石滑梯,搖搖樂,翹翹板,組合遊具,搖搖樂,搖搖樂,組合遊具,攀爬組,磨石滑梯,翹翹板,鞦韆,組合遊具,翹翹板,木樁區,盪鞦韆,平衡木,彈跳床,搖搖樂,組合遊具,翹翹板,搖搖樂,攀爬組,旋轉飛輪,組合遊具,翹翹板,旋轉台,戲沙坑遊戲桌,磨石滑梯,磨石子滑梯,攀爬組,翹翹板,彈跳床,鳥巢",
+      "transit": "公車路線：搭42、42區、棕13至力行新城站，再步行抵達",
+      "name_en": "Lixing 3 Park"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-440",
+    "name": "至德園公園",
+    "category": "park",
+    "lat": 25.0984,
+    "lng": 121.546402,
+    "address": "至善路2段113巷",
+    "city": "臺北市",
+    "district": "臨溪里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "公園"
+    ],
+    "extra": {
+      "area_sqm": 8722.0,
+      "managing_unit": "士林區公所",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-28826200",
+      "facilities": "",
+      "transit": "公車路線:搭小18、小19、小18區、棕13、255、255區、304至外雙溪(至善)",
+      "name_en": "Chih-te Garden"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-557",
+    "name": "博嘉公園",
+    "category": "park",
+    "lat": 25.00045,
+    "lng": 121.57354,
+    "address": "軍功路47巷55號之8旁",
+    "city": "臺北市",
+    "district": "博嘉里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "公園"
+    ],
+    "extra": {
+      "area_sqm": 1173.0,
+      "managing_unit": "文山區公所",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-29365522#383",
+      "facilities": "組合遊具、搖搖樂、蹺蹺板 / 水龍頭、涼亭 / 彈跳床,搖滾盤,攀爬組,磨石滑梯,搖搖樂,翹翹板,組合遊具,搖搖樂,搖搖樂,組合遊具,攀爬組,磨石滑梯,翹翹板,鞦韆,組合遊具,翹翹板,木樁區,盪鞦韆,平衡木,彈跳床,搖搖樂,組合遊具,翹翹板,搖搖樂,攀爬組,旋轉飛輪,組合遊具,翹翹板,旋轉台,戲沙坑遊戲桌,磨石滑梯,磨石子滑梯,攀爬組,翹翹板,彈跳床,鳥巢鞦韆,戲沙坑,攀爬組,組合遊具,攀爬組,站",
+      "transit": "捷運路線：搭文湖線至木柵站步行10分鐘。公車路線：搭251、251區、252、282副、556、647至博嘉國小。搭棕3、棕6、小30、282、556、1503至軍功新村。",
+      "name_en": "Bo Jia Park"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "park-76",
+    "name": "北投64號綠地",
+    "category": "park",
+    "lat": 25.126383,
+    "lng": 121.503285,
+    "address": "磺港路上(崇仁路一段131巷口至三合橋旁)",
+    "city": "臺北市",
+    "district": "清江里,奇岩里",
+    "tags": [
+      "公園",
+      "綠地",
+      "休憩點",
+      "綠地"
+    ],
+    "extra": {
+      "area_sqm": 4758.0,
+      "managing_unit": "園藝工程隊(北區分隊)",
+      "open_start": "00:00",
+      "open_end": "24:00",
+      "phone": "02-28805456",
+      "facilities": "",
+      "transit": "公車:搭乘223於忠義新村站下車步行4分鐘。\n捷運:搭乘捷運淡水線至奇岩站下車步行約5分鐘。",
+      "name_en": "Beitou Green No.64"
+    },
+    "source": "data.taipei / 臺北市公園基本資料 (128366)"
+  },
+  {
+    "id": "rest-4244",
+    "name": "橡園咖啡商行",
+    "category": "restaurant",
+    "lat": 23.476209,
+    "lng": 120.44454,
+    "address": "嘉義市西區西榮里新榮路124號1樓",
+    "city": "嘉義市",
+    "district": "",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "05-2271716#",
+      "mobile": "0912108771"
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-4741",
+    "name": "山野居蔬食-板橋大遠百",
+    "category": "restaurant",
+    "lat": 25.014065,
+    "lng": 121.467333,
+    "address": "新北市板橋區新站路28號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "-#",
+      "mobile": "0916970870"
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-4938",
+    "name": "大禾自助餐",
+    "category": "restaurant",
+    "lat": 24.210168,
+    "lng": 120.608827,
+    "address": "臺中市西屯區新科路1號(員工餐廳)",
+    "city": "臺中市",
+    "district": "西屯區",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "04-24634797#",
+      "mobile": "0965712039"
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-5515",
+    "name": "萬佳鄉-新展店",
+    "category": "restaurant",
+    "lat": 25.020955,
+    "lng": 121.414141,
+    "address": "新北市新莊區龍安路66-42號",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "02-29063230#",
+      "mobile": ""
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-4869",
+    "name": "Drink store水雲朵臺灣大學店",
+    "category": "restaurant",
+    "lat": 25.01734,
+    "lng": 121.539752,
+    "address": "臺北市大安區羅斯福路4段1號（台大第一學生活動中心餐廳）",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "02-23661686#",
+      "mobile": ""
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-5138",
+    "name": "武蔵野森珈琲Diner",
+    "category": "restaurant",
+    "lat": 25.042437,
+    "lng": 121.559507,
+    "address": "臺北市信義區忠孝東路四段515號",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "02-27686118#",
+      "mobile": ""
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-1305",
+    "name": "默丘麵包烘焙工作室Mouchu",
+    "category": "restaurant",
+    "lat": 23.49863,
+    "lng": 120.456366,
+    "address": "嘉義市東區義教街650號",
+    "city": "嘉義市",
+    "district": "",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "-#",
+      "mobile": "0937517832"
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-5366",
+    "name": "豚將拉麵五甲店",
+    "category": "restaurant",
+    "lat": 22.59822,
+    "lng": 120.335787,
+    "address": "高雄市鳳山區五甲二路430號",
+    "city": "高雄市",
+    "district": "鳳山區",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "07-7685103",
+      "mobile": "0931703176"
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-5368",
+    "name": "豚將拉麵太保店",
+    "category": "restaurant",
+    "lat": 23.453814,
+    "lng": 120.293764,
+    "address": "嘉義縣太保市安仁里棒球三街150號",
+    "city": "嘉義縣",
+    "district": "太保市",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "05-3623833",
+      "mobile": "0976115921"
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "rest-4863",
+    "name": "瑪哈印度餐廳東豐店",
+    "category": "restaurant",
+    "lat": 23.003213,
+    "lng": 120.221521,
+    "address": "臺南市北區東豐路247號",
+    "city": "臺南市",
+    "district": "",
+    "tags": [
+      "環保餐廳",
+      "低碳飲食"
+    ],
+    "extra": {
+      "phone": "06-2008855#",
+      "mobile": ""
+    },
+    "source": "data.moenv.gov.tw / 環保餐廳 (145036)"
+  },
+  {
+    "id": "hotel-55",
+    "name": "美墅館",
+    "category": "hotel",
+    "lat": 23.157443,
+    "lng": 120.318839,
+    "address": "臺南市善化區昌隆里9鄰東勢寮131之8號",
+    "city": "臺南市",
+    "district": "善化區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(09)20656908",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-59",
+    "name": "月光寶盒旅店",
+    "category": "hotel",
+    "lat": 22.618727,
+    "lng": 120.36319,
+    "address": "高雄市鳳山區黃埔新村東一巷80號",
+    "city": "高雄市",
+    "district": "鳳山區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(09)33631615",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-129",
+    "name": "墾丁夏都沙灘酒店",
+    "category": "hotel",
+    "lat": 21.94505,
+    "lng": 120.79231,
+    "address": "屏東縣恆春鎮墾丁路451號",
+    "city": "屏東縣",
+    "district": "恆春鎮",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0910)371823",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-154",
+    "name": "嘉義智選假日酒店",
+    "category": "hotel",
+    "lat": 23.481191,
+    "lng": 120.437933,
+    "address": "嘉義市西區中興路69號B2至13層樓",
+    "city": "嘉義市",
+    "district": "西區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2335899#801",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-6",
+    "name": "台北艾麗酒店",
+    "category": "hotel",
+    "lat": 25.038696,
+    "lng": 121.567393,
+    "address": "臺北市信義區松高路18號",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)66318031",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-143",
+    "name": "統一渡假村",
+    "category": "hotel",
+    "lat": 24.767086,
+    "lng": 121.217723,
+    "address": "新竹縣關西鎮金山里34號",
+    "city": "新竹縣",
+    "district": "關西鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)5478888",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-50",
+    "name": "海灣假日酒店",
+    "category": "hotel",
+    "lat": 25.004177,
+    "lng": 121.59858,
+    "address": "新北市深坑區北深路3段265號",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77035880",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-183",
+    "name": "承萬尊爵渡假酒店",
+    "category": "hotel",
+    "lat": 23.959941,
+    "lng": 120.975444,
+    "address": "南投縣埔里鎮樹人路131號",
+    "city": "南投縣",
+    "district": "埔里鎮",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅館"
+    ],
+    "extra": {
+      "phone": "(049)2995757#6316",
+      "village": "-",
+      "level": "銀級環保旅館"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-166",
+    "name": "星漾商旅(中清館)",
+    "category": "hotel",
+    "lat": 24.15414,
+    "lng": 120.677061,
+    "address": "臺中市北區中清路一段63號",
+    "city": "臺中市",
+    "district": "北區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)22083888",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-179",
+    "name": "晶泉丰旅",
+    "category": "hotel",
+    "lat": 24.828757,
+    "lng": 121.772817,
+    "address": "宜蘭縣礁溪鄉溫泉路67號2至10樓",
+    "city": "宜蘭縣",
+    "district": "礁溪鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9100000#6105",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "trail-140",
+    "name": "救千宮步道",
+    "category": "trail",
+    "lat": 24.9729,
+    "lng": 121.5789,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1029.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "樟山寺",
+      "end_point": "混元宮前高速公路涵洞下步道口",
+      "end_lat": 24.9756,
+      "end_lng": 121.5715,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-108",
+    "name": "象山自然步道",
+    "category": "trail",
+    "lat": 25.0297,
+    "lng": 121.5669,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 400.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "市療羽球場",
+      "end_point": "象山煙火平台",
+      "end_lat": 25.0307,
+      "end_lng": 121.5644,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-57",
+    "name": "貴子坑步道",
+    "category": "trail",
+    "lat": 25.1579,
+    "lng": 121.4938,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1330.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "親山步道打印台",
+      "end_point": "貴子坑露營場對面步道口",
+      "end_lat": 25.153,
+      "end_lng": 121.4905,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-115",
+    "name": "九五峰",
+    "category": "trail",
+    "lat": 25.0346,
+    "lng": 121.5861,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 2165.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "南港山鞍部",
+      "end_point": "姆指山山頂陵線",
+      "end_lat": 25.0231,
+      "end_lng": 121.5763,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-151",
+    "name": "中埔山榕樹步道",
+    "category": "trail",
+    "lat": 25.0099,
+    "lng": 121.5597,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 250.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "辛亥路四段21巷步道口",
+      "end_point": "石板鋪面終點",
+      "end_lat": 25.0111,
+      "end_lng": 121.5581,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-72",
+    "name": "軍艦岩步道",
+    "category": "trail",
+    "lat": 25.1237,
+    "lng": 121.5172,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 500.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "陽明醫學院步道口",
+      "end_point": "軍艦岩前叉路",
+      "end_lat": 25.1277,
+      "end_lng": 121.5188,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-2",
+    "name": "大溝溪溪畔步道",
+    "category": "trail",
+    "lat": 25.0887,
+    "lng": 121.5986,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 680.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "大湖山莊街底大溝溪公園涼亭外",
+      "end_point": "鯉魚山50m處相接",
+      "end_lat": 25.0927,
+      "end_lng": 121.5965,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-41",
+    "name": "大崙頭森林步道",
+    "category": "trail",
+    "lat": 25.1131,
+    "lng": 121.5817,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 833.0,
+      "duration_min": 90.0,
+      "level": "親子級",
+      "start_point": "碧溪產業道路1.7K森林步道口",
+      "end_point": "稜線步道(含入口意象範圍)",
+      "end_lat": 25.1106,
+      "end_lng": 121.5863,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-109",
+    "name": "石泉巖步道",
+    "category": "trail",
+    "lat": 25.0166,
+    "lng": 121.5561,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 289.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "石泉巖",
+      "end_point": "中正巖",
+      "end_lat": 25.0187,
+      "end_lng": 121.5569,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-88",
+    "name": "虎山溪步道",
+    "category": "trail",
+    "lat": 25.0382,
+    "lng": 121.5793,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 950.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "慈惠堂",
+      "end_point": "復興園",
+      "end_lat": 25.0328,
+      "end_lng": 121.5786,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區中安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區中安街85號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中安里",
+      "manager": "李謙國",
+      "phone": "(02)86600515",
+      "mobile": "",
+      "open_time": "每月第2、4週六 8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區田安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區田安里新北大道一段206巷1號對面",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "田安里",
+      "manager": "陳黃秀美",
+      "phone": "(02)89881235",
+      "mobile": "",
+      "open_time": "每週五 08:30~10:30(第2週五除外，每月第2週為週六 08:30~10:30)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區民治里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區得和路104巷14號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民治里",
+      "manager": "陳以樂",
+      "phone": "(02)29488321",
+      "mobile": "",
+      "open_time": "每週三13:00~14:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區五峯里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區北新路1段92號(文化劇場)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "五峯里",
+      "manager": "陳淑美",
+      "phone": "(02)29126264",
+      "mobile": "",
+      "open_time": "每月第1.3週四07:00~09:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區福星里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區四川路一段157巷9號(活動中心)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福星里",
+      "manager": "朱泰霖",
+      "phone": "(02)29510833",
+      "mobile": "",
+      "open_time": "每週五08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區聚安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區大觀路二段174巷147號旁空地",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "聚安里",
+      "manager": "蔡世川",
+      "phone": "(02)29600213",
+      "mobile": "",
+      "open_time": "每周六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區文林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區千歲街59號(文林國小懷恩樓川堂)",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "文林里",
+      "manager": "甘永昌",
+      "phone": "(02)26755252",
+      "mobile": "",
+      "open_time": "每月第1、3週六8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區華中里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區僑中一街102巷7弄1號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "華中里",
+      "manager": "黃榮煌",
+      "phone": "(02)29680023",
+      "mobile": "",
+      "open_time": "每周六08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區豐年里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區瓊泰路116號 (豐年國小後門)",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "豐年里",
+      "manager": "林麗華",
+      "phone": "(02)22012188",
+      "mobile": "",
+      "open_time": "每週五18:30~20:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區新德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新店區北新路一段351號旁(北新藝術廣場)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新德里",
+      "manager": "陳炳漢",
+      "phone": "(02)29110007",
+      "mobile": "",
+      "open_time": "每月第4周六上午07:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  }
+]
