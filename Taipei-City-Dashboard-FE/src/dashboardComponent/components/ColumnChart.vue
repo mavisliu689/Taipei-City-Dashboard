@@ -1,7 +1,7 @@
 <!-- Developed by Taipei Urban Intelligence Center 2023-2024-->
 
 <script setup>
-import { computed, ref, watch } from "vue";
+import { computed, ref } from "vue";
 import VueApexCharts from "vue3-apexcharts";
 
 const props = defineProps([
@@ -53,20 +53,6 @@ const avgLineLabel = computed(() => {
 	return al.label || `平均 ${al.value}`;
 });
 const showAvgCorner = computed(() => !!(averageLine.value && averageLine.value.value > 0));
-const initialAverageLineAnnotations = [];
-
-// ApexCharts API 即時更新 annotation（chartOptions.events 引用 captureChartCtx，必須先宣告）
-let apexChartCtx = null;
-const captureChartCtx = (ctx) => { apexChartCtx = ctx; };
-
-function applyAverageAnnotation(al) {
-	if (!apexChartCtx) return;
-	apexChartCtx.updateOptions({
-		annotations: {
-			yaxis: [],
-		},
-	});
-}
 
 const chartOptions = ref({
 	chart: {
@@ -88,13 +74,6 @@ const chartOptions = ref({
 			: {
 				show: false,
 			},
-		events: {
-			mounted: captureChartCtx, // chart 渲染完取 ApexCharts context，給 watch 用
-			updated: captureChartCtx, // ApexCharts 內部 redraw 後 ref 仍是同 instance（保險）
-		},
-	},
-	annotations: {
-		yaxis: initialAverageLineAnnotations,
 	},
 	colors: [...props.chart_config.color],
 	dataLabels: {
@@ -182,9 +161,6 @@ const chartOptions = ref({
 		type: "category",
 	},
 });
-
-// 切 dropdown 後 chart_config.average_line 被 mutation patch，watch 觸發即時呼叫 ApexCharts API 重畫
-watch(averageLine, applyAverageAnnotation, { deep: true });
 
 const selectedIndex = ref(null);
 

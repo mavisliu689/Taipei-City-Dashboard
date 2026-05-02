@@ -27,17 +27,15 @@ export const KAOBEI_CITY_OPTIONS = [
 	{ value: "newtaipei",   name: "新北市" },
 ];
 
-const KAOBEI_NEWTAIPEI_UNSUPPORTED = new Set([
-	"park_greenspace",
-	"hiking_trail",
-]);
+// 不支援新北市的組件（目前已無；保留 set 給未來可能的 BE 限制 component 用）
+const KAOBEI_NEWTAIPEI_UNSUPPORTED = new Set();
 
-// kaobei dashboard 6 組件的 index 集合（給 view 端 listener 判斷是否走 kaobei 分支）
+// kaobei dashboard 5 組件的 index 集合（給 view 端 listener 判斷是否走 kaobei 分支）
+// 親子步道 (hiking_trail) 已移除
 export const KAOBEI_COMPONENT_INDICES = new Set([
 	"park_greenspace",
 	"eco_restaurant",
 	"eco_hotel",
-	"hiking_trail",
 	"recycle_station",
 	"youbike_availability",
 ]);
@@ -47,7 +45,6 @@ const INDEX_TO_RESOURCE = {
 	park_greenspace:      "parks",
 	eco_restaurant:       "restaurant",
 	eco_hotel:            "hotel",
-	hiking_trail:         "walkpath",
 	recycle_station:      "recycle",
 	youbike_availability: "ubike",
 };
@@ -57,7 +54,6 @@ export const kaobeiCityFilters = reactive({
 	park_greenspace:      "metrotaipei",
 	eco_restaurant:       "metrotaipei",
 	eco_hotel:            "metrotaipei",
-	hiking_trail:         "metrotaipei",
 	recycle_station:      "metrotaipei",
 	youbike_availability: "metrotaipei",
 });
@@ -87,7 +83,6 @@ const ENDPOINTS = {
 	parks:      "/green/park",
 	restaurant: "/green/restaurant",
 	hotel:      "/green/hotel",
-	walkpath:   "/green/walkpath",
 	recycle:    "/green/recycle",
 	ubike:      "/green/ubike",
 };
@@ -124,16 +119,6 @@ function topN(map, n) {
 		.map(([x, y]) => ({ x, y }));
 }
 
-function countBy(rows, key) {
-	const counts = new Map();
-	for (const r of rows) {
-		const k = r[key];
-		if (!k) continue;
-		counts.set(k, (counts.get(k) || 0) + 1);
-	}
-	return counts;
-}
-
 function normalizeTaipeiCity(city) {
 	if (city === "台北市") return "臺北市";
 	return city;
@@ -148,6 +133,18 @@ function extractDistrict(address) {
 
 function getRestaurantDistrict(row) {
 	return extractDistrict(row?.address) || normalizeTaipeiCity(row?.city) || "未分類";
+}
+
+// 公園 row 行政區/里欄位 schema 因縣市而異：
+//   臺北市 row：pm_libie 有值（里名）、pm_type 通常空
+//   新北市 row：pm_libie 為空、pm_type 是行政區（如「八里區」）
+// fallback chain：pm_libie → pm_type → 從 pm_location address 抽
+function getParkDistrict(row) {
+	const libie = typeof row?.pm_libie === "string" ? row.pm_libie.trim() : "";
+	if (libie) return libie;
+	const type = typeof row?.pm_type === "string" ? row.pm_type.trim() : "";
+	if (type) return type;
+	return extractDistrict(row?.pm_location) || "";
 }
 
 // 把行政區字串尾字統一補「區」（BE 偶有「中正」/「中正區」混用）
@@ -168,7 +165,19 @@ function getHotelTown(row) {
 
 const TRANSFORMS = {
 	parks(rows) {
-		return [{ name: "公園數", data: topN(countBy(rows, "pm_libie"), 10) }];
+		// 跨雙北 row schema 用 fallback：臺北 pm_libie（里）/ 新北 pm_type（區）
+		const counts = new Map();
+		rows.forEach((row) => {
+			const k = getParkDistrict(row);
+			if (!k) return;
+			counts.set(k, (counts.get(k) || 0) + 1);
+		});
+		// total 用 BE 回的 row 數量（含 pm_libie/pm_type 都沒有的未歸類筆數），
+		// chart 上 top 10 仍只顯示能歸類的；wrapper 顯示 total_label 為「總合」
+		return {
+			series: [{ name: "公園數", data: topN(counts, 10) }],
+			configPatch: { total_label: `${rows.length} 座` },
+		};
 	},
 	restaurant(rows) {
 		const counts = new Map();
@@ -192,21 +201,6 @@ const TRANSFORMS = {
 			series: [{ name: "家數", data: sorted.map(([, y]) => y) }],
 			configPatch: { categories: sorted.map(([x]) => x) },
 		};
-	},
-	walkpath(rows) {
-		// 改 DistrictChart choropleth：依 district 計數
-		const counts = new Map();
-		rows.forEach((row) => {
-			const d = normalizeDistrict(row?.district);
-			if (!d) return;
-			counts.set(d, (counts.get(d) || 0) + 1);
-		});
-		return [
-			{
-				name: "步道數",
-				data: [...counts.entries()].map(([x, y]) => ({ x, y })),
-			},
-		];
 	},
 	recycle(rows) {
 		// ColumnChart + 平均線：avg 取「全資料集每行政區家數平均」（非僅 top 10）
@@ -318,20 +312,6 @@ const FC_BUILDERS = {
 			eco_hotel_silver: fc(buckets.silver),
 			eco_hotel_other: fc(buckets.other),
 		};
-	},
-	walkpath(rows) {
-		const features = [];
-		for (const r of rows) {
-			const sLng = num(r.start_longitude);
-			const sLat = num(r.start_latitude);
-			const eLng = num(r.end_longitude);
-			const eLat = num(r.end_latitude);
-			if ([sLng, sLat, eLng, eLat].some((v) => v === null)) continue;
-			features.push(
-				feature([[sLng, sLat], [eLng, eLat]], "LineString", { ...r }),
-			);
-		}
-		return { hiking_trail: fc(features) };
 	},
 	recycle(rows) {
 		const features = [];
@@ -528,52 +508,6 @@ function configBlueprints() {
 			history_config: null,
 		},
 		{
-			id: 90004,
-			index: "hiking_trail",
-			city: CITY,
-			name: "親子步道",
-			source: "Taipei Code Fest API",
-			short_desc: "依步道分級分布",
-			long_desc: "顯示雙北地區列管登山步道之空間分布與行政區密度，格式為行政區地圖（顏色深淺代表步道數量多寡）。資料來源為臺北市政府工務局公開資料，不定期更新。目前臺北市親山步道系統列管有 154 條步道，總長約 117 公里。可作為步道新闢規劃與市民親子戶外活動選擇之參考依據。圖示說明 🟩 深綠色區域：步道數量多，親山資源豐富。🟢 淺綠色區域：步道數量少，可考慮增設或串連既有路線。",
-			use_case: "臺北市與新北市的觀光傳播局及工務局可依據此可視化工具，掌握雙北地區親子步道的空間分布與各行政區資源密度。透過行政區地圖以顏色深淺直觀呈現步道集中程度，識別步道資源豐富的區域（如北投、士林）與相對匱乏的區域，作為規劃新闢步道、改善既有步道親子友善設施（如無障礙坡道、休憩涼亭、飲水設施）的決策依據；同時，家長可透過地圖快速查找住家周邊適合親子同行的步道路線，利用週末假日以步行方式親近自然、增進親子互動，取代開車前往遠方景點的高碳排休閒模式，將戶外運動融入低碳生活日常。",
-			links: ["https://data.gov.tw/dataset/145689"],
-			contributors: ["waiue0620", "Mhanto0712", "jadokao", "Lydia584285", "mavisliu689"],
-			time_from: "static",
-			time_to: "static",
-			update_freq: null,
-			update_freq_unit: null,
-			query_data: "hiking_trail",
-			chart_config: {
-				color: [CHART_TOKENS.green],
-				colorRamp: GREEN_RAMP,
-				types: ["DistrictChart", "BarChart"],
-				unit: "條",
-				categories: null,
-				showDataLabels: true, // 切到橫向長條圖時數字顯示在條柱右側外（同餐廳）
-			},
-			chart_data: null,
-			map_config: [
-				{
-					index: "hiking_trail",
-					type: "line",
-					title: "親子步道",
-					paint: { "line-color": CHART_TOKENS.green },
-					property: [
-						{ key: "route", name: "路線" },
-						{ key: "district", name: "行政區" },
-						{ key: "grade", name: "分級" },
-						{ key: "total_length_m", name: "長度(m)" },
-					],
-					size: null,
-					icon: null,
-					source: "geojson",
-					city: CITY,
-				},
-			],
-			map_filter: { mode: "byParam", byParam: { xParam: "district", yParam: null } },
-			history_config: null,
-		},
-		{
 			id: 90005,
 			index: "recycle_station",
 			city: CITY,
@@ -717,7 +651,6 @@ export const KAOBEI_LAYER_INDICES = new Set([
 	"eco_hotel_gold",
 	"eco_hotel_silver",
 	"eco_hotel_other",
-	"hiking_trail",
 	"recycle_station",
 	"youbike_availability",
 ]);
