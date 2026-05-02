@@ -139,6 +139,23 @@ func MigrateManagerSchema() {
 	}
 }
 
+// MigrateDashboardSchema 建立 / 更新 DBDashboard 上的唯讀資料表。
+// 這些表的實際資料寫入端是 Data Engineering 端 Airflow ETL,
+// 此處 AutoMigrate 主要負責先建立空表,讓 ETL 的 TRUNCATE+append 載入流程能順利執行。
+func MigrateDashboardSchema() {
+	if DBDashboard != nil {
+		DBDashboard.AutoMigrate(
+			&GreenPark{},
+			&GreenRestaurant{},
+			&GreenHotel{},
+			&GreenWalkpath{},
+			&GreenRecycle{},
+		)
+	} else {
+		panic("failed to get Dashboard database connection")
+	}
+}
+
 // ExecuteSQLFile executes SQL statements from a given file.
 func ExecuteSQLFile(db *sql.DB, filename string) error {
 	// Open the SQL file

@@ -1,0 +1,36 @@
+{
+    "dag_infos": {
+        "dag_id": "green_recycles",
+        "start_date": "2026-05-02",
+        "schedule_interval": "40 3 * * *",
+        "catchup": false,
+        "tags": ["green_recycles", "資源回收", "雙北"],
+        "description": "Taipei + New Taipei recycle points merged, written to DBDashboard.green_recycles for BE /api/v1/green/recycle.",
+        "default_args": {
+            "owner": "airflow",
+            "email": ["DEFAULT_EMAIL_LIST"],
+            "email_on_retry": false,
+            "email_on_failure": true,
+            "retries": 1,
+            "retry_delay": 60
+        },
+        "ready_data_db": "postgres_default",
+        "ready_data_default_table": "green_recycles",
+        "raw_data_db": "postgres_default",
+        "raw_data_table": "",
+        "load_behavior": "replace"
+    },
+    "data_infos": {
+        "name_cn": "雙北資源回收據點",
+        "airflow_update_freq": "daily",
+        "source": "data.taipei + data.ntpc.gov.tw",
+        "source_type": "Mixed CSV (Big5 + UTF-8 BOM)",
+        "source_dept": "臺北市環保局清潔隊 / 新北市環保局",
+        "gis_format": "Point",
+        "output_coordinate": "EPSG:4326",
+        "is_geometry": 0,
+        "dataset_description": "整合臺北市清潔隊資源回收站與新北市資源回收個體戶,以 source 欄位區分。",
+        "etl_description": "merge two CSVs with different encodings, normalize columns to BE green_recycles table.",
+        "sensitivity": "public"
+    }
+}

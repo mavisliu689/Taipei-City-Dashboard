@@ -1,0 +1,36 @@
+{
+    "dag_infos": {
+        "dag_id": "green_restaurants",
+        "start_date": "2026-05-02",
+        "schedule_interval": "10 3 * * *",
+        "catchup": false,
+        "tags": ["green_restaurants", "環保餐廳", "環境部"],
+        "description": "MOENV gis_p_11 environmental restaurants dataset, written to DBDashboard.green_restaurants for BE /api/v1/green/restaurant.",
+        "default_args": {
+            "owner": "airflow",
+            "email": ["DEFAULT_EMAIL_LIST"],
+            "email_on_retry": false,
+            "email_on_failure": true,
+            "retries": 1,
+            "retry_delay": 60
+        },
+        "ready_data_db": "postgres_default",
+        "ready_data_default_table": "green_restaurants",
+        "raw_data_db": "postgres_default",
+        "raw_data_table": "",
+        "load_behavior": "replace"
+    },
+    "data_infos": {
+        "name_cn": "環保餐廳",
+        "airflow_update_freq": "daily",
+        "source": "https://data.moenv.gov.tw/api/v2/gis_p_11",
+        "source_type": "MOENV Open Data API",
+        "source_dept": "環境部",
+        "gis_format": "Point",
+        "output_coordinate": "EPSG:4326",
+        "is_geometry": 0,
+        "dataset_description": "全國環保餐廳清單(取最新 1000 筆)。",
+        "etl_description": "fetch via get_moenv_json_data and align columns with BE green_restaurants table.",
+        "sensitivity": "public"
+    }
+}

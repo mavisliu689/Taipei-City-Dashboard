@@ -89,6 +89,12 @@ func MigrateManagerSchema() {
 	models.CloseConnects("MANAGER")
 }
 
+func MigrateDashboardSchema() {
+	models.ConnectToDatabases("DASHBOARD")
+	models.MigrateDashboardSchema()
+	models.CloseConnects("DASHBOARD")
+}
+
 func InsertDashbaordSampleData() {
 	models.ConnectToDatabases("DASHBOARD")
 	initial.InitSampleCityData()
