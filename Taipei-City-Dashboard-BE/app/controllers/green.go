@@ -32,7 +32,7 @@ func (e *upstreamFetchError) Unwrap() error { return e.err }
 //     優先讀 DBDashboard;若 DB 為空(例如 Airflow ETL 還沒跑過第一次),
 //     觸發 fallback:從外部 API/CSV 抓資料、寫回 DB、回應給 client。
 //     fallback 受 mutex 保護,並發進入時只會抓一次,後續請求會看到 DB 已有資料。
-//   - ublike: 30 秒 TTL 即時資料,維持外部抓取 + in-memory cache,不寫 DB。
+//   - ubike: 30 秒 TTL 即時資料,維持外部抓取 + in-memory cache,不寫 DB。
 
 // === 外部資料源 URL ===
 
@@ -542,7 +542,7 @@ func parseCityFilter(c *gin.Context) string {
 }
 
 // matchesCityFilter 判斷 city 欄位字串是否符合 filter,容忍「臺/台」字形差異與前後空白。
-// 給有 city/county 欄位的資料集(restaurant/hotel/recycle/ublike)使用。
+// 給有 city/county 欄位的資料集(restaurant/hotel/recycle/ubike)使用。
 func matchesCityFilter(cityField, filter string) bool {
 	switch filter {
 	case "origin":
@@ -660,9 +660,9 @@ func ListRecycles(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(filtered), "data": filtered})
 }
 
-// === ublike (DB-first + fallback fetch) ===
+// === ubike (DB-first + fallback fetch) ===
 //
-// ublike 跟其他 5 個 green endpoint 一致:優先讀 DB,DB 空才 fallback 抓兩個外部資料源
+// ubike 跟其他 5 個 green endpoint 一致:優先讀 DB,DB 空才 fallback 抓兩個外部資料源
 // (台北市 JSON + 新北市 CSV),寫回 DB 並回應。30 秒 in-memory cache 不再需要(DB 直讀夠快)。
 //
 // 寫入端用 active flag 過濾掉停用站點(active != "1" / 1 的不存)。
@@ -842,14 +842,14 @@ func ensureUbikesData() ([]models.GreenUbike, error) {
 }
 
 /*
-ListUblikes 從 DBDashboard 讀取 YouBike2.0 站點目錄(台北市 + 新北市,僅 active);
+ListUbikes 從 DBDashboard 讀取 YouBike2.0 站點目錄(台北市 + 新北市,僅 active);
 若 DB 為空則 fallback 到外部 API(台北 JSON + 新北 CSV)
-GET /api/v1/green/ublike
+GET /api/v1/green/ubike
 */
-func ListUblikes(c *gin.Context) {
+func ListUbikes(c *gin.Context) {
 	rows, err := ensureUbikesData()
 	if err != nil {
-		handleGreenError(c, "ListUblikes", err)
+		handleGreenError(c, "Listubikes", err)
 		return
 	}
 	filter := parseCityFilter(c)

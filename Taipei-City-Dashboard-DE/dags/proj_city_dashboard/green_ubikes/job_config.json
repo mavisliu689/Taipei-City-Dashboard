@@ -5,7 +5,7 @@
         "schedule_interval": "50 3 * * *",
         "catchup": false,
         "tags": ["green_ubikes", "YouBike2.0", "雙北"],
-        "description": "Taipei + New Taipei YouBike2.0 active station directory, written to DBDashboard.green_ubikes for BE /api/v1/green/ublike.",
+        "description": "Taipei + New Taipei YouBike2.0 active station directory, written to DBDashboard.green_ubikes for BE /api/v1/green/ubike.",
         "default_args": {
             "owner": "airflow",
             "email": ["DEFAULT_EMAIL_LIST"],
