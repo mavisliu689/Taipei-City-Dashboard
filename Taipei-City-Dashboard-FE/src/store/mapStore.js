@@ -48,7 +48,7 @@ import { marchingSquare } from "../assets/utilityFunctions/marchingSquare.js";
 import { voronoi } from "../assets/utilityFunctions/voronoi.js";
 import { calculateHaversineDistance } from "../assets/utilityFunctions/calculateHaversineDistance";
 import { AnimatedArcLayer } from "../assets/configs/mapbox/arcAnimate.js";
-import { getKaobeiGeoJson } from "../composables/useKaobeiData";
+import { getKaobeiGeoJson, KAOBEI_LAYER_INDICES } from "../composables/useKaobeiData";
 // 3D Mrt Map 相關 Utility Functions
 import { cutRouteSegment } from "../assets/utilityFunctions/getRouteForAnimation.js";
 import { interpolateAlongSegment } from "../assets/utilityFunctions/geometryUtils.js";
@@ -454,9 +454,9 @@ export const useMapStore = defineStore("map", {
 		},
 		// 2. Call an API to get the layer data
 		fetchLocalGeoJson(map_config) {
-			// 黑客松「靠北儀表板」：kaobei_* prefix 圖層只走 in-memory cache，
+			// 黑客松「靠北儀表板」：6 個組件圖層只走 in-memory cache，
 			// 不 fallback 到 /mapData/*.geojson（相關靜態檔已不存在）
-			if (map_config.index.startsWith("kaobei_")) {
+			if (KAOBEI_LAYER_INDICES.has(map_config.index)) {
 				const cached = getKaobeiGeoJson(map_config.index);
 				if (cached) {
 					this.addGeojsonSource(map_config, cached);

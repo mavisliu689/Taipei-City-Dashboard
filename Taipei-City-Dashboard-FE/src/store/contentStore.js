@@ -16,7 +16,7 @@ import { useDialogStore } from "./dialogStore";
 import { useAuthStore } from "./authStore";
 import { getComponentDataTimeframe } from "../assets/utilityFunctions/dataTimeframe";
 import { CityManager } from "../dashboardComponent/utilities/cityManager";
-import { loadKaobeiComponents, KAOBEI_DASHBOARD_META } from "../composables/useKaobeiData";
+import { loadKaobeiComponents, KAOBEI_DASHBOARD_META, KAOBEI_CONTRIBUTORS } from "../composables/useKaobeiData";
 
 export const useContentStore = defineStore("content", {
 	state: () => ({
@@ -264,6 +264,8 @@ export const useContentStore = defineStore("content", {
 
 			// 黑客松「靠北儀表板」：從 BE API 載入；await 後比對 index/city 守門避免 stale 賦值
 			if (this.currentDashboard.index === KAOBEI_DASHBOARD_META.index) {
+				// 注入 5 位協作者到 contributors map（idempotent;每次進 kaobei 都跑一次無副作用）
+				Object.assign(this.contributors, KAOBEI_CONTRIBUTORS);
 				const reqIndex = this.currentDashboard.index;
 				const reqCity = this.currentDashboard.city;
 				try {
@@ -744,6 +746,8 @@ export const useContentStore = defineStore("content", {
 						};
 					});
 					this.contributors = contributors;
+					// merge kaobei 5 位協作者(BE 沒這 5 人,從 FE 注入避免 race 後被覆蓋)
+					Object.assign(this.contributors, KAOBEI_CONTRIBUTORS);
 				})
 				.catch((e) => console.error(e));
 		},
