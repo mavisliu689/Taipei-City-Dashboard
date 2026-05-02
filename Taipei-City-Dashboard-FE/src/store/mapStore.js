@@ -2453,6 +2453,29 @@ export const useMapStore = defineStore("map", {
 				this.map.setLayoutProperty(mapLayerId, "visibility", "visible");
 			});
 		},
+		// 5. 「靠北儀表板」dropdown 切某組件 city 後，reload 該 component 對應的 kaobei layer 子集。
+		// useKaobeiData.refetchOne() 傳 layerIndicesSubset；無傳則 reload 全部 kaobei 層。
+		// 用 map.getSource(...).setData(newData) 原地換資料，避免 remove + re-add；
+		// 同時 setFilter null 清掉舊 city 的 byParam filter。
+		reloadKaobeiLayers(layerIndicesSubset) {
+			if (!this.map) return;
+			const subset = Array.isArray(layerIndicesSubset)
+				? new Set(layerIndicesSubset)
+				: null;
+			this.currentLayers.forEach((layerId) => {
+				const cfg = this.mapConfigs[layerId];
+				if (!cfg || !KAOBEI_LAYER_INDICES.has(cfg.index)) return;
+				if (subset && !subset.has(cfg.index)) return;
+				const newData = getKaobeiGeoJson(cfg.index);
+				const source = this.map.getSource(`${layerId}-source`);
+				if (source && newData) {
+					source.setData({ ...newData });
+				}
+				if (this.map.getLayer(layerId)) {
+					this.map.setFilter(layerId, null);
+				}
+			});
+		},
 
 		/* Find Closest Data Point */
 		// 1. Calculate the Haversine distance between two points

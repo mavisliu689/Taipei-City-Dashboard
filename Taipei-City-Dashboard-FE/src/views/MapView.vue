@@ -22,10 +22,23 @@ import MapContainer from "../components/map/MapContainer.vue";
 import MoreInfo from "../components/dialogs/MoreInfo.vue";
 import ReportIssue from "../components/dialogs/ReportIssue.vue";
 
+import {
+	getKaobeiCityFilter,
+	setKaobeiCityFilter,
+	getKaobeiCityOptions,
+	KAOBEI_COMPONENT_INDICES,
+} from "../composables/useKaobeiData";
+
 const contentStore = useContentStore();
 const dialogStore = useDialogStore();
 const mapStore = useMapStore();
 const route = useRoute();
+
+// 「靠北儀表板」6 組件共用 dropdown filter（雙北/臺北市）
+// — 與既有 cityManager（city 變體 swap component）互斥；走 in-memory state
+function isKaobeiComponent(item) {
+	return KAOBEI_COMPONENT_INDICES.has(item?.index);
+}
 
 const toggleOn = ref({
 	hasMap: [],
@@ -155,17 +168,21 @@ function popularBasicLayerGA(map_config) {
           :config="item"
           mode="halfmap"
           :info-btn="true"
-          :active-city="item.city"
+          :active-city="isKaobeiComponent(item) ? getKaobeiCityFilter(item.index) : item.city"
           :select-btn="true"
           :select-btn-disabled="
-            contentStore.cityManager.getSelectList(
-              contentStore.currentDashboard?.city,
-            ).length === 1
+            isKaobeiComponent(item)
+              ? false
+              : contentStore.cityManager.getSelectList(
+                contentStore.currentDashboard?.city,
+              ).length === 1
           "
           :select-btn-list="
-            contentStore.cityManager.getSelectList(
-              contentStore.currentDashboard?.city,
-            )
+            isKaobeiComponent(item)
+              ? getKaobeiCityOptions(item.index)
+              : contentStore.cityManager.getSelectList(
+                contentStore.currentDashboard?.city,
+              )
           "
           :city-tag="
             contentStore.cityManager.getTagList(
@@ -213,6 +230,10 @@ function popularBasicLayerGA(map_config) {
           "
           @change-city="
             (city) => {
+              if (isKaobeiComponent(item)) {
+                setKaobeiCityFilter(item.index, city);
+                return;
+              }
               const selectedData =
                 contentStore.cityDashboard.components.find(
                   (data) => {
@@ -261,24 +282,28 @@ function popularBasicLayerGA(map_config) {
           :config="item"
           mode="map"
           :info-btn="true"
-          :active-city="item.city"
+          :active-city="isKaobeiComponent(item) ? getKaobeiCityFilter(item.index) : item.city"
           :select-btn="true"
           :select-btn-disabled="
-            contentStore.cityManager.getSelectList(
-              contentStore.currentDashboard?.city,
-            ).length === 1 ||
-              contentStore.currentDashboardExcluded.components.filter(
-                (data) => data.index === item.index,
-              ).length === 0
+            isKaobeiComponent(item)
+              ? false
+              : contentStore.cityManager.getSelectList(
+                contentStore.currentDashboard?.city,
+              ).length === 1 ||
+                contentStore.currentDashboardExcluded.components.filter(
+                  (data) => data.index === item.index,
+                ).length === 0
           "
           :select-btn-list="
-            contentStore.currentDashboard?.city
-              ? contentStore.cityManager.getSelectList(
-                contentStore.currentDashboard?.city,
-              )
-              : contentStore.cityManager.getCities(
-                contentStore.cityManager.activeCities,
-              )
+            isKaobeiComponent(item)
+              ? getKaobeiCityOptions(item.index)
+              : (contentStore.currentDashboard?.city
+                ? contentStore.cityManager.getSelectList(
+                  contentStore.currentDashboard?.city,
+                )
+                : contentStore.cityManager.getCities(
+                  contentStore.cityManager.activeCities,
+                ))
           "
           :city-tag="
             contentStore.currentDashboard?.city
@@ -333,6 +358,10 @@ function popularBasicLayerGA(map_config) {
           "
           @change-city="
             (city) => {
+              if (isKaobeiComponent(item)) {
+                setKaobeiCityFilter(item.index, city);
+                return;
+              }
               const selectedData =
                 contentStore.cityDashboard.components.find(
                   (data) => {
@@ -376,17 +405,21 @@ function popularBasicLayerGA(map_config) {
           :config="item"
           mode="halfmap"
           :info-btn="true"
-          :active-city="item.city"
+          :active-city="isKaobeiComponent(item) ? getKaobeiCityFilter(item.index) : item.city"
           :select-btn="true"
           :select-btn-disabled="
-            contentStore.cityManager.getSelectList(
-              contentStore.currentDashboard?.city,
-            ).length === 1
+            isKaobeiComponent(item)
+              ? false
+              : contentStore.cityManager.getSelectList(
+                contentStore.currentDashboard?.city,
+              ).length === 1
           "
           :select-btn-list="
-            contentStore.cityManager.getSelectList(
-              contentStore.currentDashboard?.city,
-            )
+            isKaobeiComponent(item)
+              ? getKaobeiCityOptions(item.index)
+              : contentStore.cityManager.getSelectList(
+                contentStore.currentDashboard?.city,
+              )
           "
           :city-tag="
             contentStore.cityManager.getTagList(
@@ -434,6 +467,10 @@ function popularBasicLayerGA(map_config) {
           "
           @change-city="
             (city) => {
+              if (isKaobeiComponent(item)) {
+                setKaobeiCityFilter(item.index, city);
+                return;
+              }
               const selectedData = contentStore.allMapLayers.find(
                 (data) => {
                   if (
@@ -471,24 +508,28 @@ function popularBasicLayerGA(map_config) {
           :config="item"
           mode="map"
           :info-btn="true"
-          :active-city="item.city"
+          :active-city="isKaobeiComponent(item) ? getKaobeiCityFilter(item.index) : item.city"
           :select-btn="true"
           :select-btn-disabled="
-            contentStore.cityManager.getSelectList(
-              contentStore.currentDashboard?.city,
-            ).length === 1 ||
-              contentStore.currentDashboardExcluded.components.filter(
-                (data) => data.index === item.index,
-              ).length === 0
+            isKaobeiComponent(item)
+              ? false
+              : contentStore.cityManager.getSelectList(
+                contentStore.currentDashboard?.city,
+              ).length === 1 ||
+                contentStore.currentDashboardExcluded.components.filter(
+                  (data) => data.index === item.index,
+                ).length === 0
           "
           :select-btn-list="
-            contentStore.currentDashboard?.city
-              ? contentStore.cityManager.getSelectList(
-                contentStore.currentDashboard?.city,
-              )
-              : contentStore.cityManager.getCities(
-                contentStore.cityManager.activeCities,
-              )
+            isKaobeiComponent(item)
+              ? getKaobeiCityOptions(item.index)
+              : (contentStore.currentDashboard?.city
+                ? contentStore.cityManager.getSelectList(
+                  contentStore.currentDashboard?.city,
+                )
+                : contentStore.cityManager.getCities(
+                  contentStore.cityManager.activeCities,
+                ))
           "
           :city-tag="
             contentStore.currentDashboard?.city
@@ -511,6 +552,10 @@ function popularBasicLayerGA(map_config) {
           "
           @change-city="
             (city) => {
+              if (isKaobeiComponent(item)) {
+                setKaobeiCityFilter(item.index, city);
+                return;
+              }
               const selectedData =
                 contentStore.cityDashboard.components.find(
                   (data) => {

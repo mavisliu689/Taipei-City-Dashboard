@@ -2,11 +2,82 @@
 // 把 raw rows 轉成 ComponentConfig.chart_data + 各圖層的 FeatureCollection cache。
 // contentStore 在 setCurrentDashboardAllContent 偵測 index="kaobei" 時直接呼叫 loadKaobeiComponents()；
 // mapStore.fetchLocalGeoJson 對 kaobei_* prefix 的圖層呼叫 getKaobeiGeoJson(index) 從 cache 取。
+//
+// 雙北/臺北市 dropdown filter：每個組件「獨立」一個 city state，切某組件 dropdown
+// 只重打那一支 BE API（不從 cache 讀，永遠真實 fetch）。其他 5 個組件不動。
 
 import axios from "axios";
+import { reactive } from "vue";
 import { useAuthStore } from "../store/authStore";
 
 const CITY = "metrotaipei";
+
+// FE 內部值 → BE query string（BE 認得 both / origin / new）
+const CITY_TO_BE_QUERY = {
+	metrotaipei: "both",
+	taipei:      "origin",
+	newtaipei:   "new",
+};
+
+// Dropdown 選項（給 view 端 :select-btn-list 用）
+export const KAOBEI_CITY_OPTIONS = [
+	{ value: "metrotaipei", name: "雙北" },
+	{ value: "taipei",      name: "臺北市" },
+	{ value: "newtaipei",   name: "新北市" },
+];
+
+const KAOBEI_NEWTAIPEI_UNSUPPORTED = new Set([
+	"park_greenspace",
+	"hiking_trail",
+]);
+
+// kaobei dashboard 6 組件的 index 集合（給 view 端 listener 判斷是否走 kaobei 分支）
+export const KAOBEI_COMPONENT_INDICES = new Set([
+	"park_greenspace",
+	"eco_restaurant",
+	"eco_hotel",
+	"hiking_trail",
+	"recycle_station",
+	"youbike_availability",
+]);
+
+// component index ↔ resource key 對映（FETCH/TRANSFORMS/FC_BUILDERS 的 key）
+const INDEX_TO_RESOURCE = {
+	park_greenspace:      "parks",
+	eco_restaurant:       "restaurant",
+	eco_hotel:            "hotel",
+	hiking_trail:         "walkpath",
+	recycle_station:      "recycle",
+	youbike_availability: "ubike",
+};
+
+// 每個組件獨立的 city state（reactive object）。F5 / module 重載時重置回 metrotaipei
+export const kaobeiCityFilters = reactive({
+	park_greenspace:      "metrotaipei",
+	eco_restaurant:       "metrotaipei",
+	eco_hotel:            "metrotaipei",
+	hiking_trail:         "metrotaipei",
+	recycle_station:      "metrotaipei",
+	youbike_availability: "metrotaipei",
+});
+
+export function getKaobeiCityFilter(componentIndex) {
+	return kaobeiCityFilters[componentIndex];
+}
+
+export function getKaobeiCityOptions(componentIndex) {
+	if (KAOBEI_NEWTAIPEI_UNSUPPORTED.has(componentIndex)) {
+		return KAOBEI_CITY_OPTIONS.filter((option) => option.value !== "newtaipei");
+	}
+	return KAOBEI_CITY_OPTIONS;
+}
+
+// 進 kaobei dashboard 時呼叫：重置 6 個組件的 dropdown 回「雙北」（PLAN §6 改版需求）
+export function resetKaobeiCityFilters() {
+	Object.keys(kaobeiCityFilters).forEach((k) => {
+		kaobeiCityFilters[k] = "metrotaipei";
+	});
+}
 
 // 端點：baseURL = import.meta.env.VITE_API_URL（docker compose 下 = "/api/dev"），
 // vite proxy 會把 "/api/dev/..." 改寫成 "/api/v1/..." 後轉送 dashboard-be:8080；
@@ -20,15 +91,17 @@ const ENDPOINTS = {
 	ubike:      "/green/ublike", // BE 路徑 typo
 };
 
-// 全域 cache（module-scoped；route 切換時不清掉，下次切回來能立即顯示舊資料）
-const apiCache = new Map();      // key (parks/restaurant/...) → raw rows[]
-const geoJsonCache = new Map();  // map_config.index → FeatureCollection
+// geoJsonCache：map_config.index → FeatureCollection（覆寫成當前 city；不再 cache raw rows）
+const geoJsonCache = new Map();
 
-// 同時間只准一個 batch fetch；併發呼叫 share 同個 Promise
-let inflight = null;
+// per-component inflight：避免同一 component 連點 dropdown 時順序錯亂
+const inflightByIndex = new Map(); // componentIndex → Promise
+
+// 整體初次載入的 inflight（contentStore 進 kaobei dashboard 時用）
+let bulkInflight = null;
 
 // 用 raw axios（不走 src/router/axios.js 的 http），避免 401 強制登出 + 失敗時噴 notification 的 interceptor 副作用
-async function fetchGreenResource(resourcePath) {
+async function fetchGreenResource(resourcePath, cityFilter) {
 	const authStore = useAuthStore();
 	const baseURL = import.meta.env.VITE_API_URL || "";
 	const headers = authStore.token
@@ -36,6 +109,7 @@ async function fetchGreenResource(resourcePath) {
 		: {};
 	return axios.get(`${baseURL}${resourcePath}`, {
 		headers,
+		params: { city: CITY_TO_BE_QUERY[cityFilter] },
 		timeout: 10000,
 	});
 }
@@ -59,12 +133,33 @@ function countBy(rows, key) {
 	return counts;
 }
 
+function normalizeTaipeiCity(city) {
+	if (city === "台北市") return "臺北市";
+	return city;
+}
+
+function extractDistrict(address) {
+	const raw = typeof address === "string" ? address.trim() : "";
+	if (!raw) return "";
+	const match = raw.match(/(?:臺北市|台北市|新北市)([^0-9\s]{1,4}[區鎮市])/);
+	return match?.[1] || "";
+}
+
+function getRestaurantDistrict(row) {
+	return extractDistrict(row?.address) || normalizeTaipeiCity(row?.city) || "未分類";
+}
+
 const TRANSFORMS = {
 	parks(rows) {
 		return [{ name: "公園數", data: topN(countBy(rows, "pm_libie"), 10) }];
 	},
 	restaurant(rows) {
-		return [{ name: "店家數", data: topN(countBy(rows, "city"), 8) }];
+		const counts = new Map();
+		rows.forEach((row) => {
+			const district = getRestaurantDistrict(row);
+			counts.set(district, (counts.get(district) || 0) + 1);
+		});
+		return [{ name: "店家數", data: topN(counts, 8) }];
 	},
 	hotel(rows) {
 		const buckets = { 金級: 0, 銀級: 0, 其他: 0 };
@@ -93,22 +188,28 @@ const TRANSFORMS = {
 		return [{ name: "回收點數", data: topN(countBy(rows, "district"), 10) }];
 	},
 	ubike(rows) {
-		const totals = rows.reduce(
-			(acc, r) => {
-				if (r.active === false) return acc;
-				acc.stations += 1;
-				acc.bikes += Number(r.total_quantity) || 0;
-				acc.available += Number(r.available_bikes) || 0;
-				acc.spots += Number(r.available_spots) || 0;
+		const cityCounts = rows.reduce(
+			(acc, row) => {
+				if (isInactiveUbike(row)) return acc;
+				const city = normalizeTaipeiCity(row.city);
+				acc.total += 1;
+				if (city === "臺北市") acc.taipei += 1;
+				if (city === "新北市") acc.newTaipei += 1;
 				return acc;
 			},
-			{ stations: 0, bikes: 0, available: 0, spots: 0 },
+			{ total: 0, taipei: 0, newTaipei: 0 },
 		);
+		const districtCount = new Set(
+			rows
+				.filter((row) => !isInactiveUbike(row))
+				.map((row) => row.area)
+				.filter(Boolean),
+		).size;
 		return [
-			{ name: "總站數", data: [totals.stations],   icon: "站" },
-			{ name: "總車輛", data: [totals.bikes],      icon: "輛" },
-			{ name: "可借",   data: [totals.available],  icon: "輛" },
-			{ name: "可還",   data: [totals.spots],      icon: "位" },
+			{ name: "總站數", data: [cityCounts.total], icon: "站" },
+			{ name: "臺北市", data: [cityCounts.taipei], icon: "站" },
+			{ name: "新北市", data: [cityCounts.newTaipei], icon: "站" },
+			{ name: "行政區", data: [districtCount], icon: "區" },
 		];
 	},
 };
@@ -118,6 +219,14 @@ const TRANSFORMS = {
 function num(v) {
 	const n = typeof v === "number" ? v : parseFloat(v);
 	return Number.isFinite(n) ? n : null;
+}
+
+function isZeroCoordPair(lng, lat) {
+	return lng === 0 && lat === 0;
+}
+
+function isInactiveUbike(row) {
+	return row?.active === false || row?.active === 0 || row?.active === "0";
 }
 
 function fc(features) {
@@ -149,7 +258,11 @@ const FC_BUILDERS = {
 			const lng = num(r.longitude);
 			const lat = num(r.latitude);
 			if (lng === null || lat === null) continue;
-			features.push(feature([lng, lat], "Point", { ...r }));
+			features.push(feature([lng, lat], "Point", {
+				...r,
+				city: normalizeTaipeiCity(r.city),
+				district: getRestaurantDistrict(r),
+			}));
 		}
 		return { eco_restaurant: fc(features) };
 	},
@@ -191,6 +304,7 @@ const FC_BUILDERS = {
 			const lng = num(r.longitude);
 			const lat = num(r.latitude);
 			if (lng === null || lat === null) continue;
+			if (isZeroCoordPair(lng, lat)) continue;
 			features.push(feature([lng, lat], "Point", { ...r }));
 		}
 		return { recycle_station: fc(features) };
@@ -198,7 +312,7 @@ const FC_BUILDERS = {
 	ubike(rows) {
 		const features = [];
 		for (const r of rows) {
-			if (r.active === false) continue;
+			if (isInactiveUbike(r)) continue;
 			const lng = num(r.longitude);
 			const lat = num(r.latitude);
 			if (lng === null || lat === null) continue;
@@ -221,7 +335,7 @@ function configBlueprints() {
 			short_desc: "依里別排行 Top 10",
 			long_desc: "顯示雙北地區公園、綠地、廣場之面積分布，格式為各行政區綠地面積矩形圖。資料來源為臺北市政府工務局公園路燈工程管理處公開資料，不定期更新，反映各區綠地資源配置現況。可作為城市綠地規劃與市民休閒選擇之參考依據。🟩 深綠色區塊：該行政區綠地面積較大，綠地資源充足。🟢 淺綠色區塊：該行政區綠地面積較小，綠地資源相對不足。",
 			use_case: "臺北市與新北市的工務局及都市發展局可依據此可視化工具，快速掌握雙北地區公園綠地的面積分布與行政區差異。透過矩形圖直觀呈現各區綠地面積佔比，識別人均綠地低於 WHO 建議標準（9 平方公尺）的行政區，作為優先增設口袋公園或推動屋頂綠化政策的決策依據；同時，市民可透過地圖定位住家周邊的公園分布，選擇最近的綠地進行散步、運動或親子活動，減少開車前往遠處休閒場所的需求，以步行取代機動車輛，實踐日常低碳生活。",
-			links: ["https://data.gov.tw/dataset/128366", "https://data.gov.tw/dataset/124566"],
+				links: ["https://data.gov.tw/dataset/128366"],
 			contributors: ["waiue0620", "Mhanto0712", "jadokao", "Lydia584285", "mavisliu689"],
 			time_from: "static",
 			time_to: "static",
@@ -261,7 +375,7 @@ function configBlueprints() {
 			city: CITY,
 			name: "環保餐廳",
 			source: "Taipei Code Fest API",
-			short_desc: "依縣市分布 Top 8",
+			short_desc: "依行政區分布 Top 8",
 			long_desc: "顯示雙北地區環保餐廳之分布數量，格式為各行政區環保餐廳數量橫向長條圖。資料來源為環境部環境即時通地圖公開資料，不定期更新，反映各區綠色餐飲資源之推廣成效與覆蓋密度。可作為推動環保標章餐廳認證與市民綠色消費選擇之參考依據。",
 			use_case: "臺北市與新北市的環保局及觀光傳播局可依據此可視化工具，掌握雙北地區環保餐廳的分布密度與各行政區推廣成效。透過橫向長條圖比較各區環保餐廳數量，識別綠色餐飲資源不足的區域，作為推動環保標章餐廳認證輔導、擴大綠色消費網絡的政策參考；同時，市民外出用餐時可透過地圖快速搜尋住家或辦公室附近的環保餐廳，選擇減少一次性餐具、落實食材在地化與減少廚餘的餐飲場所，以日常飲食選擇支持永續經營的店家，讓每一餐都成為對環境友善的具體行動。",
 			links: ["https://data.gov.tw/dataset/145036"],
@@ -295,7 +409,7 @@ function configBlueprints() {
 					city: CITY,
 				},
 			],
-			map_filter: { mode: "byParam", byParam: { xParam: "city", yParam: null } },
+			map_filter: { mode: "byParam", byParam: { xParam: "district", yParam: null } },
 			history_config: null,
 		},
 		{
@@ -468,9 +582,9 @@ function configBlueprints() {
 			city: CITY,
 			name: "Ubike 站點",
 			source: "Taipei Code Fest API",
-			short_desc: "全市即時可借可還統計",
-			long_desc: "顯示雙北地區 YouBike 2.0 公共自行車的即時使用情況，格式為可借車輛數／全市車位數之圓餅圖。資料來源為臺北市政府交通局及新北市政府交通局公開資料，每 5-10 分鐘更新一次，反映即時的使用狀況與車輛調度情形。可作為交通監測與市民使用參考依據。圖示說明 🟡 黃色區段：2.0 在站車輛（可借）。⚡ 深黃色區段：2.0E 電輔車在站車輛。⬜ 灰色區段：空位（車輛已被借出使用中）。",
-			use_case: "臺北市與新北市的交通局及環保局可依據此可視化工具，即時掌握雙北地區 YouBike 公共自行車的車輛使用狀況與站點供需平衡。透過圓餅圖呈現在站車輛與空位的即時比例，監控尖峰時段的車輛調度需求，作為優化車輛調配策略、評估新增站點選址的數據依據；同時，市民出門前可快速確認附近站點是否有車可借，選擇以 YouBike 取代機車或汽車完成短程移動。每一趟 YouBike 騎乘相較於機車通勤可減少約 0.12 公斤碳排放，當全市每日超過十萬人次使用 YouBike，累積的減碳效益等同於數千棵樹木全年的碳吸收量，使公共自行車成為城市邁向淨零排放最具規模的低碳運輸基礎建設。",
+			short_desc: "雙北站點目錄統計",
+			long_desc: "顯示雙北地區 YouBike 2.0 站點目錄統計，內容包含總站數、臺北市站數、新北市站數與涵蓋行政區數。資料依目前後端提供之站點目錄資料計算，不包含即時可借可還數量。",
+			use_case: "臺北市與新北市的交通局及相關單位可依據此可視化工具，快速掌握雙北 YouBike 站點分布規模與行政區覆蓋情形，作為站點佈建、服務涵蓋率與跨市站點配置評估的基礎參考；市民也可透過地圖查看站點位置與基本資訊。",
 			links: ["https://data.gov.tw/dataset/137993", "https://data.gov.tw/dataset/146969"],
 			contributors: ["waiue0620", "Mhanto0712", "jadokao", "Lydia584285", "mavisliu689"],
 			time_from: "current",
@@ -487,16 +601,16 @@ function configBlueprints() {
 			chart_data: null,
 			map_config: [
 				{
-					index: "youbike_availability",
-					type: "symbol",
-					title: "Ubike 站點",
-					paint: {},
-					property: [
-						{ key: "name", name: "站名" },
-						{ key: "address", name: "地址" },
-						{ key: "available_bikes", name: "可借" },
-						{ key: "available_spots", name: "可還" },
-					],
+						index: "youbike_availability",
+						type: "symbol",
+						title: "Ubike 站點",
+						paint: {},
+						property: [
+							{ key: "name", name: "站名" },
+							{ key: "address", name: "地址" },
+							{ key: "city", name: "縣市" },
+							{ key: "area", name: "行政區" },
+						],
 					size: null,
 					icon: "youbike",
 					source: "geojson",
@@ -509,41 +623,40 @@ function configBlueprints() {
 	];
 }
 
-const FIXTURE_KEYS = ["parks", "restaurant", "hotel", "walkpath", "recycle", "ubike"];
-
 /* ───── public API ───── */
 
-async function runFetchAndTransform() {
-	const configs = configBlueprints();
-	const results = await Promise.allSettled(
-		FIXTURE_KEYS.map((k) => fetchGreenResource(ENDPOINTS[k])),
-	);
-	results.forEach((res, idx) => {
-		const key = FIXTURE_KEYS[idx];
-		if (res.status === "rejected") {
-			console.error(`[kaobei] ${key} API failed:`, res.reason?.message || res.reason);
-			configs[idx].chart_data = null; // wrapper 顯示「組件資料異常」
-			return;
+// 單一 resource 的 fetch + transform + FC build。永遠真打 BE，不讀 cache。
+// 回傳 { ok, chartData, layerIndices }，layerIndices 是這次寫進 geoJsonCache 的 layer keys。
+async function fetchAndTransformOne(resourceKey, cityFilter) {
+	let rows;
+	try {
+		const res = await fetchGreenResource(ENDPOINTS[resourceKey], cityFilter);
+		const data = res?.data?.data;
+		rows = Array.isArray(data) ? data : [];
+	} catch (err) {
+		console.error(`[kaobei] ${resourceKey} API failed:`, err?.message || err);
+		return { ok: false, chartData: null, layerIndices: [] };
+	}
+
+	let chartData = null;
+	try {
+		chartData = TRANSFORMS[resourceKey](rows);
+	} catch (err) {
+		console.error(`[kaobei] transform "${resourceKey}" failed`, err);
+	}
+
+	const layerIndices = [];
+	try {
+		const fcs = FC_BUILDERS[resourceKey](rows);
+		for (const [layerIndex, featureCol] of Object.entries(fcs)) {
+			geoJsonCache.set(layerIndex, featureCol);
+			layerIndices.push(layerIndex);
 		}
-		const rows = res.value?.data?.data;
-		const safeRows = Array.isArray(rows) ? rows : [];
-		apiCache.set(key, safeRows);
-		try {
-			configs[idx].chart_data = TRANSFORMS[key](safeRows);
-		} catch (err) {
-			console.error(`[kaobei] transform "${key}" failed`, err);
-			configs[idx].chart_data = null;
-		}
-		try {
-			const fcs = FC_BUILDERS[key](safeRows);
-			for (const [layerIndex, featureCol] of Object.entries(fcs)) {
-				geoJsonCache.set(layerIndex, featureCol);
-			}
-		} catch (err) {
-			console.error(`[kaobei] FeatureCollection build "${key}" failed`, err);
-		}
-	});
-	return configs;
+	} catch (err) {
+		console.error(`[kaobei] FeatureCollection build "${resourceKey}" failed`, err);
+	}
+
+	return { ok: true, chartData, layerIndices };
 }
 
 export const KAOBEI_LAYER_INDICES = new Set([
@@ -610,20 +723,92 @@ export const KAOBEI_CONTRIBUTORS = {
 	},
 };
 
+// 初次載入：對 6 個組件依各自 city 平行 fetch（contentStore 進 kaobei dashboard 時呼叫）
 export async function loadKaobeiComponents() {
-	if (inflight) return inflight;
-	inflight = (async () => {
+	if (bulkInflight) return bulkInflight;
+	bulkInflight = (async () => {
 		try {
-			return await runFetchAndTransform();
+			const configs = configBlueprints();
+			const indexToConfig = new Map(configs.map((c) => [c.index, c]));
+			await Promise.allSettled(
+				Object.entries(INDEX_TO_RESOURCE).map(async ([compIndex, resourceKey]) => {
+					const city = kaobeiCityFilters[compIndex];
+					const result = await fetchAndTransformOne(resourceKey, city);
+					const cfg = indexToConfig.get(compIndex);
+					if (cfg) cfg.chart_data = result.ok ? result.chartData : null;
+				}),
+			);
+			return configs;
 		} finally {
-			inflight = null;
+			bulkInflight = null;
 		}
 	})();
-	return inflight;
+	return bulkInflight;
 }
 
 export function getKaobeiGeoJson(index) {
 	return geoJsonCache.get(index);
+}
+
+// 切換單一組件 dropdown：set 該組件 city + 重打那一支 API + 更新 chart_data / map source
+// view 端 @change-city listener 對 kaobei 組件呼叫此函式（每個組件獨立、不影響其他 5 個）
+export async function setKaobeiCityFilter(componentIndex, value) {
+	if (!INDEX_TO_RESOURCE[componentIndex]) return;          // 防呆：非 kaobei 組件
+	if (!CITY_TO_BE_QUERY[value]) return;                     // 防呆：只接受 metrotaipei / taipei / newtaipei
+	if (value === kaobeiCityFilters[componentIndex]) return;  // 同值不動
+	kaobeiCityFilters[componentIndex] = value;
+	await refetchOne(componentIndex);
+}
+
+// 重打單一組件對應的 BE → 重組 chart_data + geoJsonCache → 通知 contentStore / mapStore
+async function refetchOne(componentIndex) {
+	// 同 component 連點時等前一次完（保序），避免後 fetch 早回造成新 city 結果被舊 city 蓋掉
+	const prev = inflightByIndex.get(componentIndex);
+	if (prev) {
+		try { await prev; } catch { /* swallow */ }
+	}
+
+	const reqCity = kaobeiCityFilters[componentIndex];
+	const resourceKey = INDEX_TO_RESOURCE[componentIndex];
+
+	const promise = fetchAndTransformOne(resourceKey, reqCity);
+	inflightByIndex.set(componentIndex, promise);
+
+	let result;
+	try {
+		result = await promise;
+	} finally {
+		if (inflightByIndex.get(componentIndex) === promise) {
+			inflightByIndex.delete(componentIndex);
+		}
+	}
+
+	// switch race 守門：await 完使用者已切回別的 city → 丟棄結果
+	if (kaobeiCityFilters[componentIndex] !== reqCity) return;
+
+	// Step A: in-place mutate component.chart_data。
+	// cityDashboard.components 的 element 是 Pinia reactive proxy；改 .chart_data 會觸發
+	// Pinia trap，DashboardComponent 接到 :config="item" prop 內部屬性變更，chart wrapper
+	// 接 :series="config.chart_data" 也跟著 redraw。
+	// currentDashboard.components 是 cityDashboard.components.filter() 出來的，element
+	// reference 與 cityDashboard 共用，**只動 cityDashboard 一邊就好**（兩邊都動會在
+	// scheduler flush race 中觸發 Vue internal "component is null" error）。
+	const { useContentStore } = await import("../store/contentStore");
+	const contentStore = useContentStore();
+	const arr = contentStore.cityDashboard?.components;
+	if (Array.isArray(arr) && result.ok && result.chartData !== null) {
+		const target = arr.find((c) => c.index === componentIndex);
+		if (target) {
+			target.chart_data = result.chartData;
+		}
+	}
+
+	// Step B: 通知 mapStore 只 reload 該 component 對應的 layer 子集（含清 byParam filter）
+	if (result.ok) {
+		const { useMapStore } = await import("../store/mapStore");
+		const mapStore = useMapStore();
+		mapStore.reloadKaobeiLayers(result.layerIndices);
+	}
 }
 
 // Sidebar 列表用（contentStore.setDashboards 會 push 到 metrotaipei 群組）

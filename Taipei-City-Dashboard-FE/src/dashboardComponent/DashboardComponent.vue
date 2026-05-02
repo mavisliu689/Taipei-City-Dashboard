@@ -98,7 +98,9 @@ const activeCity = computed({
 		if (toggleOn.value === false) {
 			toggleOn.value = true;
 		}
-		emits("changeCity", value);
+		setTimeout(() => {
+			emits("changeCity", value);
+		}, 0);
 	},
 });
 
@@ -421,7 +423,7 @@ function returnChartComponent(name, svg) {
       <component
         :is="returnChartComponent(item)"
         v-for="item in config.chart_config.types"
-        :key="`${props.config.index}-${item}-chart-${item.city}`"
+        :key="`${props.config.index}-${item}-chart-${props.activeCity || props.config.city}`"
         :active-chart="activeChart"
         :active-city="activeCity"
         :chart_config="config.chart_config"
