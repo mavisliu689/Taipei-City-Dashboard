@@ -68,8 +68,8 @@ def _green_ubikes(**kwargs):
         "area_en": tpe_raw.get("sareaen", "").map(_str),
         "address": tpe_raw.get("ar", "").map(_str),
         "address_en": tpe_raw.get("aren", "").map(_str),
-        "latitude": pd.to_numeric(tpe_raw.get("lat"), errors="coerce").fillna(0.0),
-        "longitude": pd.to_numeric(tpe_raw.get("lng"), errors="coerce").fillna(0.0),
+        "latitude": pd.to_numeric(tpe_raw.get("latitude"), errors="coerce").fillna(0.0),
+        "longitude": pd.to_numeric(tpe_raw.get("longitude"), errors="coerce").fillna(0.0),
     })
     tpe = tpe[tpe["sno"] != 0].copy()
 

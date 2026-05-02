@@ -637,16 +637,16 @@ func ListRecycles(c *gin.Context) {
 
 // taipeiUbikeRecord 對應台北市 YouBike2.0 JSON 的單筆紀錄(欄位皆為 string)
 type taipeiUbikeRecord struct {
-	Sno     string `json:"sno"`
-	Sna     string `json:"sna"`
-	Sarea   string `json:"sarea"`
-	Lat     string `json:"lat"`
-	Lng     string `json:"lng"`
-	Ar      string `json:"ar"`
-	Sareaen string `json:"sareaen"`
-	Snaen   string `json:"snaen"`
-	Aren    string `json:"aren"`
-	Act     string `json:"act"`
+	Sno       string  `json:"sno"`
+	Sna       string  `json:"sna"`
+	Sarea     string  `json:"sarea"`
+	Latitude  float64 `json:"latitude"`
+	Longitude float64 `json:"longitude"`
+	Ar        string  `json:"ar"`
+	Sareaen   string  `json:"sareaen"`
+	Snaen     string  `json:"snaen"`
+	Aren      string  `json:"aren"`
+	Act       string  `json:"act"`
 }
 
 var ubikesFallbackMutex sync.Mutex
@@ -739,8 +739,8 @@ func fetchUbikeTaipei() ([]models.GreenUbike, error) {
 			AreaEn:    cleanField(r.Sareaen),
 			Address:   cleanField(r.Ar),
 			AddressEn: cleanField(r.Aren),
-			Latitude:  parseFloatSafe(r.Lat),
-			Longitude: parseFloatSafe(r.Lng),
+			Latitude:  r.Latitude,
+			Longitude: r.Longitude,
 		})
 	}
 	return stations, nil
