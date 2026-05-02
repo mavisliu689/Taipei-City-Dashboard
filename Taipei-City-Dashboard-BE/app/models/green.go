@@ -1,6 +1,6 @@
 // Package models stores the models for the postgreSQL databases.
 //
-// green.go 定義 /api/v1/green 群組(park/restaurant/hotel/walkpath/recycle)的
+// green.go 定義 /api/v1/green 群組(park/restaurant/hotel/recycle)的
 // 唯讀資料模型。實際表結構由 Data Engineering 端 Airflow ETL 透過 pandas to_sql
 // 寫入 DBDashboard,此處 GORM struct 僅作為 BE 讀取與 AutoMigrate 對齊用。
 //
@@ -89,38 +89,6 @@ type GreenHotel struct {
 
 func (GreenHotel) TableName() string { return "green_hotels" }
 
-/* ----- Walkpath (data.taipei 登山步道) ----- */
-
-type GreenWalkpath struct {
-	ID                 int64   `json:"-" gorm:"column:id;autoincrement;primaryKey"`
-	SerialNumber       int     `json:"serial_number" gorm:"column:serial_number"`
-	District           string  `json:"district" gorm:"column:district;type:varchar"`
-	Route              string  `json:"route" gorm:"column:route;type:varchar"`
-	TotalLengthM       int     `json:"total_length_m" gorm:"column:total_length_m"`
-	OneWayMinutes      int     `json:"one_way_minutes" gorm:"column:one_way_minutes"`
-	Grade              string  `json:"grade" gorm:"column:grade;type:varchar"`
-	StartPoint         string  `json:"start_point" gorm:"column:start_point;type:varchar"`
-	StartLongitude     float64 `json:"start_longitude" gorm:"column:start_longitude"`
-	StartLatitude      float64 `json:"start_latitude" gorm:"column:start_latitude"`
-	StartIsStairs      bool    `json:"start_is_stairs" gorm:"column:start_is_stairs"`
-	EndPoint           string  `json:"end_point" gorm:"column:end_point;type:varchar"`
-	EndLongitude       float64 `json:"end_longitude" gorm:"column:end_longitude"`
-	EndLatitude        float64 `json:"end_latitude" gorm:"column:end_latitude"`
-	EndIsStairs        bool    `json:"end_is_stairs" gorm:"column:end_is_stairs"`
-	HasTrailGate       bool    `json:"has_trail_gate" gorm:"column:has_trail_gate"`
-	WheelchairFriendly bool    `json:"wheelchair_friendly" gorm:"column:wheelchair_friendly"`
-	WheelchairSlope    string  `json:"wheelchair_slope" gorm:"column:wheelchair_slope;type:varchar"`
-	WheelchairLengthM  int     `json:"wheelchair_length_m" gorm:"column:wheelchair_length_m"`
-	MobileSignal       string  `json:"mobile_signal" gorm:"column:mobile_signal;type:varchar"`
-	HasMobileToilet    bool    `json:"has_mobile_toilet" gorm:"column:has_mobile_toilet"`
-	ToiletLocation     string  `json:"toilet_location" gorm:"column:toilet_location;type:varchar"`
-	AccessibleToilet   bool    `json:"accessible_toilet" gorm:"column:accessible_toilet"`
-
-	UpdatedAt time.Time `json:"-" gorm:"column:updated_at;type:timestamp with time zone"`
-}
-
-func (GreenWalkpath) TableName() string { return "green_walkpaths" }
-
 /* ----- Recycle Point (北市 + 新北 整合) ----- */
 
 type GreenRecycle struct {
@@ -190,12 +158,6 @@ func GetAllGreenHotels() ([]GreenHotel, error) {
 	return rows, err
 }
 
-func GetAllGreenWalkpaths() ([]GreenWalkpath, error) {
-	rows := make([]GreenWalkpath, 0)
-	err := DBDashboard.Order("serial_number").Find(&rows).Error
-	return rows, err
-}
-
 func GetAllGreenRecycles() ([]GreenRecycle, error) {
 	rows := make([]GreenRecycle, 0)
 	err := DBDashboard.Order("id").Find(&rows).Error
@@ -250,20 +212,6 @@ func SaveGreenHotels(rows []GreenHotel) error {
 		rows[i].UpdatedAt = now
 	}
 	if err := DBDashboard.Exec("TRUNCATE TABLE green_hotels RESTART IDENTITY").Error; err != nil {
-		return err
-	}
-	return DBDashboard.Create(&rows).Error
-}
-
-func SaveGreenWalkpaths(rows []GreenWalkpath) error {
-	if len(rows) == 0 {
-		return nil
-	}
-	now := time.Now()
-	for i := range rows {
-		rows[i].UpdatedAt = now
-	}
-	if err := DBDashboard.Exec("TRUNCATE TABLE green_walkpaths RESTART IDENTITY").Error; err != nil {
 		return err
 	}
 	return DBDashboard.Create(&rows).Error

@@ -237,7 +237,6 @@ func configureGreenRoutes() {
 	greenRoutes.GET("/park", controllers.ListParks)
 	greenRoutes.GET("/restaurant", controllers.ListRestaurants)
 	greenRoutes.GET("/hotel", controllers.ListHotels)
-	greenRoutes.GET("/walkpath", controllers.ListWalkpaths)
 	greenRoutes.GET("/recycle", controllers.ListRecycles)
 	greenRoutes.GET("/ubike", controllers.ListUbikes)
 }

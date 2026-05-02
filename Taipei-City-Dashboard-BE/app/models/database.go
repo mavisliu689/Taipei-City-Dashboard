@@ -148,7 +148,6 @@ func MigrateDashboardSchema() {
 			&GreenPark{},
 			&GreenRestaurant{},
 			&GreenHotel{},
-			&GreenWalkpath{},
 			&GreenRecycle{},
 			&GreenUbike{},
 		)

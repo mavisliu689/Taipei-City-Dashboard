@@ -28,7 +28,7 @@ func (e *upstreamFetchError) Error() string { return e.err.Error() }
 func (e *upstreamFetchError) Unwrap() error { return e.err }
 
 // /api/v1/green 群組:
-//   - park / restaurant / hotel / walkpath / recycle:
+//   - park / restaurant / hotel / recycle:
 //     優先讀 DBDashboard;若 DB 為空(例如 Airflow ETL 還沒跑過第一次),
 //     觸發 fallback:從外部 API/CSV 抓資料、寫回 DB、回應給 client。
 //     fallback 受 mutex 保護,並發進入時只會抓一次,後續請求會看到 DB 已有資料。
@@ -41,7 +41,6 @@ const (
 	parksNtpcRiversideCSVURL = "https://data.ntpc.gov.tw/api/datasets/c3867812-6188-4b0a-a487-03bb4d93238d/csv"
 	restaurantsAPIURL        = "https://data.moenv.gov.tw/api/v2/gis_p_11?api_key=e75b1660-e564-4107-aad5-a8be1f905dd9&limit=1000&sort=ImportDate%20desc&format=XML"
 	hotelsAPIURL             = "https://data.moenv.gov.tw/api/v2/gp_p_43?api_key=e75b1660-e564-4107-aad5-a8be1f905dd9&limit=1000&sort=ImportDate%20desc&format=XML"
-	walkpathsCSVURL          = "https://data.taipei/api/dataset/b5726297-d172-4ba7-b5c4-31de38e184e1/resource/0d1d7db3-efc1-40d1-ad24-5a1a1f88e06b/download"
 	recycleTaipeiCSVURL      = "https://data.taipei/api/dataset/1acf38f3-1509-4cb1-898a-9b1d4f31a3af/resource/0263f0ce-403a-45ed-a407-c69285b6cad2/download"
 	recycleNewTaipeiCSVURL   = "https://data.ntpc.gov.tw/api/datasets/a381e1f4-86d0-4575-adb4-8d9b6a75e3c4/csv/file"
 	ubikeCSVURL              = "https://data.ntpc.gov.tw/api/datasets/010e5b15-3823-4b20-b401-b1cf000550c5/csv/file"
@@ -60,8 +59,6 @@ func cleanField(s string) string {
 	return strings.Join(fields, " ")
 }
 
-func parseTaiwanBool(s string) bool { return cleanField(s) == "是" }
-
 func parseIntSafe(s string) int {
 	n, _ := strconv.Atoi(cleanField(s))
 	return n
@@ -78,7 +75,6 @@ var (
 	parksFallbackMutex       sync.Mutex
 	restaurantsFallbackMutex sync.Mutex
 	hotelsFallbackMutex      sync.Mutex
-	walkpathsFallbackMutex   sync.Mutex
 	recyclesFallbackMutex    sync.Mutex
 )
 
@@ -248,67 +244,6 @@ func fetchHotelsFromAPI() ([]models.GreenHotel, error) {
 		}
 	}
 	return filtered, nil
-}
-
-// === Walkpaths fetcher ===
-
-func fetchWalkpathsFromAPI() ([]models.GreenWalkpath, error) {
-	client := &http.Client{Timeout: 60 * time.Second}
-	resp, err := client.Get(walkpathsCSVURL)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("walkpaths API returned status %d", resp.StatusCode)
-	}
-
-	// 上游 CSV 是 Big5 編碼,先解碼成 UTF-8 再交給 csv.Reader
-	utf8Reader := transform.NewReader(resp.Body, traditionalchinese.Big5.NewDecoder())
-	csvReader := csv.NewReader(utf8Reader)
-	csvReader.LazyQuotes = true
-	csvReader.FieldsPerRecord = -1
-
-	records, err := csvReader.ReadAll()
-	if err != nil {
-		return nil, err
-	}
-
-	walkpaths := make([]models.GreenWalkpath, 0, len(records))
-	for i, row := range records {
-		if i == 0 || len(row) < 22 {
-			continue
-		}
-		serial := parseIntSafe(row[0])
-		if serial == 0 {
-			continue
-		}
-		walkpaths = append(walkpaths, models.GreenWalkpath{
-			SerialNumber:       serial,
-			District:           cleanField(row[1]),
-			Route:              cleanField(row[2]),
-			TotalLengthM:       parseIntSafe(row[3]),
-			OneWayMinutes:      parseIntSafe(row[4]),
-			Grade:              cleanField(row[5]),
-			StartPoint:         cleanField(row[6]),
-			StartLongitude:     parseFloatSafe(row[7]),
-			StartLatitude:      parseFloatSafe(row[8]),
-			StartIsStairs:      parseTaiwanBool(row[9]),
-			EndPoint:           cleanField(row[10]),
-			EndLongitude:       parseFloatSafe(row[11]),
-			EndLatitude:        parseFloatSafe(row[12]),
-			EndIsStairs:        parseTaiwanBool(row[13]),
-			HasTrailGate:       parseTaiwanBool(row[14]),
-			WheelchairFriendly: parseTaiwanBool(row[15]),
-			WheelchairSlope:    cleanField(row[16]),
-			WheelchairLengthM:  parseIntSafe(row[17]),
-			MobileSignal:       cleanField(row[18]),
-			HasMobileToilet:    parseTaiwanBool(row[19]),
-			ToiletLocation:     cleanField(row[20]),
-			AccessibleToilet:   parseTaiwanBool(row[21]),
-		})
-	}
-	return walkpaths, nil
 }
 
 // === Recycles fetchers (兩個 CSV 合併) ===
@@ -534,36 +469,6 @@ func ensureHotelsData() ([]models.GreenHotel, error) {
 	return fetched, nil
 }
 
-func ensureWalkpathsData() ([]models.GreenWalkpath, error) {
-	rows, err := models.GetAllGreenWalkpaths()
-	if err != nil {
-		return nil, err
-	}
-	if len(rows) > 0 {
-		return rows, nil
-	}
-
-	walkpathsFallbackMutex.Lock()
-	defer walkpathsFallbackMutex.Unlock()
-
-	rows, err = models.GetAllGreenWalkpaths()
-	if err != nil {
-		return nil, err
-	}
-	if len(rows) > 0 {
-		return rows, nil
-	}
-
-	fetched, err := fetchWalkpathsFromAPI()
-	if err != nil {
-		return nil, &upstreamFetchError{err}
-	}
-	if saveErr := models.SaveGreenWalkpaths(fetched); saveErr != nil {
-		logs.FError("SaveGreenWalkpaths after fallback fetch failed: %v", saveErr)
-	}
-	return fetched, nil
-}
-
 func ensureRecyclesData() ([]models.GreenRecycle, error) {
 	rows, err := models.GetAllGreenRecycles()
 	if err != nil {
@@ -700,23 +605,6 @@ func ListHotels(c *gin.Context) {
 		}
 	}
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(filtered), "data": filtered})
-}
-
-/*
-ListWalkpaths 從 DBDashboard 讀取登山步道;若 DB 為空則 fallback 到 data.taipei CSV
-GET /api/v1/green/walkpath
-*/
-func ListWalkpaths(c *gin.Context) {
-	walkpaths, err := ensureWalkpathsData()
-	if err != nil {
-		handleGreenError(c, "ListWalkpaths", err)
-		return
-	}
-	// walkpaths 來源全部是台北市,city=new 則回空陣列
-	if parseCityFilter(c) == "new" {
-		walkpaths = make([]models.GreenWalkpath, 0)
-	}
-	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(walkpaths), "data": walkpaths})
 }
 
 /*
