@@ -141,6 +141,30 @@ type GreenRecycle struct {
 
 func (GreenRecycle) TableName() string { return "green_recycles" }
 
+/* ----- Ubike Station (台北市 JSON + 新北市 CSV 整合) ----- */
+//
+// 只保留站點身分/位置欄位,不存即時欄位(available_bikes/spots、updated_at mday、yb2/eyb)。
+// `active` 不存進 schema,而是在寫入端(ETL/fallback fetch)就把停用站點過濾掉。
+
+type GreenUbike struct {
+	ID        int64   `json:"-" gorm:"column:id;autoincrement;primaryKey"`
+	Sno       int     `json:"sno" gorm:"column:sno;index"`
+	Name      string  `json:"name" gorm:"column:name;type:varchar"`
+	NameEn    string  `json:"name_en" gorm:"column:name_en;type:varchar"`
+	City      string  `json:"city" gorm:"column:city;type:varchar"`
+	CityEn    string  `json:"city_en" gorm:"column:city_en;type:varchar"`
+	Area      string  `json:"area" gorm:"column:area;type:varchar"`
+	AreaEn    string  `json:"area_en" gorm:"column:area_en;type:varchar"`
+	Address   string  `json:"address" gorm:"column:address;type:varchar"`
+	AddressEn string  `json:"address_en" gorm:"column:address_en;type:varchar"`
+	Latitude  float64 `json:"latitude" gorm:"column:latitude"`
+	Longitude float64 `json:"longitude" gorm:"column:longitude"`
+
+	UpdatedAt time.Time `json:"-" gorm:"column:updated_at;type:timestamp with time zone"`
+}
+
+func (GreenUbike) TableName() string { return "green_ubikes" }
+
 /* ----- Handlers ----- */
 
 // 全部 GetAll* 都用 make 初始化空 slice,避免 0 筆時序列化成 JSON null。
@@ -171,6 +195,12 @@ func GetAllGreenWalkpaths() ([]GreenWalkpath, error) {
 
 func GetAllGreenRecycles() ([]GreenRecycle, error) {
 	rows := make([]GreenRecycle, 0)
+	err := DBDashboard.Order("id").Find(&rows).Error
+	return rows, err
+}
+
+func GetAllGreenUbikes() ([]GreenUbike, error) {
+	rows := make([]GreenUbike, 0)
 	err := DBDashboard.Order("id").Find(&rows).Error
 	return rows, err
 }
@@ -245,6 +275,20 @@ func SaveGreenRecycles(rows []GreenRecycle) error {
 		rows[i].UpdatedAt = now
 	}
 	if err := DBDashboard.Exec("TRUNCATE TABLE green_recycles RESTART IDENTITY").Error; err != nil {
+		return err
+	}
+	return DBDashboard.Create(&rows).Error
+}
+
+func SaveGreenUbikes(rows []GreenUbike) error {
+	if len(rows) == 0 {
+		return nil
+	}
+	now := time.Now()
+	for i := range rows {
+		rows[i].UpdatedAt = now
+	}
+	if err := DBDashboard.Exec("TRUNCATE TABLE green_ubikes RESTART IDENTITY").Error; err != nil {
 		return err
 	}
 	return DBDashboard.Create(&rows).Error

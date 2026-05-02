@@ -1,0 +1,36 @@
+{
+    "dag_infos": {
+        "dag_id": "green_ubikes",
+        "start_date": "2026-05-02",
+        "schedule_interval": "50 3 * * *",
+        "catchup": false,
+        "tags": ["green_ubikes", "YouBike2.0", "雙北"],
+        "description": "Taipei + New Taipei YouBike2.0 active station directory, written to DBDashboard.green_ubikes for BE /api/v1/green/ublike.",
+        "default_args": {
+            "owner": "airflow",
+            "email": ["DEFAULT_EMAIL_LIST"],
+            "email_on_retry": false,
+            "email_on_failure": true,
+            "retries": 1,
+            "retry_delay": 60
+        },
+        "ready_data_db": "postgres_default",
+        "ready_data_default_table": "green_ubikes",
+        "raw_data_db": "postgres_default",
+        "raw_data_table": "",
+        "load_behavior": "replace"
+    },
+    "data_infos": {
+        "name_cn": "雙北 YouBike2.0 站點目錄",
+        "airflow_update_freq": "daily",
+        "source": "tcgbusfs.blob (TPE) + data.ntpc.gov.tw (NTPC)",
+        "source_type": "Mixed JSON + CSV",
+        "source_dept": "臺北市政府交通局 / 新北市政府交通局",
+        "gis_format": "Point",
+        "output_coordinate": "EPSG:4326",
+        "is_geometry": 0,
+        "dataset_description": "整合台北市與新北市 YouBike2.0 站點識別與位置資訊;僅保留 active 站點,不含可用車數等即時欄位。",
+        "etl_description": "parallel fetch two sources, filter by active=1, merge, replace into green_ubikes.",
+        "sensitivity": "public"
+    }
+}

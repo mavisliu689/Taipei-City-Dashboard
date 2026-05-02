@@ -150,6 +150,7 @@ func MigrateDashboardSchema() {
 			&GreenHotel{},
 			&GreenWalkpath{},
 			&GreenRecycle{},
+			&GreenUbike{},
 		)
 	} else {
 		panic("failed to get Dashboard database connection")

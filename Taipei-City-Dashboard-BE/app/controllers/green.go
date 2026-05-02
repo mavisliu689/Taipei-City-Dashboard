@@ -44,6 +44,7 @@ const (
 	recycleTaipeiCSVURL    = "https://data.taipei/api/dataset/1acf38f3-1509-4cb1-898a-9b1d4f31a3af/resource/0263f0ce-403a-45ed-a407-c69285b6cad2/download"
 	recycleNewTaipeiCSVURL = "https://data.ntpc.gov.tw/api/datasets/a381e1f4-86d0-4575-adb4-8d9b6a75e3c4/csv/file"
 	ubikeCSVURL            = "https://data.ntpc.gov.tw/api/datasets/010e5b15-3823-4b20-b401-b1cf000550c5/csv/file"
+	ubikeTaipeiJSONURL     = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
 )
 
 // bomChar 用 rune 構造,避免在原始碼中出現會讓 Go 編譯器拒絕的中段 BOM bytes
@@ -600,68 +601,32 @@ func ListRecycles(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(points), "data": points})
 }
 
-// === ublike (即時資料,維持原邏輯) ===
+// === ublike (DB-first + fallback fetch) ===
+//
+// ublike 跟其他 5 個 green endpoint 一致:優先讀 DB,DB 空才 fallback 抓兩個外部資料源
+// (台北市 JSON + 新北市 CSV),寫回 DB 並回應。30 秒 in-memory cache 不再需要(DB 直讀夠快)。
+//
+// 寫入端用 active flag 過濾掉停用站點(active != "1" / 1 的不存)。
+// schema 不含即時欄位(available_bikes/spots/mday/yb2/eyb/total_quantity)。
 
-// UbikeStation 對應新北市 YouBike2.0 站點即時狀態的單筆紀錄
-type UbikeStation struct {
-	Sno            int     `json:"sno"`
-	Name           string  `json:"name"`
-	NameEn         string  `json:"name_en"`
-	City           string  `json:"city"`
-	CityEn         string  `json:"city_en"`
-	Area           string  `json:"area"`
-	AreaEn         string  `json:"area_en"`
-	Address        string  `json:"address"`
-	AddressEn      string  `json:"address_en"`
-	TotalQuantity  int     `json:"total_quantity"`
-	AvailableBikes int     `json:"available_bikes"`
-	AvailableSpots int     `json:"available_spots"`
-	Yb2Quantity    int     `json:"yb2_quantity"`
-	EybQuantity    int     `json:"eyb_quantity"`
-	Active         bool    `json:"active"`
-	Latitude       float64 `json:"latitude"`
-	Longitude      float64 `json:"longitude"`
-	UpdatedAt      string  `json:"updated_at"`
+// taipeiUbikeRecord 對應台北市 YouBike2.0 JSON 的單筆紀錄(欄位皆為 string)
+type taipeiUbikeRecord struct {
+	Sno     string `json:"sno"`
+	Sna     string `json:"sna"`
+	Sarea   string `json:"sarea"`
+	Lat     string `json:"lat"`
+	Lng     string `json:"lng"`
+	Ar      string `json:"ar"`
+	Sareaen string `json:"sareaen"`
+	Snaen   string `json:"snaen"`
+	Aren    string `json:"aren"`
+	Act     string `json:"act"`
 }
 
-var (
-	ubikeCache      []UbikeStation
-	ubikeCacheTime  time.Time
-	ubikeCacheMutex sync.Mutex
-	ubikeTzOnce     sync.Once
-	ubikeTz         *time.Location
-)
+var ubikesFallbackMutex sync.Mutex
 
-const ubikeCacheTTL = 30 * time.Second
-
-// parseUbikeMday 將 "20060102T150405" 字串以台北時區解析為 RFC3339,失敗時回傳原字串
-func parseUbikeMday(s string) string {
-	s = cleanField(s)
-	if s == "" {
-		return ""
-	}
-	ubikeTzOnce.Do(func() {
-		loc, err := time.LoadLocation("Asia/Taipei")
-		if err != nil {
-			loc = time.FixedZone("CST", 8*3600)
-		}
-		ubikeTz = loc
-	})
-	t, err := time.ParseInLocation("20060102T150405", s, ubikeTz)
-	if err != nil {
-		return s
-	}
-	return t.Format(time.RFC3339)
-}
-
-func fetchUbikeStations() ([]UbikeStation, error) {
-	ubikeCacheMutex.Lock()
-	defer ubikeCacheMutex.Unlock()
-
-	if ubikeCache != nil && time.Since(ubikeCacheTime) < ubikeCacheTTL {
-		return ubikeCache, nil
-	}
-
+// fetchUbikeNewTaipei 從新北市開放資料平台 CSV 抓 YouBike2.0 站點(僅保留 active=1)。
+func fetchUbikeNewTaipei() ([]models.GreenUbike, error) {
 	client := &http.Client{Timeout: 60 * time.Second}
 	resp, err := client.Get(ubikeCSVURL)
 	if err != nil {
@@ -669,7 +634,7 @@ func fetchUbikeStations() ([]UbikeStation, error) {
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("ubike API returned status %d", resp.StatusCode)
+		return nil, fmt.Errorf("ubike NTPC API returned status %d", resp.StatusCode)
 	}
 
 	csvReader := csv.NewReader(resp.Body)
@@ -681,7 +646,7 @@ func fetchUbikeStations() ([]UbikeStation, error) {
 		return nil, err
 	}
 
-	stations := make([]UbikeStation, 0, len(records))
+	stations := make([]models.GreenUbike, 0, len(records))
 	for i, row := range records {
 		if i == 0 || len(row) < 18 {
 			continue
@@ -690,43 +655,143 @@ func fetchUbikeStations() ([]UbikeStation, error) {
 		if sno == 0 {
 			continue
 		}
-		stations = append(stations, UbikeStation{
-			Sno:            sno,
-			City:           cleanField(row[0]),
-			CityEn:         cleanField(row[1]),
-			Name:           cleanField(row[2]),
-			Area:           cleanField(row[3]),
-			Address:        cleanField(row[4]),
-			NameEn:         cleanField(row[5]),
-			AreaEn:         cleanField(row[6]),
-			AddressEn:      cleanField(row[7]),
-			TotalQuantity:  parseIntSafe(row[9]),
-			AvailableBikes: parseIntSafe(row[10]),
-			UpdatedAt:      parseUbikeMday(row[11]),
-			Latitude:       parseFloatSafe(row[12]),
-			Longitude:      parseFloatSafe(row[13]),
-			AvailableSpots: parseIntSafe(row[14]),
-			Active:         parseIntSafe(row[15]) == 1,
-			Yb2Quantity:    parseIntSafe(row[16]),
-			EybQuantity:    parseIntSafe(row[17]),
+		// active 在 row[15],值為 "1" 表示啟用;非啟用直接過濾
+		if parseIntSafe(row[15]) != 1 {
+			continue
+		}
+		stations = append(stations, models.GreenUbike{
+			Sno:       sno,
+			City:      cleanField(row[0]),
+			CityEn:    cleanField(row[1]),
+			Name:      cleanField(row[2]),
+			Area:      cleanField(row[3]),
+			Address:   cleanField(row[4]),
+			NameEn:    cleanField(row[5]),
+			AreaEn:    cleanField(row[6]),
+			AddressEn: cleanField(row[7]),
+			Latitude:  parseFloatSafe(row[12]),
+			Longitude: parseFloatSafe(row[13]),
 		})
 	}
-
-	ubikeCache = stations
-	ubikeCacheTime = time.Now()
 	return stations, nil
 }
 
+// fetchUbikeTaipei 從臺北市政府 tcgbusfs blob 抓 YouBike2.0 JSON(僅保留 act=1)。
+func fetchUbikeTaipei() ([]models.GreenUbike, error) {
+	client := &http.Client{Timeout: 60 * time.Second}
+	resp, err := client.Get(ubikeTaipeiJSONURL)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("ubike TPE API returned status %d", resp.StatusCode)
+	}
+
+	var records []taipeiUbikeRecord
+	if err := json.NewDecoder(resp.Body).Decode(&records); err != nil {
+		return nil, err
+	}
+
+	stations := make([]models.GreenUbike, 0, len(records))
+	for _, r := range records {
+		sno := parseIntSafe(r.Sno)
+		if sno == 0 {
+			continue
+		}
+		// act 在 JSON 中為 string "1" 表示啟用
+		if parseIntSafe(r.Act) != 1 {
+			continue
+		}
+		stations = append(stations, models.GreenUbike{
+			Sno:       sno,
+			City:      "臺北市",
+			CityEn:    "Taipei City",
+			Name:      cleanField(r.Sna),
+			NameEn:    cleanField(r.Snaen),
+			Area:      cleanField(r.Sarea),
+			AreaEn:    cleanField(r.Sareaen),
+			Address:   cleanField(r.Ar),
+			AddressEn: cleanField(r.Aren),
+			Latitude:  parseFloatSafe(r.Lat),
+			Longitude: parseFloatSafe(r.Lng),
+		})
+	}
+	return stations, nil
+}
+
+// fetchUbikesFromAPI 並行抓台北市 + 新北市,合併後回傳。
+// 容忍部分失敗:有任一邊成功仍回該邊資料(失敗的那邊只 log);兩邊都失敗才回 error。
+func fetchUbikesFromAPI() ([]models.GreenUbike, error) {
+	type result struct {
+		label    string
+		stations []models.GreenUbike
+		err      error
+	}
+	ch := make(chan result, 2)
+	go func() { s, e := fetchUbikeNewTaipei(); ch <- result{"NTPC", s, e} }()
+	go func() { s, e := fetchUbikeTaipei(); ch <- result{"TPE", s, e} }()
+
+	combined := make([]models.GreenUbike, 0, 3000)
+	var lastErr error
+	gotAny := false
+	for i := 0; i < 2; i++ {
+		r := <-ch
+		if r.err != nil {
+			lastErr = r.err
+			logs.FError("ubike %s fetch failed: %v", r.label, r.err)
+			continue
+		}
+		gotAny = true
+		combined = append(combined, r.stations...)
+	}
+	if !gotAny {
+		return nil, lastErr
+	}
+	return combined, nil
+}
+
+// ensureUbikesData DB 優先,空則 fallback fetch + save(double-checked locking)。
+func ensureUbikesData() ([]models.GreenUbike, error) {
+	rows, err := models.GetAllGreenUbikes()
+	if err != nil {
+		return nil, err
+	}
+	if len(rows) > 0 {
+		return rows, nil
+	}
+
+	ubikesFallbackMutex.Lock()
+	defer ubikesFallbackMutex.Unlock()
+
+	rows, err = models.GetAllGreenUbikes()
+	if err != nil {
+		return nil, err
+	}
+	if len(rows) > 0 {
+		return rows, nil
+	}
+
+	fetched, err := fetchUbikesFromAPI()
+	if err != nil {
+		return nil, &upstreamFetchError{err}
+	}
+	if saveErr := models.SaveGreenUbikes(fetched); saveErr != nil {
+		logs.FError("SaveGreenUbikes after fallback fetch failed: %v", saveErr)
+	}
+	return fetched, nil
+}
+
 /*
-ListUblikes 從 data.ntpc.gov.tw 取得新北市 YouBike2.0 站點即時資料(30 秒 cache)
+ListUblikes 從 DBDashboard 讀取 YouBike2.0 站點目錄(台北市 + 新北市,僅 active);
+若 DB 為空則 fallback 到外部 API(台北 JSON + 新北 CSV)
 GET /api/v1/green/ublike
 */
 func ListUblikes(c *gin.Context) {
-	stations, err := fetchUbikeStations()
+	rows, err := ensureUbikesData()
 	if err != nil {
-		logs.FError("ListUblikes upstream fetch failed: %v", err)
-		c.JSON(http.StatusBadGateway, gin.H{"status": "error", "message": "upstream data source unavailable"})
+		handleGreenError(c, "ListUblikes", err)
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(stations), "data": stations})
+	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(rows), "data": rows})
 }
