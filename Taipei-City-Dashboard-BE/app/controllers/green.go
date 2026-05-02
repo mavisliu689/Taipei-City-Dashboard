@@ -107,6 +107,13 @@ type restaurantsXMLWrap struct {
 	Data    []models.GreenRestaurant `xml:"data"`
 }
 
+// isTaipeiOrNewTaipei 判斷 city 字串是否屬於台北市或新北市,
+// 容忍前後空白與「臺/台」的字形差異。
+func isTaipeiOrNewTaipei(city string) bool {
+	s := strings.TrimSpace(city)
+	return s == "臺北市" || s == "台北市" || s == "新北市"
+}
+
 func fetchRestaurantsFromAPI() ([]models.GreenRestaurant, error) {
 	client := &http.Client{Timeout: 30 * time.Second}
 	resp, err := client.Get(restaurantsAPIURL)
@@ -122,10 +129,15 @@ func fetchRestaurantsFromAPI() ([]models.GreenRestaurant, error) {
 	if err := xml.NewDecoder(resp.Body).Decode(&parsed); err != nil {
 		return nil, err
 	}
-	if parsed.Data == nil {
-		parsed.Data = make([]models.GreenRestaurant, 0)
+
+	// 上游含全國資料,只保留台北市/新北市
+	filtered := make([]models.GreenRestaurant, 0, len(parsed.Data))
+	for _, r := range parsed.Data {
+		if isTaipeiOrNewTaipei(r.City) {
+			filtered = append(filtered, r)
+		}
 	}
-	return parsed.Data, nil
+	return filtered, nil
 }
 
 // === Hotels fetcher ===
@@ -150,10 +162,15 @@ func fetchHotelsFromAPI() ([]models.GreenHotel, error) {
 	if err := xml.NewDecoder(resp.Body).Decode(&parsed); err != nil {
 		return nil, err
 	}
-	if parsed.Data == nil {
-		parsed.Data = make([]models.GreenHotel, 0)
+
+	// 上游含全國資料,只保留台北市/新北市(此資料集縣市欄位叫 county)
+	filtered := make([]models.GreenHotel, 0, len(parsed.Data))
+	for _, h := range parsed.Data {
+		if isTaipeiOrNewTaipei(h.County) {
+			filtered = append(filtered, h)
+		}
 	}
-	return parsed.Data, nil
+	return filtered, nil
 }
 
 // === Walkpaths fetcher ===

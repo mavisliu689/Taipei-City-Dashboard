@@ -41,6 +41,11 @@ def _green_restaurants(**kwargs):
     df = raw_df[target_cols].copy()
     for c in target_cols:
         df[c] = df[c].fillna("").astype(str).str.replace(r"\s+", " ", regex=True).str.strip()
+
+    # 上游含全國資料,只保留台北市/新北市(容忍臺/台 字形差異)
+    target_cities = {"臺北市", "台北市", "新北市"}
+    df = df[df["city"].isin(target_cities)].copy()
+
     df["updated_at"] = get_tpe_now_time()
 
     # === Load ===

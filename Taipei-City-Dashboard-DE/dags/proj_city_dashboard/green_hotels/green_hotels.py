@@ -42,6 +42,11 @@ def _green_hotels(**kwargs):
     df = raw_df[target_cols].copy()
     for c in target_cols:
         df[c] = df[c].fillna("").astype(str).str.replace(r"\s+", " ", regex=True).str.strip()
+
+    # 上游含全國資料,只保留台北市/新北市(此資料集縣市欄位叫 county)
+    target_counties = {"臺北市", "台北市", "新北市"}
+    df = df[df["county"].isin(target_counties)].copy()
+
     df["updated_at"] = get_tpe_now_time()
 
     # === Load ===
