@@ -16,6 +16,7 @@ import { useDialogStore } from "./dialogStore";
 import { useAuthStore } from "./authStore";
 import { getComponentDataTimeframe } from "../assets/utilityFunctions/dataTimeframe";
 import { CityManager } from "../dashboardComponent/utilities/cityManager";
+import { loadKaobeiComponents, KAOBEI_DASHBOARD_META, KAOBEI_CONTRIBUTORS, resetKaobeiCityFilters } from "../composables/useKaobeiData";
 
 export const useContentStore = defineStore("content", {
 	state: () => ({
@@ -158,6 +159,15 @@ export const useContentStore = defineStore("content", {
 				}
 			});
 
+			// 黑客松「靠北儀表板」：把 fixture-based dashboard 注入 metrotaipei 群組
+			const metrotaipeiDashboards = this.dashboards.get("metrotaipei") || [];
+			if (!metrotaipeiDashboards.some((d) => d.index === KAOBEI_DASHBOARD_META.index)) {
+				this.dashboards.set("metrotaipei", [
+					...metrotaipeiDashboards,
+					{ ...KAOBEI_DASHBOARD_META },
+				]);
+			}
+
 			if (onlyDashboard) return;
 
 			// 2-1. If the current path is /dashboard or /mapview, redirect to the first dashboard
@@ -251,6 +261,36 @@ export const useContentStore = defineStore("content", {
 			// Set the current dashboard info
 			this.currentDashboard.name = currentDashboardInfo.name;
 			this.currentDashboard.icon = currentDashboardInfo.icon;
+
+			// 黑客松「靠北儀表板」：從 BE API 載入；await 後比對 index/city 守門避免 stale 賦值
+			if (this.currentDashboard.index === KAOBEI_DASHBOARD_META.index) {
+				// 每次進 kaobei dashboard 都重置 6 個組件的 dropdown 回「雙北」
+				resetKaobeiCityFilters();
+				// 注入 5 位協作者到 contributors map（idempotent;每次進 kaobei 都跑一次無副作用）
+				Object.assign(this.contributors, KAOBEI_CONTRIBUTORS);
+				const reqIndex = this.currentDashboard.index;
+				const reqCity = this.currentDashboard.city;
+				try {
+					const components = await loadKaobeiComponents();
+					if (
+						this.currentDashboard.index !== reqIndex ||
+						this.currentDashboard.city !== reqCity
+					) {
+						return;
+					}
+					this.cityDashboard.components = components;
+					this.filterCurrentDashboardContent();
+				} catch (error) {
+					console.error("Error loading kaobei components:", error);
+					if (
+						this.currentDashboard.index === reqIndex &&
+						this.currentDashboard.city === reqCity
+					) {
+						this.cityDashboard.components = [];
+					}
+				}
+				return;
+			}
 
 			// Get the dashboard index data
 			try {
@@ -377,6 +417,8 @@ export const useContentStore = defineStore("content", {
 
 		// 20251224 因應擁擠程度相關組件須每分鐘刷新新增func
 		async updateCurrentDashboardAllChartData() {
+			// 黑客松「靠北儀表板」：id 90001-90006 BE 沒有，避免 /component/{id}/chart 噴 6 條 404 通知
+			if (this.currentDashboard.index === KAOBEI_DASHBOARD_META.index) return;
 			try {
 				// 4-1. Loop through all the components of a dashboard
 				for (
@@ -497,6 +539,8 @@ export const useContentStore = defineStore("content", {
 		},
 
 		async updateCurrentDashboardCertainChartData() {
+			// 黑客松「靠北儀表板」：同 updateCurrentDashboardAllChartData，避免噴 404
+			if (this.currentDashboard.index === KAOBEI_DASHBOARD_META.index) return;
 			try {
 				// 4-1. Loop through all the components of a dashboard
 				for (
@@ -704,6 +748,8 @@ export const useContentStore = defineStore("content", {
 						};
 					});
 					this.contributors = contributors;
+					// merge kaobei 5 位協作者(BE 沒這 5 人,從 FE 注入避免 race 後被覆蓋)
+					Object.assign(this.contributors, KAOBEI_CONTRIBUTORS);
 				})
 				.catch((e) => console.error(e));
 		},

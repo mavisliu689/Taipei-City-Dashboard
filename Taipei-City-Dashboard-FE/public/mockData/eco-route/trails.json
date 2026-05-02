@@ -1,0 +1,4160 @@
+[
+  {
+    "id": "trail-1",
+    "name": "碧湖步道",
+    "category": "trail",
+    "lat": 25.088,
+    "lng": 121.5925,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1300.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "內湖路三段60巷12弄17號碧湖步道口(含入口意象)",
+      "end_point": "大湖街131巷新福本坑出口(葉氏祖廟前)(含入口意象)",
+      "end_lat": 25.0908,
+      "end_lng": 121.5962,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-2",
+    "name": "大溝溪溪畔步道",
+    "category": "trail",
+    "lat": 25.0887,
+    "lng": 121.5986,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 680.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "大湖山莊街底大溝溪公園涼亭外",
+      "end_point": "鯉魚山50m處相接",
+      "end_lat": 25.0927,
+      "end_lng": 121.5965,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-3",
+    "name": "圓覺寺步道",
+    "category": "trail",
+    "lat": 25.094,
+    "lng": 121.5965,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1185.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "鯉魚山叉路",
+      "end_point": "峰碧塔門口",
+      "end_lat": 25.0978,
+      "end_lng": 121.5919,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-4",
+    "name": "鯉魚山步道",
+    "category": "trail",
+    "lat": 25.0927,
+    "lng": 121.5963,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1065.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "碧山路",
+      "end_point": "葉氏祖廟(含入口意象範圍)",
+      "end_lat": 25.0959,
+      "end_lng": 121.5893,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-5",
+    "name": "碧山巖步道",
+    "category": "trail",
+    "lat": 25.0945,
+    "lng": 121.5878,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 346.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "碧山路23號",
+      "end_point": "碧山巖",
+      "end_lat": 25.0972,
+      "end_lng": 121.588,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-6",
+    "name": "忠勇山步道",
+    "category": "trail",
+    "lat": 25.093,
+    "lng": 121.585,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 800.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "慈聖宮",
+      "end_point": "忠勇山頂",
+      "end_lat": 25.0983,
+      "end_lng": 121.5849,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-7",
+    "name": "忠勇山越嶺步道",
+    "category": "trail",
+    "lat": 25.0972,
+    "lng": 121.5879,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1660.0,
+      "duration_min": 60.0,
+      "level": "親子級",
+      "start_point": "碧山巖",
+      "end_point": "金龍產業道路",
+      "end_lat": 25.1003,
+      "end_lng": 121.5758,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-8",
+    "name": "大崙尾山步道圓明寺支線",
+    "category": "trail",
+    "lat": 25.1056,
+    "lng": 121.5777,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 3180.0,
+      "duration_min": 120.0,
+      "level": "親子級",
+      "start_point": "大崙尾山打印台",
+      "end_point": "湧泉寺(圓明寺門前)",
+      "end_lat": 25.0993,
+      "end_lng": 121.556,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-9",
+    "name": "碧山露營場步道",
+    "category": "trail",
+    "lat": 25.1039,
+    "lng": 121.5805,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 86.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "碧山工作站前方岔路口",
+      "end_point": "露營場",
+      "end_lat": 25.1038,
+      "end_lng": 121.5798,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-10",
+    "name": "碧山露營場下方木棧道",
+    "category": "trail",
+    "lat": 25.1039,
+    "lng": 121.5805,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 272.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "碧山工作站前方岔路口",
+      "end_point": "露營場┼串連道(枕木步道交會)",
+      "end_lat": 25.1047,
+      "end_lng": 121.58,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-11",
+    "name": "碧山露營場枕木步道",
+    "category": "trail",
+    "lat": 25.1041,
+    "lng": 121.581,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1088.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "碧山工作站",
+      "end_point": "營地側門",
+      "end_lat": 25.1043,
+      "end_lng": 121.58,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-12",
+    "name": "白鷺鷥山步道",
+    "category": "trail",
+    "lat": 25.0753,
+    "lng": 121.6013,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1845.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "老公祠福佑宮",
+      "end_point": "金湖路268號進入(含入口意象範圍)",
+      "end_lat": 25.0785,
+      "end_lng": 121.6062,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-13",
+    "name": "康樂山步道",
+    "category": "trail",
+    "lat": 25.0775,
+    "lng": 121.6072,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1470.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "成功路5段山海寺牌樓",
+      "end_point": "安泰街水源頭福德宮",
+      "end_lat": 25.0775,
+      "end_lng": 121.6072,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-14",
+    "name": "明舉山步道",
+    "category": "trail",
+    "lat": 25.0857,
+    "lng": 121.6136,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1450.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "安泰街慶福祠旁",
+      "end_point": "內溝溪生態展示館前",
+      "end_lat": 25.0871,
+      "end_lng": 121.6229,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-15",
+    "name": "康樂街步道",
+    "category": "trail",
+    "lat": 25.0854,
+    "lng": 121.6144,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 383.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "康樂街236號內溝里民活動中心",
+      "end_point": "六角木造涼亭",
+      "end_lat": 25.0871,
+      "end_lng": 121.6198,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-16",
+    "name": "龍船岩步道碧山路支線",
+    "category": "trail",
+    "lat": 25.1011,
+    "lng": 121.5972,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 368.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "碧山路62號",
+      "end_point": "龍船岩叉路口(福德宮)",
+      "end_lat": 25.1035,
+      "end_lng": 121.5964,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-17",
+    "name": "龍船岩步道開眼山支線",
+    "category": "trail",
+    "lat": 25.1005,
+    "lng": 121.5969,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 554.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "開眼山",
+      "end_point": "龍船岩",
+      "end_lat": 25.1048,
+      "end_lng": 121.599,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-18",
+    "name": "龍船岩步道五路財神廟支線",
+    "category": "trail",
+    "lat": 25.1011,
+    "lng": 121.5972,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1330.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "龍船岩叉路(福德宮)",
+      "end_point": "五路財神廟",
+      "end_lat": 25.1017,
+      "end_lng": 121.6067,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-19",
+    "name": "金面山步道",
+    "category": "trail",
+    "lat": 25.0901,
+    "lng": 121.5821,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "勇腳級"
+    ],
+    "extra": {
+      "length_m": 2786.0,
+      "duration_min": 70.0,
+      "level": "勇腳級",
+      "start_point": "內湖步道叉路",
+      "end_point": "金龍里福德宮(剪刀石→小金面)",
+      "end_lat": 25.0984,
+      "end_lng": 121.5678,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-20",
+    "name": "採石場步道",
+    "category": "trail",
+    "lat": 25.0887,
+    "lng": 121.568,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 730.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "環山路一段136巷底",
+      "end_point": "打印台前叉路(論劍亭上方)(含入口意象範圍)",
+      "end_lat": 25.0933,
+      "end_lng": 121.5709,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-21",
+    "name": "竹月寺步道",
+    "category": "trail",
+    "lat": 25.0892,
+    "lng": 121.5682,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1080.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "採石場步道40m叉路右經竹月寺",
+      "end_point": "金面山稜線",
+      "end_lat": 25.0923,
+      "end_lng": 121.5742,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-22",
+    "name": "金面山68巷支線步道",
+    "category": "trail",
+    "lat": 25.0875,
+    "lng": 121.5758,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 464.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "環山路二段68巷底",
+      "end_point": "金面山稜線泰安亭",
+      "end_lat": 25.0903,
+      "end_lng": 121.5764,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-23",
+    "name": "郭氏古厝步道",
+    "category": "trail",
+    "lat": 25.0787,
+    "lng": 121.5862,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 100.0,
+      "duration_min": 3.0,
+      "level": "親子級",
+      "start_point": "內湖文德路步道口",
+      "end_point": "郭子儀紀念館",
+      "end_lat": 25.0794,
+      "end_lng": 121.5865,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-24",
+    "name": "大湖里步道",
+    "category": "trail",
+    "lat": 25.0888,
+    "lng": 121.5986,
+    "address": "臺北市內湖區",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 450.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "大溝溪親水公園入口旁",
+      "end_point": "大溝溪畔步道起點前涼亭叉路口",
+      "end_lat": 25.0894,
+      "end_lng": 121.5987,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-25",
+    "name": "復興電台線步道",
+    "category": "trail",
+    "lat": 25.0877,
+    "lng": 121.5278,
+    "address": "臺北市中山區",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 700.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "中山北路5段282巷",
+      "end_point": "劍潭山稜線",
+      "end_lat": 25.0867,
+      "end_lng": 121.5322,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-26",
+    "name": "劍潭山稜線步道",
+    "category": "trail",
+    "lat": 25.0807,
+    "lng": 121.5245,
+    "address": "臺北市中山區",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1574.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "劍潭山打印台經老地方",
+      "end_point": "軍營門口(延伸374m至軍營前)",
+      "end_lat": 25.0909,
+      "end_lng": 121.5382,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-27",
+    "name": "文間山步道",
+    "category": "trail",
+    "lat": 25.0902,
+    "lng": 121.5498,
+    "address": "臺北市中山區",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 750.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "臨溪路100巷口",
+      "end_point": "文間山出口",
+      "end_lat": 25.0925,
+      "end_lng": 121.5535,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-28",
+    "name": "風櫃嘴步道",
+    "category": "trail",
+    "lat": 25.1341,
+    "lng": 121.597,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 614.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "溪山里至善路三段336巷51號",
+      "end_point": "萬溪產業道路風櫃嘴步道口",
+      "end_lat": 25.1371,
+      "end_lng": 121.6027,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-29",
+    "name": "大崎頭步道",
+    "category": "trail",
+    "lat": 25.1302,
+    "lng": 121.5864,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1030.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "至善路三段370巷步道口",
+      "end_point": "坪頂古圳清風亭",
+      "end_lat": 25.1345,
+      "end_lng": 121.5831,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-30",
+    "name": "坪頂古圳步道",
+    "category": "trail",
+    "lat": 25.1341,
+    "lng": 121.5868,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1350.0,
+      "duration_min": 60.0,
+      "level": "親子級",
+      "start_point": "至善路三段370巷29號步道口",
+      "end_point": "平菁街95巷步道口",
+      "end_lat": 25.1337,
+      "end_lng": 121.5819,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-31",
+    "name": "鵝尾山步道礁坑橋支線\n(平溪步道)",
+    "category": "trail",
+    "lat": 25.1216,
+    "lng": 121.5779,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1345.0,
+      "duration_min": 60.0,
+      "level": "親子級",
+      "start_point": "至善路3段181巷5弄",
+      "end_point": "平等國小旁平菁路105巷底",
+      "end_lat": 25.1277,
+      "end_lng": 121.5768,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-32",
+    "name": "鵝尾山步道簡厝支線",
+    "category": "trail",
+    "lat": 25.1215,
+    "lng": 121.5853,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 303.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "至善路三段277巷",
+      "end_point": "至善路3段371巷20弄",
+      "end_lat": 25.1227,
+      "end_lng": 121.5837,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-33",
+    "name": "平菁步道",
+    "category": "trail",
+    "lat": 25.1149,
+    "lng": 121.567,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 929.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "至善路三段71巷步道口",
+      "end_point": "平菁街140號",
+      "end_lat": 25.1218,
+      "end_lng": 121.5719,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-34",
+    "name": "竹林步道",
+    "category": "trail",
+    "lat": 25.1297,
+    "lng": 121.5714,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 525.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "平菁路42巷禾豐餐廳停車場旁",
+      "end_point": "公平橋",
+      "end_lat": 25.13,
+      "end_lng": 121.5678,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-35",
+    "name": "永圳步道",
+    "category": "trail",
+    "lat": 25.1276,
+    "lng": 121.5668,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 320.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "永公路350巷反射鏡後直行到路底",
+      "end_point": "圳溝邊(距公平橋300m)",
+      "end_lat": 25.1256,
+      "end_lng": 121.5658,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-36",
+    "name": "水管路步道",
+    "category": "trail",
+    "lat": 25.1276,
+    "lng": 121.5336,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 2600.0,
+      "duration_min": 90.0,
+      "level": "親子級",
+      "start_point": "中山北路七段232巷1弄",
+      "end_point": "愛富三街(含入口意象範圍)",
+      "end_lat": 25.1409,
+      "end_lng": 121.5435,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-37",
+    "name": "下竹林步道",
+    "category": "trail",
+    "lat": 25.1275,
+    "lng": 121.5381,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1034.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "中山北路七段190巷112號",
+      "end_point": "仁民路",
+      "end_lat": 25.1334,
+      "end_lng": 121.5426,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-38",
+    "name": "婆婆橋步道",
+    "category": "trail",
+    "lat": 25.1009,
+    "lng": 121.5539,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 555.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "至善路二段266巷底",
+      "end_point": "劍南路口圓明寺前(舊路200M)",
+      "end_lat": 25.0996,
+      "end_lng": 121.556,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-39",
+    "name": "鄭成功廟步道",
+    "category": "trail",
+    "lat": 25.0969,
+    "lng": 121.5546,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 312.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "劍南路鄭成功廟旁",
+      "end_point": "上方九蓮寺叉路",
+      "end_lat": 25.0976,
+      "end_lng": 121.5571,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-40",
+    "name": "大崙頭山步道",
+    "category": "trail",
+    "lat": 25.1061,
+    "lng": 121.5837,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 515.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "碧山路(含大崙湖周邊步道)",
+      "end_point": "山頂",
+      "end_lat": 25.1089,
+      "end_lng": 121.5853,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-41",
+    "name": "大崙頭森林步道",
+    "category": "trail",
+    "lat": 25.1131,
+    "lng": 121.5817,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 833.0,
+      "duration_min": 90.0,
+      "level": "親子級",
+      "start_point": "碧溪產業道路1.7K森林步道口",
+      "end_point": "稜線步道(含入口意象範圍)",
+      "end_lat": 25.1106,
+      "end_lng": 121.5863,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-42",
+    "name": "大崙頭自然步道",
+    "category": "trail",
+    "lat": 25.1083,
+    "lng": 121.5815,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 620.0,
+      "duration_min": 60.0,
+      "level": "親子級",
+      "start_point": "碧溪產業道路2.4K枕木步道口",
+      "end_point": "稜線步道(含入口意象範圍)",
+      "end_lat": 25.1096,
+      "end_lng": 121.5859,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-43",
+    "name": "大崙頭北面步道",
+    "category": "trail",
+    "lat": 25.1089,
+    "lng": 121.5853,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 960.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "大崙頭山頂",
+      "end_point": "碧山路50號民宅前",
+      "end_lat": 25.1081,
+      "end_lng": 121.5886,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-44",
+    "name": "望獅步道",
+    "category": "trail",
+    "lat": 25.1081,
+    "lng": 121.6213,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 420.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "藥用植物園旁",
+      "end_point": "碧溪產業道路0+150",
+      "end_lat": 25.1066,
+      "end_lng": 121.6203,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-45",
+    "name": "瞭望台步道",
+    "category": "trail",
+    "lat": 25.1098,
+    "lng": 121.5816,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 200.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "碧溪產道2.25K下方碎石步道",
+      "end_point": "高架瞭望台(2.45K)(含瞭望台下方休憩平台)",
+      "end_lat": 25.1098,
+      "end_lng": 121.5809,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-46",
+    "name": "碧溪步道",
+    "category": "trail",
+    "lat": 25.1088,
+    "lng": 121.5809,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1450.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "碧溪產業道路1.5K石頭厝",
+      "end_point": "翠山步道交會處",
+      "end_lat": 25.114,
+      "end_lng": 121.5807,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-47",
+    "name": "翠山(靶場)步道",
+    "category": "trail",
+    "lat": 25.1082,
+    "lng": 121.5714,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1145.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "中社路二段路底",
+      "end_point": "碧溪步道交會處",
+      "end_lat": 25.1084,
+      "end_lng": 121.5805,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-48",
+    "name": "大崙尾山中社路支線",
+    "category": "trail",
+    "lat": 25.1057,
+    "lng": 121.579,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 870.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "中社路二段",
+      "end_point": "山頂",
+      "end_lat": 25.1064,
+      "end_lng": 121.5736,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-49",
+    "name": "大崙尾山步道碧山路支線",
+    "category": "trail",
+    "lat": 25.1059,
+    "lng": 121.5678,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 740.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "碧山路",
+      "end_point": "大崙尾山頂",
+      "end_lat": 25.1064,
+      "end_lng": 121.5736,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-50",
+    "name": "翠山街步道",
+    "category": "trail",
+    "lat": 25.0999,
+    "lng": 121.641,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 200.0,
+      "duration_min": 6.0,
+      "level": "親子級",
+      "start_point": "中社路2段公車終點站旁",
+      "end_point": "翠山街口雙福宮",
+      "end_lat": 25.1009,
+      "end_lng": 121.6404,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-51",
+    "name": "雙溪國小步道",
+    "category": "trail",
+    "lat": 25.1061,
+    "lng": 121.5637,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 330.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "雙溪國小旁步道口",
+      "end_point": "明溪街31號往國小步道口",
+      "end_lat": 25.1057,
+      "end_lng": 121.5646,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-52",
+    "name": "雙溪溝古道",
+    "category": "trail",
+    "lat": 25.1308,
+    "lng": 121.5987,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 900.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "萬溪右線產業道路",
+      "end_point": "五指山產業道路",
+      "end_lat": 25.1259,
+      "end_lng": 121.603,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-53",
+    "name": "五指山古道",
+    "category": "trail",
+    "lat": 25.1118,
+    "lng": 121.5869,
+    "address": "臺北市士林區",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 3000.0,
+      "duration_min": 120.0,
+      "level": "親子級",
+      "start_point": "梅花山",
+      "end_point": "大崙頭北面步道叉路口",
+      "end_lat": 25.1259,
+      "end_lng": 121.603,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-54",
+    "name": "忠義山步道",
+    "category": "trail",
+    "lat": 25.1373,
+    "lng": 121.4783,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 850.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "忠義廟",
+      "end_point": "親山步道打印台",
+      "end_lat": 25.1428,
+      "end_lng": 121.4775,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-55",
+    "name": "楓丹白露步道",
+    "category": "trail",
+    "lat": 25.143,
+    "lng": 121.4771,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 450.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "忠義山打印台",
+      "end_point": "楓丹白露社區前入口意象",
+      "end_lat": 25.141,
+      "end_lng": 121.4748,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-56",
+    "name": "下青礐步道",
+    "category": "trail",
+    "lat": 25.152,
+    "lng": 121.4938,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1727.0,
+      "duration_min": 60.0,
+      "level": "親子級",
+      "start_point": "貴子坑水保教室前",
+      "end_point": "下青礐(復興三路)",
+      "end_lat": 25.1622,
+      "end_lng": 121.4962,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-57",
+    "name": "貴子坑步道",
+    "category": "trail",
+    "lat": 25.1579,
+    "lng": 121.4938,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1330.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "親山步道打印台",
+      "end_point": "貴子坑露營場對面步道口",
+      "end_lat": 25.153,
+      "end_lng": 121.4905,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-58",
+    "name": "上清宮步道",
+    "category": "trail",
+    "lat": 25.1506,
+    "lng": 121.5042,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 880.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "復興三路212號",
+      "end_point": "中清礐",
+      "end_lat": 25.1537,
+      "end_lng": 121.5039,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-59",
+    "name": "永春寮步道",
+    "category": "trail",
+    "lat": 25.1523,
+    "lng": 121.5055,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 760.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "復興三路300巷底",
+      "end_point": "上清宮對面水泥橋",
+      "end_lat": 25.1544,
+      "end_lng": 121.5068,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-60",
+    "name": "永春寮溪步道",
+    "category": "trail",
+    "lat": 25.1527,
+    "lng": 121.5052,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 350.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "上清宮旁步道口",
+      "end_point": "復興三路310巷步道口",
+      "end_lat": 25.1554,
+      "end_lng": 121.5052,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-61",
+    "name": "白宮山莊步道",
+    "category": "trail",
+    "lat": 25.1454,
+    "lng": 121.5027,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 520.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "復興四路105巷10號",
+      "end_point": "復興三路白宮山莊",
+      "end_lat": 25.1488,
+      "end_lng": 121.5045,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-62",
+    "name": "郵政訓練所步道",
+    "category": "trail",
+    "lat": 25.1479,
+    "lng": 121.514,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 906.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "登山路61號",
+      "end_point": "郵政訓練中心(含入口意象範圍)",
+      "end_lat": 25.1426,
+      "end_lng": 121.51,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-63",
+    "name": "法雨寺步道",
+    "category": "trail",
+    "lat": 25.1452,
+    "lng": 121.514,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 924.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "泉源產業道路",
+      "end_point": "登山路40號至墓園邊200m",
+      "end_lat": 25.1469,
+      "end_lng": 121.5172,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-64",
+    "name": "中正山親山步道",
+    "category": "trail",
+    "lat": 25.1501,
+    "lng": 121.5201,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 180.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "登山路立祥商店步道口",
+      "end_point": "立祥商店步道口前行180m",
+      "end_lat": 25.151,
+      "end_lng": 121.5201,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-65",
+    "name": "中正山嶺頭步道",
+    "category": "trail",
+    "lat": 25.1499,
+    "lng": 121.5137,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 800.0,
+      "duration_min": 100.0,
+      "level": "親子級",
+      "start_point": "拓印亭對面步道口",
+      "end_point": "中正山停車場步道口",
+      "end_lat": 25.1559,
+      "end_lng": 121.5114,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-66",
+    "name": "青楓步道",
+    "category": "trail",
+    "lat": 25.1715,
+    "lng": 121.5293,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 300.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "大梯田旁步道口",
+      "end_point": "竹子湖產業道路2K+650",
+      "end_lat": 25.1711,
+      "end_lng": 121.5307,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-67",
+    "name": "頂湖海芋步道",
+    "category": "trail",
+    "lat": 25.1764,
+    "lng": 121.5376,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 460.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "名陽匐農場旁步道口",
+      "end_point": "海芋田景觀木橋",
+      "end_lat": 25.1786,
+      "end_lng": 121.5406,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-68",
+    "name": "猴崁步道",
+    "category": "trail",
+    "lat": 25.1713,
+    "lng": 121.5347,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 350.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "竹子湖路下切左轉",
+      "end_point": "猴崁產業道路",
+      "end_lat": 25.1685,
+      "end_lng": 121.5341,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-69",
+    "name": "水尾巴拉卡步道",
+    "category": "trail",
+    "lat": 25.1786,
+    "lng": 121.5406,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 518.0,
+      "duration_min": 60.0,
+      "level": "親子級",
+      "start_point": "竹子湖水尾公車站",
+      "end_point": "巴拉卡公路",
+      "end_lat": 25.1764,
+      "end_lng": 121.5376,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-70",
+    "name": "湖田國小步道",
+    "category": "trail",
+    "lat": 25.1648,
+    "lng": 121.5353,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 650.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "竹子湖9號",
+      "end_point": "猴崁產業道路(1K┼100)",
+      "end_lat": 25.1668,
+      "end_lng": 121.5385,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-71",
+    "name": "水車寮步道",
+    "category": "trail",
+    "lat": 25.1701,
+    "lng": 121.5386,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 550.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "湖田國小停車場旁步道口",
+      "end_point": "湖田大樹下餐廳步道口",
+      "end_lat": 25.1728,
+      "end_lng": 121.5387,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-72",
+    "name": "軍艦岩步道",
+    "category": "trail",
+    "lat": 25.1237,
+    "lng": 121.5172,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 500.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "陽明醫學院步道口",
+      "end_point": "軍艦岩前叉路",
+      "end_lat": 25.1277,
+      "end_lng": 121.5188,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-73",
+    "name": "照明寺步道",
+    "category": "trail",
+    "lat": 25.1319,
+    "lng": 121.5145,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1230.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "軍艦岩下泥土步道",
+      "end_point": "照明禪寺",
+      "end_lat": 25.1276,
+      "end_lng": 121.5188,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-74",
+    "name": "丹鳳山步道",
+    "category": "trail",
+    "lat": 25.1322,
+    "lng": 121.514,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1300.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "照明寺旁丹鳳山入口",
+      "end_point": "中和禪寺",
+      "end_lat": 25.1307,
+      "end_lng": 121.5058,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-75",
+    "name": "半嶺步道",
+    "category": "trail",
+    "lat": 25.1464,
+    "lng": 121.5376,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1200.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "(向前延伸至湖底路)紅檀前方30m步道口",
+      "end_point": "欄杆橋頭福德宮",
+      "end_lat": 25.1381,
+      "end_lng": 121.5333,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-76",
+    "name": "橫嶺古道",
+    "category": "trail",
+    "lat": 25.1516,
+    "lng": 121.5417,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 800.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "湖山路一段步道口",
+      "end_point": "紅檀停車場",
+      "end_lat": 25.1451,
+      "end_lng": 121.539,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-77",
+    "name": "湖山國小步道",
+    "category": "trail",
+    "lat": 25.15,
+    "lng": 121.5363,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 568.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "湖底路48號湖山國小旁",
+      "end_point": "湖山路25之1號",
+      "end_lat": 25.1516,
+      "end_lng": 121.5412,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-78",
+    "name": "風尾步道",
+    "category": "trail",
+    "lat": 25.1508,
+    "lng": 121.5285,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 291.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "東昇路38號前步道口",
+      "end_point": "東昇路68-15號",
+      "end_lat": 25.1544,
+      "end_lng": 121.5289,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-79",
+    "name": "泉源紗帽步道",
+    "category": "trail",
+    "lat": 25.1486,
+    "lng": 121.5326,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 684.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "泉源路232號上方路口",
+      "end_point": "紗帽路10號巷口（對面至山谷下步道）",
+      "end_lat": 25.1445,
+      "end_lng": 121.5274,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-80",
+    "name": "淨水廠步道",
+    "category": "trail",
+    "lat": 25.1505,
+    "lng": 121.5315,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 132.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "泉源路260號淨水廠旁步道口",
+      "end_point": "水圳步道邊",
+      "end_lat": 25.1509,
+      "end_lng": 121.5323,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-81",
+    "name": "鼎筆橋步道",
+    "category": "trail",
+    "lat": 25.1517,
+    "lng": 121.5327,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 363.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "鼎筆橋",
+      "end_point": "東昇路(頂湖福德宮)",
+      "end_lat": 25.1531,
+      "end_lng": 121.5306,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-82",
+    "name": "陽峰古道",
+    "category": "trail",
+    "lat": 25.1574,
+    "lng": 121.5358,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1100.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "陽峰古道入口",
+      "end_point": "鼎筆橋旁",
+      "end_lat": 25.152,
+      "end_lng": 121.5329,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-83",
+    "name": "磺溪溫泉步道",
+    "category": "trail",
+    "lat": 25.1363,
+    "lng": 121.5292,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 750.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "行義路260巷15號前步道口",
+      "end_point": "行義路402巷42-1號皇池溫泉停車場旁步道口",
+      "end_lat": 25.1415,
+      "end_lng": 121.5297,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-84",
+    "name": "硫磺谷步道",
+    "category": "trail",
+    "lat": 25.1442,
+    "lng": 121.5225,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 236.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "東昇路往硫磺谷福德宮巷口",
+      "end_point": "東昇路與行義路交會處(過磺港溪)",
+      "end_lat": 25.146,
+      "end_lng": 121.5237,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-85",
+    "name": "忠義山步道-坪頂路支線",
+    "category": "trail",
+    "lat": 25.1431,
+    "lng": 121.4774,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 800.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "忠義山步道",
+      "end_point": "坪頂路口(稻香路口)",
+      "end_lat": 25.1477,
+      "end_lng": 121.4813,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-86",
+    "name": "國華練習場至貴子坑步道",
+    "category": "trail",
+    "lat": 25.1546,
+    "lng": 121.4859,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 300.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "國華練習場",
+      "end_point": "貴子坑步道",
+      "end_lat": 25.1538,
+      "end_lng": 121.488,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-87",
+    "name": "湖山秘徑",
+    "category": "trail",
+    "lat": 25.1553,
+    "lng": 121.5422,
+    "address": "臺北市北投區",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 362.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "4O砲陣地樓梯前",
+      "end_point": "涼亭(陽明山第二停車場)",
+      "end_lat": 25.155,
+      "end_lng": 121.5442,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-88",
+    "name": "虎山溪步道",
+    "category": "trail",
+    "lat": 25.0382,
+    "lng": 121.5793,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 950.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "慈惠堂",
+      "end_point": "復興園",
+      "end_lat": 25.0328,
+      "end_lng": 121.5786,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-89",
+    "name": "虎山山腰步道",
+    "category": "trail",
+    "lat": 25.0328,
+    "lng": 121.5786,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 527.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "復興園",
+      "end_point": "山神廟叉路",
+      "end_lat": 25.034,
+      "end_lng": 121.5828,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-90",
+    "name": "虎山自然步道",
+    "category": "trail",
+    "lat": 25.0382,
+    "lng": 121.5792,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1100.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "慈惠堂",
+      "end_point": "南港山稜線叉路口",
+      "end_lat": 25.0244,
+      "end_lng": 121.5768,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-91",
+    "name": "虎山生態步道",
+    "category": "trail",
+    "lat": 25.0353,
+    "lng": 121.5818,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 480.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "虎山400m涼亭",
+      "end_point": "王家土雞城叉路口",
+      "end_lat": 25.0334,
+      "end_lng": 121.58,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-92",
+    "name": "虎山復興園步道",
+    "category": "trail",
+    "lat": 25.0328,
+    "lng": 121.5786,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 580.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "復興園",
+      "end_point": "瑤池宮",
+      "end_lat": 25.0311,
+      "end_lng": 121.5755,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-93",
+    "name": "美的世界社區步道",
+    "category": "trail",
+    "lat": 25.0311,
+    "lng": 121.5755,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 500.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "瑤池宮",
+      "end_point": "松山路673號美的世界社區",
+      "end_lat": 25.0337,
+      "end_lng": 121.5741,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-94",
+    "name": "虎山120高地步道",
+    "category": "trail",
+    "lat": 25.0355,
+    "lng": 121.5766,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 238.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "福德街221巷",
+      "end_point": "虎山120高地",
+      "end_lat": 25.0351,
+      "end_lng": 121.5745,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-95",
+    "name": "虎山峰下方步道",
+    "category": "trail",
+    "lat": 25.0337,
+    "lng": 121.5765,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 157.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "福德街221巷",
+      "end_point": "虎山峰下涼亭",
+      "end_lat": 25.0336,
+      "end_lng": 121.5752,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-96",
+    "name": "虎山峰前方步道",
+    "category": "trail",
+    "lat": 25.0325,
+    "lng": 121.5764,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 220.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "福德街221巷",
+      "end_point": "虎山峰前涼亭",
+      "end_lat": 25.0325,
+      "end_lng": 121.5757,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-97",
+    "name": "虎山奉天宮步道",
+    "category": "trail",
+    "lat": 25.039,
+    "lng": 121.5762,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 890.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "奉天宮",
+      "end_point": "松山路679-1號",
+      "end_lat": 25.032,
+      "end_lng": 121.5757,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-98",
+    "name": "虎山吉福宮步道",
+    "category": "trail",
+    "lat": 25.0382,
+    "lng": 121.5733,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 509.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "福德街51巷",
+      "end_point": "虎山120高地",
+      "end_lat": 25.0351,
+      "end_lng": 121.5745,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-99",
+    "name": "吉福宮叉路步道",
+    "category": "trail",
+    "lat": 25.0367,
+    "lng": 121.5741,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 322.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "吉福宮上方右叉路",
+      "end_point": "涼亭右轉下福德街51巷",
+      "end_lat": 25.035,
+      "end_lng": 121.5729,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-100",
+    "name": "象山北星寶宮步道",
+    "category": "trail",
+    "lat": 25.0292,
+    "lng": 121.5625,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 824.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "靈雲宮",
+      "end_point": "北星寶宮叉路",
+      "end_lat": 25.0275,
+      "end_lng": 121.5695,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-101",
+    "name": "天寶聖道宮步道",
+    "category": "trail",
+    "lat": 25.0277,
+    "lng": 121.5699,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 408.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "北星寶宮",
+      "end_point": "天寶聖道宮",
+      "end_lat": 25.0301,
+      "end_lng": 121.5712,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-102",
+    "name": "拇指山步道",
+    "category": "trail",
+    "lat": 25.0244,
+    "lng": 121.5768,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1355.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "拇指山登山口",
+      "end_point": "北星寶宮",
+      "end_lat": 25.0277,
+      "end_lng": 121.5699,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-103",
+    "name": "北台慈惠堂步道",
+    "category": "trail",
+    "lat": 25.0249,
+    "lng": 121.5727,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 150.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "北台慈惠堂",
+      "end_point": "南港山親山步道三叉路",
+      "end_lat": 25.0252,
+      "end_lng": 121.574,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-104",
+    "name": "永春崗顏子廟步道",
+    "category": "trail",
+    "lat": 25.0338,
+    "lng": 121.5689,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 220.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "永春崗公園",
+      "end_point": "顏子廟",
+      "end_lat": 25.0342,
+      "end_lng": 121.5679,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-105",
+    "name": "象山永春崗步道",
+    "category": "trail",
+    "lat": 25.0337,
+    "lng": 121.5707,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 850.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "松山路650巷超市旁",
+      "end_point": "象山頂前南港山叉路口(含入口意象範圍)",
+      "end_lat": 25.0285,
+      "end_lng": 121.5676,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-106",
+    "name": "象山一線天步道",
+    "category": "trail",
+    "lat": 25.0309,
+    "lng": 121.5688,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 822.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "象山990m巨石叉路",
+      "end_point": "75m叉路口",
+      "end_lat": 25.0294,
+      "end_lng": 121.5632,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-107",
+    "name": "市立療養院步道",
+    "category": "trail",
+    "lat": 25.0299,
+    "lng": 121.567,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 233.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "療養院",
+      "end_point": "稜線(象山親山460m)(含入口意象範圍)",
+      "end_lat": 25.0286,
+      "end_lng": 121.5665,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-108",
+    "name": "象山自然步道",
+    "category": "trail",
+    "lat": 25.0297,
+    "lng": 121.5669,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 400.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "市療羽球場",
+      "end_point": "象山煙火平台",
+      "end_lat": 25.0307,
+      "end_lng": 121.5644,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-109",
+    "name": "石泉巖步道",
+    "category": "trail",
+    "lat": 25.0166,
+    "lng": 121.5561,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 289.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "石泉巖",
+      "end_point": "中正巖",
+      "end_lat": 25.0187,
+      "end_lng": 121.5569,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-110",
+    "name": "糶米古道",
+    "category": "trail",
+    "lat": 25.0183,
+    "lng": 121.5647,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 446.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "吳興街600巷",
+      "end_point": "極樂公墓",
+      "end_lat": 25.0151,
+      "end_lng": 121.5659,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-111",
+    "name": "豹山溪步道",
+    "category": "trail",
+    "lat": 25.0319,
+    "lng": 121.5802,
+    "address": "臺北市信義區",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 550.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "豹山拆遷整治區前",
+      "end_point": "靈隱寺",
+      "end_lat": 25.0256,
+      "end_lng": 121.5818,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-112",
+    "name": "南港山(一)中華技術學院",
+    "category": "trail",
+    "lat": 25.0348,
+    "lng": 121.6016,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1970.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "中華技術學院",
+      "end_point": "分界點",
+      "end_lat": 25.0346,
+      "end_lng": 121.5861,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-113",
+    "name": "南港山(二)北興宮",
+    "category": "trail",
+    "lat": 25.0346,
+    "lng": 121.5861,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 685.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "南港山鞍部",
+      "end_point": "北興宮(含入口意象範圍)",
+      "end_lat": 25.037,
+      "end_lng": 121.591,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-114",
+    "name": "南港山(三)麗山橋口",
+    "category": "trail",
+    "lat": 25.0269,
+    "lng": 121.5913,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1175.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "研究院路四段50巷",
+      "end_point": "南港山鞍部(含入口意象範圍)",
+      "end_lat": 25.0346,
+      "end_lng": 121.5861,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-115",
+    "name": "九五峰",
+    "category": "trail",
+    "lat": 25.0346,
+    "lng": 121.5861,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 2165.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "南港山鞍部",
+      "end_point": "姆指山山頂陵線",
+      "end_lat": 25.0231,
+      "end_lng": 121.5763,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-116",
+    "name": "更寮步道",
+    "category": "trail",
+    "lat": 25.0349,
+    "lng": 121.6302,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 2450.0,
+      "duration_min": 75.0,
+      "level": "親子級",
+      "start_point": "舊莊街二段122巷",
+      "end_point": "大豐產業道路",
+      "end_lat": 25.0277,
+      "end_lng": 121.6392,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-117",
+    "name": "栳寮步道",
+    "category": "trail",
+    "lat": 25.0341,
+    "lng": 121.636,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 440.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "舊莊街二段232巷",
+      "end_point": "魏靜時故居(含入口意象範圍)",
+      "end_lat": 25.0295,
+      "end_lng": 121.638,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-118",
+    "name": "桂花林步道┼2條支線",
+    "category": "trail",
+    "lat": 25.0264,
+    "lng": 121.6608,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 495.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "舊莊街二段添進茶園",
+      "end_point": "南港茶葉製造示範廠第2停車場",
+      "end_lat": 25.0281,
+      "end_lng": 121.6634,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-119",
+    "name": "桂花吊橋步道┼支線",
+    "category": "trail",
+    "lat": 25.0259,
+    "lng": 121.6613,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 305.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "舊莊街二段寶豐庭茶莊",
+      "end_point": "舊莊路2段328號",
+      "end_lat": 25.0255,
+      "end_lng": 121.6626,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-120",
+    "name": "桂花吊橋親水步道",
+    "category": "trail",
+    "lat": 25.0256,
+    "lng": 121.6617,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 170.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "舊莊街二段寶樹橋旁",
+      "end_point": "桂花吊橋",
+      "end_lat": 25.0255,
+      "end_lng": 121.6604,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-121",
+    "name": "桂花亭步道",
+    "category": "trail",
+    "lat": 25.0239,
+    "lng": 121.6618,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 200.0,
+      "duration_min": 10.0,
+      "level": "親子級",
+      "start_point": "桂花亭入口意象",
+      "end_point": "舊莊街二段步道口(含入口意象範圍)",
+      "end_lat": 25.0249,
+      "end_lng": 121.6623,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-122",
+    "name": "明聖步道",
+    "category": "trail",
+    "lat": 25.0507,
+    "lng": 121.6093,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 76.0,
+      "duration_min": 5.0,
+      "level": "親子級",
+      "start_point": "無極明聖宮旁",
+      "end_point": "國家生技園區範圍前",
+      "end_lat": 25.0507,
+      "end_lng": 121.6085,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-123",
+    "name": "余氏古厝步道",
+    "category": "trail",
+    "lat": 25.0265,
+    "lng": 121.6511,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 328.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "余氏古厝後方",
+      "end_point": "桂花亭步道",
+      "end_lat": 25.0245,
+      "end_lng": 121.6593,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-124",
+    "name": "妙高台步道",
+    "category": "trail",
+    "lat": 25.024,
+    "lng": 121.6616,
+    "address": "臺北市南港區",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1000.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "拇指山馬蹄形平台",
+      "end_point": "紫雲街75號",
+      "end_lat": 25.0174,
+      "end_lng": 121.5685,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-125",
+    "name": "土地公嶺步道",
+    "category": "trail",
+    "lat": 25.0114,
+    "lng": 121.5593,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 500.0,
+      "duration_min": 20.0,
+      "level": "親子級",
+      "start_point": "崇德街",
+      "end_point": "安祿宮",
+      "end_lat": 25.0101,
+      "end_lng": 121.5582,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-126",
+    "name": "試院支線步道",
+    "category": "trail",
+    "lat": 24.9883,
+    "lng": 121.5445,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 452.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "考試院上方涼亭",
+      "end_point": "仙跡岩足跡步道叉路(含木柵路1段23號旁入口路段)",
+      "end_lat": 24.9909,
+      "end_lng": 121.5449,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-127",
+    "name": "景興國小支線步道",
+    "category": "trail",
+    "lat": 24.9937,
+    "lng": 121.5505,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 368.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "親山步道915m景興國小叉路口",
+      "end_point": "景興國小",
+      "end_lat": 24.9954,
+      "end_lng": 121.5492,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-128",
+    "name": "溝子口支線步道",
+    "category": "trail",
+    "lat": 24.991,
+    "lng": 121.5548,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 868.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "(往光輝路口)樓梯盡頭",
+      "end_point": "主稜線及景興國小支線轉角",
+      "end_lat": 24.9937,
+      "end_lng": 121.5505,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-129",
+    "name": "麥田支線步道",
+    "category": "trail",
+    "lat": 24.9968,
+    "lng": 121.5511,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 413.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "麥田山莊",
+      "end_point": "仙跡岩稜線(含福德宮304巷支線)",
+      "end_lat": 24.994,
+      "end_lng": 121.5515,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-130",
+    "name": "海巡署支線",
+    "category": "trail",
+    "lat": 24.9939,
+    "lng": 121.5583,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 600.0,
+      "duration_min": 60.0,
+      "level": "親子級",
+      "start_point": "興隆路三段304巷25號勞保局倉庫前",
+      "end_point": "溝子口步道上方指向牌",
+      "end_lat": 24.9928,
+      "end_lng": 121.5534,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-131",
+    "name": "指南宮步道",
+    "category": "trail",
+    "lat": 24.9846,
+    "lng": 121.5804,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 900.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "指南宮33巷牌樓步道口",
+      "end_point": "指南慈惠堂前方指向牌",
+      "end_lat": 24.9798,
+      "end_lng": 121.5864,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-132",
+    "name": "指南慈惠堂步道",
+    "category": "trail",
+    "lat": 24.9776,
+    "lng": 121.5835,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 750.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "指南路三段",
+      "end_point": "指南慈惠堂再接商店街至獅子亭前方涼亭",
+      "end_lat": 24.98,
+      "end_lng": 121.5853,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-133",
+    "name": "大成殿步道",
+    "category": "trail",
+    "lat": 24.9756,
+    "lng": 121.5903,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 605.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "指南路三段步道口",
+      "end_point": "指南路三段157巷步道口",
+      "end_lat": 24.9767,
+      "end_lng": 121.5922,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-134",
+    "name": "猴山岳步道",
+    "category": "trail",
+    "lat": 24.979,
+    "lng": 121.5909,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 602.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "指南宮後山猴山岳步道口",
+      "end_point": "猴山岳土雞城(萬壽路71號)",
+      "end_lat": 24.9775,
+      "end_lng": 121.5952,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-135",
+    "name": "茶推廣中心步道",
+    "category": "trail",
+    "lat": 24.9687,
+    "lng": 121.5956,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 760.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "茶推廣中心停車場",
+      "end_point": "指南路三段",
+      "end_lat": 24.9736,
+      "end_lng": 121.5943,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-136",
+    "name": "健康步道",
+    "category": "trail",
+    "lat": 24.9693,
+    "lng": 121.594,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 414.0,
+      "duration_min": 45.0,
+      "level": "親子級",
+      "start_point": "茶推廣中心步道口",
+      "end_point": "私人工寮旁",
+      "end_lat": 24.9736,
+      "end_lng": 121.5943,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-137",
+    "name": "壺穴步道",
+    "category": "trail",
+    "lat": 24.9698,
+    "lng": 121.5967,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 550.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "茶壺站對面寒舍入口",
+      "end_point": "壺穴吊橋",
+      "end_lat": 24.9661,
+      "end_lng": 121.5974,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-138",
+    "name": "小天空步道",
+    "category": "trail",
+    "lat": 24.9686,
+    "lng": 121.5955,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 200.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "茶推廣中心停車場旁",
+      "end_point": "邀月餐廳門口",
+      "end_lat": 24.9671,
+      "end_lng": 121.5964,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-139",
+    "name": "飛龍步道",
+    "category": "trail",
+    "lat": 24.9799,
+    "lng": 121.5764,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 960.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "政治大學環山二道",
+      "end_point": "樟山寺",
+      "end_lat": 24.9732,
+      "end_lng": 121.5795,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-140",
+    "name": "救千宮步道",
+    "category": "trail",
+    "lat": 24.9729,
+    "lng": 121.5789,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1029.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "樟山寺",
+      "end_point": "混元宮前高速公路涵洞下步道口",
+      "end_lat": 24.9756,
+      "end_lng": 121.5715,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-141",
+    "name": "指南國小步道",
+    "category": "trail",
+    "lat": 24.9763,
+    "lng": 121.5832,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 686.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "指南國小",
+      "end_point": "樟山寺前叉路口",
+      "end_lat": 24.9735,
+      "end_lng": 121.5795,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-142",
+    "name": "拖板嶺步道",
+    "category": "trail",
+    "lat": 24.9764,
+    "lng": 121.5836,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1320.0,
+      "duration_min": 70.0,
+      "level": "親子級",
+      "start_point": "指南國小",
+      "end_point": "纜車貓空站",
+      "end_lat": 24.9684,
+      "end_lng": 121.5882,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-143",
+    "name": "貓空越嶺步道",
+    "category": "trail",
+    "lat": 24.9683,
+    "lng": 121.5882,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 800.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "纜車貓空站對面步道口",
+      "end_point": "稜線上十字路口",
+      "end_lat": 24.9637,
+      "end_lng": 121.5881,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-144",
+    "name": "樟樹步道",
+    "category": "trail",
+    "lat": 24.9694,
+    "lng": 121.5805,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 1100.0,
+      "duration_min": 50.0,
+      "level": "親子級",
+      "start_point": "指南路三段34巷步道口",
+      "end_point": "大觀園後方停車場",
+      "end_lat": 24.9673,
+      "end_lng": 121.5873,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-145",
+    "name": "楓林步道",
+    "category": "trail",
+    "lat": 24.9677,
+    "lng": 121.5858,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 160.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "樟樹步道楓林支線叉路口",
+      "end_point": "指南路談天園對面步道口(含涼亭範圍)",
+      "end_lat": 24.9683,
+      "end_lng": 121.5849,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-146",
+    "name": "石獅腳步道",
+    "category": "trail",
+    "lat": 24.9721,
+    "lng": 121.5802,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 350.0,
+      "duration_min": 25.0,
+      "level": "親子級",
+      "start_point": "德興茶園旁步道口",
+      "end_point": "指南路三段34巷27號旁步道口",
+      "end_lat": 24.9699,
+      "end_lng": 121.5814,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-147",
+    "name": "老樟樹步道",
+    "category": "trail",
+    "lat": 24.9695,
+    "lng": 121.5809,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 70.0,
+      "duration_min": 5.0,
+      "level": "親子級",
+      "start_point": "樟樹步道老樟樹叉路口",
+      "end_point": "繞一圈至前方80m出口",
+      "end_lat": 24.9692,
+      "end_lng": 121.581,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-148",
+    "name": "樟湖步道",
+    "category": "trail",
+    "lat": 24.9672,
+    "lng": 121.5874,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 2500.0,
+      "duration_min": 100.0,
+      "level": "親子級",
+      "start_point": "指南路3段38巷涵鈺軒",
+      "end_point": "指南路3段34巷步道口(公車樟山寺站旁)",
+      "end_lat": 24.9705,
+      "end_lng": 121.5799,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-149",
+    "name": "待老坑步道",
+    "category": "trail",
+    "lat": 24.9663,
+    "lng": 121.5793,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 522.0,
+      "duration_min": 30.0,
+      "level": "親子級",
+      "start_point": "樟湖步道待老坑叉路",
+      "end_point": "待老坑山至老泉街26巷優人神鼓",
+      "end_lat": 24.9657,
+      "end_lng": 121.5734,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-150",
+    "name": "登高步道",
+    "category": "trail",
+    "lat": 24.9701,
+    "lng": 121.5784,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 100.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "明德宮對面步道口",
+      "end_point": "望遠亭",
+      "end_lat": 24.9704,
+      "end_lng": 121.5779,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-151",
+    "name": "中埔山榕樹步道",
+    "category": "trail",
+    "lat": 25.0099,
+    "lng": 121.5597,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 250.0,
+      "duration_min": 15.0,
+      "level": "親子級",
+      "start_point": "辛亥路四段21巷步道口",
+      "end_point": "石板鋪面終點",
+      "end_lat": 25.0111,
+      "end_lng": 121.5581,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-152",
+    "name": "仙跡岩主稜線",
+    "category": "trail",
+    "lat": 24.991,
+    "lng": 121.5435,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 400.0,
+      "duration_min": 40.0,
+      "level": "親子級",
+      "start_point": "溝子口支線及海巡署支線三叉路口",
+      "end_point": "主稜線及景興國小支線轉角",
+      "end_lat": 24.9937,
+      "end_lng": 121.5505,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-153",
+    "name": "軍功山步道",
+    "category": "trail",
+    "lat": 25.0076,
+    "lng": 121.5646,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 600.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "軍功山世界山莊登山口",
+      "end_point": "中埔山東峰步道交界處",
+      "end_lat": 25.0114,
+      "end_lng": 121.5593,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  },
+  {
+    "id": "trail-154",
+    "name": "中埔山東峰步道",
+    "category": "trail",
+    "lat": 25.0114,
+    "lng": 121.5593,
+    "address": "臺北市文山區",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "登山步道",
+      "健行",
+      "親子級"
+    ],
+    "extra": {
+      "length_m": 700.0,
+      "duration_min": 35.0,
+      "level": "親子級",
+      "start_point": "軍功山步道交界處",
+      "end_point": "辛亥路水泥陡坡終點",
+      "end_lat": 25.0136,
+      "end_lng": 121.556,
+      "barrier_free": "",
+      "public_transport": ""
+    },
+    "source": "data.taipei / 臺北市列管登山步道 (145689)"
+  }
+]

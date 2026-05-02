@@ -48,6 +48,7 @@ import { marchingSquare } from "../assets/utilityFunctions/marchingSquare.js";
 import { voronoi } from "../assets/utilityFunctions/voronoi.js";
 import { calculateHaversineDistance } from "../assets/utilityFunctions/calculateHaversineDistance";
 import { AnimatedArcLayer } from "../assets/configs/mapbox/arcAnimate.js";
+import { getKaobeiGeoJson, KAOBEI_LAYER_INDICES } from "../composables/useKaobeiData";
 // 3D Mrt Map 相關 Utility Functions
 import { cutRouteSegment } from "../assets/utilityFunctions/getRouteForAnimation.js";
 import { interpolateAlongSegment } from "../assets/utilityFunctions/geometryUtils.js";
@@ -453,6 +454,22 @@ export const useMapStore = defineStore("map", {
 		},
 		// 2. Call an API to get the layer data
 		fetchLocalGeoJson(map_config) {
+			// 黑客松「靠北儀表板」：6 個組件圖層只走 in-memory cache，
+			// 不 fallback 到 /mapData/*.geojson（相關靜態檔已不存在）
+			if (KAOBEI_LAYER_INDICES.has(map_config.index)) {
+				const cached = getKaobeiGeoJson(map_config.index);
+				if (cached) {
+					this.addGeojsonSource(map_config, cached);
+				} else {
+					console.warn(
+						`[kaobei] cache miss for ${map_config.index}; layer not added`,
+					);
+					this.loadingLayers = this.loadingLayers.filter(
+						(el) => el !== map_config.layerId,
+					);
+				}
+				return;
+			}
 			axios
 				.get(`/mapData/${map_config.index}.geojson`)
 				.then((rs) => {
@@ -2434,6 +2451,29 @@ export const useMapStore = defineStore("map", {
 			map_configs.map((map_config) => {
 				let mapLayerId = `${map_config.index}-${map_config.type}-${map_config.city}`;
 				this.map.setLayoutProperty(mapLayerId, "visibility", "visible");
+			});
+		},
+		// 5. 「靠北儀表板」dropdown 切某組件 city 後，reload 該 component 對應的 kaobei layer 子集。
+		// useKaobeiData.refetchOne() 傳 layerIndicesSubset；無傳則 reload 全部 kaobei 層。
+		// 用 map.getSource(...).setData(newData) 原地換資料，避免 remove + re-add；
+		// 同時 setFilter null 清掉舊 city 的 byParam filter。
+		reloadKaobeiLayers(layerIndicesSubset) {
+			if (!this.map) return;
+			const subset = Array.isArray(layerIndicesSubset)
+				? new Set(layerIndicesSubset)
+				: null;
+			this.currentLayers.forEach((layerId) => {
+				const cfg = this.mapConfigs[layerId];
+				if (!cfg || !KAOBEI_LAYER_INDICES.has(cfg.index)) return;
+				if (subset && !subset.has(cfg.index)) return;
+				const newData = getKaobeiGeoJson(cfg.index);
+				const source = this.map.getSource(`${layerId}-source`);
+				if (source && newData) {
+					source.setData({ ...newData });
+				}
+				if (this.map.getLayer(layerId)) {
+					this.map.setFilter(layerId, null);
+				}
 			});
 		},
 

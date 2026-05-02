@@ -1,10 +1,10 @@
 <!-- Developed By Taipei Urban Intelligence Center 2023-2024 -->
-<!-- 
+<!--
 Lead Developer:  Igor Ho (Full Stack Engineer)
 Data Pipelines:  Iima Yu (Data Scientist)
 Design and UX: Roy Lin (Fmr. Consultant), Chu Chen (Researcher)
 Systems: Ann Shih (Systems Engineer)
-Testing: Jack Huang (Data Scientist), Ian Huang (Data Analysis Intern) 
+Testing: Jack Huang (Data Scientist), Ian Huang (Data Analysis Intern)
 -->
 <!-- Department of Information Technology, Taipei City Government -->
 
@@ -22,6 +22,7 @@ import { useAuthStore } from "./store/authStore";
 import { useDialogStore } from "./store/dialogStore";
 import { useContentStore } from "./store/contentStore";
 import { useMapStore } from "./store/mapStore";
+import { useEcoAssistantStore } from "./store/ecoAssistantStore";
 
 import NavBar from "./components/utilities/bars/NavBar.vue";
 import SideBar from "./components/utilities/bars/SideBar.vue";
@@ -33,10 +34,15 @@ import ComponentSideBar from "./components/utilities/bars/ComponentSideBar.vue";
 import LogIn from "./components/dialogs/LogIn.vue";
 import ChatBox from "./components/dialogs/ChatBox.vue";
 import ChatBotIcon from "./components/icons/ChatBotIcon.vue";
+import EcoAssistantButton from "./components/ecoAssistant/EcoAssistantButton.vue";
+import EcoAssistantPanel from "./components/ecoAssistant/EcoAssistantPanel.vue";
+import EcoMapOverlay from "./components/ecoAssistant/EcoMapOverlay.vue";
+import { KAOBEI_DASHBOARD_META } from "./composables/useKaobeiData";
 
 const authStore = useAuthStore();
 const dialogStore = useDialogStore();
 const contentStore = useContentStore();
+const ecoStore = useEcoAssistantStore();
 const timeToUpdate = ref(600);
 
 const mapStore = useMapStore();
@@ -73,6 +79,13 @@ const formattedTimeToUpdate = computed(() => {
 	const seconds = timeToUpdate.value % 60;
 	return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 });
+
+// 小碳寶（小碳寶）只在「靠北儀表板」的地圖頁顯示
+const showEcoAssistant = computed(
+	() =>
+		authStore.currentPath === "mapview" &&
+		contentStore.currentDashboard.index === KAOBEI_DASHBOARD_META.index,
+);
 
 function reloadChartData() {
 	if (!["dashboard", "mapview"].includes(authStore.currentPath)) return;
@@ -159,15 +172,25 @@ function reload3DMRTMapData() {
 	});
 }
 
-// Chatroom 功能顯示隱藏
+// Chatroom 功能顯示隱藏 — 與小碳寶面板互斥, 一次只開一個
 function chatbotBtnHandler() {
-	isChatBoxShow.value = !isChatBoxShow.value;
+	const next = !isChatBoxShow.value;
+	isChatBoxShow.value = next;
+	if (next) ecoStore.closePanel();
 }
 
 function hideBtnClickHandler() {
 	isChatBtnShow.value = false;
 	isChatBoxShow.value = false;
 }
+
+// 小碳寶開啟時, 自動關閉舊版 chatbot
+watch(
+	() => ecoStore.open,
+	(open) => {
+		if (open) isChatBoxShow.value = false;
+	}
+);
 
 (watch(
 	() => route.query,
@@ -291,6 +314,15 @@ onBeforeUnmount(() => {
         </button>
       </div>
     </div>
+    <!-- Eco-route AI assistant: 只在「靠北儀表板」的 /mapview 顯示 -->
+    <template v-if="showEcoAssistant">
+      <div class="eco-assistant-container">
+        <EcoAssistantPanel />
+        <EcoAssistantButton />
+      </div>
+    </template>
+    <!-- Behaviour-only: chat 產生的 marker 仍可拖曳, 不需要 picker UI -->
+    <EcoMapOverlay v-if="showEcoAssistant" />
   </div>
 </template>
 
@@ -332,6 +364,25 @@ onBeforeUnmount(() => {
 		&:hover {
 			opacity: 1;
 		}
+	}
+}
+
+// Eco-route assistant 浮動容器（位於 chatbot 上方避免重疊）
+.eco-assistant-container {
+	position: fixed;
+	bottom: 6.5rem;
+	right: 1.5rem;
+	z-index: 11;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 12px;
+}
+
+@media (max-width: 600px) {
+	.eco-assistant-container {
+		bottom: 5.5rem;
+		right: 1rem;
 	}
 }
 
