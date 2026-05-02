@@ -1,4 +1,5 @@
 .DS_Store
+.claude/
 /node_modules
 Taipei-City-Dashboard-FE/dist
 Taipei-City-Dashboard-BE/TaipeiCityDashboardBE
