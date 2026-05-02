@@ -47,38 +47,41 @@ func (GreenPark) TableName() string { return "green_parks" }
 
 /* ----- Restaurant (gis_p_11) ----- */
 
+// xml tag 同時支援從 MOENV gis_p_11 XML 端點直接 Unmarshal(BE 端 fallback fetch 用),
+// 不影響 json 序列化結果。
 type GreenRestaurant struct {
-	ID        int64  `json:"-" gorm:"column:id;autoincrement;primaryKey"`
-	RestID    string `json:"restid" gorm:"column:restid;type:varchar"`
-	Name      string `json:"name" gorm:"column:name;type:varchar"`
-	Address   string `json:"address" gorm:"column:address;type:varchar"`
-	Phone     string `json:"phone" gorm:"column:phone;type:varchar"`
-	Mobile    string `json:"mobile" gorm:"column:mobile;type:varchar"`
-	Latitude  string `json:"latitude" gorm:"column:latitude;type:varchar"`
-	Longitude string `json:"longitude" gorm:"column:longitude;type:varchar"`
-	City      string `json:"city" gorm:"column:city;type:varchar"`
+	ID        int64  `json:"-" xml:"-" gorm:"column:id;autoincrement;primaryKey"`
+	RestID    string `json:"restid" xml:"restid" gorm:"column:restid;type:varchar"`
+	Name      string `json:"name" xml:"name" gorm:"column:name;type:varchar"`
+	Address   string `json:"address" xml:"address" gorm:"column:address;type:varchar"`
+	Phone     string `json:"phone" xml:"phone" gorm:"column:phone;type:varchar"`
+	Mobile    string `json:"mobile" xml:"mobile" gorm:"column:mobile;type:varchar"`
+	Latitude  string `json:"latitude" xml:"latitude" gorm:"column:latitude;type:varchar"`
+	Longitude string `json:"longitude" xml:"longitude" gorm:"column:longitude;type:varchar"`
+	City      string `json:"city" xml:"city" gorm:"column:city;type:varchar"`
 
-	UpdatedAt time.Time `json:"-" gorm:"column:updated_at;type:timestamp with time zone"`
+	UpdatedAt time.Time `json:"-" xml:"-" gorm:"column:updated_at;type:timestamp with time zone"`
 }
 
 func (GreenRestaurant) TableName() string { return "green_restaurants" }
 
 /* ----- Hotel (gp_p_43) ----- */
 
+// xml tag 同時支援從 MOENV gp_p_43 XML 端點直接 Unmarshal(BE 端 fallback fetch 用)。
 type GreenHotel struct {
-	ID           int64  `json:"-" gorm:"column:id;autoincrement;primaryKey"`
-	SerialNumber string `json:"serialnumber" gorm:"column:serialnumber;type:varchar"`
-	Name         string `json:"name" gorm:"column:name;type:varchar"`
-	Address      string `json:"address" gorm:"column:address;type:varchar"`
-	Phone        string `json:"phone" gorm:"column:phone;type:varchar"`
-	Latitude     string `json:"latitude" gorm:"column:latitude;type:varchar"`
-	Longitude    string `json:"longitude" gorm:"column:longitude;type:varchar"`
-	Note         string `json:"note" gorm:"column:note;type:varchar"`
-	County       string `json:"county" gorm:"column:county;type:varchar"`
-	Town         string `json:"town" gorm:"column:town;type:varchar"`
-	Village      string `json:"village" gorm:"column:village;type:varchar"`
+	ID           int64  `json:"-" xml:"-" gorm:"column:id;autoincrement;primaryKey"`
+	SerialNumber string `json:"serialnumber" xml:"serialnumber" gorm:"column:serialnumber;type:varchar"`
+	Name         string `json:"name" xml:"name" gorm:"column:name;type:varchar"`
+	Address      string `json:"address" xml:"address" gorm:"column:address;type:varchar"`
+	Phone        string `json:"phone" xml:"phone" gorm:"column:phone;type:varchar"`
+	Latitude     string `json:"latitude" xml:"latitude" gorm:"column:latitude;type:varchar"`
+	Longitude    string `json:"longitude" xml:"longitude" gorm:"column:longitude;type:varchar"`
+	Note         string `json:"note" xml:"note" gorm:"column:note;type:varchar"`
+	County       string `json:"county" xml:"county" gorm:"column:county;type:varchar"`
+	Town         string `json:"town" xml:"town" gorm:"column:town;type:varchar"`
+	Village      string `json:"village" xml:"village" gorm:"column:village;type:varchar"`
 
-	UpdatedAt time.Time `json:"-" gorm:"column:updated_at;type:timestamp with time zone"`
+	UpdatedAt time.Time `json:"-" xml:"-" gorm:"column:updated_at;type:timestamp with time zone"`
 }
 
 func (GreenHotel) TableName() string { return "green_hotels" }
@@ -170,4 +173,79 @@ func GetAllGreenRecycles() ([]GreenRecycle, error) {
 	rows := make([]GreenRecycle, 0)
 	err := DBDashboard.Order("id").Find(&rows).Error
 	return rows, err
+}
+
+// SaveGreen* 系列函式提供「TRUNCATE + bulk insert」語意,給 BE fallback fetch 用。
+// 與 DE Airflow ETL 的 load_behavior=replace 行為一致。
+// 入參若為空,則只清表不寫入(避免覆蓋為空)。
+// 統一在此處戳 UpdatedAt,確保 DB 觀察上能看到資料寫入時間。
+
+func SaveGreenParks(rows []GreenPark) error {
+	if len(rows) == 0 {
+		return nil
+	}
+	now := time.Now()
+	for i := range rows {
+		rows[i].UpdatedAt = now
+	}
+	if err := DBDashboard.Exec("TRUNCATE TABLE green_parks RESTART IDENTITY").Error; err != nil {
+		return err
+	}
+	return DBDashboard.Create(&rows).Error
+}
+
+func SaveGreenRestaurants(rows []GreenRestaurant) error {
+	if len(rows) == 0 {
+		return nil
+	}
+	now := time.Now()
+	for i := range rows {
+		rows[i].UpdatedAt = now
+	}
+	if err := DBDashboard.Exec("TRUNCATE TABLE green_restaurants RESTART IDENTITY").Error; err != nil {
+		return err
+	}
+	return DBDashboard.Create(&rows).Error
+}
+
+func SaveGreenHotels(rows []GreenHotel) error {
+	if len(rows) == 0 {
+		return nil
+	}
+	now := time.Now()
+	for i := range rows {
+		rows[i].UpdatedAt = now
+	}
+	if err := DBDashboard.Exec("TRUNCATE TABLE green_hotels RESTART IDENTITY").Error; err != nil {
+		return err
+	}
+	return DBDashboard.Create(&rows).Error
+}
+
+func SaveGreenWalkpaths(rows []GreenWalkpath) error {
+	if len(rows) == 0 {
+		return nil
+	}
+	now := time.Now()
+	for i := range rows {
+		rows[i].UpdatedAt = now
+	}
+	if err := DBDashboard.Exec("TRUNCATE TABLE green_walkpaths RESTART IDENTITY").Error; err != nil {
+		return err
+	}
+	return DBDashboard.Create(&rows).Error
+}
+
+func SaveGreenRecycles(rows []GreenRecycle) error {
+	if len(rows) == 0 {
+		return nil
+	}
+	now := time.Now()
+	for i := range rows {
+		rows[i].UpdatedAt = now
+	}
+	if err := DBDashboard.Exec("TRUNCATE TABLE green_recycles RESTART IDENTITY").Error; err != nil {
+		return err
+	}
+	return DBDashboard.Create(&rows).Error
 }
