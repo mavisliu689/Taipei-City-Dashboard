@@ -1,0 +1,8560 @@
+[
+  {
+    "id": "recycle-tpe-0",
+    "name": "士林區蘭雅回收點",
+    "category": "recycle",
+    "lat": 25.09997,
+    "lng": 121.52006,
+    "address": "臺北市士林區文昌路211之3號",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "蘭雅",
+      "phone": "(02)28311586",
+      "open_time": "周三、周日開放時間為06：00~16：00，其餘開放時間為06：00~22：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-1",
+    "name": "士林區社子回收點",
+    "category": "recycle",
+    "lat": 25.08603,
+    "lng": 121.50647,
+    "address": "臺北市士林區中正路臨692號對面",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "社子",
+      "phone": "(02)28136658",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-2",
+    "name": "士林區天母回收點",
+    "category": "recycle",
+    "lat": 25.11576,
+    "lng": 121.52771,
+    "address": "臺北市士林區中山北路6段763巷臨2號對面(垃圾車駐點)",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "天母",
+      "phone": "(02)28742048",
+      "open_time": "開放時間07：00~10：00、14：00 ~17：00、20：00 ~ 22：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-3",
+    "name": "大同區大龍回收點",
+    "category": "recycle",
+    "lat": 25.076,
+    "lng": 121.52059,
+    "address": "臺北市大同區承德路3段303號之1",
+    "city": "臺北市",
+    "district": "大同區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "大龍",
+      "phone": "(02)25860781",
+      "open_time": "開放時間06：00~11：00、14：00~21：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-4",
+    "name": "大同區建成回收點",
+    "category": "recycle",
+    "lat": 25.06284,
+    "lng": 121.51439,
+    "address": "臺北市大同區民權西路臨194之1號",
+    "city": "臺北市",
+    "district": "大同區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "建成",
+      "phone": "(02)25535107",
+      "open_time": "開放時間06：00~16：30加油站旁"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-5",
+    "name": "大同區延平回收點",
+    "category": "recycle",
+    "lat": 25.0525,
+    "lng": 121.5072,
+    "address": "臺北市大同區環河北路1段63號之1",
+    "city": "臺北市",
+    "district": "大同區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "延平",
+      "phone": "(02)25521952",
+      "open_time": "其他開放時間06：00~19：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-6",
+    "name": "大安區和平回收點",
+    "category": "recycle",
+    "lat": 25.0223,
+    "lng": 121.5328,
+    "address": "臺北市大安區辛亥路1段臨143號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "和平",
+      "phone": "(02)23625869",
+      "open_time": "開放時間06：00~16：00、20：00~22：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-7",
+    "name": "大安區瑞安回收點",
+    "category": "recycle",
+    "lat": 25.02495,
+    "lng": 121.53778,
+    "address": "臺北市大安區建國南路2段臨263號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "瑞安",
+      "phone": "(02)23634850",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-8",
+    "name": "大安區臺大回收點",
+    "category": "recycle",
+    "lat": 25.02242,
+    "lng": 121.53528,
+    "address": "臺北市大安區辛亥路1段臨138號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "臺大",
+      "phone": "(02)23633215",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-9",
+    "name": "大安區臥龍回收點",
+    "category": "recycle",
+    "lat": 25.01937,
+    "lng": 121.54693,
+    "address": "臺北市大安區基隆路3段臨24號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "臥龍",
+      "phone": "(02)23785530",
+      "open_time": "開放時間06：00~17：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-10",
+    "name": "大安區新生回收點",
+    "category": "recycle",
+    "lat": 25.03986,
+    "lng": 121.53785,
+    "address": "臺北市大安區建國南路1段臨173號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "新生",
+      "phone": "(02)27529383",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-11",
+    "name": "大安區敦化回收點",
+    "category": "recycle",
+    "lat": 25.04182,
+    "lng": 121.53707,
+    "address": "臺北市大安區忠孝東路3段臨31號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "敦化",
+      "phone": "(02)27786724",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-12",
+    "name": "大安區建南\n停車場回收點",
+    "category": "recycle",
+    "lat": 25.02882,
+    "lng": 121.53785,
+    "address": "臺北市大安區建國南路2段臨149號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "建南\n停車場",
+      "phone": "(02)27000962",
+      "open_time": "開放時間06：00~23：00，僅收受使用專用垃圾袋之一般垃圾"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-13",
+    "name": "中山區長安回收點",
+    "category": "recycle",
+    "lat": 25.04628,
+    "lng": 121.53685,
+    "address": "臺北市中山區建國北路1段臨5-1號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "長安",
+      "phone": "(02)27775545",
+      "open_time": "開放時間06：00~11：00、13：30~16：30，僅收受使用專用垃圾袋之一般垃圾及資源回收物(不含廚餘)"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-14",
+    "name": "中山區中山回收點",
+    "category": "recycle",
+    "lat": 25.05412,
+    "lng": 121.52748,
+    "address": "臺北市中山區新生北路2段臨30-1號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "中山",
+      "phone": "(02)25110958",
+      "open_time": "開放時間06：00~16：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-15",
+    "name": "中山區南京回收點",
+    "category": "recycle",
+    "lat": 25.05456,
+    "lng": 121.54174,
+    "address": "臺北市中山區長春路350號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "南京",
+      "phone": "(02)27132687",
+      "open_time": "開放時間：06：00∼11：00、13：30∼16：30 \n其他：開放時間 06：00∼11：00、13：30∼16：30，僅收受使用專用垃圾袋之一般垃圾及資源回收物(不含廚餘)"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-16",
+    "name": "中山區大直\n停車場回收點",
+    "category": "recycle",
+    "lat": 25.07292,
+    "lng": 121.54577,
+    "address": "臺北市中山區濱江街301巷內",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "大直\n停車場",
+      "phone": "(02)25057649",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-17",
+    "name": "中正區師大路\n停車場回收點",
+    "category": "recycle",
+    "lat": 25.02094,
+    "lng": 121.52533,
+    "address": "臺北市中正區師大路臨241號",
+    "city": "臺北市",
+    "district": "中正區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "師大路\n停車場",
+      "phone": "(02)23654040",
+      "open_time": "開放時間06：00~17：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-18",
+    "name": "內湖區內湖\n停車場回收點",
+    "category": "recycle",
+    "lat": 25.07005,
+    "lng": 121.57479,
+    "address": "臺北市內湖區舊宗路2段臨158號",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "內湖\n停車場",
+      "phone": "(02)87912409",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-19",
+    "name": "文山區興隆回收點",
+    "category": "recycle",
+    "lat": 25.00126,
+    "lng": 121.54512,
+    "address": "臺北市文山區景豐街臨82號對面(垃圾車駐點)",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "興隆",
+      "phone": "(02)89315653",
+      "open_time": "收受時間為每周一、二、四、五、六上午07：00~08：00，僅收受專用垃圾袋之一般垃圾"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-20",
+    "name": "文山區博嘉回收點",
+    "category": "recycle",
+    "lat": 25.00229,
+    "lng": 121.56851,
+    "address": "臺北市文山區萬美街1段47號",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "博嘉",
+      "phone": "(02)22397182",
+      "open_time": "開放時間08：00~08：30(每周三、日、颱風天、停班日暫停開放)"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-21",
+    "name": "文山區景美回收點",
+    "category": "recycle",
+    "lat": 25.00245,
+    "lng": 121.5356,
+    "address": "臺北市文山區溪洲街臨220號",
+    "city": "臺北市",
+    "district": "文山區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "景美",
+      "phone": "(02)29305836",
+      "open_time": "週三、周日開放時間為06：00~15：00，其餘開放時間為06：00~22：00，僅收受使用專用垃圾袋之一般垃圾及資源回收物(不含廚餘)"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-22",
+    "name": "北投區陽明一班回收點",
+    "category": "recycle",
+    "lat": 25.15127,
+    "lng": 121.54636,
+    "address": "臺北市北投區紗帽路141巷23號",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "陽明一班",
+      "phone": "(02)28617757",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-23",
+    "name": "北投區石牌回收點",
+    "category": "recycle",
+    "lat": 25.11205,
+    "lng": 121.49836,
+    "address": "臺北市北投區承德路7段393巷200號",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "石牌",
+      "phone": "(02)28235650",
+      "open_time": "開放時間為周一至周六06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-24",
+    "name": "北投區關渡回收點",
+    "category": "recycle",
+    "lat": 25.12311,
+    "lng": 121.46703,
+    "address": "臺北市北投區大度路3段臨250號",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "關渡",
+      "phone": "(02)28950256",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-25",
+    "name": "松山區松山回收點",
+    "category": "recycle",
+    "lat": 25.05127,
+    "lng": 121.56934,
+    "address": "臺北市松山區南京東路5段356號對面橋下",
+    "city": "臺北市",
+    "district": "松山區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "松山",
+      "phone": "(02)27678552",
+      "open_time": "開放時間為週三、周日06：00~16：30"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-26",
+    "name": "南港區南港\n停車場回收點",
+    "category": "recycle",
+    "lat": 25.02897,
+    "lng": 121.62225,
+    "address": "臺北市南港區南深路37-1號",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "南港\n停車場",
+      "phone": "(02)27835658",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-27",
+    "name": "南港區南港回收點",
+    "category": "recycle",
+    "lat": 25.06107,
+    "lng": 121.61112,
+    "address": "臺北市南港區松河街699號",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "南港",
+      "phone": "(02)27837522",
+      "open_time": "開放時間06：00~23：00"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-28",
+    "name": "萬華區大理回收點",
+    "category": "recycle",
+    "lat": 25.03295,
+    "lng": 121.489,
+    "address": "臺北市萬華區長順街臨131號",
+    "city": "臺北市",
+    "district": "萬華區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "大理",
+      "phone": "(02)23068781",
+      "open_time": "周三、周日開放時間為06：00~16：30，其餘時間正常開放(06：00~23：00)"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-tpe-29",
+    "name": "萬華區萬華\n停車場回收點",
+    "category": "recycle",
+    "lat": 25.05034,
+    "lng": 121.50975,
+    "address": "臺北市萬華區鄭州路及環河北路1段交口",
+    "city": "臺北市",
+    "district": "萬華區",
+    "tags": [
+      "資源回收",
+      "限時收受"
+    ],
+    "extra": {
+      "squad": "萬華\n停車場",
+      "phone": "(02)25521063",
+      "open_time": "開放時間06：00~23：00，淡3號疏散門外"
+    },
+    "source": "data.taipei / 臺北市垃圾資源回收限時收受點 (132357)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區中山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區大觀路二段37巷280號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中山里",
+      "manager": "林爽",
+      "phone": "(02)82752345",
+      "mobile": "",
+      "open_time": "每週六早上 06:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區廣德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區重慶路245巷50弄17號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "廣德里",
+      "manager": "周建和",
+      "phone": "(02)29643797",
+      "mobile": "",
+      "open_time": "每周六日9:00~12:00、15:00~18:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區景星里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區景福路11號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "景星里",
+      "manager": "林志成",
+      "phone": "(02)29531072",
+      "mobile": "",
+      "open_time": "每週四 09:00~14：00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區滿翠里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區民生路三段263巷7號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "滿翠里",
+      "manager": "林重光",
+      "phone": "(02)22556070",
+      "mobile": "",
+      "open_time": "每週三、五 19:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區華德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區四川路二段99之9號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "華德里",
+      "manager": "陳寶銓",
+      "phone": "(02)89676580",
+      "mobile": "",
+      "open_time": "每週五 8:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區和平里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區和平路安樂巷51號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "和平里",
+      "manager": "李蔡春花",
+      "phone": "(02)29557838",
+      "mobile": "",
+      "open_time": "每週一、五 07:00~22:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區雙玉里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區永豐街124號(永豐公園活動中心旁巡守隊崗哨)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "雙玉里",
+      "manager": "王聰震",
+      "phone": "(02)29529786",
+      "mobile": "",
+      "open_time": "每週一、五 18:30~19:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區長安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區長安街331巷60號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "長安里",
+      "manager": "陳聰文",
+      "phone": "(02)29519341",
+      "mobile": "",
+      "open_time": "每週三、五 19:00~21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區重慶里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區國慶路149巷3弄6號旁",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "重慶里",
+      "manager": "許鳳霞",
+      "phone": "(02)29632763",
+      "mobile": "",
+      "open_time": "每週三19:00~21:00；每週四 8:00~09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區玉光里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區民生路二段60號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "玉光里",
+      "manager": "曾國旃",
+      "phone": "(02)89645179",
+      "mobile": "",
+      "open_time": "每週四 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區鄉雲里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區大華街168號 新北市板橋區四川路一段274巷3號(里辦)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "鄉雲里",
+      "manager": "謝秀娥",
+      "phone": "(02)29624656",
+      "mobile": "",
+      "open_time": "(里辦)每週一~六 08:00~13:00；(大華街)每週二 12:00~14:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區漢生里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區公館街96號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "漢生里",
+      "manager": "蕭水文",
+      "phone": "(02)29669384",
+      "mobile": "",
+      "open_time": "每週六 上午10:00~下午16:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區溪洲里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區溪洲里溪崑二街113號(溪洲公園活動中心)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "溪洲里",
+      "manager": "王山崎",
+      "phone": "(02)26842011",
+      "mobile": "",
+      "open_time": "每月第2、4週五 10:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區福德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區忠孝路忠義巷9弄1-1號1樓(福泰社區活動中心)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福德里",
+      "manager": "劉慧琳",
+      "phone": "(02)29513625",
+      "mobile": "",
+      "open_time": "每週二 08:30~13:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區大豐里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區重慶路290巷12號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大豐里",
+      "manager": "張錦堂",
+      "phone": "(02)29524458",
+      "mobile": "",
+      "open_time": "每週六 07:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區國泰里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區國泰街75巷2弄15號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "國泰里",
+      "manager": "陳志煉",
+      "phone": "(02)29584918",
+      "mobile": "",
+      "open_time": "每週二11:00~14:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區成和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區金門街97號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "成和里",
+      "manager": "鄧月茶",
+      "phone": "(02)26816526",
+      "mobile": "",
+      "open_time": "每月第1,3週五11:00~14:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區聚安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區大觀路二段174巷147號旁空地",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "聚安里",
+      "manager": "蔡世川",
+      "phone": "(02)29600213",
+      "mobile": "",
+      "open_time": "每周六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區華貴里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區大明街20巷19弄13號1樓",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "華貴里",
+      "manager": "林榮彩",
+      "phone": "(02)29510606",
+      "mobile": "",
+      "open_time": "每周三19:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區華中里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區僑中一街102巷7弄1號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "華中里",
+      "manager": "黃榮煌",
+      "phone": "(02)29680023",
+      "mobile": "",
+      "open_time": "每周六08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區香雅里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區南雅西路二段307號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "香雅里",
+      "manager": "謝淑姿",
+      "phone": "(02)29669675",
+      "mobile": "",
+      "open_time": "每週一07:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區大觀里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區僑中二街92巷1號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大觀里",
+      "manager": "何明山",
+      "phone": "(02)29691007",
+      "mobile": "",
+      "open_time": "每週五8:00-10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區福星里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區四川路一段157巷9號(活動中心)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福星里",
+      "manager": "朱泰霖",
+      "phone": "(02)29510833",
+      "mobile": "",
+      "open_time": "每週五08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區金華里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區金華街10巷4號(活動中心)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "金華里",
+      "manager": "洪宗信",
+      "phone": "(02)29693025",
+      "mobile": "",
+      "open_time": "每週四15:00-17:00及19:00-21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區華興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區貴興路8號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "華興里",
+      "manager": "劉憲鐘",
+      "phone": "(02)29598803",
+      "mobile": "",
+      "open_time": "每週一19:00-21:00每周二07:00-08:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區廣新里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區永豐街58號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "廣新里",
+      "manager": "黃明和",
+      "phone": "(02)29619169",
+      "mobile": "",
+      "open_time": "每週五9:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區華江里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區民生路2段226巷17弄9號(美廉社對面)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "華江里",
+      "manager": "黃發達",
+      "phone": "(02)22528366",
+      "mobile": "",
+      "open_time": "每週六8:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區仁愛里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區仁愛路62巷15弄16號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "仁愛里",
+      "manager": "葉中正",
+      "phone": "(02)89533956",
+      "mobile": "",
+      "open_time": "每週五.19:00-21:00 每周六8:00~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區信義里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區信義路74巷7弄3號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "信義里",
+      "manager": "黃閎源",
+      "phone": "(02)29558215",
+      "mobile": "",
+      "open_time": "每週三19:00~21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區溪福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區金門街336巷7號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "溪福里",
+      "manager": "楊秋菊",
+      "phone": "(02)26831254",
+      "mobile": "",
+      "open_time": "每週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區自立里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區南雅西路二段196號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "自立里",
+      "manager": "呂建同",
+      "phone": "(02)29679914",
+      "mobile": "",
+      "open_time": "每周五09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區華福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區居安巷13-1號對面屋內",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "華福里",
+      "manager": "陳素玉",
+      "phone": "(02)29580219",
+      "mobile": "",
+      "open_time": "每周一 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區後埔里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區重慶路89巷9弄2號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "後埔里",
+      "manager": "林義壽",
+      "phone": "(02)29565712",
+      "mobile": "",
+      "open_time": "每週四15:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區光華里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區光華里14鄰光華街1巷1號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "光華里",
+      "manager": "周秀美",
+      "phone": "(02)29601222",
+      "mobile": "",
+      "open_time": "每周六08 :00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區社後里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區社後里大仁街33巷2號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "社後里",
+      "manager": "莊晉貴",
+      "phone": "(02)29677678",
+      "mobile": "",
+      "open_time": "每週六9：00~15：00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區自強里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區自強里中正路25巷3號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "自強里",
+      "manager": "張雪嬰",
+      "phone": "(02)29676168",
+      "mobile": "",
+      "open_time": "每周六早上9:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區埤墘里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區縣民大道三段63巷口",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "埤墘里",
+      "manager": "蘇琮貴",
+      "phone": "(02)89516381",
+      "mobile": "",
+      "open_time": "每周四早上9:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區香丘里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區漢生東路117巷7號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "香丘里",
+      "manager": "蘇淑芳",
+      "phone": "(02)89514121",
+      "mobile": "",
+      "open_time": "每週六08：30~11：00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區港嘴里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區縣民大道3段245號之1",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "港嘴里",
+      "manager": "鄭景耀",
+      "phone": "(02)22591380",
+      "mobile": "",
+      "open_time": "每周一8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區崑崙里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區大觀路三段240號(活動中心)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "崑崙里",
+      "manager": "魏烽智",
+      "phone": "",
+      "mobile": "0972085988",
+      "open_time": "每月第2、4周五上午08:00-11:00(遇連假順延一周)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區振義里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區萬安街53巷30號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "振義里",
+      "manager": "呂志祥",
+      "phone": "(02)29591118",
+      "mobile": "",
+      "open_time": "每周一上午9:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區西安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區板新路112號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "西安里",
+      "manager": "莊淑慧",
+      "phone": "(02)29543958",
+      "mobile": "",
+      "open_time": "每周五上午09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區振興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區中山路二段505巷56號(土地公廟旁)",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "振興里",
+      "manager": "柯仁傑",
+      "phone": "(02)29635758",
+      "mobile": "",
+      "open_time": "每周二下午13:30-15:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區湳興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區南雅西路一段64號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "湳興里",
+      "manager": "洪雅玲",
+      "phone": "(02)29679900",
+      "mobile": "",
+      "open_time": "每周二上午08:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區民族里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區民族路225巷43號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民族里",
+      "manager": "葉成和",
+      "phone": "(02)29506999",
+      "mobile": "",
+      "open_time": "每月第一、三 週五 8:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區浮洲里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區大觀路一段28巷89號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "浮洲里",
+      "manager": "賴姿吟",
+      "phone": "(02)22722237",
+      "mobile": "",
+      "open_time": "每月2.4周二08:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "板橋區五權里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市板橋區五權街59號1樓",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "五權里",
+      "manager": "黃國展",
+      "phone": "(02)29513957",
+      "mobile": "",
+      "open_time": "每週四07:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區慈惠里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區仁愛街580巷邊公園",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "慈惠里",
+      "manager": "蔡清德",
+      "phone": "(02)22862522",
+      "mobile": "",
+      "open_time": "每週二、週五 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區順德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區河邊北街256巷28號對面",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "順德里",
+      "manager": "李鴻志",
+      "phone": "(02)29786144",
+      "mobile": "",
+      "open_time": "每月第1、3週一 17:00~19:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區田安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區田安里新北大道一段206巷1號對面",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "田安里",
+      "manager": "陳黃秀美",
+      "phone": "(02)89881235",
+      "mobile": "",
+      "open_time": "每週五 08:30~10:30(第2週五除外，每月第2週為週六 08:30~10:30)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區厚德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區三和路三段170巷49號",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "厚德里",
+      "manager": "陳榮楠",
+      "phone": "(02)29822008",
+      "mobile": "",
+      "open_time": "每週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區永發里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區力行路一段178巷24號",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永發里",
+      "manager": "陳綉娜",
+      "phone": "(02)29845190",
+      "mobile": "",
+      "open_time": "每週一,四 10:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區光田里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區中華路5號",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "光田里",
+      "manager": "吳勝文",
+      "phone": "(02)29852719",
+      "mobile": "",
+      "open_time": "每月第1週五08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區五福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區自強路五段66號(原碧華國中大門旁)",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "五福里",
+      "manager": "李福山",
+      "phone": "(02)29886880",
+      "mobile": "",
+      "open_time": "每週六 09:00~11:00(暫停營運)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區大有里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區中正北路428巷20號",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大有里",
+      "manager": "鐘林美珠",
+      "phone": "(02)29814448",
+      "mobile": "",
+      "open_time": "每週二 09:00~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區崇德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區仁福街62號對面",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "崇德里",
+      "manager": "吳芳明",
+      "phone": "(02)89726351",
+      "mobile": "",
+      "open_time": "每週四 8:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區溪美里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區仁政街82號",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "溪美里",
+      "manager": "葉仁德",
+      "phone": "(02)89850578",
+      "mobile": "",
+      "open_time": "每週四08：30~11：00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區永德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "三重區自強路三段42巷11號",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永德里",
+      "manager": "陳冠霖",
+      "phone": "(02)29866499",
+      "mobile": "",
+      "open_time": "每週四 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區瑞德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區仁福街62號對面廣場",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "瑞德里",
+      "manager": "陳仕宏",
+      "phone": "(02)29755360",
+      "mobile": "",
+      "open_time": "每周一09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區五華里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區五華街75巷17號(五華公園)",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "五華里",
+      "manager": "楊志評",
+      "phone": "(02)29875481",
+      "mobile": "",
+      "open_time": "每月隔周六上午09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區立德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區忠孝路二段30號(和平活動中心)",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "立德里",
+      "manager": "林建利",
+      "phone": "(02)29880723",
+      "mobile": "",
+      "open_time": "暫停營運",
+      "state": "暫停營運"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區培德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區後竹圍街207號對面崗亭",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "培德里",
+      "manager": "盧姿貝",
+      "phone": "(02)29717995",
+      "mobile": "",
+      "open_time": "每周二上午09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區尚德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區三和路三段99號(巡守亭對面)",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "尚德里",
+      "manager": "許朝順",
+      "phone": "(02)29830121",
+      "mobile": "",
+      "open_time": "每周六上午09:00-10:50",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三重區承德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三重區龍門路274巷36號",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "承德里",
+      "manager": "吳政權",
+      "phone": "(02)29754164",
+      "mobile": "",
+      "open_time": "每月第1.3週五16:30~18:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區上林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區竹林路75巷17號旁",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "上林里",
+      "manager": "林維楠",
+      "phone": "(02)89269859",
+      "mobile": "",
+      "open_time": "每週六13:00~15:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區得和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區秀朗路一段203巷口",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "得和里",
+      "manager": "蔡琇花",
+      "phone": "(02)22312735",
+      "mobile": "",
+      "open_time": "每月第1.3週六08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區永興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區竹林路124巷30號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永興里",
+      "manager": "陳錦松",
+      "phone": "(02)29270057",
+      "mobile": "",
+      "open_time": "每月隔週週四13:00--15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區民族里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區民族街43巷口對面(小公園旁)",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民族里",
+      "manager": "張淑美",
+      "phone": "(02)29499613",
+      "mobile": "",
+      "open_time": "每週五19:00~20:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區和平里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區保平路236巷12弄7號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "和平里",
+      "manager": "柳舒雲",
+      "phone": "(02)29272429",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區永元里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區永和區秀朗路二段38號(巡守隊崗亭)",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永元里",
+      "manager": "呂卓春英",
+      "phone": "(02)29282712",
+      "mobile": "",
+      "open_time": "每月第1.3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區正興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區中興街10巷29號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "正興里",
+      "manager": "江貴滿",
+      "phone": "(02)29281463",
+      "mobile": "",
+      "open_time": "每月第1.3週六13:00~15:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區智光里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區民光街與民享街23巷口",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "智光里",
+      "manager": "趙珮蓁",
+      "phone": "(02)29423149",
+      "mobile": "",
+      "open_time": "每週六08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區中興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區復興街32巷14號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中興里",
+      "manager": "林東誼",
+      "phone": "",
+      "mobile": "",
+      "open_time": "單週一 14:00~15:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區潭安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區安樂路72巷7號1樓",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "潭安里",
+      "manager": "游富喬",
+      "phone": "(02)29417755",
+      "mobile": "",
+      "open_time": "單週六上午08:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區福和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區永貞路126號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福和里",
+      "manager": "王淑美",
+      "phone": "(02)29215050",
+      "mobile": "",
+      "open_time": "每月第2,4週六 08:30~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區竹林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區豫溪街151巷9號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "竹林里",
+      "manager": "王素娥",
+      "phone": "(02)89282635",
+      "mobile": "",
+      "open_time": "每月第三週六8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區秀朗里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區永亨路203號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀朗里",
+      "manager": "沈賜是",
+      "phone": "(02)29259090",
+      "mobile": "",
+      "open_time": "每月第1,3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區後溪里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區信義路25巷30弄3號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "後溪里",
+      "manager": "莊銘淵",
+      "phone": "(02)22323738",
+      "mobile": "",
+      "open_time": "每月2,4週五13:30-14:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區信義里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區信義路25巷30弄3號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "信義里",
+      "manager": "莊瑞雲",
+      "phone": "",
+      "mobile": "0912026393",
+      "open_time": "每月2,4週五13:30-14:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區秀成里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區成功路一段93巷20弄3號1樓",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀成里",
+      "manager": "黃昰瑋",
+      "phone": "(02)29251658",
+      "mobile": "",
+      "open_time": "每月2.4週四18:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區民治里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區得和路104巷14號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民治里",
+      "manager": "陳以樂",
+      "phone": "(02)29488321",
+      "mobile": "",
+      "open_time": "每週三13:00~14:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區民樂里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區成功路二段121巷9號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民樂里",
+      "manager": "潘慶忠",
+      "phone": "(02)22319635",
+      "mobile": "",
+      "open_time": "每月2.4周二18:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區雙和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "永和區中和路335巷14號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "雙和里",
+      "manager": "黃珠珪",
+      "phone": "(02)89234548",
+      "mobile": "",
+      "open_time": "每月第2.4週三 9:30~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區民生里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區民生路67巷45號旁",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民生里",
+      "manager": "黃新旺",
+      "phone": "(02)29409888",
+      "mobile": "",
+      "open_time": "每月第2、4周三上午08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區中溪里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區永平路238巷12號(停車場前)",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中溪里",
+      "manager": "吳春玉",
+      "phone": "(02)29298555",
+      "mobile": "",
+      "open_time": "每月第1、3周四下午18:00-20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "永和區民本里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市永和區成功路二段201巷8弄7號",
+    "city": "新北市",
+    "district": "永和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民本里",
+      "manager": "曹麗莉",
+      "phone": "(02)29483326",
+      "mobile": "",
+      "open_time": "每月第1.3周三下午12:30-14:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區秀峰里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區秀峰街103巷1弄2號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀峰里",
+      "manager": "周存炎",
+      "phone": "(02)29416936",
+      "mobile": "",
+      "open_time": "每週六 07:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區建和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區連城路263巷4號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "建和里",
+      "manager": "江曉佩",
+      "phone": "(02)22490243",
+      "mobile": "",
+      "open_time": "每週六 09:00~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區錦和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區圓通路369巷2號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "錦和里",
+      "manager": "林進明",
+      "phone": "(02)22422470",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區秀成里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區大智街109巷16號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀成里",
+      "manager": "吳金松",
+      "phone": "(02)29475348",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區頂南里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區興南路二段159巷28號1樓",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "頂南里",
+      "manager": "謝森儒",
+      "phone": "(02)29451238",
+      "mobile": "",
+      "open_time": "每週三19：00~21：00、星期六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區內南里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區興南路二段242巷11號旁",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "內南里",
+      "manager": "曾金禧",
+      "phone": "(02)86686688",
+      "mobile": "",
+      "open_time": "每月第1、3週六 07:00~09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區和興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區板南路160號對面",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "和興里",
+      "manager": "蔡璧如",
+      "phone": "(02)22477162",
+      "mobile": "",
+      "open_time": "每月第1、3週六 07:30~09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區秀景里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區成功路97巷7號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀景里",
+      "manager": "李淙河",
+      "phone": "(02)29424281",
+      "mobile": "",
+      "open_time": "每月第2、4週六 07:30~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區景本里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區景新街423巷36號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "景本里",
+      "manager": "張林秀麗",
+      "phone": "(02)29471217",
+      "mobile": "",
+      "open_time": "每月第一週六 08:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區崇南里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區景新街496巷26弄2號(活動中心)",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "崇南里",
+      "manager": "林秀貞",
+      "phone": "(02)29442606",
+      "mobile": "",
+      "open_time": "每週六 07:00~09:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區興南里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區信義街41巷12號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "興南里",
+      "manager": "呂明志",
+      "phone": "(02)29423656",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區外南里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區南山路236-1號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "外南里",
+      "manager": "連顯達",
+      "phone": "(02)29447369",
+      "mobile": "",
+      "open_time": "每週六07:00~9:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區德穗里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區國光街1號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "德穗里",
+      "manager": "詹文定",
+      "phone": "(02)29549556",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:30~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區景新里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區興南路一段56巷32號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "景新里",
+      "manager": "游成家",
+      "phone": "(02)29496369",
+      "mobile": "",
+      "open_time": "每週六 07:30~9:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區秀仁里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區大勇街60巷25號邊",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀仁里",
+      "manager": "陳慶章",
+      "phone": "(02)29462612",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區景平里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區安樂路66號旁(巷子內空地)",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "景平里",
+      "manager": "游一龍",
+      "phone": "(02)29411719",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區秀福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區秀朗路三段10巷37弄8號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀福里",
+      "manager": "林江西",
+      "phone": "(02)29464757",
+      "mobile": "",
+      "open_time": "每月第2、4週六 07:30~09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區景南里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區景新街467巷25號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "景南里",
+      "manager": "胡宇辰",
+      "phone": "(02)29462889",
+      "mobile": "",
+      "open_time": "每月第1.3週六07:00~09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區華南里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區忠孝街48號(飛駝活動中心)",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "華南里",
+      "manager": "林平發",
+      "phone": "(02)29498998",
+      "mobile": "",
+      "open_time": "每週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區連城里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區連城路171巷7號(連城里活動中心)",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "連城里",
+      "manager": "林仁凱",
+      "phone": "(02)22470797",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區力行里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區圓通路與板南路口",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "力行里",
+      "manager": "周聰明",
+      "phone": "(02)22473197",
+      "mobile": "",
+      "open_time": "每月第4週六7:30~9:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區德行里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區中正路211巷13弄4號1樓",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "德行里",
+      "manager": "陳靜宜",
+      "phone": "(02)22478548",
+      "mobile": "",
+      "open_time": "每月第2.4週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區復興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區復興路280巷6號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "復興里",
+      "manager": "尤敏玉",
+      "phone": "(02)22425205",
+      "mobile": "",
+      "open_time": "每月第3週六 06:30~09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區嘉新里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區民安街148號(嘉新里活動中心)",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "嘉新里",
+      "manager": "林后福",
+      "phone": "(02)22233556",
+      "mobile": "",
+      "open_time": "每週六08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區福祥里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區永和路88之4號1樓",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福祥里",
+      "manager": "張昌期",
+      "phone": "(02)22483320",
+      "mobile": "",
+      "open_time": "每月第3週六09:00-12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區仁和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區和城路一段271巷",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "仁和里",
+      "manager": "林達",
+      "phone": "(02)22238312",
+      "mobile": "",
+      "open_time": "每月第1、3週三19:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區中安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區中安街85號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中安里",
+      "manager": "李謙國",
+      "phone": "(02)86600515",
+      "mobile": "",
+      "open_time": "每月第2、4週六 8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區秀水里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區大仁街10巷35號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀水里",
+      "manager": "陳炳男",
+      "phone": "(02)29466323",
+      "mobile": "",
+      "open_time": "每月第2、4週一 8:00~10:00 (遇國定假日順延一周)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區秀義里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "中和區秀朗路三段70巷31號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "秀義里",
+      "manager": "張文亮",
+      "phone": "(02)29430058",
+      "mobile": "",
+      "open_time": "每月第2.4週六8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區錦盛里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區圓通路335巷37弄12號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "錦盛里",
+      "manager": "林建全",
+      "phone": "(02)22486789",
+      "mobile": "",
+      "open_time": "每月第2、4周六上午08:30-10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區明德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區華順街95號旁停車場",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "明德里",
+      "manager": "羅健容",
+      "phone": "(02)29512201",
+      "mobile": "",
+      "open_time": "每月第2.4周二09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區廟美里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區廟美街6巷3號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "廟美里",
+      "manager": "鄭鈞瑋",
+      "phone": "(02)22445678",
+      "mobile": "",
+      "open_time": "每月第三週六9:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區員富里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區員山路611巷11弄4號",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "員富里",
+      "manager": "蔡宗霖",
+      "phone": "(02)82267971",
+      "mobile": "",
+      "open_time": "每月第二週四09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區福和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區水源路7巷2號1樓",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福和里",
+      "manager": "簡健翔",
+      "phone": "",
+      "mobile": "",
+      "open_time": "",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "中和區泰安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市中和區景安路79巷35號前",
+    "city": "新北市",
+    "district": "中和區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "泰安里",
+      "manager": "林美惠",
+      "phone": "(02)29413861",
+      "mobile": "",
+      "open_time": "每月第2.4週六8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區大鵬里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區大鵬里中正路700巷(車道尾端)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大鵬里",
+      "manager": "喬天鼎",
+      "phone": "(02)82182338",
+      "mobile": "",
+      "open_time": "每週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區美城里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區永業路81巷5弄5號B1樓",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "美城里",
+      "manager": "翁智冠",
+      "phone": "(02)29148839",
+      "mobile": "",
+      "open_time": "每月1、3週日 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區玫瑰里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區富貴街9巷29號(B1樓)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "玫瑰里",
+      "manager": "施天賜",
+      "phone": "(02)22150119",
+      "mobile": "",
+      "open_time": "每週三 18:30~21:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區中華里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區三民路20之1號(三民活動中心)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中華里",
+      "manager": "邱湘羚",
+      "phone": "(02)89119959",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區國豐里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區建國路58號(建國游泳池)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "國豐里",
+      "manager": "顏榮宏",
+      "phone": "(02)29187328",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區太平里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區碧潭路27號 新北市新店區精忠路10-1號",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "太平里",
+      "manager": "李謝素珍",
+      "phone": "(02)22115711",
+      "mobile": "",
+      "open_time": "每月1, 2,4 週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區張南里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區環河路5號1樓",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "張南里",
+      "manager": "林國榮",
+      "phone": "(02)29117423",
+      "mobile": "",
+      "open_time": "每週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區吉祥里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區玫瑰路51巷2號1樓(吉祥里活動中心)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "吉祥里",
+      "manager": "林永輝",
+      "phone": "(02)22151115",
+      "mobile": "",
+      "open_time": "每週一 19:00~21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區江陵里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區江陵里二十張路60巷2號(江陵里活動中心)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "江陵里",
+      "manager": "葉金珠",
+      "phone": "(02)22180802",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區新和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區新和街128號之1(永安臨時集會所)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新和里",
+      "manager": "仇雅彤",
+      "phone": "(02)29461653",
+      "mobile": "",
+      "open_time": "每月第1、3週五 20:00~21:30週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區塗潭里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區新潭路二段61號",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "塗潭里",
+      "manager": "邱秀雄",
+      "phone": "(02)29127797",
+      "mobile": "",
+      "open_time": "每月第2、4週日 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區公崙里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區安康路二段100巷5-1號",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "公崙里",
+      "manager": "游炎嵐",
+      "phone": "(02)22125650",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區國校里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區國校路65巷1號(里辦) 新北市新店區北宜路一段115巷8弄3-1號(國校里活動中心)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "國校里",
+      "manager": "郭儒鈞",
+      "phone": "(02)29117312",
+      "mobile": "",
+      "open_time": "每月第1週六:里辦前每月第2週日:活動中心 時間皆08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區文明里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區檳榔路36巷土地公廟口",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "文明里",
+      "manager": "彭永珍",
+      "phone": "(02)29141879",
+      "mobile": "",
+      "open_time": "每月第2.4週二08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區青潭里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區新烏路一段11巷口",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "青潭里",
+      "manager": "林岑郁",
+      "phone": "(02)22179229",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區德安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區安德街148巷1號旁",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "德安里",
+      "manager": "丁萬貴",
+      "phone": "(02)22121736",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區日興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區日興里錦秀路1之1號旁(守望相助隊旁)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "日興里",
+      "manager": "廖景春",
+      "phone": "(02)22151793",
+      "mobile": "",
+      "open_time": "每月第2週日14:00~16:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區下城里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區安康路一段281巷6號(下城社區發展協會)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "下城里",
+      "manager": "廖瓊瑤",
+      "phone": "(02)22123302",
+      "mobile": "",
+      "open_time": "每月第3週六 14:00~16:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區中興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區北新路一段50號",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中興里",
+      "manager": "張正義",
+      "phone": "(02)29120556",
+      "mobile": "",
+      "open_time": "每月第1、3週二 07:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區中山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區中山里溪園路&中山路口(湯泉橋下)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中山里",
+      "manager": "潘威志",
+      "phone": "(02)85311283",
+      "mobile": "",
+      "open_time": "每月第1.3週日08:30-09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區寶安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區寶元路一段105號(土地公廟空地)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "寶安里",
+      "manager": "宋美雪",
+      "phone": "(02)29139988",
+      "mobile": "",
+      "open_time": "每月第1週二 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區五峯里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區北新路1段92號(文化劇場)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "五峯里",
+      "manager": "陳淑美",
+      "phone": "(02)29126264",
+      "mobile": "",
+      "open_time": "每月第1.3週四07:00~09:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區文中里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區北宜路一段39巷32號旁(文中活動中心)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "文中里",
+      "manager": "劉閔禮",
+      "phone": "(02)29122820",
+      "mobile": "",
+      "open_time": "每月第1、3週日 8:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區安和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區安興路67號(活動中心)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "安和里",
+      "manager": "劉淑美",
+      "phone": "(02)86666527",
+      "mobile": "",
+      "open_time": "每月雙週三1930-21:00+週四08:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區永安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新店區新和街32巷1之1號",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永安里",
+      "manager": "林清一",
+      "phone": "(02)86682400",
+      "mobile": "",
+      "open_time": "每雙週四16:00~18:00 19 :00~21:00 雙週五早上8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區新德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新店區北新路一段351號旁(北新藝術廣場)",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新德里",
+      "manager": "陳炳漢",
+      "phone": "(02)29110007",
+      "mobile": "",
+      "open_time": "每月第4周六上午07:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新店區忠孝里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新店區中正路663巷7弄15號",
+    "city": "新北市",
+    "district": "新店區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "忠孝里",
+      "manager": "游皓麟",
+      "phone": "(02)22186010",
+      "mobile": "",
+      "open_time": "每月第4週四08:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區建安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區建安街101巷34號",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "建安里",
+      "manager": "王永華",
+      "phone": "(02)22062060",
+      "mobile": "",
+      "open_time": "每週四 19:00~21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區南港里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區四維路186巷2號(四維活動中心)",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "南港里",
+      "manager": "林朝基",
+      "phone": "(02)22048385",
+      "mobile": "",
+      "open_time": "每週一早上9:30~11:30.下午3:00~7:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區雙鳳里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區鳳山街52號",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "雙鳳里",
+      "manager": "潘素娥",
+      "phone": "(02)29035533",
+      "mobile": "",
+      "open_time": "每週二 18:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區光正里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區民安西路189巷29號",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "光正里",
+      "manager": "陳通助",
+      "phone": "(02)22034597",
+      "mobile": "",
+      "open_time": "每週六16:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區中港里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區幸福路710巷口",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中港里",
+      "manager": "高忠傑",
+      "phone": "",
+      "mobile": "0917879133",
+      "open_time": "每週四12:00~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區豐年里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區瓊泰路116號 (豐年國小後門)",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "豐年里",
+      "manager": "林麗華",
+      "phone": "(02)22012188",
+      "mobile": "",
+      "open_time": "每週五18:30~20:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區民全里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區民全街21號旁",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民全里",
+      "manager": "張文興",
+      "phone": "(02)22020089",
+      "mobile": "",
+      "open_time": "每週五19:00-20:50",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區立泰里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區新泰路359號",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "立泰里",
+      "manager": "許文章",
+      "phone": "(02)29963958",
+      "mobile": "",
+      "open_time": "每週二 19:00~21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區祥鳳里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區天祥街121巷16號",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "祥鳳里",
+      "manager": "賴俊良",
+      "phone": "(02)29089411",
+      "mobile": "",
+      "open_time": "每週一 18:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "新莊區思賢里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市新莊區博愛路5巷9號",
+    "city": "新北市",
+    "district": "新莊區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "思賢里",
+      "manager": "楊祐全",
+      "phone": "(02)89923326",
+      "mobile": "",
+      "open_time": "每周一19:00-21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區圳民里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區俊英街155巷27號",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "圳民里",
+      "manager": "王 墘",
+      "phone": "(02)26885543",
+      "mobile": "",
+      "open_time": "每月第1、3週六08:00~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區圳福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區圳福里千歲街橋下休閒廣場",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "圳福里",
+      "manager": "蘇益和",
+      "phone": "(02)86755255",
+      "mobile": "",
+      "open_time": "每月第1, 3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區東陽里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區鎮前街467號(鎮前活動中心)",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "東陽里",
+      "manager": "林耿邦",
+      "phone": "(02)86861234",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區圳安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區俊英街222號",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "圳安里",
+      "manager": "許進旺",
+      "phone": "(02)26811454",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區金寮里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區保安街二段151號武林國小",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "金寮里",
+      "manager": "楊淑惠",
+      "phone": "(02)26757295",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區中山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區地政街12號旁(老人會館廣場)",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中山里",
+      "manager": "簡炎輝",
+      "phone": "",
+      "mobile": "",
+      "open_time": "每月第1、3週六8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區文林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區千歲街59號(文林國小懷恩樓川堂)",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "文林里",
+      "manager": "甘永昌",
+      "phone": "(02)26755252",
+      "mobile": "",
+      "open_time": "每月第1、3週六8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區坡內里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區備內街117號",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "坡內里",
+      "manager": "陳譽丰",
+      "phone": "(02)26867040",
+      "mobile": "",
+      "open_time": "每月第2,4週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區樹人里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區備前街124號",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "樹人里",
+      "manager": "邱世昌",
+      "phone": "(02)86753127",
+      "mobile": "",
+      "open_time": "每月2.4週六08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區東昇里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區中山路二段78-1號",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "東昇里",
+      "manager": "詹麒叡",
+      "phone": "(02)86856377",
+      "mobile": "",
+      "open_time": "每月第1、3週六8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "樹林區三福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市樹林區福興街17號(活動中心)",
+    "city": "新北市",
+    "district": "樹林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "三福里",
+      "manager": "張致遠",
+      "phone": "(02)26888622",
+      "mobile": "",
+      "open_time": "每月第2、4周六上午08:00-09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區鳳祥里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區鶯桃路381巷2弄17號(活動中心)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "鳳祥里",
+      "manager": "曾勝利",
+      "phone": "(02)86777028",
+      "mobile": "",
+      "open_time": "每月第1、3週日 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區建國里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區育智路100號旁(里活動中心籃球場)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "建國里",
+      "manager": "林清得",
+      "phone": "(02)26796063",
+      "mobile": "",
+      "open_time": "每月第1.3週日08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區東鶯里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區文化路215號(東鶯活動中心)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "東鶯里",
+      "manager": "陳陸賀",
+      "phone": "(02)26792501",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區中湖里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "1.新北市鶯歌區中湖街23號 2.新北市鶯歌區湖山路34巷(湖山福德宮) 3.新北市鶯歌區大湖路余厝巷廣場",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中湖里",
+      "manager": "游盛政",
+      "phone": "(02)26701600",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區南靖里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區文化路395號(活動中心)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "南靖里",
+      "manager": "吳金定",
+      "phone": "(02)86772819",
+      "mobile": "",
+      "open_time": "每月2、4週六 08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區北鶯里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區仁愛路 55號 (區公所前)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "北鶯里",
+      "manager": "李松進",
+      "phone": "(02)26791067",
+      "mobile": "",
+      "open_time": "每月第3週六 08:30-10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區永吉里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區鶯桃路206巷24弄30-1號",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永吉里",
+      "manager": "林茂哲",
+      "phone": "(02)26705638",
+      "mobile": "",
+      "open_time": "每月第2、4週日08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區鳳福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區鳳吉一街167-1號",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "鳳福里",
+      "manager": "簡騰源",
+      "phone": "(02)26708600",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區鳳鳴里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區永和街34巷8號 (鳳鳴活動中心)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "鳳鳴里",
+      "manager": "陳芷柔",
+      "phone": "(02)86771878",
+      "mobile": "",
+      "open_time": "每月第2 ,4週日 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區西鶯里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區中正一路203號(活動中心)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "西鶯里",
+      "manager": "蘇炳輝",
+      "phone": "(02)86775288",
+      "mobile": "",
+      "open_time": "每月第1週六08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區永昌里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區永昌街36-1號(第四週) 新北市鶯歌區永明街22號(第二週 昌福國小門口)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永昌里",
+      "manager": "游武雄",
+      "phone": "(02)26782585",
+      "mobile": "",
+      "open_time": "每月2,4週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區大湖里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "單月:新北市鶯歌區朝陽街1號 雙月: 新北市鶯歌區國際二路6巷底(聖天宮廣場) 每月第3週一 新北市鶯歌區大湖路732巷16弄走到底(土地公廟)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大湖里",
+      "manager": "蕭鈴玉",
+      "phone": "(02)26705824﻿",
+      "mobile": "",
+      "open_time": "每月第1周六08:30~10:30 每月第3週一08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區二橋里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "第1週六:新北市鶯歌區中正三路337號 第3週六 中正三路37號對面",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "二橋里",
+      "manager": "李金量",
+      "phone": "(02)26795373",
+      "mobile": "",
+      "open_time": "每月第1.3周六09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區尖山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區尖山路211巷1號",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "尖山里",
+      "manager": "陳怡潔",
+      "phone": "",
+      "mobile": "0937923006",
+      "open_time": "每月第3周六09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區同慶里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區尖山埔路104號(活動中心)",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "同慶里",
+      "manager": "張素燕",
+      "phone": "(02)26706526",
+      "mobile": "",
+      "open_time": "每月第2、第4周一17:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "鶯歌區南鶯里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市鶯歌區建國路257號",
+    "city": "新北市",
+    "district": "鶯歌區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "南鶯里",
+      "manager": "李明弘",
+      "phone": "(02)26793167",
+      "mobile": "",
+      "open_time": "每月第2週五9:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區嘉添里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區嘉添路9號",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "嘉添里",
+      "manager": "李萬興",
+      "phone": "(02)26714079",
+      "mobile": "",
+      "open_time": "每月第1, 3 週日 07:00~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區安坑里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區建安路42號",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "安坑里",
+      "manager": "簡美玲課長",
+      "phone": "(02)26711017",
+      "mobile": "",
+      "open_time": "每月第2、4週六 09:00~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區永館里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區永館里文化路210巷(舊公有臨時市場)",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永館里",
+      "manager": "蘇正國",
+      "phone": "",
+      "mobile": "0932121126",
+      "open_time": "每週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區安溪里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區中華路76號對面空地",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "安溪里",
+      "manager": "王曼甄",
+      "phone": "(02)26718399",
+      "mobile": "",
+      "open_time": "每月第2, 4週日9:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區溪東里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區溪東路218巷1號(活動中心)",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "溪東里",
+      "manager": "陳錫遠",
+      "phone": "(02)86763543",
+      "mobile": "",
+      "open_time": "每月第1週六09:00-12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區鳶山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區大勇路36巷2號",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "鳶山里",
+      "manager": "周文美",
+      "phone": "(02)26715961",
+      "mobile": "",
+      "open_time": "每週六09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區中正里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區永安街95巷29號",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中正里",
+      "manager": "陳志泉",
+      "phone": "﻿﻿",
+      "mobile": "",
+      "open_time": "每週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區介壽里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區光明路69巷25-7號(環保志工總部)",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "介壽里",
+      "manager": "周梓亭",
+      "phone": "(02)26719658",
+      "mobile": "",
+      "open_time": "每週六09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區二鬮里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "三峽區二鬮路110巷口(土地公廟)",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "二鬮里",
+      "manager": "陳孝皇",
+      "phone": "(02)26733365",
+      "mobile": "",
+      "open_time": "每月第2、4周四 07:00-09:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三峽區中埔里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三峽區弘園街36巷(中園國小後門)",
+    "city": "新北市",
+    "district": "三峽區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中埔里",
+      "manager": "翁聖潍",
+      "phone": "(02)26736698",
+      "mobile": "",
+      "open_time": "每單數周日0900-1100",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區樹興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區樹林口42之3號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "樹興里",
+      "manager": "許秋芳",
+      "phone": "(02)86260291",
+      "mobile": "",
+      "open_time": "每週一08:00~09:00樹林口點",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區竿蓁里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區竿蓁二街36巷2號1樓",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "竿蓁里",
+      "manager": "王信崇",
+      "phone": "(02)26221769",
+      "mobile": "",
+      "open_time": "每週四 08:30~10:30(逢雨暫停)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區鄧公里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區鄧公路30巷2號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "鄧公里",
+      "manager": "邱美津",
+      "phone": "(02)26252100",
+      "mobile": "",
+      "open_time": "每月第1,3週六13:00~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區大庄里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區沙崙路201巷26號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大庄里",
+      "manager": "林建仲",
+      "phone": "(02)28053356",
+      "mobile": "",
+      "open_time": "每週日 09:00~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區長庚里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區中山路72巷1弄10號1樓(長庚活動中心)",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "長庚里",
+      "manager": "陳崇煌",
+      "phone": "",
+      "mobile": "0933119320",
+      "open_time": "每週五 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區賢孝里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區淡金路五段26號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "賢孝里",
+      "manager": "葉振昌",
+      "phone": "(02)28010288",
+      "mobile": "",
+      "open_time": "每週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區忠山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區奎柔山路413號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "忠山里",
+      "manager": "潘炳丁",
+      "phone": "(02)26210658",
+      "mobile": "",
+      "open_time": "每月第1、3週六8:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區民生里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區民生路27號旁",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民生里",
+      "manager": "陳李明緣",
+      "phone": "(02)28084569",
+      "mobile": "",
+      "open_time": "每月雙週週五 08:00~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區幸福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區學府路51巷3弄10號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "幸福里",
+      "manager": "李佳倩",
+      "phone": "(02)26251855",
+      "mobile": "",
+      "open_time": "每月第1、3週六13:00~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區新義里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區中山北路一段149巷6-4號1樓",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新義里",
+      "manager": "盧寶全",
+      "phone": "(02)26220282",
+      "mobile": "",
+      "open_time": "每週五 12:00~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區油車里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區淡海路32號(站牌:淡江新村)(淡江華城對面)",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "油車里",
+      "manager": "唐儷樺",
+      "phone": "(02)28059282",
+      "mobile": "",
+      "open_time": "每月第1.3週六0800-1100",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區北投里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區北新路223號旁土地公廟",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "北投里",
+      "manager": "張麗卿",
+      "phone": "(02)26205789",
+      "mobile": "",
+      "open_time": "每月第2、4週六09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區忠寮里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區破瓦厝子3號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "忠寮里",
+      "manager": "蔣耿南",
+      "phone": "(02)26223585",
+      "mobile": "",
+      "open_time": "每月第2、4週六08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區八勢里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區八勢一街21號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "八勢里",
+      "manager": "沈欽裕",
+      "phone": "(02)88096781",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區正德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區北新路141巷27號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "正德里",
+      "manager": "黃俊雄",
+      "phone": "(02)26250849",
+      "mobile": "",
+      "open_time": "每週一19:00-21:00, 每週二09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區中和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區小中寮19-7號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中和里",
+      "manager": "王文輝",
+      "phone": "(02)28013232",
+      "mobile": "",
+      "open_time": "每月第2, 4週六 09:00-12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區興仁里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區興仁路95號(活動中心)",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "興仁里",
+      "manager": "盧仁澤",
+      "phone": "(02)26212461",
+      "mobile": "",
+      "open_time": "每月第2, 4 週六09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區水碓里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區大仁街23號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "水碓里",
+      "manager": "孫麗明",
+      "phone": "(02)26213948",
+      "mobile": "",
+      "open_time": "每月單週週六08:00-12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區新民里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區新民街120巷60號旁(新民公園旁)",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新民里",
+      "manager": "林聖傑",
+      "phone": "(02)86310077",
+      "mobile": "",
+      "open_time": "每月第2, 4週一 13:00~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區新春里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區新春街46-1號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新春里",
+      "manager": "莊志文",
+      "phone": "(02)26269868",
+      "mobile": "",
+      "open_time": "每週日 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區埤島里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區行忠路146號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "埤島里",
+      "manager": "蔡正忠",
+      "phone": "(02)26213086",
+      "mobile": "",
+      "open_time": "每月1.3週日 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區學府里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區英專路212號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "學府里",
+      "manager": "林文成",
+      "phone": "(02)26251680",
+      "mobile": "",
+      "open_time": "每月2.4週一09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區民權里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區民權路177巷10號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "民權里",
+      "manager": "江瑟媚",
+      "phone": "(02)28087612",
+      "mobile": "",
+      "open_time": "每月1.3週五08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區新興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區新春街138號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新興里",
+      "manager": "吳錦泉",
+      "phone": "(02)26205051",
+      "mobile": "",
+      "open_time": "每月2,4週四 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區沙崙里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區淡海路231巷6號1樓",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "沙崙里",
+      "manager": "彭瑀筑",
+      "phone": "",
+      "mobile": "",
+      "open_time": "每月第2.4週一18:00-20:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區福德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區自強路58號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福德里",
+      "manager": "吳穎綸",
+      "phone": "(02)28091123",
+      "mobile": "",
+      "open_time": "每周一上午10:00~12:00(1.3周里辦 2.4周活動中心)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區水源里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區北新路二段77-7號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "水源里",
+      "manager": "李貴鐘",
+      "phone": "(02)26224235",
+      "mobile": "",
+      "open_time": "每月第1、3周二上午09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區義山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區下圭柔山279-36地號(義山福德宮)",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "義山里",
+      "manager": "楊永麗",
+      "phone": "(02)26228812",
+      "mobile": "",
+      "open_time": "每月最末周二上午09:00-11:00(遇雨暫停)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "淡水區屯山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市淡水區淡石頭厝9-3號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "屯山里",
+      "manager": "謝炳坤",
+      "phone": "(02)28013636",
+      "mobile": "",
+      "open_time": "每月第2、4周六07:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "汐止區禮門里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市汐止區禮門里中正路285號(禮門里活動中心)",
+    "city": "新北市",
+    "district": "汐止區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "禮門里",
+      "manager": "李朝發",
+      "phone": "(02)86923954",
+      "mobile": "",
+      "open_time": "每週二 08:30~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "汐止區金龍里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市汐止區湖前街31巷2弄2號",
+    "city": "新北市",
+    "district": "汐止區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "金龍里",
+      "manager": "陳美麗",
+      "phone": "(02)26925688",
+      "mobile": "",
+      "open_time": "每週六 07:30~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "汐止區北山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市汐止區明峰街298巷1-2號(北山里活動中心)",
+    "city": "新北市",
+    "district": "汐止區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "北山里",
+      "manager": "林徵熊",
+      "phone": "(02)26926255",
+      "mobile": "",
+      "open_time": "每週六 08:00~13:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "汐止區復興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市汐止區復興路1-1號(活動中心)",
+    "city": "新北市",
+    "district": "汐止區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "復興里",
+      "manager": "蕭素真",
+      "phone": "(02)26426123",
+      "mobile": "",
+      "open_time": "每月第2, 4 週六 09:00-12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "汐止區江北里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市汐止區汐萬路1段81號",
+    "city": "新北市",
+    "district": "汐止區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "江北里",
+      "manager": "謝祚敏",
+      "phone": "(02)26413009",
+      "mobile": "",
+      "open_time": "每週一 08:30-12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "汐止區大同里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市汐止區大同路二段296巷5號",
+    "city": "新北市",
+    "district": "汐止區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大同里",
+      "manager": "黃翠華",
+      "phone": "(02)26415209",
+      "mobile": "",
+      "open_time": "每周四09:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "汐止區湖光里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市汐止區康寧街520號-1(活動中心)",
+    "city": "新北市",
+    "district": "汐止區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "湖光里",
+      "manager": "杜金泉",
+      "phone": "(02)26922789",
+      "mobile": "",
+      "open_time": "每周五上午08:00-12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區東和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區中山路20號(東和里活動中心)",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "東和里",
+      "manager": "周樹木",
+      "phone": "(02)24972704",
+      "mobile": "",
+      "open_time": "每月2、4週六 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區爪峯里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區三爪子坑路114號及旁邊空地",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "爪峯里",
+      "manager": "簡明慧",
+      "phone": "(02)24061505",
+      "mobile": "",
+      "open_time": "每月第2、4週六 09:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區龍潭里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區瑞芳街21號",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "龍潭里",
+      "manager": "陳淑霞",
+      "phone": "(02)24979587",
+      "mobile": "",
+      "open_time": "每月第1、3週六 8:00~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區柑坪里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區明燈路1段82號",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "柑坪里",
+      "manager": "許銘仁",
+      "phone": "(02)24974461",
+      "mobile": "",
+      "open_time": "每月單週五 09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區龍興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區民權街10號",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "龍興里",
+      "manager": "黃錫基",
+      "phone": "(02)24972408",
+      "mobile": "",
+      "open_time": "每月第4週日9:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區新峰里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區三爪子坑13巷28號前",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新峰里",
+      "manager": "黃茂峻",
+      "phone": "(02)24977059",
+      "mobile": "",
+      "open_time": "每月第1, 3 週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區龍川里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區明燈路三段109號",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "龍川里",
+      "manager": "賴鴻春",
+      "phone": "(02)24966362",
+      "mobile": "",
+      "open_time": "每月第 3週六 10:00~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區傑魚里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區傑魚坑路245巷2號",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "傑魚里",
+      "manager": "周清標",
+      "phone": "(02)24973228",
+      "mobile": "",
+      "open_time": "每月第3週一 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "瑞芳區上天里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市瑞芳區粗坑口路1巷2-2號",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "上天里",
+      "manager": "林瑞明",
+      "phone": "(02)24587046",
+      "mobile": "",
+      "open_time": "每月第1週二09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區瑞興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區德興街97號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "瑞興里",
+      "manager": "蔡萬合",
+      "phone": "(02)89673958",
+      "mobile": "",
+      "open_time": "每週五 08:30~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區埤林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區學享街75巷3號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "埤林里",
+      "manager": "蔡志紅",
+      "phone": "(02)22624411",
+      "mobile": "",
+      "open_time": "每週三19:00~20:00及每週四09:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區青雲里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區青雲里清水路141巷18號(青雲里活動中心)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "青雲里",
+      "manager": "廖特青",
+      "phone": "(02)22659858",
+      "mobile": "",
+      "open_time": "每週五08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區青山里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區明德路一段74-1號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "青山里",
+      "manager": "姚韋華",
+      "phone": "(02)22645785",
+      "mobile": "",
+      "open_time": "每週日 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區峰廷里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "土城區延吉街217巷3弄1號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "峰廷里",
+      "manager": "林献章",
+      "phone": "(02)22619796",
+      "mobile": "",
+      "open_time": "每月第1、3週五8:30~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區裕生里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區中央路一段189巷2號(莒光四村活動中心)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "裕生里",
+      "manager": "楊忠富",
+      "phone": "(02)22621150",
+      "mobile": "",
+      "open_time": "每週一 19:00~:2100, 每週二 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區員仁里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區福仁街81之1號(服務處)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "員仁里",
+      "manager": "洪永富",
+      "phone": "(02)22705007",
+      "mobile": "",
+      "open_time": "每週一 08:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區中正里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區裕民路193-1號(中正里活動中心)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中正里",
+      "manager": "呂聰成",
+      "phone": "(02)22634905",
+      "mobile": "",
+      "open_time": "每週三 19:00~21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區埤塘里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區忠義路61號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "埤塘里",
+      "manager": "邱顯俊",
+      "phone": "(02)22692102",
+      "mobile": "",
+      "open_time": "每週六 08:30~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區永寧里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區中央路三段184巷5號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永寧里",
+      "manager": "周清芳",
+      "phone": "(02)22696053",
+      "mobile": "",
+      "open_time": "每月第2, 4週一 19:00~21:00, 週二 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區永豐里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區清水路234巷5號(活動中心)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永豐里",
+      "manager": "黃榮沐",
+      "phone": "(02)22614311",
+      "mobile": "",
+      "open_time": "每週二 8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區學成里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區學成路97巷8號(活動中心)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "學成里",
+      "manager": "戴有利",
+      "phone": "(02)22664923",
+      "mobile": "",
+      "open_time": "每週一 19:30~21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區大安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區承天路2號(巡守隊前)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大安里",
+      "manager": "張俊隆",
+      "phone": "(02)22672969",
+      "mobile": "",
+      "open_time": "每週二 9:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區延和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區延和路28號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "延和里",
+      "manager": "黃富源",
+      "phone": "(02)22633747",
+      "mobile": "",
+      "open_time": "每週六 9:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區延吉里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區延吉街137巷13號(活動中心)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "延吉里",
+      "manager": "楊季堂",
+      "phone": "(02)22611190",
+      "mobile": "",
+      "open_time": "每月第2、4週六 9:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區廷寮里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區永豐路238號(活動中心)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "廷寮里",
+      "manager": "李月嬌",
+      "phone": "(02)22626089",
+      "mobile": "",
+      "open_time": "每週二 9:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區員林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區員林街15號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "員林里",
+      "manager": "蔡黃地",
+      "phone": "(02)22610593",
+      "mobile": "",
+      "open_time": "每週六 09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區學府里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區學府路一段155巷後方司令台",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "學府里",
+      "manager": "宮敬家",
+      "phone": "(02)82623299",
+      "mobile": "",
+      "open_time": "每週五8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區員福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區福祥街59號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "員福里",
+      "manager": "黃崇煒",
+      "phone": "(02)22613836",
+      "mobile": "",
+      "open_time": "每月第2.4周一 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區員信里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區員信里11鄰中央路2段278巷6-4號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "員信里",
+      "manager": "杜萬來",
+      "phone": "(02)22702160",
+      "mobile": "",
+      "open_time": "每週四07:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區日新里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區裕生路100巷7號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "日新里",
+      "manager": "吳信坪",
+      "phone": "(02)82626001",
+      "mobile": "",
+      "open_time": "每週四09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區金城里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區明峰街28巷2號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "金城里",
+      "manager": "黃郁惠",
+      "phone": "(02)22700488",
+      "mobile": "",
+      "open_time": "每月2.4週四 8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區頂埔里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區中央路四段55-12號(頂鋪市民活動中心)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "頂埔里",
+      "manager": "林忠謀",
+      "phone": "(02)22678936",
+      "mobile": "",
+      "open_time": "每週四 10:00~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區日和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區中華路一段225號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "日和里",
+      "manager": "李福源",
+      "phone": "(02)22630356",
+      "mobile": "",
+      "open_time": "每月第二、第四週一 8：00~10：00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區永富里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區延吉街381號後面",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永富里",
+      "manager": "黃思儀",
+      "phone": "(02)22644813",
+      "mobile": "",
+      "open_time": "每週五早上8:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區復興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區廣福街100號(旁邊鐵皮屋)",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "復興里",
+      "manager": "潘祝惠",
+      "phone": "(02)89662058",
+      "mobile": "",
+      "open_time": "每周五上午08:30-10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區貨饒里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區學成路128巷13弄8號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "貨饒里",
+      "manager": "周根本",
+      "phone": "(02)82615609",
+      "mobile": "",
+      "open_time": "每周二下午19:30-21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區樂利里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區裕民路92巷25弄10號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "樂利里",
+      "manager": "吳麗美",
+      "phone": "(02)22634518",
+      "mobile": "",
+      "open_time": "每月第2、4周三上午08:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區沛陂里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區三民路23巷8弄9號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "沛陂里",
+      "manager": "王金芬",
+      "phone": "(02)22686607",
+      "mobile": "",
+      "open_time": "每月第1.3周三上午07:30-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "土城區清和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市土城區青雲路368號",
+    "city": "新北市",
+    "district": "土城區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "清和里",
+      "manager": "郭真好",
+      "phone": "(02)22615959",
+      "mobile": "",
+      "open_time": "",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區水湳里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區水湳里仁愛廣場",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "水湳里",
+      "manager": "吳松標",
+      "phone": "(02)28470836",
+      "mobile": "",
+      "open_time": "每週二19:00~20:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區忠孝里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區民義街68巷35號旁邊(貨櫃屋)",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "忠孝里",
+      "manager": "徐茂集",
+      "phone": "(02)22817861",
+      "mobile": "",
+      "open_time": "每週四 19:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區光明里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區中正路185巷31弄33號",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "光明里",
+      "manager": "陳文良",
+      "phone": "(02)82851391",
+      "mobile": "",
+      "open_time": "每週六07:30~09:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區南港里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區三民路611號(三民公園活動中心)",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "南港里",
+      "manager": "王珠香",
+      "phone": "(02)28489511",
+      "mobile": "",
+      "open_time": "每月第1、3週六 8:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區延平里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區永安南路二段134號",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "延平里",
+      "manager": "張明德",
+      "phone": "(02)22850425",
+      "mobile": "",
+      "open_time": "每月第2、4週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區仁愛里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區民權路82巷5弄6號",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "仁愛里",
+      "manager": "林宏典",
+      "phone": "(02)28477885",
+      "mobile": "",
+      "open_time": "每週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區中華里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區光華路107巷11號",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中華里",
+      "manager": "蔡宜峰",
+      "phone": "(02)22826377",
+      "mobile": "",
+      "open_time": "每週五19:00-20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區永德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區長安街267巷7弄1號1F",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永德里",
+      "manager": "陳宥安",
+      "phone": "(02)28488000",
+      "mobile": "",
+      "open_time": "每月第2、4週六 7:30~9:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區信義里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區信義路292巷19號",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "信義里",
+      "manager": "郭騰芳",
+      "phone": "(02)22828721",
+      "mobile": "",
+      "open_time": "每週六 09:00-10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區保和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區復興路17巷口(文德宮廟)",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "保和里",
+      "manager": "楊總仁",
+      "phone": "(02)22829598",
+      "mobile": "",
+      "open_time": "每月第2、4週六 09:00-10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區鷺江里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區民權路26號旁",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "鷺江里",
+      "manager": "侯凱文",
+      "phone": "",
+      "mobile": "",
+      "open_time": "每月2、4週六 08:30~09:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區永安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區永安南路二段16巷9號",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永安里",
+      "manager": "李建興",
+      "phone": "(02)22885918",
+      "mobile": "",
+      "open_time": "每週六12:30~14:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "蘆洲區長安里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市蘆洲區長安街111巷31號",
+    "city": "新北市",
+    "district": "蘆洲區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "長安里",
+      "manager": "王彥貴",
+      "phone": "(02)82851500",
+      "mobile": "",
+      "open_time": "每月雙週二 12:30~14:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "五股區集賢里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市五股區天乙路3-1號",
+    "city": "新北市",
+    "district": "五股區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "集賢里",
+      "manager": "陳文賓",
+      "phone": "(02)22941888",
+      "mobile": "",
+      "open_time": "每週二 18:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "五股區成泰里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市五股區御史路1-5號",
+    "city": "新北市",
+    "district": "五股區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "成泰里",
+      "manager": "潘明宏",
+      "phone": "(02)22937615",
+      "mobile": "",
+      "open_time": "每週一 18:30~20:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "五股區水碓里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市五股區水碓路28號旁",
+    "city": "新北市",
+    "district": "五股區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "水碓里",
+      "manager": "邱江永",
+      "phone": "(02)22933092",
+      "mobile": "",
+      "open_time": "每週二 19:00~21:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "五股區成德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市五股區成泰路三段541號(五股郵局內)",
+    "city": "新北市",
+    "district": "五股區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "成德里",
+      "manager": "陳次芬",
+      "phone": "(02)22931689",
+      "mobile": "",
+      "open_time": "每週二 19:30~20:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "五股區集福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市五股區孝義路55巷10號(活動中心)",
+    "city": "新北市",
+    "district": "五股區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "集福里",
+      "manager": "葉玉芳",
+      "phone": "",
+      "mobile": "0952055803",
+      "open_time": "每月第4週日13:00~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "五股區成州里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市五股區西雲路267號",
+    "city": "新北市",
+    "district": "五股區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "成州里",
+      "manager": "陳林益",
+      "phone": "(02)22911405",
+      "mobile": "",
+      "open_time": "每月第1,3週日 08:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "五股區成功里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市五股區西雲路165號",
+    "city": "新北市",
+    "district": "五股區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "成功里",
+      "manager": "簡銘信",
+      "phone": "(02)82954913",
+      "mobile": "",
+      "open_time": "每週一18:00~20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "五股區興珍里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市五股區四維路6號",
+    "city": "新北市",
+    "district": "五股區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "興珍里",
+      "manager": "黃朝枝",
+      "phone": "(02)29895450",
+      "mobile": "",
+      "open_time": "每周一下午18:00-20:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "泰山區福興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市泰山區全興路25巷12號對面公園",
+    "city": "新北市",
+    "district": "泰山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福興里",
+      "manager": "張玉琴",
+      "phone": "(02)22963466",
+      "mobile": "",
+      "open_time": "每月第2、4週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "泰山區貴子里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市泰山區工專路22號(貴子里活動中心)",
+    "city": "新北市",
+    "district": "泰山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "貴子里",
+      "manager": "戴聯樹",
+      "phone": "(02)29062557",
+      "mobile": "",
+      "open_time": "每月第1週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "泰山區義仁里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市泰山區明志路二段177號(義仁市民活動中心)",
+    "city": "新北市",
+    "district": "泰山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "義仁里",
+      "manager": "許火炎",
+      "phone": "(02)22962319",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "泰山區新明里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市泰山區新民路42號旁",
+    "city": "新北市",
+    "district": "泰山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "新明里",
+      "manager": "林柏融",
+      "phone": "(02)22095642",
+      "mobile": "",
+      "open_time": "每月第1、3周六上午08:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "泰山區泰友里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市泰山區明志路二段273巷18號旁",
+    "city": "新北市",
+    "district": "泰山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "泰友里",
+      "manager": "溫來居",
+      "phone": "(02)22968980",
+      "mobile": "",
+      "open_time": "每月第三周六08:00-10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "林口區麗林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市林口區公園路46號旁(土地公廟廣場)",
+    "city": "新北市",
+    "district": "林口區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "麗林里",
+      "manager": "薛純良",
+      "phone": "(02)26081356",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "林口區仁愛里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市林口區文化一路一段137號(仁愛里市民活動中心旁)",
+    "city": "新北市",
+    "district": "林口區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "仁愛里",
+      "manager": "劉鴻橋",
+      "phone": "(02)26090428",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "林口區麗園里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市林口區忠孝路569巷17號",
+    "city": "新北市",
+    "district": "林口區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "麗園里",
+      "manager": "黃添福",
+      "phone": "(02)26001457",
+      "mobile": "",
+      "open_time": "每月第2、4周六 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "深坑區土庫里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市深坑區北深路一段164號(土庫第二市民活動中心)",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "土庫里",
+      "manager": "高太郎",
+      "phone": "(02)26627777",
+      "mobile": "",
+      "open_time": "每週一 19:00~21:00；每週四 9:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "深坑區昇高里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市深坑區旺耽路25號(昇高活動中心) 新北市深坑區雲鄉路1號B1(雲鄉社區會議室)",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "昇高里",
+      "manager": "李傳震",
+      "phone": "(02)26621648",
+      "mobile": "",
+      "open_time": "每週一 09:00-11:00(昇高活動中心) + 每週六 13:30-15:30(雲鄉社區會議室)",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "深坑區賴仲里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市深坑區北深路一段300號(慈聖宮旁)",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "賴仲里",
+      "manager": "蕭麗玉",
+      "phone": "(02)26629962",
+      "mobile": "",
+      "open_time": "每週六 08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "深坑區萬順里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市深坑區北深路3段107巷 26號(萬順活動中心)",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "萬順里",
+      "manager": "楊文得",
+      "phone": "(02)26622208",
+      "mobile": "",
+      "open_time": "每週六 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "深坑區深坑里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市深坑區深坑街57號",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "深坑里",
+      "manager": "黃建強",
+      "phone": "(02)26622723",
+      "mobile": "",
+      "open_time": "每週四08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "深坑區萬福里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市深坑區北深路三段232號",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "萬福里",
+      "manager": "鄭宗良",
+      "phone": "(02)26621600",
+      "mobile": "",
+      "open_time": "每週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "深坑區埔新里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市深坑區北深路二段43巷11弄2號",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "埔新里",
+      "manager": "游貫中",
+      "phone": "",
+      "mobile": "",
+      "open_time": "每周一上午09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "石碇區烏塗里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市石碇區烏塗窟26號旁",
+    "city": "新北市",
+    "district": "石碇區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "烏塗里",
+      "manager": "林 却",
+      "phone": "(02)26631657",
+      "mobile": "",
+      "open_time": "每月第1、3週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "石碇區潭邊里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市石碇區碇坪路一段122號隔壁(巡守隊)",
+    "city": "新北市",
+    "district": "石碇區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "潭邊里",
+      "manager": "王萬紫",
+      "phone": "(02)26631322",
+      "mobile": "",
+      "open_time": "每月第2、4週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "石碇區石碇里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市石碇區石碇西街6號",
+    "city": "新北市",
+    "district": "石碇區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "石碇里",
+      "manager": "王銘勇",
+      "phone": "(02)26631080",
+      "mobile": "",
+      "open_time": "每月第1、3週二 12:30~14:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "坪林區粗窟里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市坪林區金瓜寮13號",
+    "city": "新北市",
+    "district": "坪林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "粗窟里",
+      "manager": "李志忠",
+      "phone": "(02)26657868",
+      "mobile": "",
+      "open_time": "每月第3週二 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "坪林區大林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市坪林區(魚逮)魚堀55之8號)",
+    "city": "新北市",
+    "district": "坪林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大林里",
+      "manager": "李秋勝",
+      "phone": "(02)26656407",
+      "mobile": "",
+      "open_time": "每月第2週二 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "坪林區水德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市坪林區水聳淒坑7號之6(倆兄弟茶園)",
+    "city": "新北市",
+    "district": "坪林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "水德里",
+      "manager": "鐘國賓",
+      "phone": "(02)26656177",
+      "mobile": "",
+      "open_time": "每月第1周一上午08:30-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "坪林區上德里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市坪林區虎寮潭畔16號(虎寮潭休閒度假山莊)",
+    "city": "新北市",
+    "district": "坪林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "上德里",
+      "manager": "陳金山",
+      "phone": "(02)26656549",
+      "mobile": "",
+      "open_time": "每月第2個周四上午08:30-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "坪林區坪林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市坪林街88號",
+    "city": "新北市",
+    "district": "坪林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "坪林里",
+      "manager": "陳錦發",
+      "phone": "(02)26657827",
+      "mobile": "",
+      "open_time": "每月第3周五08:30-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "坪林區漁光里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市坪林區大舌湖24號(土地公廟旁)",
+    "city": "新北市",
+    "district": "坪林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "漁光里",
+      "manager": "白珮嫻",
+      "phone": "(02)26656989",
+      "mobile": "",
+      "open_time": "每月第2周一上午08:30-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "坪林區石𥕢里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "坪林區石𥕢10-5號",
+    "city": "新北市",
+    "district": "坪林區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "石𥕢里",
+      "manager": "鐘清良",
+      "phone": "",
+      "mobile": "",
+      "open_time": "每月第3週四8:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "三芝區後厝里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市三芝區北勢子20-6號",
+    "city": "新北市",
+    "district": "三芝區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "後厝里",
+      "manager": "楊秀彥",
+      "phone": "(02)26362536",
+      "mobile": "",
+      "open_time": "每週六14:00~17:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "八里區訊塘里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市八里區中山路二段445號對面",
+    "city": "新北市",
+    "district": "八里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "訊塘里",
+      "manager": "張金貴",
+      "phone": "(02)26192178",
+      "mobile": "",
+      "open_time": "每月第1週六 07:00~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "八里區大崁里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市八里區中山路一段21號 (大崁老人活動中心)",
+    "city": "新北市",
+    "district": "八里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大崁里",
+      "manager": "林秀真",
+      "phone": "(02)86301926",
+      "mobile": "",
+      "open_time": "每月最後1週週六 08:30~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "八里區龍源里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市八里區龍米路一段223號龍米市民活動中心",
+    "city": "新北市",
+    "district": "八里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "龍源里",
+      "manager": "林俊德",
+      "phone": "(02)26183541",
+      "mobile": "",
+      "open_time": "每月第2週六 08:30~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "八里區埤頭里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市八里區中山路一段109號1樓",
+    "city": "新北市",
+    "district": "八里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "埤頭里",
+      "manager": "曾志國",
+      "phone": "(02)26102602",
+      "mobile": "",
+      "open_time": "每月第3周六08:30-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "平溪區薯榔里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市平溪區雙菁路81-4號",
+    "city": "新北市",
+    "district": "平溪區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "薯榔里",
+      "manager": "潘隆裕",
+      "phone": "(02)24951540",
+      "mobile": "",
+      "open_time": "每週三全日",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "雙溪區平林里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市雙溪區外平林52號",
+    "city": "新北市",
+    "district": "雙溪區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "平林里",
+      "manager": "黃添松",
+      "phone": "(02)24933032",
+      "mobile": "",
+      "open_time": "每週四 8:30~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "雙溪區三港里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市雙溪區三港里三港7號",
+    "city": "新北市",
+    "district": "雙溪區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "三港里",
+      "manager": "康俐瑩",
+      "phone": "(02)24933531",
+      "mobile": "",
+      "open_time": "每週一10:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區永興里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區跳石17號",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "永興里",
+      "manager": "許瑞林",
+      "phone": "(02)24987518",
+      "mobile": "",
+      "open_time": "每月第1週六 9:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區大同里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區溫泉路中山公園涼亭(公廁旁)",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大同里",
+      "manager": "許振煌",
+      "phone": "(02)24989008",
+      "mobile": "",
+      "open_time": "每月第3週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區重和里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區六股林口29號(重和里辦公處)",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "重和里",
+      "manager": "賴蔡標",
+      "phone": "(02)24080640",
+      "mobile": "",
+      "open_time": "每月第2週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區五湖里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區中山路73-6號",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "五湖里",
+      "manager": "李進發",
+      "phone": "(02)24983247",
+      "mobile": "",
+      "open_time": "每月第4週六 09:00~12:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區三界里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區三界壇路三福宮前廣場",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "三界里",
+      "manager": "許添坤",
+      "phone": "(02)24982206",
+      "mobile": "",
+      "open_time": "每月第2週四 08:00~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區清泉里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區三界壇路83號後面空地",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "清泉里",
+      "manager": "陳麗蘭",
+      "phone": "(02)24982619",
+      "mobile": "",
+      "open_time": "每月第1週一 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區金美里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區仁愛路19號對面空地",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "金美里",
+      "manager": "蔡龍豪",
+      "phone": "(02)24988279",
+      "mobile": "",
+      "open_time": "每月第3週一 13:00~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區六股里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區頂六股3號(六股市民活動中心)",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "六股里",
+      "manager": "鐘鼎平",
+      "phone": "(02)24985731",
+      "mobile": "",
+      "open_time": "每月第2週一 09:00-11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區豐漁里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區民生路190號",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "豐漁里",
+      "manager": "許吉興",
+      "phone": "(02)24987836",
+      "mobile": "",
+      "open_time": "每月第1週四 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區磺港里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區磺港路南屏公共浴室旁車庫",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "磺港里",
+      "manager": "許明熙",
+      "phone": "(02)24081714",
+      "mobile": "",
+      "open_time": "每月最後1週週五09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區兩湖里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區倒照湖33之2號",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "兩湖里",
+      "manager": "張金火",
+      "phone": "(02)24986452",
+      "mobile": "",
+      "open_time": "每月第4週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區美田里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區四維路25號旁空地",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "美田里",
+      "manager": "何文發",
+      "phone": "",
+      "mobile": "",
+      "open_time": "每月第一周六08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "金山區萬壽里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市金山區海興路116號",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "萬壽里",
+      "manager": "劉正行",
+      "phone": "(02)24984126",
+      "mobile": "",
+      "open_time": "每月第三週六9:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "萬里區北基里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市萬里區忠六街口",
+    "city": "新北市",
+    "district": "萬里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "北基里",
+      "manager": "鄧月嬌",
+      "phone": "(02)24926225",
+      "mobile": "",
+      "open_time": "每隔週六 08:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "萬里區龜吼里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市萬里區玉田路45號之3(活動中心)",
+    "city": "新北市",
+    "district": "萬里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "龜吼里",
+      "manager": "曾基成",
+      "phone": "(02)24926539",
+      "mobile": "",
+      "open_time": "每週六 09:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "萬里區萬里里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市萬里區瑪鋉路123號1樓",
+    "city": "新北市",
+    "district": "萬里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "萬里里",
+      "manager": "王傑倫",
+      "phone": "(02)24928845",
+      "mobile": "",
+      "open_time": "每週六 08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "萬里區大鵬里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市萬里區加投路198號後方空地",
+    "city": "新北市",
+    "district": "萬里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "大鵬里",
+      "manager": "李建才",
+      "phone": "(02)24983699",
+      "mobile": "",
+      "open_time": "每月2.4週五 08:30~10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "萬里區中幅里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市萬里區中福路112號",
+    "city": "新北市",
+    "district": "萬里區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "中幅里",
+      "manager": "謝嘉陽",
+      "phone": "(02)24924806",
+      "mobile": "",
+      "open_time": "每周六上午08:30-10:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "貢寮區龍門里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市貢寮區龍門街11號",
+    "city": "新北市",
+    "district": "貢寮區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "龍門里",
+      "manager": "吳世揚",
+      "phone": "(02)24941175",
+      "mobile": "",
+      "open_time": "每月第2個週四 08:30~10:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "貢寮區福隆里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市貢寮區東興街70號(福隆市民活動中心)",
+    "city": "新北市",
+    "district": "貢寮區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "福隆里",
+      "manager": "吳憲彰",
+      "phone": "(02)24991456",
+      "mobile": "",
+      "open_time": "每月第3週四9:00~11:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "貢寮區龍崗里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市貢寮區嵩陽街40-1(貢寮根帝宮)",
+    "city": "新北市",
+    "district": "貢寮區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "龍崗里",
+      "manager": "黃朝銘",
+      "phone": "(02)24942666",
+      "mobile": "",
+      "open_time": "每月第1週四 10:00~11:30",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  },
+  {
+    "id": "recycle-ntpc-None",
+    "name": "貢寮區仁里里黃金資收站",
+    "category": "recycle",
+    "lat": null,
+    "lng": null,
+    "address": "新北市貢寮區仁義街8號",
+    "city": "新北市",
+    "district": "貢寮區",
+    "tags": [
+      "黃金資收站",
+      "資源回收"
+    ],
+    "extra": {
+      "village": "仁里里",
+      "manager": "紀志樺",
+      "phone": "(02)24901241",
+      "mobile": "",
+      "open_time": "每月第二個周五下午13:30~15:00",
+      "state": "營運中"
+    },
+    "source": "data.ntpc.gov.tw / 新北市黃金資收站資訊 (123351)"
+  }
+]

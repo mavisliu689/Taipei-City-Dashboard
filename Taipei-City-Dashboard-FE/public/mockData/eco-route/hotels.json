@@ -1,0 +1,4862 @@
+[
+  {
+    "id": "hotel-0",
+    "name": "煙波大飯店花蓮太魯閣沁海館",
+    "category": "hotel",
+    "lat": 24.115461,
+    "lng": 121.639698,
+    "address": "花蓮縣新城鄉順安村6鄰草林10之6號",
+    "city": "花蓮縣",
+    "district": "新城鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8228835#1174",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-1",
+    "name": "煙波大飯店花蓮館",
+    "category": "hotel",
+    "lat": 23.986849,
+    "lng": 121.622067,
+    "address": "花蓮縣花蓮市民立里1鄰中美路142號",
+    "city": "花蓮縣",
+    "district": "花蓮市",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8228835#1174",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-2",
+    "name": "墾丁福華渡假飯店",
+    "category": "hotel",
+    "lat": 21.94163,
+    "lng": 120.807233,
+    "address": "屏東縣恆春鎮墾丁里墾丁路2號",
+    "city": "屏東縣",
+    "district": "恆春鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8862324#2701",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-3",
+    "name": "台北六福萬怡酒店",
+    "category": "hotel",
+    "lat": 25.052025,
+    "lng": 121.606292,
+    "address": "臺北市南港區忠孝東路七段359號7至30樓",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)66156565#5000",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-4",
+    "name": "美之旅商務飯店",
+    "category": "hotel",
+    "lat": 24.14799,
+    "lng": 120.661988,
+    "address": "臺中市西區美村路一段269號1樓、2樓之1、2樓之2、3、4、5、6、7樓",
+    "city": "臺中市",
+    "district": "西區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)23024330",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-5",
+    "name": "小巷內",
+    "category": "hotel",
+    "lat": 24.879664,
+    "lng": 121.28814,
+    "address": "桃園市大溪區中央路52-3號",
+    "city": "桃園市",
+    "district": "大溪區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3881052",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-6",
+    "name": "台北艾麗酒店",
+    "category": "hotel",
+    "lat": 25.038696,
+    "lng": 121.567393,
+    "address": "臺北市信義區松高路18號",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)66318031",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-7",
+    "name": "正好友生態環保旅店",
+    "category": "hotel",
+    "lat": 22.352119,
+    "lng": 120.381859,
+    "address": "屏東縣琉球鄉中山路153號",
+    "city": "臺中市",
+    "district": "后里區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0886)12270",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-8",
+    "name": "福容大飯店 麗寶樂園",
+    "category": "hotel",
+    "lat": 24.323647,
+    "lng": 120.69651,
+    "address": "臺中市后里區福容路88號",
+    "city": "臺中市",
+    "district": "后里區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)25571366#8343",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-9",
+    "name": "福容徠旅高雄",
+    "category": "hotel",
+    "lat": 22.629707,
+    "lng": 120.294552,
+    "address": "高雄市前金區永恆街3號6-14樓",
+    "city": "高雄市",
+    "district": "前金區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)2156688#6309",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-10",
+    "name": "捷絲旅臺大尊賢館",
+    "category": "hotel",
+    "lat": 25.013364,
+    "lng": 121.536235,
+    "address": "臺北市大安區羅斯福路四段83號1-10樓",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77355088",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-11",
+    "name": "小琉球古拉克民宿",
+    "category": "hotel",
+    "lat": 22.34894,
+    "lng": 120.378909,
+    "address": "屏東縣琉球鄉本福村中山路61-20號",
+    "city": "屏東縣",
+    "district": "琉球鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8612229",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-12",
+    "name": "鹿港澄悅酒店",
+    "category": "hotel",
+    "lat": 24.063368,
+    "lng": 120.434758,
+    "address": "彰化縣鹿港鎮中正路598號1樓、5至8樓",
+    "city": "彰化縣",
+    "district": "鹿港鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)7785727",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-13",
+    "name": "夏堤民宿",
+    "category": "hotel",
+    "lat": 22.340595,
+    "lng": 120.36583,
+    "address": "屏東縣琉球鄉上福村2鄰杉板路51巷2號",
+    "city": "屏東縣",
+    "district": "琉球鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8611155",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-14",
+    "name": "雲頂國際商旅",
+    "category": "hotel",
+    "lat": 22.971288,
+    "lng": 120.214854,
+    "address": "臺南市南區大同路二段530號",
+    "city": "臺南市",
+    "district": "南區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)2687766",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-15",
+    "name": "板橋凱撒大飯店",
+    "category": "hotel",
+    "lat": 25.01174,
+    "lng": 121.462724,
+    "address": "新北市板橋區縣民大道二段8號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)29583000#7701",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-16",
+    "name": "陽明山天籟渡假酒店",
+    "category": "hotel",
+    "lat": 25.202031,
+    "lng": 121.595324,
+    "address": "新北市金山區名流路1之6號、1之7號、1之9號、1之9號5樓及1之9號5樓之1至之8",
+    "city": "新北市",
+    "district": "金山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)24080400#1700",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-17",
+    "name": "緻麗伯爵酒店",
+    "category": "hotel",
+    "lat": 23.710762,
+    "lng": 120.542558,
+    "address": "雲林縣斗六市中山路6號",
+    "city": "雲林縣",
+    "district": "斗六市",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)5341666#3",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-18",
+    "name": "高雄富野渡假酒店",
+    "category": "hotel",
+    "lat": 22.598028,
+    "lng": 120.320848,
+    "address": "高雄市前鎮區瑞田街99號",
+    "city": "高雄市",
+    "district": "前鎮區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)8215299#7102",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-19",
+    "name": "新南一二文創商行",
+    "category": "hotel",
+    "lat": 24.88173,
+    "lng": 121.28707,
+    "address": "桃園市大溪區中山路１２號",
+    "city": "桃園市",
+    "district": "大溪區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3884466",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-20",
+    "name": "武陵富野渡假村",
+    "category": "hotel",
+    "lat": 24.347869,
+    "lng": 121.309809,
+    "address": "臺中市和平區武陵路3-16號",
+    "city": "臺中市",
+    "district": "和平區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)25901399#8912",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-21",
+    "name": "清新溫泉飯店",
+    "category": "hotel",
+    "lat": 24.136649,
+    "lng": 120.588096,
+    "address": "臺中市烏日區溫泉路2號",
+    "city": "臺中市",
+    "district": "烏日區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)23831088#7602",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-22",
+    "name": "台南大飯店",
+    "category": "hotel",
+    "lat": 22.997167,
+    "lng": 120.210648,
+    "address": "臺南市中西區成功路1號",
+    "city": "臺南市",
+    "district": "中西區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)2289101#2012",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-23",
+    "name": "康橋商旅-六合夜市七賢館",
+    "category": "hotel",
+    "lat": 22.635455,
+    "lng": 120.300666,
+    "address": "高雄市新興區同愛街28號1樓、30號",
+    "city": "高雄市",
+    "district": "新興區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)288-5588",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-24",
+    "name": "頌華私墅肆區民宿",
+    "category": "hotel",
+    "lat": 23.647247,
+    "lng": 119.598976,
+    "address": "澎湖縣湖西鄉許家村6鄰港子尾120之5號",
+    "city": "澎湖縣",
+    "district": "湖西鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)9212953",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-25",
+    "name": "觀霧山莊",
+    "category": "hotel",
+    "lat": 24.50675,
+    "lng": 121.115399,
+    "address": "苗栗縣泰安鄉梅園村觀霧8號",
+    "city": "苗栗縣",
+    "district": "泰安鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3343818",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-26",
+    "name": "幸福蝸牛",
+    "category": "hotel",
+    "lat": 24.666334,
+    "lng": 121.818378,
+    "address": "宜蘭縣五結鄉利澤西路6號",
+    "city": "宜蘭縣",
+    "district": "五結鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9500047",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-27",
+    "name": "夢想森林親子民宿",
+    "category": "hotel",
+    "lat": 24.689363,
+    "lng": 121.700468,
+    "address": "宜蘭縣三星鄉三星鄉大德路二段613號",
+    "city": "宜蘭縣",
+    "district": "三星鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9898113",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-28",
+    "name": "神隱國度民宿",
+    "category": "hotel",
+    "lat": 25.107281,
+    "lng": 121.845703,
+    "address": "新北市瑞芳區崙頂路90號",
+    "city": "新北市",
+    "district": "瑞芳區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(09)05788650",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-29",
+    "name": "海霞您的家",
+    "category": "hotel",
+    "lat": 25.053177,
+    "lng": 121.925191,
+    "address": "新北市貢寮區仁里里14鄰仁愛路38號",
+    "city": "新北市",
+    "district": "貢寮區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(09)35204895",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-30",
+    "name": "鐡馬騎跡",
+    "category": "hotel",
+    "lat": 22.468064,
+    "lng": 120.457656,
+    "address": "屏東縣東港鎮新學路50號",
+    "city": "屏東縣",
+    "district": "東港鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0952)848898",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-31",
+    "name": "臺邦商旅",
+    "category": "hotel",
+    "lat": 22.988732,
+    "lng": 120.184353,
+    "address": "臺南市安平區永華二街199號",
+    "city": "臺南市",
+    "district": "安平區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)2931800#8603",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-32",
+    "name": "台中港酒店",
+    "category": "hotel",
+    "lat": 24.260259,
+    "lng": 120.533737,
+    "address": "臺中市梧棲區大智路二段388號",
+    "city": "臺中市",
+    "district": "梧棲區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)37055888#6128",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-33",
+    "name": "秘境民宿",
+    "category": "hotel",
+    "lat": 22.465873,
+    "lng": 120.458318,
+    "address": "屏東縣東港鎮屏東縣東港鎮水源路223號(新和段737-3地號)",
+    "city": "屏東縣",
+    "district": "東港鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8333345",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-34",
+    "name": "和逸飯店桃園青埔館",
+    "category": "hotel",
+    "lat": 24.972151,
+    "lng": 121.205396,
+    "address": "桃園市中壢區春德路101號",
+    "city": "桃園市",
+    "district": "中壢區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)2737692#2102",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-35",
+    "name": "礁溪寒沐酒店",
+    "category": "hotel",
+    "lat": 24.829612,
+    "lng": 121.77281,
+    "address": "宜蘭縣礁溪鄉健康路1號1至14樓",
+    "city": "宜蘭縣",
+    "district": "礁溪鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9058007",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-36",
+    "name": "讀好民宿",
+    "category": "hotel",
+    "lat": 24.691189,
+    "lng": 121.796289,
+    "address": "宜蘭縣五結鄉五結中路二段241巷7弄16號",
+    "city": "宜蘭縣",
+    "district": "五結鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0920)023139",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-37",
+    "name": "遇見民宿",
+    "category": "hotel",
+    "lat": 22.465947,
+    "lng": 120.458525,
+    "address": "屏東縣東港鎮水源路221號(新和段737-4地號)",
+    "city": "屏東縣",
+    "district": "東港鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8333345",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-38",
+    "name": "麗格休閒飯店",
+    "category": "hotel",
+    "lat": 23.986832,
+    "lng": 121.598808,
+    "address": "花蓮縣花蓮市商校街258.260.262號",
+    "city": "花蓮縣",
+    "district": "花蓮市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8349922",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-39",
+    "name": "捷絲旅花蓮中正館",
+    "category": "hotel",
+    "lat": 23.974691,
+    "lng": 121.603767,
+    "address": "花蓮縣花蓮市主睦里14鄰中正路396號",
+    "city": "花蓮縣",
+    "district": "花蓮市",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8900069#8104",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-40",
+    "name": "麗軒國際飯店",
+    "category": "hotel",
+    "lat": 23.991176,
+    "lng": 121.625537,
+    "address": "花蓮縣花蓮市中美路99之1號",
+    "city": "花蓮縣",
+    "district": "花蓮市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8246898",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-41",
+    "name": "發現號特色民宿",
+    "category": "hotel",
+    "lat": 22.428579,
+    "lng": 120.488572,
+    "address": "屏東縣林邊鄉崎峰村裕後路90號",
+    "city": "屏東縣",
+    "district": "林邊鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8750300",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-42",
+    "name": "關子嶺富野溫泉會館",
+    "category": "hotel",
+    "lat": 23.336624,
+    "lng": 120.504317,
+    "address": "臺南市白河區關子嶺28號",
+    "city": "臺南市",
+    "district": "白河區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)6822288",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-43",
+    "name": "旅行邦尼",
+    "category": "hotel",
+    "lat": 25.170282,
+    "lng": 121.442423,
+    "address": "新北市淡水區中山路87巷7號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(09)28824850",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-44",
+    "name": "今古安民宿",
+    "category": "hotel",
+    "lat": 23.972562,
+    "lng": 121.608086,
+    "address": "花蓮縣花蓮市重慶路353巷30號",
+    "city": "花蓮縣",
+    "district": "花蓮市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8345555",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-45",
+    "name": "星8藝宿",
+    "category": "hotel",
+    "lat": 24.678223,
+    "lng": 121.653189,
+    "address": "宜蘭縣三星鄉中山路三段192巷8號",
+    "city": "宜蘭縣",
+    "district": "三星鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0932)495200",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-46",
+    "name": "波西米亞民宿",
+    "category": "hotel",
+    "lat": 23.96476,
+    "lng": 121.599071,
+    "address": "花蓮縣吉安鄉東昌村13鄰東海一街168號",
+    "city": "花蓮縣",
+    "district": "吉安鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0385)31234",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-47",
+    "name": "日月潭力麗溫德姆溫泉酒店",
+    "category": "hotel",
+    "lat": 23.846743,
+    "lng": 120.932048,
+    "address": "南投縣魚池鄉日月村中正路312號",
+    "city": "南投縣",
+    "district": "魚池鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(049)2850085#8802",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-48",
+    "name": "美綠民宿",
+    "category": "hotel",
+    "lat": 22.873503,
+    "lng": 120.586207,
+    "address": "高雄市美濃區獅山里竹門14-2號",
+    "city": "高雄市",
+    "district": "美濃區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)6851111",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-49",
+    "name": "台南安平雅樂軒酒店",
+    "category": "hotel",
+    "lat": 22.990267,
+    "lng": 120.160238,
+    "address": "臺南市安平區光州路108號2-12樓、光州路108之1號",
+    "city": "臺南市",
+    "district": "安平區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)3905000#8600",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-50",
+    "name": "海灣假日酒店",
+    "category": "hotel",
+    "lat": 25.004177,
+    "lng": 121.59858,
+    "address": "新北市深坑區北深路3段265號",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77035880",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-51",
+    "name": "新竹喜來登大飯店",
+    "category": "hotel",
+    "lat": 24.818772,
+    "lng": 121.029309,
+    "address": "新竹縣竹北市光明六路東一段265號",
+    "city": "新竹縣",
+    "district": "竹北市",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)6206126",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-52",
+    "name": "夏優旅居",
+    "category": "hotel",
+    "lat": 22.625562,
+    "lng": 120.281021,
+    "address": "高雄市鹽埕區新興街67號",
+    "city": "高雄市",
+    "district": "鹽埕區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)5328885",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-53",
+    "name": "寒軒國際大飯店",
+    "category": "hotel",
+    "lat": 22.618735,
+    "lng": 120.30875,
+    "address": "高雄市苓雅區四維三路三十三號",
+    "city": "高雄市",
+    "district": "苓雅區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0980)556224",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-54",
+    "name": "八里福朋喜來登酒店",
+    "category": "hotel",
+    "lat": 25.159355,
+    "lng": 121.429618,
+    "address": "新北市八里區觀海大道8號",
+    "city": "新北市",
+    "district": "八里區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)26192777#2602",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-55",
+    "name": "美墅館",
+    "category": "hotel",
+    "lat": 23.157443,
+    "lng": 120.318839,
+    "address": "臺南市善化區昌隆里9鄰東勢寮131之8號",
+    "city": "臺南市",
+    "district": "善化區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(09)20656908",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-56",
+    "name": "SOHO工房眷村生活體驗館",
+    "category": "hotel",
+    "lat": 22.618631,
+    "lng": 120.364643,
+    "address": "高雄市鳳山區黃埔新村東三巷101號",
+    "city": "高雄市",
+    "district": "鳳山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0906)506106",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-57",
+    "name": "薆悅酒店野柳渡假館一館",
+    "category": "hotel",
+    "lat": 25.204453,
+    "lng": 121.690005,
+    "address": "新北市萬里區野柳里港東路162號之2",
+    "city": "新北市",
+    "district": "萬里區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77035770#623",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-58",
+    "name": "台北旅人國際青年旅館",
+    "category": "hotel",
+    "lat": 25.17168,
+    "lng": 121.439016,
+    "address": "新北市淡水區三民街22、22之1、22之2、22之3、22之4號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)26258222",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-59",
+    "name": "月光寶盒旅店",
+    "category": "hotel",
+    "lat": 22.618727,
+    "lng": 120.36319,
+    "address": "高雄市鳳山區黃埔新村東一巷80號",
+    "city": "高雄市",
+    "district": "鳳山區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(09)33631615",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-60",
+    "name": "高雄商旅",
+    "category": "hotel",
+    "lat": 22.629648,
+    "lng": 120.312783,
+    "address": "高雄市新興區民族二路33號1、4~10樓；37號1、3~10樓",
+    "city": "高雄市",
+    "district": "新興區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(09)19546590",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-61",
+    "name": "鳳山79 背包客",
+    "category": "hotel",
+    "lat": 22.618727,
+    "lng": 120.36319,
+    "address": "高雄市鳳山區黃埔新村東一巷79號",
+    "city": "高雄市",
+    "district": "鳳山區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)5524545",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-62",
+    "name": "台北萬豪酒店",
+    "category": "hotel",
+    "lat": 25.080429,
+    "lng": 121.559299,
+    "address": "臺北市中山區樂群二路199號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)21757999#1701",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-63",
+    "name": "溪頭福華渡假飯店-溪頭漢光樓",
+    "category": "hotel",
+    "lat": 23.672251,
+    "lng": 120.797435,
+    "address": "南投縣鹿谷鄉森林巷11、12號",
+    "city": "南投縣",
+    "district": "鹿谷鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(049)2612588#3005",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-64",
+    "name": "南港老爺行旅",
+    "category": "hotel",
+    "lat": 25.059804,
+    "lng": 121.614795,
+    "address": "臺北市南港區經貿二路196號、196號10樓至20樓",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77500588",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-65",
+    "name": "美侖商旅",
+    "category": "hotel",
+    "lat": 25.053113,
+    "lng": 121.530377,
+    "address": "臺北市中山區吉林路49號1至8樓",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)25313535#878",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-66",
+    "name": "台中金典酒店",
+    "category": "hotel",
+    "lat": 24.155999,
+    "lng": 120.663177,
+    "address": "臺中市西區健行路1049號",
+    "city": "臺中市",
+    "district": "西區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)23288000#6692",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-67",
+    "name": "J.S 23",
+    "category": "hotel",
+    "lat": 22.709048,
+    "lng": 120.299453,
+    "address": "高雄市楠梓區新昌街10巷15弄23號",
+    "city": "高雄市",
+    "district": "楠梓區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "0985309531",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-68",
+    "name": "福容大飯店 淡水漁人碼頭",
+    "category": "hotel",
+    "lat": 25.182432,
+    "lng": 121.415171,
+    "address": "新北市淡水區觀海路83號",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)2805 9958#8178",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-69",
+    "name": "KMQM",
+    "category": "hotel",
+    "lat": 24.446793,
+    "lng": 118.343273,
+    "address": "金門縣金寧鄉盤山村下堡28之1號",
+    "city": "金門縣",
+    "district": "金寧鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0912)304489",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-70",
+    "name": "台北中山雅樂軒酒店",
+    "category": "hotel",
+    "lat": 25.063034,
+    "lng": 121.524478,
+    "address": "臺北市中山區雙城街1號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77439900",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-71",
+    "name": "台中李方艾美酒店",
+    "category": "hotel",
+    "lat": 24.136704,
+    "lng": 120.683357,
+    "address": "臺中市中區建國路111號",
+    "city": "臺中市",
+    "district": "中區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)22240888#81002",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-72",
+    "name": "福華大飯店",
+    "category": "hotel",
+    "lat": 25.03747,
+    "lng": 121.543301,
+    "address": "臺北市大安區仁愛路三段160號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)27002323#2411",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-73",
+    "name": "渴望會館",
+    "category": "hotel",
+    "lat": 24.839326,
+    "lng": 121.184036,
+    "address": "桃園市龍潭區渴望路428號3-5樓",
+    "city": "桃園市",
+    "district": "龍潭區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)4072999#7110",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-74",
+    "name": "泊寓",
+    "category": "hotel",
+    "lat": 24.054941,
+    "lng": 120.444776,
+    "address": "彰化縣鹿港鎮鹿興路57巷3號",
+    "city": "彰化縣",
+    "district": "鹿港鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)7115655#120",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-75",
+    "name": "台北西門町意舍酒店",
+    "category": "hotel",
+    "lat": 25.045167,
+    "lng": 121.50557,
+    "address": "臺北市萬華區武昌街2段77號5樓至10樓",
+    "city": "臺北市",
+    "district": "萬華區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)23755111#2100",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-76",
+    "name": "阿里山英迪格酒店",
+    "category": "hotel",
+    "lat": 23.446006,
+    "lng": 120.674415,
+    "address": "嘉義縣番路鄉公田村2鄰龍頭20號2樓之1等10筆",
+    "city": "嘉義縣",
+    "district": "番路鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2586800#121",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-77",
+    "name": "長榮桂冠酒店(台北)",
+    "category": "hotel",
+    "lat": 25.048872,
+    "lng": 121.533329,
+    "address": "臺北市中山區松江路63號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)25019988#2701",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-78",
+    "name": "綉溪安平",
+    "category": "hotel",
+    "lat": 23.003163,
+    "lng": 120.15845,
+    "address": "臺南市安平區王城里12鄰古堡街136號、138號、138之1號",
+    "city": "臺南市",
+    "district": "安平區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)3910988#3111",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-79",
+    "name": "捷絲旅台北三重館",
+    "category": "hotel",
+    "lat": 25.077389,
+    "lng": 121.487597,
+    "address": "新北市三重區三和路四段107-1號",
+    "city": "新北市",
+    "district": "三重區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)22806111#8304",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-80",
+    "name": "臺中逢甲智選假日酒店",
+    "category": "hotel",
+    "lat": 24.183109,
+    "lng": 120.64583,
+    "address": "臺中市西屯區福星北三街33巷28號",
+    "city": "臺中市",
+    "district": "西屯區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)27083911#6101",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-81",
+    "name": "娜路彎花園酒店",
+    "category": "hotel",
+    "lat": 22.793218,
+    "lng": 121.129454,
+    "address": "臺東縣台東市新興路77號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)231111",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-82",
+    "name": "巨蛋旅店",
+    "category": "hotel",
+    "lat": 22.66498,
+    "lng": 120.302284,
+    "address": "高雄市鼓山區文忠路1號",
+    "city": "高雄市",
+    "district": "鼓山區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)5868388#0",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-83",
+    "name": "娜路彎會館",
+    "category": "hotel",
+    "lat": 22.768585,
+    "lng": 121.124768,
+    "address": "臺東縣台東市中興路2段385號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)235500",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-84",
+    "name": "台北君品大酒店",
+    "category": "hotel",
+    "lat": 25.052195,
+    "lng": 121.520296,
+    "address": "臺北市大同區承德路1段3號1樓、5樓~16樓及地下1樓、地下3樓",
+    "city": "臺北市",
+    "district": "大同區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)21819999#3142",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-85",
+    "name": "捷絲旅高雄中正館",
+    "category": "hotel",
+    "lat": 22.628424,
+    "lng": 120.332042,
+    "address": "高雄市苓雅區中正一路134號",
+    "city": "高雄市",
+    "district": "苓雅區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)9733587#8104",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-86",
+    "name": "捷絲旅高雄站前館",
+    "category": "hotel",
+    "lat": 22.635496,
+    "lng": 120.302557,
+    "address": "高雄市新興區中山一路280號1至14樓",
+    "city": "高雄市",
+    "district": "新興區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)9733587#8104",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-87",
+    "name": "城市商旅駁二館",
+    "category": "hotel",
+    "lat": 22.620136,
+    "lng": 120.285321,
+    "address": "高雄市鹽埕區公園二路83號1至11樓",
+    "city": "高雄市",
+    "district": "鹽埕區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)5322777",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-88",
+    "name": "城市商旅高雄真愛館",
+    "category": "hotel",
+    "lat": 22.618997,
+    "lng": 120.284442,
+    "address": "高雄市鹽埕區大義街1號",
+    "city": "高雄市",
+    "district": "鹽埕區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)5215116#9303",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-89",
+    "name": "亞昕福朋喜來登酒店",
+    "category": "hotel",
+    "lat": 25.066195,
+    "lng": 121.360845,
+    "address": "新北市林口區文化三路一段1號、1號2樓、1號3樓",
+    "city": "新北市",
+    "district": "林口區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77276961",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-90",
+    "name": "城市商旅美麗島館(HOTEL PAPA WHALE)",
+    "category": "hotel",
+    "lat": 22.627751,
+    "lng": 120.30455,
+    "address": "高雄市新興區民生一路328號1-7樓",
+    "city": "高雄市",
+    "district": "新興區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)2519888",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-91",
+    "name": "台北中山意舍酒店",
+    "category": "hotel",
+    "lat": 25.055732,
+    "lng": 121.523006,
+    "address": "臺北市中山區中山北路二段57之1號1至8樓",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)25652828",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-92",
+    "name": "娜路彎銀河行館",
+    "category": "hotel",
+    "lat": 22.761315,
+    "lng": 121.143912,
+    "address": "臺東縣台東市豐興路88號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)383366",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-93",
+    "name": "凱撒大飯店",
+    "category": "hotel",
+    "lat": 21.941675,
+    "lng": 120.804977,
+    "address": "屏東縣恆春鎮墾丁路6號",
+    "city": "屏東縣",
+    "district": "恆春鎮",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8861888",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-94",
+    "name": "台北時代寓所",
+    "category": "hotel",
+    "lat": 25.044159,
+    "lng": 121.523328,
+    "address": "臺北市中正區林森南路7號1至14樓，7-1號1樓",
+    "city": "臺北市",
+    "district": "中正區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77521801",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-95",
+    "name": "圓山大飯店",
+    "category": "hotel",
+    "lat": 25.078583,
+    "lng": 121.527814,
+    "address": "臺北市中山區中山北路4段1巷1號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)28861818#1007",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-96",
+    "name": "娜路彎銀河酒店",
+    "category": "hotel",
+    "lat": 22.764738,
+    "lng": 121.13961,
+    "address": "臺東縣台東市豐興路66號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)225000#8263",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-97",
+    "name": "揚昊民宿",
+    "category": "hotel",
+    "lat": 24.405753,
+    "lng": 120.735021,
+    "address": "苗栗縣苑裡鎮蕉埔里8鄰蕉埔86之6號",
+    "city": "苗栗縣",
+    "district": "苑裡鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(037)747711#9",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-98",
+    "name": "綠意山莊民宿",
+    "category": "hotel",
+    "lat": 24.405753,
+    "lng": 120.735021,
+    "address": "苗栗縣苑裡鎮蕉埔里8鄰蕉埔86之5號",
+    "city": "苗栗縣",
+    "district": "苑裡鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(037)747711#9",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-99",
+    "name": "和逸．高雄中山館",
+    "category": "hotel",
+    "lat": 22.613328,
+    "lng": 120.305125,
+    "address": "高雄市前鎮區中山二路260號22-29樓",
+    "city": "高雄市",
+    "district": "前鎮區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)9756670",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-100",
+    "name": "尊爵天際大飯店",
+    "category": "hotel",
+    "lat": 25.051968,
+    "lng": 121.288053,
+    "address": "桃園市蘆竹區南崁路一段108號",
+    "city": "桃園市",
+    "district": "蘆竹區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)2228100#6081",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-101",
+    "name": "仁義湖岸大酒店",
+    "category": "hotel",
+    "lat": 23.458313,
+    "lng": 120.501407,
+    "address": "嘉義縣番路鄉內甕村後坑仔35號",
+    "city": "嘉義縣",
+    "district": "番路鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2769388",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-102",
+    "name": "礁溪老爺酒店",
+    "category": "hotel",
+    "lat": 24.826789,
+    "lng": 121.756767,
+    "address": "宜蘭縣礁溪鄉大忠村五峰路69號、69-1號",
+    "city": "宜蘭縣",
+    "district": "礁溪鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9885211#8006",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-103",
+    "name": "嘉義富野渡假酒店",
+    "category": "hotel",
+    "lat": 23.558102,
+    "lng": 120.469315,
+    "address": "嘉義縣民雄鄉三興村升學一街3、5、7、9、11、13、15、17、19、21、23、25、27號",
+    "city": "嘉義縣",
+    "district": "民雄鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2721688",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-104",
+    "name": "福容大飯店 高雄",
+    "category": "hotel",
+    "lat": 22.621363,
+    "lng": 120.287711,
+    "address": "高雄市鹽埕區五福四路45號",
+    "city": "高雄市",
+    "district": "鹽埕區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)5317777#7782",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-105",
+    "name": "台北W飯店",
+    "category": "hotel",
+    "lat": 25.041368,
+    "lng": 121.56523,
+    "address": "臺北市信義區忠孝東路五段10號",
+    "city": "臺北市",
+    "district": "信義區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77038765",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-106",
+    "name": "城市商旅德立莊博愛館",
+    "category": "hotel",
+    "lat": 22.650385,
+    "lng": 120.303788,
+    "address": "高雄市三民區博愛一路338號地上1至10樓",
+    "city": "高雄市",
+    "district": "三民區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)3238777#9301",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-107",
+    "name": "寒居酒店",
+    "category": "hotel",
+    "lat": 25.051641,
+    "lng": 121.532645,
+    "address": "臺北市中山區松江路116號1樓至9樓",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)66008000#8886",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-108",
+    "name": "享沐時光",
+    "category": "hotel",
+    "lat": 24.419876,
+    "lng": 120.690116,
+    "address": "苗栗縣苑裡鎮石鎮里錦山8-1,8-2號",
+    "city": "苗栗縣",
+    "district": "苑裡鎮",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(037)742878#124",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-109",
+    "name": "新竹安捷國際酒店",
+    "category": "hotel",
+    "lat": 24.807624,
+    "lng": 121.03831,
+    "address": "新竹縣竹北市復興三路二段168號14樓-18樓",
+    "city": "新竹縣",
+    "district": "竹北市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)6209777#660",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-110",
+    "name": "台北士林萬麗酒店",
+    "category": "hotel",
+    "lat": 25.093114,
+    "lng": 121.529046,
+    "address": "臺北市士林區中山北路五段470巷8號",
+    "city": "臺北市",
+    "district": "士林區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)88612389",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-111",
+    "name": "泰安觀止溫泉會館",
+    "category": "hotel",
+    "lat": 24.46765,
+    "lng": 120.951876,
+    "address": "苗栗縣泰安鄉錦水村圓墩58-7號",
+    "city": "苗栗縣",
+    "district": "泰安鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(037)941951#527",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-112",
+    "name": "星漾商旅",
+    "category": "hotel",
+    "lat": 24.153469,
+    "lng": 120.688047,
+    "address": "臺中市北區錦南街17號,錦新街30號4樓至9樓,錦新街32號4樓至9樓",
+    "city": "臺中市",
+    "district": "北區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)22289008",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-113",
+    "name": "基拉耳景觀民宿",
+    "category": "hotel",
+    "lat": 24.805329,
+    "lng": 121.347434,
+    "address": "桃園市復興區溪口路16巷29號",
+    "city": "桃園市",
+    "district": "復興區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)23965188#594",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-114",
+    "name": "福容大飯店 墾丁",
+    "category": "hotel",
+    "lat": 21.937142,
+    "lng": 120.816759,
+    "address": "屏東縣恆春鎮船帆路1000號",
+    "city": "屏東縣",
+    "district": "恆春鎮",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8856969#340",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-115",
+    "name": "富光大旅社",
+    "category": "hotel",
+    "lat": 22.673401,
+    "lng": 120.492768,
+    "address": "屏東縣屏東市公園路19-7號",
+    "city": "屏東縣",
+    "district": "屏東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)7345656",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-116",
+    "name": "澎湖福朋喜來登酒店",
+    "category": "hotel",
+    "lat": 23.568216,
+    "lng": 119.575844,
+    "address": "澎湖縣馬公市新店路197號",
+    "city": "澎湖縣",
+    "district": "馬公市",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)9279955#3701",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-117",
+    "name": "長榮桂冠酒店(基隆)",
+    "category": "hotel",
+    "lat": 25.135154,
+    "lng": 121.746306,
+    "address": "基隆市中正區中正路62號之1",
+    "city": "基隆市",
+    "district": "中正區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)24279988",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-118",
+    "name": "高雄圓山大飯店",
+    "category": "hotel",
+    "lat": 22.656904,
+    "lng": 120.344309,
+    "address": "高雄市鳥松區圓山路2號",
+    "city": "高雄市",
+    "district": "鳥松區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)3706007#519",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-119",
+    "name": "台北中山九昱希爾頓逸林酒店",
+    "category": "hotel",
+    "lat": 25.051413,
+    "lng": 121.522594,
+    "address": "臺北市中山區中山北路一段121巷1之1號, 121巷1號1樓至14樓",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)66253281",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-120",
+    "name": "三好國際酒店",
+    "category": "hotel",
+    "lat": 23.716807,
+    "lng": 120.534259,
+    "address": "雲林縣斗六市斗六五路35號",
+    "city": "雲林縣",
+    "district": "斗六市",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)5510999#1500",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-121",
+    "name": "迎曦大飯店",
+    "category": "hotel",
+    "lat": 24.80614,
+    "lng": 120.971389,
+    "address": "新竹市東區親仁里文化街10號2-10樓",
+    "city": "新竹市",
+    "district": "東區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)5347266#124",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-122",
+    "name": "北投麗禧溫泉酒店",
+    "category": "hotel",
+    "lat": 25.137779,
+    "lng": 121.515081,
+    "address": "臺北市北投區幽雅路30號",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)28967799#738",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-123",
+    "name": "台灣糖業股份有限公司池上牧野渡假村",
+    "category": "hotel",
+    "lat": 23.105782,
+    "lng": 121.196739,
+    "address": "臺東縣池上鄉新興村新興110號",
+    "city": "臺東縣",
+    "district": "池上鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)862736#1001",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-124",
+    "name": "兆品酒店",
+    "category": "hotel",
+    "lat": 23.483396,
+    "lng": 120.448647,
+    "address": "嘉義市文化路257號B2-9F",
+    "city": "嘉義市",
+    "district": "東區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2292883#3130",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-125",
+    "name": "趣淘漫旅-台北",
+    "category": "hotel",
+    "lat": 25.011261,
+    "lng": 121.462763,
+    "address": "新北市板橋區中山路1段139號(1至2層)、139號4樓至20樓",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)29583000#7701",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-126",
+    "name": "台北新板希爾頓酒店",
+    "category": "hotel",
+    "lat": 25.011418,
+    "lng": 121.462432,
+    "address": "新北市板橋區民權路88號、88號（2至31樓）90號",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)29583000#7702",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-127",
+    "name": "小叮噹科學遊樂區生活大師會館",
+    "category": "hotel",
+    "lat": 24.869202,
+    "lng": 120.980025,
+    "address": "新竹縣新豐鄉松柏村康和路199號",
+    "city": "新竹縣",
+    "district": "新豐鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)5592132",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-128",
+    "name": "富信大飯店",
+    "category": "hotel",
+    "lat": 25.055452,
+    "lng": 121.631994,
+    "address": "新北市汐止區大同路一段152號",
+    "city": "新北市",
+    "district": "汐止區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)26416422#5112",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-129",
+    "name": "墾丁夏都沙灘酒店",
+    "category": "hotel",
+    "lat": 21.94505,
+    "lng": 120.79231,
+    "address": "屏東縣恆春鎮墾丁路451號",
+    "city": "屏東縣",
+    "district": "恆春鎮",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0910)371823",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-130",
+    "name": "和逸·台南西門館",
+    "category": "hotel",
+    "lat": 22.987345,
+    "lng": 120.198365,
+    "address": "臺南市中西區西門路一段658之2號4樓至13樓",
+    "city": "臺南市",
+    "district": "中西區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)7026685",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-131",
+    "name": "台南老爺行旅",
+    "category": "hotel",
+    "lat": 22.989894,
+    "lng": 120.233301,
+    "address": "臺南市東區中華東路一段368號1樓、6-10樓",
+    "city": "臺南市",
+    "district": "東區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)2361680#301",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-132",
+    "name": "捷絲旅 台南虎山館",
+    "category": "hotel",
+    "lat": 22.938104,
+    "lng": 120.230189,
+    "address": "臺南市仁德區成功里5鄰文華路2段300號1~9樓，地下一、二樓",
+    "city": "臺南市",
+    "district": "仁德區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)2662218#8321",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-133",
+    "name": "桃園大溪笠復威斯汀度假酒店",
+    "category": "hotel",
+    "lat": 24.882547,
+    "lng": 121.326207,
+    "address": "桃園市大溪區日新路166號",
+    "city": "桃園市",
+    "district": "大溪區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)2725035",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-134",
+    "name": "四季時光",
+    "category": "hotel",
+    "lat": 23.836739,
+    "lng": 120.903617,
+    "address": "南投縣魚池鄉頭社村平和巷103-11號",
+    "city": "南投縣",
+    "district": "魚池鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0932)376767",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-135",
+    "name": "高雄中央公園英迪格酒店",
+    "category": "hotel",
+    "lat": 22.624455,
+    "lng": 120.301518,
+    "address": "高雄市新興區中山一路4號",
+    "city": "高雄市",
+    "district": "新興區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)2721555#301",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-136",
+    "name": "瑞穗天合國際觀光酒店",
+    "category": "hotel",
+    "lat": 23.493739,
+    "lng": 121.3543,
+    "address": "花蓮縣瑞穗鄉溫泉路二段368號",
+    "city": "花蓮縣",
+    "district": "瑞穗鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8876000#3260",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-137",
+    "name": "台南大員皇冠假日酒店",
+    "category": "hotel",
+    "lat": 22.999368,
+    "lng": 120.148888,
+    "address": "臺南市安平區州平路289號",
+    "city": "臺南市",
+    "district": "安平區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)5121888#6002",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-138",
+    "name": "北投老爺酒店",
+    "category": "hotel",
+    "lat": 25.137657,
+    "lng": 121.503824,
+    "address": "臺北市北投區中和街2號",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅館"
+    ],
+    "extra": {
+      "phone": "(02)28966966#8878",
+      "village": "-",
+      "level": "金級環保旅館"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-139",
+    "name": "福容大飯店 台北二館",
+    "category": "hotel",
+    "lat": 25.004215,
+    "lng": 121.600329,
+    "address": "新北市深坑區北深路三段236號",
+    "city": "新北市",
+    "district": "深坑區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)26620088#186",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-140",
+    "name": "統一谷關渡假村",
+    "category": "hotel",
+    "lat": 24.201654,
+    "lng": 121.001679,
+    "address": "臺中市和平區博愛里東關路一段188號",
+    "city": "臺中市",
+    "district": "和平區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)25950000",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-141",
+    "name": "麗翔大飯店",
+    "category": "hotel",
+    "lat": 23.974262,
+    "lng": 121.611796,
+    "address": "花蓮縣花蓮市花崗街2、4、6、8、10號",
+    "city": "花蓮縣",
+    "district": "花蓮市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8323737",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-142",
+    "name": "阿里山東方明珠國際大飯店",
+    "category": "hotel",
+    "lat": 23.443956,
+    "lng": 120.543752,
+    "address": "嘉義縣中埔鄉社口村檨仔林23號",
+    "city": "嘉義縣",
+    "district": "中埔鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2536999",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-143",
+    "name": "統一渡假村",
+    "category": "hotel",
+    "lat": 24.767086,
+    "lng": 121.217723,
+    "address": "新竹縣關西鎮金山里34號",
+    "city": "新竹縣",
+    "district": "關西鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)5478888",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-144",
+    "name": "台北遠東香格里拉",
+    "category": "hotel",
+    "lat": 25.026431,
+    "lng": 121.549323,
+    "address": "臺北市大安區敦化南路二段201號",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)23788888#6608",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-145",
+    "name": "九昱晴美",
+    "category": "hotel",
+    "lat": 25.064703,
+    "lng": 121.525537,
+    "address": "臺北市中山區林森北路568號2樓至13樓，3樓之1、2、3、5、6至12樓之1、2、3、5、6，13樓之1",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)66080807#105",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-146",
+    "name": "福華國際文教會館",
+    "category": "hotel",
+    "lat": 25.023668,
+    "lng": 121.534326,
+    "address": "臺北市大安區新生南路3段30號(住宿棟1樓及5樓至14樓)",
+    "city": "臺北市",
+    "district": "大安區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77122323#2340",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-147",
+    "name": "秘境41",
+    "category": "hotel",
+    "lat": 24.879432,
+    "lng": 121.287625,
+    "address": "桃園市大溪區興和里中央路41號",
+    "city": "桃園市",
+    "district": "大溪區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3887111",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-148",
+    "name": "趣淘漫旅-台東",
+    "category": "hotel",
+    "lat": 22.792304,
+    "lng": 121.124485,
+    "address": "臺東縣台東市新站路260號",
+    "city": "臺東縣",
+    "district": "台東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)231188#7187",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-149",
+    "name": "伊塔原旅臺東縣原住民文化會館",
+    "category": "hotel",
+    "lat": 22.762407,
+    "lng": 121.157474,
+    "address": "臺東縣台東市中山路10號",
+    "city": "臺東縣",
+    "district": "台東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)34060",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-150",
+    "name": "大溪老城四季行館",
+    "category": "hotel",
+    "lat": 24.879348,
+    "lng": 121.287614,
+    "address": "桃園市大溪區中央路37號",
+    "city": "桃園市",
+    "district": "大溪區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3881818",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-151",
+    "name": "福容徠旅林口",
+    "category": "hotel",
+    "lat": 25.060364,
+    "lng": 121.362729,
+    "address": "桃園市龜山區文二一街68號",
+    "city": "桃園市",
+    "district": "龜山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3277388#300",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-152",
+    "name": "嘉仕特飯店",
+    "category": "hotel",
+    "lat": 24.992825,
+    "lng": 121.308269,
+    "address": "桃園市桃園區中山路203號",
+    "city": "桃園市",
+    "district": "桃園區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3343999",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-153",
+    "name": "提米好旅",
+    "category": "hotel",
+    "lat": 24.081821,
+    "lng": 120.541233,
+    "address": "彰化縣彰化市成功路277號",
+    "city": "彰化縣",
+    "district": "彰化市",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)7061086#9",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-154",
+    "name": "嘉義智選假日酒店",
+    "category": "hotel",
+    "lat": 23.481191,
+    "lng": 120.437933,
+    "address": "嘉義市西區中興路69號B2至13層樓",
+    "city": "嘉義市",
+    "district": "西區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2335899#801",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-155",
+    "name": "台北松山意舍酒店",
+    "category": "hotel",
+    "lat": 25.0493,
+    "lng": 121.580502,
+    "address": "臺北市南港區市民大道7段8號17樓至21樓",
+    "city": "臺北市",
+    "district": "南港區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)26532828#2100",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-156",
+    "name": "裕元花園酒店",
+    "category": "hotel",
+    "lat": 24.179783,
+    "lng": 120.624028,
+    "address": "臺中市西屯區臺灣大道四段610號",
+    "city": "臺中市",
+    "district": "西屯區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)24655660#5030",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-157",
+    "name": "老爺大酒店",
+    "category": "hotel",
+    "lat": 25.053707,
+    "lng": 121.52295,
+    "address": "臺北市中山區中山北路2段37-1號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)25423299#359",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-158",
+    "name": "山鄰山林青年文旅",
+    "category": "hotel",
+    "lat": 23.332829,
+    "lng": 121.312641,
+    "address": "花蓮縣玉里鎮大同路226.228號",
+    "city": "花蓮縣",
+    "district": "玉里鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8887228",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-159",
+    "name": "福容大飯店花蓮",
+    "category": "hotel",
+    "lat": 23.995535,
+    "lng": 121.633195,
+    "address": "花蓮縣花蓮市民生路51號",
+    "city": "花蓮縣",
+    "district": "花蓮市",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8239988#7507",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-160",
+    "name": "福華石門水庫渡假飯店",
+    "category": "hotel",
+    "lat": 24.81783,
+    "lng": 121.242865,
+    "address": "桃園市龍潭區民富街176號",
+    "city": "桃園市",
+    "district": "龍潭區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)4714888",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-161",
+    "name": "橘子民宿",
+    "category": "hotel",
+    "lat": 24.685026,
+    "lng": 120.879477,
+    "address": "苗栗縣竹南鎮竹南里7鄰民治街12號",
+    "city": "苗栗縣",
+    "district": "竹南鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0972)092658",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-162",
+    "name": "太平⼭莊",
+    "category": "hotel",
+    "lat": 24.497375,
+    "lng": 121.535107,
+    "address": "宜蘭縣大同鄉太平村太平巷58之1號",
+    "city": "宜蘭縣",
+    "district": "大同鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9545114#607",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-163",
+    "name": "旅悅國際青年旅館",
+    "category": "hotel",
+    "lat": 22.614609,
+    "lng": 120.307079,
+    "address": "高雄市前鎮區三多三路211號3樓及4樓",
+    "city": "高雄市",
+    "district": "前鎮區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)3359006",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-164",
+    "name": "長榮鳳凰酒店(礁溪)",
+    "category": "hotel",
+    "lat": 24.831184,
+    "lng": 121.774899,
+    "address": "宜蘭縣礁溪鄉健康路77號",
+    "city": "宜蘭縣",
+    "district": "礁溪鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9100988#2335",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-165",
+    "name": "維悅酒店",
+    "category": "hotel",
+    "lat": 22.997095,
+    "lng": 120.171222,
+    "address": "臺南市安平區慶平路539號 1至5樓及地下1樓",
+    "city": "臺南市",
+    "district": "安平區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)2950888#1125",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-166",
+    "name": "星漾商旅(中清館)",
+    "category": "hotel",
+    "lat": 24.15414,
+    "lng": 120.677061,
+    "address": "臺中市北區中清路一段63號",
+    "city": "臺中市",
+    "district": "北區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)22083888",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-167",
+    "name": "如一家精緻民宿",
+    "category": "hotel",
+    "lat": 24.433989,
+    "lng": 118.317195,
+    "address": "金門縣金城鎮珠浦北路35-1號",
+    "city": "金門縣",
+    "district": "金城鎮",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(082)322167",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-168",
+    "name": "悅徠舘",
+    "category": "hotel",
+    "lat": 25.05405,
+    "lng": 121.365644,
+    "address": "桃園市龜山區興華三街18號2樓之1",
+    "city": "桃園市",
+    "district": "龜山區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3280177",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-169",
+    "name": "小烏來山莊",
+    "category": "hotel",
+    "lat": 24.785482,
+    "lng": 121.398467,
+    "address": "桃園市復興區義盛里1鄰宇內路99號",
+    "city": "桃園市",
+    "district": "復興區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3821199",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-170",
+    "name": "煙波花時間 宜蘭傳藝",
+    "category": "hotel",
+    "lat": 24.685709,
+    "lng": 121.824047,
+    "address": "宜蘭縣五結鄉五濱路二段201號",
+    "city": "宜蘭縣",
+    "district": "五結鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9256899#1171",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-171",
+    "name": "華泰瑞苑",
+    "category": "hotel",
+    "lat": 21.956327,
+    "lng": 120.808356,
+    "address": "屏東縣恆春鎮公園路101號",
+    "city": "屏東縣",
+    "district": "恆春鎮",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)8863666",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-172",
+    "name": "長榮桂冠酒店(台中)",
+    "category": "hotel",
+    "lat": 24.159295,
+    "lng": 120.657069,
+    "address": "臺中市西屯區臺灣大道二段666號",
+    "city": "臺中市",
+    "district": "西屯區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)23242236#2700",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-173",
+    "name": "河那灣",
+    "category": "hotel",
+    "lat": 24.803599,
+    "lng": 121.342651,
+    "address": "桃園市復興區澤仁里3鄰溪口台41號",
+    "city": "桃園市",
+    "district": "復興區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0919)235303",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-174",
+    "name": "阿里山賓館（現代館）",
+    "category": "hotel",
+    "lat": 23.510974,
+    "lng": 120.803499,
+    "address": "嘉義縣阿里山鄉香林村西阿里山16-1號",
+    "city": "嘉義縣",
+    "district": "阿里山鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2679996#5117",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-175",
+    "name": "然一酒店",
+    "category": "hotel",
+    "lat": 22.6106,
+    "lng": 120.305454,
+    "address": "高雄市前鎮區中山二路199號",
+    "city": "高雄市",
+    "district": "前鎮區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)9730186#1666",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-176",
+    "name": "劍湖山渡假大飯店",
+    "category": "hotel",
+    "lat": 23.615221,
+    "lng": 120.576742,
+    "address": "雲林縣古坑鄉永光村大湖口67-8號",
+    "city": "雲林縣",
+    "district": "古坑鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)5829900#7214",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-177",
+    "name": "山形閣",
+    "category": "hotel",
+    "lat": 24.828279,
+    "lng": 121.775073,
+    "address": "宜蘭縣礁溪鄉中山路二段187號",
+    "city": "宜蘭縣",
+    "district": "礁溪鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9872323",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-178",
+    "name": "凱達大飯店",
+    "category": "hotel",
+    "lat": 25.033356,
+    "lng": 121.499892,
+    "address": "臺北市萬華區艋舺大道167號1-26樓",
+    "city": "臺北市",
+    "district": "萬華區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅館"
+    ],
+    "extra": {
+      "phone": "(02)23836789#6321",
+      "village": "-",
+      "level": "金級環保旅館"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-179",
+    "name": "晶泉丰旅",
+    "category": "hotel",
+    "lat": 24.828757,
+    "lng": 121.772817,
+    "address": "宜蘭縣礁溪鄉溫泉路67號2至10樓",
+    "city": "宜蘭縣",
+    "district": "礁溪鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9100000#6105",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-180",
+    "name": "捷絲旅西門町店",
+    "category": "hotel",
+    "lat": 25.044905,
+    "lng": 121.509506,
+    "address": "臺北市中正區中華路一段41號5樓至9樓",
+    "city": "臺北市",
+    "district": "中正區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)25215000",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-181",
+    "name": "將捷金鬱金香酒店",
+    "category": "hotel",
+    "lat": 25.176593,
+    "lng": 121.429726,
+    "address": "新北市淡水區中正路1段2之1號(A區地上3至6層、B區地上1至5層、C區地下3層至地上3層)",
+    "city": "新北市",
+    "district": "淡水區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)26218555#2913",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-182",
+    "name": "長榮文苑酒店(嘉義)",
+    "category": "hotel",
+    "lat": 23.468621,
+    "lng": 120.294962,
+    "address": "嘉義縣太保市東勢里故宮大道777號",
+    "city": "嘉義縣",
+    "district": "太保市",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)3669988#2700",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-183",
+    "name": "承萬尊爵渡假酒店",
+    "category": "hotel",
+    "lat": 23.959941,
+    "lng": 120.975444,
+    "address": "南投縣埔里鎮樹人路131號",
+    "city": "南投縣",
+    "district": "埔里鎮",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅館"
+    ],
+    "extra": {
+      "phone": "(049)2995757#6316",
+      "village": "-",
+      "level": "銀級環保旅館"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-184",
+    "name": "新悦花園酒店",
+    "category": "hotel",
+    "lat": 23.50466,
+    "lng": 120.449851,
+    "address": "嘉義市東區後湖里6鄰保順路69號",
+    "city": "嘉義市",
+    "district": "東區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(05)2777266#5801",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-185",
+    "name": "台糖花蓮旅館",
+    "category": "hotel",
+    "lat": 23.656765,
+    "lng": 121.419937,
+    "address": "花蓮縣光復鄉大進村糖廠街19號",
+    "city": "花蓮縣",
+    "district": "光復鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8704125#621",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-186",
+    "name": "天成大飯店",
+    "category": "hotel",
+    "lat": 25.046374,
+    "lng": 121.518377,
+    "address": "臺北市中正區忠孝西路一段43號",
+    "city": "臺北市",
+    "district": "中正區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)23118905#3705",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-187",
+    "name": "台糖台北會館",
+    "category": "hotel",
+    "lat": 25.045362,
+    "lng": 121.509834,
+    "address": "臺北市中正區中華路一段39號3至5樓",
+    "city": "臺北市",
+    "district": "中正區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)23885522#5001",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-188",
+    "name": "台糖台北會館",
+    "category": "hotel",
+    "lat": 25.045362,
+    "lng": 121.509834,
+    "address": "臺北市中正區中華路一段39號3至5樓",
+    "city": "臺北市",
+    "district": "中正區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)23885522#5001",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-189",
+    "name": "福爾摩沙遊艇酒店",
+    "category": "hotel",
+    "lat": 22.998695,
+    "lng": 120.155052,
+    "address": "臺南市安平區王城里13鄰安平路988號1至10樓",
+    "city": "臺南市",
+    "district": "安平區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)3911313",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-190",
+    "name": "三道門建築文創旅店",
+    "category": "hotel",
+    "lat": 22.997588,
+    "lng": 120.208427,
+    "address": "臺南市中西區成功路75、77號",
+    "city": "臺南市",
+    "district": "中西區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(3088)2223088",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-191",
+    "name": "翰品酒店 高雄",
+    "category": "hotel",
+    "lat": 22.624803,
+    "lng": 120.285649,
+    "address": "高雄市鹽埕區大仁路43號",
+    "city": "高雄市",
+    "district": "鹽埕區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)5614688#3110",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-192",
+    "name": "奧斯卡去旅行民宿",
+    "category": "hotel",
+    "lat": 22.789328,
+    "lng": 121.1273,
+    "address": "臺東縣臺東市興安路一段167號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅館"
+    ],
+    "extra": {
+      "phone": "(0910)633944",
+      "village": "-",
+      "level": "銅級環保旅館"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-193",
+    "name": "小古堡民宿",
+    "category": "hotel",
+    "lat": 22.78899,
+    "lng": 121.127333,
+    "address": "臺東縣台東市興安路一段165號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0910)633944",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-194",
+    "name": "奧斯卡民宿",
+    "category": "hotel",
+    "lat": 22.789066,
+    "lng": 121.127326,
+    "address": "臺東縣台東市興安路1段175號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0965)329000",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-195",
+    "name": "日日森旅二館",
+    "category": "hotel",
+    "lat": 23.897023,
+    "lng": 120.530204,
+    "address": "彰化縣田尾鄉民族路一段185巷11號",
+    "city": "彰化縣",
+    "district": "田尾鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)8221669",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-196",
+    "name": "福容大飯店 福隆",
+    "category": "hotel",
+    "lat": 25.018383,
+    "lng": 121.943956,
+    "address": "新北市貢寮區福隆里福隆街41號",
+    "city": "新北市",
+    "district": "貢寮區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)24992381",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-197",
+    "name": "秧悦美地度假酒店",
+    "category": "hotel",
+    "lat": 23.946478,
+    "lng": 121.544121,
+    "address": "花蓮縣吉安鄉干城村干城二街95-9號",
+    "city": "花蓮縣",
+    "district": "吉安鄉",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8129168#2701",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-198",
+    "name": "爸爸萬歲民宿",
+    "category": "hotel",
+    "lat": 23.985306,
+    "lng": 121.601876,
+    "address": "花蓮縣花蓮市延平街68巷27號",
+    "city": "花蓮縣",
+    "district": "花蓮市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0900)757520",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-199",
+    "name": "好室民宿",
+    "category": "hotel",
+    "lat": 22.755277,
+    "lng": 121.153116,
+    "address": "臺東縣台東市中正路251巷9號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0905)583758",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-200",
+    "name": "福美民宿",
+    "category": "hotel",
+    "lat": 22.752788,
+    "lng": 121.155803,
+    "address": "臺東縣台東市精誠路241號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)328466",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-201",
+    "name": "捷絲旅礁溪館",
+    "category": "hotel",
+    "lat": 24.828744,
+    "lng": 121.772488,
+    "address": "宜蘭縣礁溪鄉德陽路24巷8號、10號",
+    "city": "宜蘭縣",
+    "district": "礁溪鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9102000#8104",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-202",
+    "name": "老公老婆友善民宿",
+    "category": "hotel",
+    "lat": 24.679374,
+    "lng": 121.742088,
+    "address": "宜蘭縣冬山鄉境安路345號",
+    "city": "宜蘭縣",
+    "district": "冬山鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03) 9519013",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-203",
+    "name": "HOFI VILLA和風飯店",
+    "category": "hotel",
+    "lat": 24.842054,
+    "lng": 121.791915,
+    "address": "宜蘭縣頭城鎮宜三路一段56號",
+    "city": "宜蘭縣",
+    "district": "頭城鎮",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)9777711",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-204",
+    "name": "武陵國民賓館",
+    "category": "hotel",
+    "lat": 24.34631,
+    "lng": 121.308346,
+    "address": "臺中市和平區平等里武陵路3-1號",
+    "city": "臺中市",
+    "district": "和平區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)25901258#2103",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-205",
+    "name": "尊爵大飯店",
+    "category": "hotel",
+    "lat": 25.024664,
+    "lng": 121.297627,
+    "address": "桃園市桃園區莊敬路一段300號",
+    "city": "桃園市",
+    "district": "桃園區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3169090#8502",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-206",
+    "name": "綠藤輕旅",
+    "category": "hotel",
+    "lat": 25.01929,
+    "lng": 121.213983,
+    "address": "桃園市大園區中山南路二段673號",
+    "city": "桃園市",
+    "district": "大園區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)2873043",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-207",
+    "name": "凱旋酒店",
+    "category": "hotel",
+    "lat": 25.077381,
+    "lng": 121.577786,
+    "address": "臺北市內湖區江南街55號3樓至9樓",
+    "city": "臺北市",
+    "district": "內湖區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)87527888#6203",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-208",
+    "name": "台東Deer  House民宿",
+    "category": "hotel",
+    "lat": 22.930499,
+    "lng": 121.139256,
+    "address": "臺東縣鹿野鄉永安村1鄰永安路７１號",
+    "city": "臺東縣",
+    "district": "鹿野鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)552224",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-209",
+    "name": "勝利131民宿",
+    "category": "hotel",
+    "lat": 22.679288,
+    "lng": 120.48552,
+    "address": "屏東縣屏東市勝利路131號",
+    "city": "屏東縣",
+    "district": "屏東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)7320099",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-210",
+    "name": "勝利127民宿",
+    "category": "hotel",
+    "lat": 22.679265,
+    "lng": 120.485617,
+    "address": "屏東縣屏東市勝利路127號",
+    "city": "屏東縣",
+    "district": "屏東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(08)7320099",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-211",
+    "name": "泡泡森林民宿",
+    "category": "hotel",
+    "lat": 22.777748,
+    "lng": 121.124322,
+    "address": "臺東縣台東市南一街40號",
+    "city": "臺東縣",
+    "district": "臺東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "0986866545",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-212",
+    "name": "打個蛋海旅民宿",
+    "category": "hotel",
+    "lat": 22.53397,
+    "lng": 120.963283,
+    "address": "臺東縣太麻里鄉金崙4鄰129號",
+    "city": "臺東縣",
+    "district": "太麻里鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(089)771551",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-213",
+    "name": "緣羊軒民宿",
+    "category": "hotel",
+    "lat": 22.77859,
+    "lng": 121.123219,
+    "address": "臺東縣台東市南一街96號",
+    "city": "臺東縣",
+    "district": "台東市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "089326400",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-214",
+    "name": "金湖飯店",
+    "category": "hotel",
+    "lat": 24.439254,
+    "lng": 118.419369,
+    "address": "金門縣金湖鎮太湖路二段218號",
+    "city": "金門縣",
+    "district": "金湖鎮",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(082)379666#160",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-215",
+    "name": "大地酒店",
+    "category": "hotel",
+    "lat": 25.135009,
+    "lng": 121.506991,
+    "address": "臺北市北投區奇岩路1號",
+    "city": "臺北市",
+    "district": "北投區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅館"
+    ],
+    "extra": {
+      "phone": "(02)28931221#1003",
+      "village": "-",
+      "level": "金級環保旅館"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-216",
+    "name": "台糖長榮酒店(台南)",
+    "category": "hotel",
+    "lat": 22.974474,
+    "lng": 120.220884,
+    "address": "臺南市東區中華東路三段336巷1號",
+    "city": "臺南市",
+    "district": "東區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)3378888",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-217",
+    "name": "日玥居",
+    "category": "hotel",
+    "lat": 24.478381,
+    "lng": 118.308043,
+    "address": "金門縣金寧鄉南山19號",
+    "city": "金門縣",
+    "district": "金寧鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(0987)397327",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-218",
+    "name": "藍水輕旅",
+    "category": "hotel",
+    "lat": 25.008925,
+    "lng": 121.210068,
+    "address": "桃園市大園區高鐵南路一段126號",
+    "city": "桃園市",
+    "district": "大園區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)2871855",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-219",
+    "name": "高雄福華大飯店",
+    "category": "hotel",
+    "lat": 22.633745,
+    "lng": 120.308132,
+    "address": "高雄市新興區七賢一路311號",
+    "city": "高雄市",
+    "district": "新興區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)2307737",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-220",
+    "name": "煙波花時間 花蓮",
+    "category": "hotel",
+    "lat": 24.115441,
+    "lng": 121.639687,
+    "address": "花蓮縣新城鄉順安村草林10-5號2~6樓",
+    "city": "花蓮縣",
+    "district": "新城鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8612000#1470",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-221",
+    "name": "煙波大飯店花蓮太魯閣山闊館",
+    "category": "hotel",
+    "lat": 24.115148,
+    "lng": 121.639387,
+    "address": "花蓮縣新城鄉順安村草林10-7號",
+    "city": "花蓮縣",
+    "district": "新城鄉",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8612000#1470",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-222",
+    "name": "智醫康寓",
+    "category": "hotel",
+    "lat": 25.000142,
+    "lng": 121.344836,
+    "address": "桃園市桃園區民生路107號1-3樓及7-20樓",
+    "city": "桃園市",
+    "district": "龜山區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3362575",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-223",
+    "name": "桃園喜來登酒店",
+    "category": "hotel",
+    "lat": 25.06148,
+    "lng": 121.17595,
+    "address": "桃園市大園區大觀路777號",
+    "city": "桃園市",
+    "district": "大園區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3850000#2605",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-224",
+    "name": "新竹福華大飯店",
+    "category": "hotel",
+    "lat": 24.809828,
+    "lng": 120.966367,
+    "address": "新竹市中正路178號",
+    "city": "新竹市",
+    "district": "北區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)5282323#5303",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-225",
+    "name": "傑仕堡有氧酒店",
+    "category": "hotel",
+    "lat": 25.017678,
+    "lng": 121.469401,
+    "address": "新北市板橋區縣民大道2段275號、275號2至17樓、277號2樓",
+    "city": "新北市",
+    "district": "板橋區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)77273000#54083",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-226",
+    "name": "享豪大飯店",
+    "category": "hotel",
+    "lat": 24.836074,
+    "lng": 121.009559,
+    "address": "新竹縣竹北市信義街7號",
+    "city": "新竹縣",
+    "district": "竹北市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)6565501",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-227",
+    "name": "台北花園大酒店",
+    "category": "hotel",
+    "lat": 25.03637,
+    "lng": 121.506818,
+    "address": "臺北市中正區中華路2段1號",
+    "city": "臺北市",
+    "district": "中正區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(02)23143300#3151",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-228",
+    "name": "甲桂林商務旅館",
+    "category": "hotel",
+    "lat": 25.046616,
+    "lng": 121.291568,
+    "address": "桃園市蘆竹區桃園街106號",
+    "city": "桃園市",
+    "district": "蘆竹區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "03-3116799",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-229",
+    "name": "高雄洲際酒店",
+    "category": "hotel",
+    "lat": 22.611268,
+    "lng": 120.303525,
+    "address": "高雄市前鎮區新光路33號 1樓、3~16樓",
+    "city": "高雄市",
+    "district": "前鎮區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(07)2132006",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-230",
+    "name": "惠來谷關溫泉會館",
+    "category": "hotel",
+    "lat": 24.204179,
+    "lng": 121.010774,
+    "address": "臺中市和平區東關路一段溫泉巷十號",
+    "city": "臺中市",
+    "district": "和平區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(04)25951998#621",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-231",
+    "name": "澎澄飯店",
+    "category": "hotel",
+    "lat": 23.566856,
+    "lng": 119.572222,
+    "address": "澎湖縣馬公市同和路168號",
+    "city": "澎湖縣",
+    "district": "馬公市",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "069235678",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-232",
+    "name": "柳營尖山埤渡假村",
+    "category": "hotel",
+    "lat": 23.264232,
+    "lng": 120.394105,
+    "address": "臺南市柳營區旭山里60號",
+    "city": "臺南市",
+    "district": "柳營區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "066233888",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-233",
+    "name": "亞都麗緻大飯店",
+    "category": "hotel",
+    "lat": 25.062829,
+    "lng": 121.52995,
+    "address": "臺北市中山區民權東路2段41號",
+    "city": "臺北市",
+    "district": "中山區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅宿"
+    ],
+    "extra": {
+      "phone": "0277352360",
+      "village": "-",
+      "level": "金級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-234",
+    "name": "承億酒店股份有限公司",
+    "category": "hotel",
+    "lat": 22.609281,
+    "lng": 120.302325,
+    "address": "高雄市前鎮區林森四路189號",
+    "city": "高雄市",
+    "district": "前鎮區",
+    "tags": [
+      "環保旅館",
+      "金級環保旅館"
+    ],
+    "extra": {
+      "phone": "073333999",
+      "village": "-",
+      "level": "金級環保旅館"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-235",
+    "name": "遠雄悅來大飯店",
+    "category": "hotel",
+    "lat": 23.868793,
+    "lng": 121.588371,
+    "address": "花蓮縣壽豐鄉鹽寮村山嶺18號",
+    "city": "花蓮縣",
+    "district": "壽豐鄉",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)8123900#8266",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-236",
+    "name": "新竹老爺大酒店",
+    "category": "hotel",
+    "lat": 24.781592,
+    "lng": 121.020385,
+    "address": "新竹市東區光復路一段227號",
+    "city": "新竹市",
+    "district": "東區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)5631285#204",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-237",
+    "name": "雅霖大飯店",
+    "category": "hotel",
+    "lat": 23.568465,
+    "lng": 119.57372,
+    "address": "澎湖縣馬公市同和路100號",
+    "city": "澎湖縣",
+    "district": "馬公市",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)9261366",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-238",
+    "name": "榮美金鬱金香酒店",
+    "category": "hotel",
+    "lat": 23.001966,
+    "lng": 120.200205,
+    "address": "臺南市北區海安路三段50號",
+    "city": "臺南市",
+    "district": "北區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)2200800#6001",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-239",
+    "name": "榮興金鬱金香酒店",
+    "category": "hotel",
+    "lat": 22.996368,
+    "lng": 120.205715,
+    "address": "臺南市中西區民族路二段128號",
+    "city": "臺南市",
+    "district": "中西區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)2200800#6006",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-240",
+    "name": "福容大飯店 桃園機場捷運 A8",
+    "category": "hotel",
+    "lat": 25.060283,
+    "lng": 121.369611,
+    "address": "桃園市龜山區復興一路2號3樓",
+    "city": "桃園市",
+    "district": "龜山區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3285688#8770",
+      "village": "-",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-241",
+    "name": "台南遠東香格里拉",
+    "category": "hotel",
+    "lat": 22.996392,
+    "lng": 120.214421,
+    "address": "臺南市東區大學路西段89號",
+    "city": "臺南市",
+    "district": "東區",
+    "tags": [
+      "環保旅館",
+      "銅級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(06)7028888#6903",
+      "village": "-",
+      "level": "銅級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  },
+  {
+    "id": "hotel-242",
+    "name": "福容大飯店 桃園",
+    "category": "hotel",
+    "lat": 25.013866,
+    "lng": 121.303228,
+    "address": "桃園市桃園區同安里大興西路一段200號",
+    "city": "桃園市",
+    "district": "桃園區",
+    "tags": [
+      "環保旅館",
+      "銀級環保旅宿"
+    ],
+    "extra": {
+      "phone": "(03)3265800#300",
+      "village": "同安里",
+      "level": "銀級環保旅宿"
+    },
+    "source": "data.moenv.gov.tw / 環保標章旅館 (145035)"
+  }
+]

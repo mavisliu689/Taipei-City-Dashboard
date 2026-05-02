@@ -19,6 +19,7 @@ import { useContentStore } from "../store/contentStore";
 import { useDialogStore } from "../store/dialogStore";
 import { useMapStore } from "../store/mapStore";
 import MapContainer from "../components/map/MapContainer.vue";
+import EcoLayerSection from "../components/ecoAssistant/EcoLayerSection.vue";
 import MoreInfo from "../components/dialogs/MoreInfo.vue";
 import ReportIssue from "../components/dialogs/ReportIssue.vue";
 
@@ -141,6 +142,10 @@ function popularBasicLayerGA(map_config) {
 <template>
   <div class="map">
     <div class="hide-if-mobile">
+      <!-- 0. 綠能助手結果 (AI 對話產生的路線/景點以圖層形式呈現) -->
+      <div class="map-charts eco-layer-mount">
+        <EcoLayerSection />
+      </div>
       <!-- 1. If the dashboard is map-layers -->
       <div
         v-if="

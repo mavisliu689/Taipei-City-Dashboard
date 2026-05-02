@@ -76,6 +76,8 @@ services:
       TWCC_TIMEOUT: ${TWCC_TIMEOUT}
       TWCC_MAX_RETRY: ${TWCC_MAX_RETRY}
       TWCC_MAX_CONCURRENT: ${TWCC_MAX_CONCURRENT}
+      ECO_DATA_PATH: ${ECO_DATA_PATH:-/opt/Taipei-City-Dashboard-BE/data/eco-route/all_points.json}
+      MAPBOX_TOKEN: ${MAPBOX_TOKEN:-${VITE_MAPBOXTOKEN}}
     volumes:
       - ../Taipei-City-Dashboard-BE:/opt/Taipei-City-Dashboard-BE
     working_dir: /opt/Taipei-City-Dashboard-BE

@@ -12,6 +12,7 @@ export default [
 			sourceType: "module",
 			globals: {
 				...globals.browser,
+				...globals.node,
 			},
 		},
 		rules: {
@@ -40,5 +41,32 @@ export default [
 			"vue/no-template-shadow": "off",
 		},
 	},
-	{ ignores: ["**/public/", "**/dist/", "**/node_modules/", "*.json"] },
+	{
+		files: ["**/*.{test,spec}.{js,ts}", "tests/**/*.{js,ts}"],
+		languageOptions: {
+			globals: {
+				...globals.node,
+				describe: "readonly",
+				it: "readonly",
+				test: "readonly",
+				expect: "readonly",
+				beforeAll: "readonly",
+				afterAll: "readonly",
+				beforeEach: "readonly",
+				afterEach: "readonly",
+				vi: "readonly",
+			},
+		},
+	},
+	{
+		ignores: [
+			"**/public/",
+			"**/dist/",
+			"**/node_modules/",
+			"*.json",
+			"playwright-report/",
+			"test-results/",
+			"coverage/",
+		],
+	},
 ];
