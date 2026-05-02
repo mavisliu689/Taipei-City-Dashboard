@@ -39,6 +39,9 @@ type GreenPark struct {
 	PlayArea       string `json:"pm_playarea" gorm:"column:pm_playarea;type:varchar"`
 	Description    string `json:"pm_description" gorm:"column:pm_description;type:text"`
 	PlayEquipment  string `json:"pm_playeq" gorm:"column:pm_playeq;type:text"`
+	// City 區分公園來源縣市("臺北市"/"新北市"),供 /park?city= 過濾使用。
+	// 由 ETL 或 BE fallback 寫入時依資料源固定填值,而非從 NTPC/TPE 上游欄位讀取。
+	City string `json:"city" gorm:"column:city;type:varchar"`
 
 	UpdatedAt time.Time `json:"-" gorm:"column:updated_at;type:timestamp with time zone"`
 }
