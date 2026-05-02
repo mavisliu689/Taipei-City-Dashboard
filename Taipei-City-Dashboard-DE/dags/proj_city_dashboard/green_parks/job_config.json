@@ -1,0 +1,36 @@
+{
+    "dag_infos": {
+        "dag_id": "green_parks",
+        "start_date": "2026-05-02",
+        "schedule_interval": "0 3 * * *",
+        "catchup": false,
+        "tags": ["green_parks", "臺北市公園", "公園處"],
+        "description": "Taipei city parks dataset from parks.gov.taipei, written to DBDashboard.green_parks for BE /api/v1/green/park.",
+        "default_args": {
+            "owner": "airflow",
+            "email": ["DEFAULT_EMAIL_LIST"],
+            "email_on_retry": false,
+            "email_on_failure": true,
+            "retries": 1,
+            "retry_delay": 60
+        },
+        "ready_data_db": "postgres_default",
+        "ready_data_default_table": "green_parks",
+        "raw_data_db": "postgres_default",
+        "raw_data_table": "",
+        "load_behavior": "replace"
+    },
+    "data_infos": {
+        "name_cn": "臺北市公園",
+        "airflow_update_freq": "daily",
+        "source": "https://parks.gov.taipei/parks/api/",
+        "source_type": "Taipei Parks API",
+        "source_dept": "公園路燈工程管理處",
+        "gis_format": "Point",
+        "output_coordinate": "EPSG:4326",
+        "is_geometry": 0,
+        "dataset_description": "全臺北市公園清單,包含名稱、座標、設施、開放時間等。",
+        "etl_description": "rename JSON keys to snake_case columns aligning with BE green_parks table.",
+        "sensitivity": "public"
+    }
+}
