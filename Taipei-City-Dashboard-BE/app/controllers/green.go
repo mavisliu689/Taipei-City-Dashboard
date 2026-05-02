@@ -526,6 +526,35 @@ func ensureRecyclesData() ([]models.GreenRecycle, error) {
 //   - 兩者皆成功            -> 200 + data
 // 所有錯誤細節只進 log,對外只給通用訊息。
 
+// parseCityFilter 讀取 query string 的 "city" 參數,正規化成三選一:
+//   - "origin" => 台北市
+//   - "new"    => 新北市
+//   - "both" / 其他 / 空 => 雙北(預設)
+func parseCityFilter(c *gin.Context) string {
+	switch strings.ToLower(strings.TrimSpace(c.Query("city"))) {
+	case "origin":
+		return "origin"
+	case "new":
+		return "new"
+	default:
+		return "both"
+	}
+}
+
+// matchesCityFilter 判斷 city 欄位字串是否符合 filter,容忍「臺/台」字形差異與前後空白。
+// 給有 city/county 欄位的資料集(restaurant/hotel/recycle/ublike)使用。
+func matchesCityFilter(cityField, filter string) bool {
+	switch filter {
+	case "origin":
+		s := strings.TrimSpace(cityField)
+		return s == "臺北市" || s == "台北市"
+	case "new":
+		return strings.TrimSpace(cityField) == "新北市"
+	default: // both
+		return true
+	}
+}
+
 func handleGreenError(c *gin.Context, handlerName string, err error) {
 	logs.FError("%s failed: %v", handlerName, err)
 	var ufe *upstreamFetchError
@@ -546,6 +575,10 @@ func ListParks(c *gin.Context) {
 		handleGreenError(c, "ListParks", err)
 		return
 	}
+	// parks 來源全部是台北市,city=new 則回空陣列
+	if parseCityFilter(c) == "new" {
+		parks = make([]models.GreenPark, 0)
+	}
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(parks), "data": parks})
 }
 
@@ -559,7 +592,14 @@ func ListRestaurants(c *gin.Context) {
 		handleGreenError(c, "ListRestaurants", err)
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(restaurants), "data": restaurants})
+	filter := parseCityFilter(c)
+	filtered := make([]models.GreenRestaurant, 0, len(restaurants))
+	for _, r := range restaurants {
+		if matchesCityFilter(r.City, filter) {
+			filtered = append(filtered, r)
+		}
+	}
+	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(filtered), "data": filtered})
 }
 
 /*
@@ -572,7 +612,15 @@ func ListHotels(c *gin.Context) {
 		handleGreenError(c, "ListHotels", err)
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(hotels), "data": hotels})
+	// hotel 資料集縣市欄位叫 county
+	filter := parseCityFilter(c)
+	filtered := make([]models.GreenHotel, 0, len(hotels))
+	for _, h := range hotels {
+		if matchesCityFilter(h.County, filter) {
+			filtered = append(filtered, h)
+		}
+	}
+	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(filtered), "data": filtered})
 }
 
 /*
@@ -584,6 +632,10 @@ func ListWalkpaths(c *gin.Context) {
 	if err != nil {
 		handleGreenError(c, "ListWalkpaths", err)
 		return
+	}
+	// walkpaths 來源全部是台北市,city=new 則回空陣列
+	if parseCityFilter(c) == "new" {
+		walkpaths = make([]models.GreenWalkpath, 0)
 	}
 	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(walkpaths), "data": walkpaths})
 }
@@ -598,7 +650,14 @@ func ListRecycles(c *gin.Context) {
 		handleGreenError(c, "ListRecycles", err)
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(points), "data": points})
+	filter := parseCityFilter(c)
+	filtered := make([]models.GreenRecycle, 0, len(points))
+	for _, p := range points {
+		if matchesCityFilter(p.City, filter) {
+			filtered = append(filtered, p)
+		}
+	}
+	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(filtered), "data": filtered})
 }
 
 // === ublike (DB-first + fallback fetch) ===
@@ -793,5 +852,12 @@ func ListUblikes(c *gin.Context) {
 		handleGreenError(c, "ListUblikes", err)
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(rows), "data": rows})
+	filter := parseCityFilter(c)
+	filtered := make([]models.GreenUbike, 0, len(rows))
+	for _, r := range rows {
+		if matchesCityFilter(r.City, filter) {
+			filtered = append(filtered, r)
+		}
+	}
+	c.JSON(http.StatusOK, gin.H{"status": "success", "total": len(filtered), "data": filtered})
 }
