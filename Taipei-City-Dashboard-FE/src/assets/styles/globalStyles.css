@@ -19,6 +19,13 @@
 	
 	--color-taipei: #1411AC;
 	--color-metrotaipei: #ac7811;
+
+	/* 「靠北儀表板」5 組件配色 token（值與 src/composables/chartTokens.js 同步） */
+	--chart-green-base: #81D8D0;     /* 公園綠地 / 親子步道 */
+	--chart-purple:     #BDB2FF;     /* 環保旅宿 */
+	--chart-teal:       #00B8A9;     /* 資源回收點 */
+	--chart-yellow:     #FFD166;     /* Ubike 在站車輛 */
+	--chart-grey-empty: #636E72;     /* Ubike 空位 */
 }
 
 * {

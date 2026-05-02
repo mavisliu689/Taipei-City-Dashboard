@@ -1267,14 +1267,15 @@ function handleDataSelection(index) {
 		}
 
 		h6 {
-			color: var(--color-complement-text);
-			font-size: var(--font-m);
+			color: var(--color-normal-text);
+			font-size: var(--font-l);
 			font-weight: 400;
 		}
 
 		&-legend {
 			display: flex;
 			justify-content: space-between;
+			margin-top: 0.5rem; // 跟上方「總合 N 條」拉開距離
 
 			div {
 				position: relative;

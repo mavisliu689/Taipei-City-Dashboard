@@ -57,6 +57,10 @@ const sum = computed(() => {
 	return Math.round(parsedSeries.value.reduce((a, b) => a + b) * 100) / 100;
 });
 
+// PLAN2.md §4.3：當 chart_config.color 只有 2 色（如 Ubike 的「在站車輛 vs 空位」），
+// 走「兩段樣式」— 隱藏外緣 dataLabels、底部顯示 legend、donut 環稍粗。
+const isTwoSegment = props.chart_config.color?.length === 2;
+
 // chartOptions needs to be in the bottom since it uses computed data
 const chartOptions = ref({
 	chart: {
@@ -67,6 +71,7 @@ const chartOptions = ref({
 			? [...props.chart_config.color, "#848c94"]
 			: props.chart_config.color,
 	dataLabels: {
+		enabled: !isTwoSegment,
 		formatter: function (
 			_val,
 			{ seriesIndex, w }
@@ -76,16 +81,20 @@ const chartOptions = ref({
 		},
 	},
 	labels: parsedLabels,
-	legend: {
-		show: false,
-	},
+	legend: isTwoSegment
+		? {
+			show: true,
+			position: "bottom",
+			labels: { colors: "var(--color-complement-text)" },
+		}
+		: { show: false },
 	plotOptions: {
 		pie: {
 			dataLabels: {
 				offset: 15,
 			},
 			donut: {
-				size: "77.5%",
+				size: isTwoSegment ? "80%" : "77.5%",
 			},
 		},
 	},
@@ -199,8 +208,8 @@ function handleDataSelection(_e, _chartContext, config) {
 
 		h6 {
 			margin: 0;
-			color: var(--color-complement-text);
-			font-size: var(--font-m);
+			color: var(--color-normal-text);
+			font-size: var(--font-l);
 			font-weight: 400;
 		}
 	}

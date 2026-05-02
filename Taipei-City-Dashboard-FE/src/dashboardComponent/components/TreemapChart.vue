@@ -21,6 +21,36 @@ const emits = defineEmits([
 	"fly"
 ]);
 
+// 單色階模式：當 chart_config.color 只有 1 色，且 chart_config.colorRamp 提供 N 階 ramp，
+// 用 colorScale.ranges 自訂 N 階（小值對應 ramp[0]、大值對應 ramp[last]），
+// 比 ApexCharts 內建 shadeIntensity 對小範圍資料更明顯。多色或無 ramp 維持原行為。
+const isSingleColor = props.chart_config.color?.length === 1;
+const ramp = Array.isArray(props.chart_config.colorRamp) && props.chart_config.colorRamp.length >= 2
+	? props.chart_config.colorRamp
+	: null;
+
+function buildSingleColorRanges(series) {
+	if (!isSingleColor || !ramp) return null;
+	const yValues = (series || []).flatMap((s) =>
+		Array.isArray(s?.data)
+			? s.data.map((d) => d?.y).filter((v) => typeof v === "number" && !Number.isNaN(v))
+			: [],
+	);
+	if (yValues.length < 2) return null;
+	const min = Math.min(...yValues);
+	const max = Math.max(...yValues);
+	if (min === max) return null; // 全同值無法分階
+	const N = ramp.length;
+	const step = (max - min) / N;
+	return ramp.map((color, i) => ({
+		from: min + step * i,
+		to: i === N - 1 ? max + 1 : min + step * (i + 1),
+		color,
+	}));
+}
+
+const colorScaleRanges = buildSingleColorRanges(props.series);
+
 const chartOptions = ref({
 	chart: {
 		borderRadius: 5,
@@ -30,10 +60,9 @@ const chartOptions = ref({
 	},
 	colors: [...props.chart_config.color],
 	dataLabels: {
-		formatter: function (
-			val,
-			{ dataPointIndex }
-		) {
+		formatter: function (val, { dataPointIndex }) {
+			// 單色階模式所有格子都顯示名字；多色模式只顯示前 6 名避免擁擠
+			if (isSingleColor) return val;
 			return dataPointIndex > 5 ? "" : val;
 		},
 	},
@@ -45,12 +74,22 @@ const chartOptions = ref({
 	},
 	plotOptions: {
 		treemap: {
-			distributed: true,
-			shadeIntensity: 0,
+			distributed: !isSingleColor,
+			// 有 colorScale.ranges 時關 enableShades 避免雙重 shading；無 ranges 時 fallback 到 enableShades
+			enableShades: isSingleColor && !colorScaleRanges,
+			shadeIntensity: isSingleColor && !colorScaleRanges ? 1 : 0,
+			reverseNegativeShade: false,
+			...(colorScaleRanges
+				? { colorScale: { ranges: colorScaleRanges } }
+				: {}),
 		},
 	},
 	stroke: {
-		colors: ["#282a2c"],
+		colors: [
+			(typeof window !== "undefined" && window.getComputedStyle
+				? window.getComputedStyle(document.body).getPropertyValue("--color-component-background").trim()
+				: "") || "#282a2c",
+		],
 		show: true,
 		width: 2,
 	},
@@ -170,10 +209,11 @@ function handleDataSelection(_e, _chartContext, config) {
 
 		h6 {
 			margin: 0;
-			color: var(--color-complement-text);
-			font-size: var(--font-m);
+			color: var(--color-normal-text);
+			font-size: var(--font-l);
 			font-weight: 400;
 		}
 	}
+
 }
 </style>

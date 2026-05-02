@@ -52,10 +52,13 @@ const chartOptions = ref({
 	},
 	colors: [props.chart_config.color[0]],
 	dataLabels: {
-		enabled: false,
+		enabled: props.chart_config.showDataLabels === true,
+		offsetX: props.chart_config.showDataLabels === true ? 10 : 0,
+		textAnchor: "start",
 	},
 	grid: {
 		show: false,
+		...(props.chart_config.showDataLabels === true ? { padding: { right: 35 } } : {}),
 	},
 	legend: {
 		show: true,
@@ -75,6 +78,9 @@ const chartOptions = ref({
 			borderRadius: 4,
 			distributed: true,
 			horizontal: true,
+			dataLabels: {
+				position: props.chart_config.showDataLabels === true ? "top" : "center",
+			},
 		},
 	},
 	fill: {

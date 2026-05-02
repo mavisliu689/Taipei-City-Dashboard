@@ -9,6 +9,7 @@
 import axios from "axios";
 import { reactive } from "vue";
 import { useAuthStore } from "../store/authStore";
+import { CHART_TOKENS, UBIKE_AREA_PALETTE, GREEN_RAMP } from "./chartTokens";
 
 const CITY = "metrotaipei";
 
@@ -88,7 +89,7 @@ const ENDPOINTS = {
 	hotel:      "/green/hotel",
 	walkpath:   "/green/walkpath",
 	recycle:    "/green/recycle",
-	ubike:      "/green/ublike", // BE 路徑 typo
+	ubike:      "/green/ubike",
 };
 
 // geoJsonCache：map_config.index → FeatureCollection（覆寫成當前 city；不再 cache raw rows）
@@ -149,6 +150,22 @@ function getRestaurantDistrict(row) {
 	return extractDistrict(row?.address) || normalizeTaipeiCity(row?.city) || "未分類";
 }
 
+// 把行政區字串尾字統一補「區」（BE 偶有「中正」/「中正區」混用）
+function normalizeDistrict(s) {
+	const v = typeof s === "string" ? s.trim() : "";
+	if (!v) return "";
+	if (v.endsWith("區") || v.endsWith("市") || v.endsWith("鎮") || v.endsWith("鄉")) return v;
+	return `${v}區`;
+}
+
+// 從 hotel raw row 取行政區（優先用 town，退而求其次從 address regex 拆）
+function getHotelTown(row) {
+	const t = normalizeDistrict(row?.town);
+	if (t) return t;
+	const fromAddr = extractDistrict(row?.address);
+	return fromAddr || "未分類";
+}
+
 const TRANSFORMS = {
 	parks(rows) {
 		return [{ name: "公園數", data: topN(countBy(rows, "pm_libie"), 10) }];
@@ -162,55 +179,73 @@ const TRANSFORMS = {
 		return [{ name: "店家數", data: topN(counts, 8) }];
 	},
 	hotel(rows) {
-		const buckets = { 金級: 0, 銀級: 0, 其他: 0 };
-		for (const r of rows) {
-			const note = r.note || "";
-			if (note.includes("金級")) buckets["金級"] += 1;
-			else if (note.includes("銀級")) buckets["銀級"] += 1;
-			else buckets["其他"] += 1;
-		}
-		return [
-			{ name: "金級", type: "circle", value: buckets["金級"] },
-			{ name: "銀級", type: "circle", value: buckets["銀級"] },
-			{ name: "其他", type: "circle", value: buckets["其他"] },
-		];
+		// ColumnChart + RadarChart 共用：依 town（行政區）分組計數，回 categories + 純數值陣列形式。
+		// （RadarChart wrapper 必須要 categories 才畫得出來；ColumnChart 也支援同形式。）
+		const counts = new Map();
+		rows.forEach((row) => {
+			const town = getHotelTown(row);
+			counts.set(town, (counts.get(town) || 0) + 1);
+		});
+		// 雙北合計通常 ≤ 12 區，top 12 足以涵蓋；依數量遞減排序，視覺上長條從高→低
+		const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+		return {
+			series: [{ name: "家數", data: sorted.map(([, y]) => y) }],
+			configPatch: { categories: sorted.map(([x]) => x) },
+		};
 	},
 	walkpath(rows) {
-		const counts = countBy(rows, "grade");
+		// 改 DistrictChart choropleth：依 district 計數
+		const counts = new Map();
+		rows.forEach((row) => {
+			const d = normalizeDistrict(row?.district);
+			if (!d) return;
+			counts.set(d, (counts.get(d) || 0) + 1);
+		});
 		return [
 			{
-				name: "步道分級",
+				name: "步道數",
 				data: [...counts.entries()].map(([x, y]) => ({ x, y })),
 			},
 		];
 	},
 	recycle(rows) {
-		return [{ name: "回收點數", data: topN(countBy(rows, "district"), 10) }];
+		// ColumnChart + 平均線：avg 取「全資料集每行政區家數平均」（非僅 top 10）
+		const counts = new Map();
+		rows.forEach((row) => {
+			const d = normalizeDistrict(row?.district);
+			if (!d) return;
+			counts.set(d, (counts.get(d) || 0) + 1);
+		});
+		const all = [...counts.values()];
+		const avg = all.length
+			? Math.round((all.reduce((a, b) => a + b, 0) / all.length) * 10) / 10
+			: 0;
+		return {
+			series: [{ name: "回收點數", data: topN(counts, 10) }],
+			configPatch: avg > 0
+				? { average_line: { value: avg, label: `雙北平均 ${avg}`, color: CHART_TOKENS.yellow } }
+				: { average_line: null },
+		};
 	},
 	ubike(rows) {
-		const cityCounts = rows.reduce(
-			(acc, row) => {
-				if (isInactiveUbike(row)) return acc;
-				const city = normalizeTaipeiCity(row.city);
-				acc.total += 1;
-				if (city === "臺北市") acc.taipei += 1;
-				if (city === "新北市") acc.newTaipei += 1;
-				return acc;
-			},
-			{ total: 0, taipei: 0, newTaipei: 0 },
-		);
-		const districtCount = new Set(
-			rows
-				.filter((row) => !isInactiveUbike(row))
-				.map((row) => row.area)
-				.filter(Boolean),
-		).size;
-		return [
-			{ name: "總站數", data: [cityCounts.total], icon: "站" },
-			{ name: "臺北市", data: [cityCounts.taipei], icon: "站" },
-			{ name: "新北市", data: [cityCounts.newTaipei], icon: "站" },
-			{ name: "行政區", data: [districtCount], icon: "區" },
-		];
+		// DonutChart / BarChart 共用：依 area（行政區）統計站數，top 8 + 「其他」彙總。
+		// （BE 目前只回站點目錄、無 available_bikes/spots 即時欄位；改以站數分布展示。
+		// 中央總和 = 雙北全部站數，包含未進 top 8 的小區。）
+		const counts = new Map();
+		rows.forEach((row) => {
+			if (isInactiveUbike(row)) return;
+			const area = typeof row.area === "string" ? row.area.trim() : "";
+			if (!area) return;
+			counts.set(area, (counts.get(area) || 0) + 1);
+		});
+
+		const TOP_N = 8;
+		const sorted = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+		const data = sorted.slice(0, TOP_N).map(([x, y]) => ({ x, y }));
+		const otherTotal = sorted.slice(TOP_N).reduce((sum, [, y]) => sum + y, 0);
+		if (otherTotal > 0) data.push({ x: "其他", y: otherTotal });
+
+		return [{ name: "Ubike", data }];
 	},
 };
 
@@ -335,7 +370,7 @@ function configBlueprints() {
 			short_desc: "依里別排行 Top 10",
 			long_desc: "顯示雙北地區公園、綠地、廣場之面積分布，格式為各行政區綠地面積矩形圖。資料來源為臺北市政府工務局公園路燈工程管理處公開資料，不定期更新，反映各區綠地資源配置現況。可作為城市綠地規劃與市民休閒選擇之參考依據。🟩 深綠色區塊：該行政區綠地面積較大，綠地資源充足。🟢 淺綠色區塊：該行政區綠地面積較小，綠地資源相對不足。",
 			use_case: "臺北市與新北市的工務局及都市發展局可依據此可視化工具，快速掌握雙北地區公園綠地的面積分布與行政區差異。透過矩形圖直觀呈現各區綠地面積佔比，識別人均綠地低於 WHO 建議標準（9 平方公尺）的行政區，作為優先增設口袋公園或推動屋頂綠化政策的決策依據；同時，市民可透過地圖定位住家周邊的公園分布，選擇最近的綠地進行散步、運動或親子活動，減少開車前往遠處休閒場所的需求，以步行取代機動車輛，實踐日常低碳生活。",
-				links: ["https://data.gov.tw/dataset/128366"],
+			links: ["https://data.gov.tw/dataset/128366"],
 			contributors: ["waiue0620", "Mhanto0712", "jadokao", "Lydia584285", "mavisliu689"],
 			time_from: "static",
 			time_to: "static",
@@ -343,10 +378,12 @@ function configBlueprints() {
 			update_freq_unit: null,
 			query_data: "park_greenspace",
 			chart_config: {
-				color: ["#7CB342"],
-				types: ["BarChart"],
+				color: [CHART_TOKENS.green],
+				colorRamp: GREEN_RAMP,
+				types: ["TreemapChart", "BarChart"],
 				unit: "座",
 				categories: null,
+				showDataLabels: true, // 切到橫向長條圖時數字顯示在條柱右側外（同餐廳）
 			},
 			chart_data: null,
 			map_config: [
@@ -354,7 +391,7 @@ function configBlueprints() {
 					index: "park_greenspace",
 					type: "circle",
 					title: "公園綠地",
-					paint: { "circle-color": "#7CB342" },
+					paint: { "circle-color": CHART_TOKENS.green },
 					property: [
 						{ key: "pm_name", name: "名稱" },
 						{ key: "pm_location", name: "地址" },
@@ -386,10 +423,11 @@ function configBlueprints() {
 			update_freq_unit: null,
 			query_data: "eco_restaurant",
 			chart_config: {
-				color: ["#FB8C00"],
+				color: [...UBIKE_AREA_PALETTE], // 跟 Ubike 同樣的黃→深黃漸層（distributed: true，每條一色）
 				types: ["BarChart"],
 				unit: "家",
 				categories: null,
+				showDataLabels: true, // 數字顯示在條柱右端外側
 			},
 			chart_data: null,
 			map_config: [
@@ -429,10 +467,11 @@ function configBlueprints() {
 			update_freq_unit: null,
 			query_data: "eco_hotel",
 			chart_config: {
-				color: ["#FFD700", "#C0C0C0", "#888888"],
-				types: ["MapLegend"],
+				color: [CHART_TOKENS.purple],
+				types: ["ColumnChart", "RadarChart"],
 				unit: "家",
-				categories: null,
+				categories: null,        // transform configPatch 在 fetch 後動態填入各 town
+				showDataLabels: true,    // categories 形式預設關 dataLabels；顯式 opt-in 讓條柱頂端顯示家數
 			},
 			chart_data: null,
 			map_config: [
@@ -485,7 +524,7 @@ function configBlueprints() {
 					city: CITY,
 				},
 			],
-			map_filter: { mode: "byLayer", byParam: null },
+			map_filter: { mode: "byParam", byParam: { xParam: "town", yParam: null } },
 			history_config: null,
 		},
 		{
@@ -505,10 +544,12 @@ function configBlueprints() {
 			update_freq_unit: null,
 			query_data: "hiking_trail",
 			chart_config: {
-				color: ["#5a9cf8", "#42A5F5", "#1976D2", "#0D47A1"],
-				types: ["DonutChart"],
+				color: [CHART_TOKENS.green],
+				colorRamp: GREEN_RAMP,
+				types: ["DistrictChart", "BarChart"],
 				unit: "條",
 				categories: null,
+				showDataLabels: true, // 切到橫向長條圖時數字顯示在條柱右側外（同餐廳）
 			},
 			chart_data: null,
 			map_config: [
@@ -516,7 +557,7 @@ function configBlueprints() {
 					index: "hiking_trail",
 					type: "line",
 					title: "親子步道",
-					paint: { "line-color": "#5a9cf8" },
+					paint: { "line-color": CHART_TOKENS.green },
 					property: [
 						{ key: "route", name: "路線" },
 						{ key: "district", name: "行政區" },
@@ -529,7 +570,7 @@ function configBlueprints() {
 					city: CITY,
 				},
 			],
-			map_filter: { mode: "byParam", byParam: { xParam: "grade", yParam: null } },
+			map_filter: { mode: "byParam", byParam: { xParam: "district", yParam: null } },
 			history_config: null,
 		},
 		{
@@ -549,10 +590,12 @@ function configBlueprints() {
 			update_freq_unit: null,
 			query_data: "recycle_station",
 			chart_config: {
-				color: ["#4CAF50"],
-				types: ["BarChart"],
+				color: [CHART_TOKENS.teal],
+				types: ["ColumnChart"],
 				unit: "點",
 				categories: null,
+				showDataLabels: true,
+				average_line: null,
 			},
 			chart_data: null,
 			map_config: [
@@ -593,24 +636,25 @@ function configBlueprints() {
 			update_freq_unit: null,
 			query_data: "youbike_availability",
 			chart_config: {
-				color: ["#5a9cf8", "#FFFFFF", "#888787"],
-				types: ["TextUnitChart"],
-				unit: null,
+				color: [...UBIKE_AREA_PALETTE],
+				types: ["DonutChart", "BarChart"],
+				unit: "站",
 				categories: null,
+				showDataLabels: true,
 			},
 			chart_data: null,
 			map_config: [
 				{
-						index: "youbike_availability",
-						type: "symbol",
-						title: "Ubike 站點",
-						paint: {},
-						property: [
-							{ key: "name", name: "站名" },
-							{ key: "address", name: "地址" },
-							{ key: "city", name: "縣市" },
-							{ key: "area", name: "行政區" },
-						],
+					index: "youbike_availability",
+					type: "symbol",
+					title: "Ubike 站點",
+					paint: {},
+					property: [
+						{ key: "name", name: "站名" },
+						{ key: "address", name: "地址" },
+						{ key: "city", name: "縣市" },
+						{ key: "area", name: "行政區" },
+					],
 					size: null,
 					icon: "youbike",
 					source: "geojson",
@@ -638,9 +682,17 @@ async function fetchAndTransformOne(resourceKey, cityFilter) {
 		return { ok: false, chartData: null, layerIndices: [] };
 	}
 
+	// transform 可回 array（純 series）或 { series, configPatch }（需要動 chart_config 時）
 	let chartData = null;
+	let chartConfigPatch = null;
 	try {
-		chartData = TRANSFORMS[resourceKey](rows);
+		const result = TRANSFORMS[resourceKey](rows);
+		if (result && !Array.isArray(result) && Array.isArray(result.series)) {
+			chartData = result.series;
+			chartConfigPatch = result.configPatch || null;
+		} else {
+			chartData = result;
+		}
 	} catch (err) {
 		console.error(`[kaobei] transform "${resourceKey}" failed`, err);
 	}
@@ -656,7 +708,7 @@ async function fetchAndTransformOne(resourceKey, cityFilter) {
 		console.error(`[kaobei] FeatureCollection build "${resourceKey}" failed`, err);
 	}
 
-	return { ok: true, chartData, layerIndices };
+	return { ok: true, chartData, chartConfigPatch, layerIndices };
 }
 
 export const KAOBEI_LAYER_INDICES = new Set([
@@ -735,7 +787,11 @@ export async function loadKaobeiComponents() {
 					const city = kaobeiCityFilters[compIndex];
 					const result = await fetchAndTransformOne(resourceKey, city);
 					const cfg = indexToConfig.get(compIndex);
-					if (cfg) cfg.chart_data = result.ok ? result.chartData : null;
+					if (!cfg) return;
+					cfg.chart_data = result.ok ? result.chartData : null;
+					if (result.ok && result.chartConfigPatch) {
+						Object.assign(cfg.chart_config, result.chartConfigPatch);
+					}
 				}),
 			);
 			return configs;
@@ -800,6 +856,13 @@ async function refetchOne(componentIndex) {
 		const target = arr.find((c) => c.index === componentIndex);
 		if (target) {
 			target.chart_data = result.chartData;
+			if (result.chartConfigPatch) {
+				// spread 換新 reference 確保 chart wrapper computed 重算（avg 變動時 annotation 跟著更新）
+				target.chart_config = {
+					...target.chart_config,
+					...result.chartConfigPatch,
+				};
+			}
 		}
 	}
 
