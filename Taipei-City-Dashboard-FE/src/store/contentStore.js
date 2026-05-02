@@ -262,14 +262,28 @@ export const useContentStore = defineStore("content", {
 			this.currentDashboard.name = currentDashboardInfo.name;
 			this.currentDashboard.icon = currentDashboardInfo.icon;
 
-			// 黑客松「靠北儀表板」：從 fixture 載入，不打 BE API
+			// 黑客松「靠北儀表板」：從 BE API 載入；await 後比對 index/city 守門避免 stale 賦值
 			if (this.currentDashboard.index === KAOBEI_DASHBOARD_META.index) {
+				const reqIndex = this.currentDashboard.index;
+				const reqCity = this.currentDashboard.city;
 				try {
-					this.cityDashboard.components = await loadKaobeiComponents();
+					const components = await loadKaobeiComponents();
+					if (
+						this.currentDashboard.index !== reqIndex ||
+						this.currentDashboard.city !== reqCity
+					) {
+						return;
+					}
+					this.cityDashboard.components = components;
 					this.filterCurrentDashboardContent();
 				} catch (error) {
 					console.error("Error loading kaobei components:", error);
-					this.cityDashboard.components = [];
+					if (
+						this.currentDashboard.index === reqIndex &&
+						this.currentDashboard.city === reqCity
+					) {
+						this.cityDashboard.components = [];
+					}
 				}
 				return;
 			}
@@ -399,6 +413,8 @@ export const useContentStore = defineStore("content", {
 
 		// 20251224 因應擁擠程度相關組件須每分鐘刷新新增func
 		async updateCurrentDashboardAllChartData() {
+			// 黑客松「靠北儀表板」：id 90001-90006 BE 沒有，避免 /component/{id}/chart 噴 6 條 404 通知
+			if (this.currentDashboard.index === KAOBEI_DASHBOARD_META.index) return;
 			try {
 				// 4-1. Loop through all the components of a dashboard
 				for (
@@ -519,6 +535,8 @@ export const useContentStore = defineStore("content", {
 		},
 
 		async updateCurrentDashboardCertainChartData() {
+			// 黑客松「靠北儀表板」：同 updateCurrentDashboardAllChartData，避免噴 404
+			if (this.currentDashboard.index === KAOBEI_DASHBOARD_META.index) return;
 			try {
 				// 4-1. Loop through all the components of a dashboard
 				for (

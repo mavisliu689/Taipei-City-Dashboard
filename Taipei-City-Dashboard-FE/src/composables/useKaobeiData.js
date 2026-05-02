@@ -1,16 +1,46 @@
-// 黑客松「靠北儀表板」用：把 6 份 Postman fixture 轉成 ComponentConfig，
-// 給 contentStore 在 setCurrentDashboardAllContent 偵測 index="kaobei" 時直接灌入。
+// 黑客松「靠北儀表板」用：呼叫 6 支 BE API（同 envelope: { data, status, total }），
+// 把 raw rows 轉成 ComponentConfig.chart_data + 各圖層的 FeatureCollection cache。
+// contentStore 在 setCurrentDashboardAllContent 偵測 index="kaobei" 時直接呼叫 loadKaobeiComponents()；
+// mapStore.fetchLocalGeoJson 對 kaobei_* prefix 的圖層呼叫 getKaobeiGeoJson(index) 從 cache 取。
+
+import axios from "axios";
+import { useAuthStore } from "../store/authStore";
 
 const CITY = "metrotaipei";
 
-const FIXTURE_LOADERS = {
-	parks:      () => import("../dashboardComponent/fixtures/kaobei/parks.json"),
-	restaurant: () => import("../dashboardComponent/fixtures/kaobei/restaurant.json"),
-	hotel:      () => import("../dashboardComponent/fixtures/kaobei/hotel.json"),
-	walkpath:   () => import("../dashboardComponent/fixtures/kaobei/walkpath.json"),
-	recycle:    () => import("../dashboardComponent/fixtures/kaobei/recycle.json"),
-	ubike:      () => import("../dashboardComponent/fixtures/kaobei/ubike.json"),
+// 端點：baseURL = import.meta.env.VITE_API_URL（docker compose 下 = "/api/dev"），
+// vite proxy 會把 "/api/dev/..." 改寫成 "/api/v1/..." 後轉送 dashboard-be:8080；
+// 所以這裡只寫 "/green/{resource}" 就好（不要再寫 /v1，會被 proxy double 加）。
+const ENDPOINTS = {
+	parks:      "/green/park",
+	restaurant: "/green/restaurant",
+	hotel:      "/green/hotel",
+	walkpath:   "/green/walkpath",
+	recycle:    "/green/recycle",
+	ubike:      "/green/ublike", // BE 路徑 typo
 };
+
+// 全域 cache（module-scoped；route 切換時不清掉，下次切回來能立即顯示舊資料）
+const apiCache = new Map();      // key (parks/restaurant/...) → raw rows[]
+const geoJsonCache = new Map();  // map_config.index → FeatureCollection
+
+// 同時間只准一個 batch fetch；併發呼叫 share 同個 Promise
+let inflight = null;
+
+// 用 raw axios（不走 src/router/axios.js 的 http），避免 401 強制登出 + 失敗時噴 notification 的 interceptor 副作用
+async function fetchGreenResource(resourcePath) {
+	const authStore = useAuthStore();
+	const baseURL = import.meta.env.VITE_API_URL || "";
+	const headers = authStore.token
+		? { Authorization: `Bearer ${authStore.token}` }
+		: {};
+	return axios.get(`${baseURL}${resourcePath}`, {
+		headers,
+		timeout: 10000,
+	});
+}
+
+/* ───── chart_data 聚合邏輯 ───── */
 
 function topN(map, n) {
 	return [...map.entries()]
@@ -31,14 +61,10 @@ function countBy(rows, key) {
 
 const TRANSFORMS = {
 	parks(rows) {
-		return [
-			{ name: "公園數", data: topN(countBy(rows, "pm_libie"), 10) },
-		];
+		return [{ name: "公園數", data: topN(countBy(rows, "pm_libie"), 10) }];
 	},
 	restaurant(rows) {
-		return [
-			{ name: "店家數", data: topN(countBy(rows, "city"), 8) },
-		];
+		return [{ name: "店家數", data: topN(countBy(rows, "city"), 8) }];
 	},
 	hotel(rows) {
 		const buckets = { 金級: 0, 銀級: 0, 其他: 0 };
@@ -64,9 +90,7 @@ const TRANSFORMS = {
 		];
 	},
 	recycle(rows) {
-		return [
-			{ name: "回收點數", data: topN(countBy(rows, "district"), 10) },
-		];
+		return [{ name: "回收點數", data: topN(countBy(rows, "district"), 10) }];
 	},
 	ubike(rows) {
 		const totals = rows.reduce(
@@ -88,6 +112,103 @@ const TRANSFORMS = {
 		];
 	},
 };
+
+/* ───── FeatureCollection 建構（給地圖圖層用） ───── */
+
+function num(v) {
+	const n = typeof v === "number" ? v : parseFloat(v);
+	return Number.isFinite(n) ? n : null;
+}
+
+function fc(features) {
+	return { type: "FeatureCollection", features };
+}
+
+function feature(coords, geomType, properties) {
+	return {
+		type: "Feature",
+		geometry: { type: geomType, coordinates: coords },
+		properties,
+	};
+}
+
+const FC_BUILDERS = {
+	parks(rows) {
+		const features = [];
+		for (const r of rows) {
+			const lng = num(r.pm_Longitude);
+			const lat = num(r.pm_Latitude);
+			if (lng === null || lat === null) continue;
+			features.push(feature([lng, lat], "Point", { ...r }));
+		}
+		return { kaobei_parks: fc(features) };
+	},
+	restaurant(rows) {
+		const features = [];
+		for (const r of rows) {
+			const lng = num(r.longitude);
+			const lat = num(r.latitude);
+			if (lng === null || lat === null) continue;
+			features.push(feature([lng, lat], "Point", { ...r }));
+		}
+		return { kaobei_restaurant: fc(features) };
+	},
+	hotel(rows) {
+		const buckets = { gold: [], silver: [], other: [] };
+		for (const r of rows) {
+			const lng = num(r.longitude);
+			const lat = num(r.latitude);
+			if (lng === null || lat === null) continue;
+			const note = r.note || "";
+			let key = "other";
+			if (note.includes("金級")) key = "gold";
+			else if (note.includes("銀級")) key = "silver";
+			buckets[key].push(feature([lng, lat], "Point", { ...r }));
+		}
+		return {
+			kaobei_hotel_gold: fc(buckets.gold),
+			kaobei_hotel_silver: fc(buckets.silver),
+			kaobei_hotel_other: fc(buckets.other),
+		};
+	},
+	walkpath(rows) {
+		const features = [];
+		for (const r of rows) {
+			const sLng = num(r.start_longitude);
+			const sLat = num(r.start_latitude);
+			const eLng = num(r.end_longitude);
+			const eLat = num(r.end_latitude);
+			if ([sLng, sLat, eLng, eLat].some((v) => v === null)) continue;
+			features.push(
+				feature([[sLng, sLat], [eLng, eLat]], "LineString", { ...r }),
+			);
+		}
+		return { kaobei_walkpath: fc(features) };
+	},
+	recycle(rows) {
+		const features = [];
+		for (const r of rows) {
+			const lng = num(r.longitude);
+			const lat = num(r.latitude);
+			if (lng === null || lat === null) continue;
+			features.push(feature([lng, lat], "Point", { ...r }));
+		}
+		return { kaobei_recycle: fc(features) };
+	},
+	ubike(rows) {
+		const features = [];
+		for (const r of rows) {
+			if (r.active === false) continue;
+			const lng = num(r.longitude);
+			const lat = num(r.latitude);
+			if (lng === null || lat === null) continue;
+			features.push(feature([lng, lat], "Point", { ...r }));
+		}
+		return { kaobei_ubike: fc(features) };
+	},
+};
+
+/* ───── ComponentConfig blueprints ───── */
 
 function configBlueprints() {
 	return [
@@ -366,33 +487,58 @@ function configBlueprints() {
 
 const FIXTURE_KEYS = ["parks", "restaurant", "hotel", "walkpath", "recycle", "ubike"];
 
-// Async function 給 contentStore 呼叫，回 6 份 ComponentConfig（chart_data 已填好）
-export async function loadKaobeiComponents() {
+/* ───── public API ───── */
+
+async function runFetchAndTransform() {
 	const configs = configBlueprints();
 	const results = await Promise.allSettled(
-		FIXTURE_KEYS.map((k) => FIXTURE_LOADERS[k]()),
+		FIXTURE_KEYS.map((k) => fetchGreenResource(ENDPOINTS[k])),
 	);
 	results.forEach((res, idx) => {
 		const key = FIXTURE_KEYS[idx];
 		if (res.status === "rejected") {
-			console.error(`[kaobei] fixture "${key}" load failed`, res.reason);
-			configs[idx].chart_data = null;
+			console.error(`[kaobei] ${key} API failed:`, res.reason?.message || res.reason);
+			configs[idx].chart_data = null; // wrapper 顯示「組件資料異常」
 			return;
 		}
-		const mod = res.value;
-		const payload = mod.default ?? mod;
-		const rows = Array.isArray(payload.data) ? payload.data : [];
+		const rows = res.value?.data?.data;
+		const safeRows = Array.isArray(rows) ? rows : [];
+		apiCache.set(key, safeRows);
 		try {
-			configs[idx].chart_data = TRANSFORMS[key](rows);
+			configs[idx].chart_data = TRANSFORMS[key](safeRows);
 		} catch (err) {
 			console.error(`[kaobei] transform "${key}" failed`, err);
 			configs[idx].chart_data = null;
+		}
+		try {
+			const fcs = FC_BUILDERS[key](safeRows);
+			for (const [layerIndex, featureCol] of Object.entries(fcs)) {
+				geoJsonCache.set(layerIndex, featureCol);
+			}
+		} catch (err) {
+			console.error(`[kaobei] FeatureCollection build "${key}" failed`, err);
 		}
 	});
 	return configs;
 }
 
-// Sidebar 列表用的 dashboard meta（不含 components，components 會在點進去時才 load）
+export async function loadKaobeiComponents() {
+	if (inflight) return inflight;
+	inflight = (async () => {
+		try {
+			return await runFetchAndTransform();
+		} finally {
+			inflight = null;
+		}
+	})();
+	return inflight;
+}
+
+export function getKaobeiGeoJson(index) {
+	return geoJsonCache.get(index);
+}
+
+// Sidebar 列表用（contentStore.setDashboards 會 push 到 metrotaipei 群組）
 export const KAOBEI_DASHBOARD_META = {
 	index: "kaobei",
 	name: "靠北儀表板",
