@@ -9,7 +9,8 @@
 		"build": "eslint . --fix && vite build",
 		"build:test": "eslint . --fix && vite build --mode test",
 		"lint": "eslint . --fix",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"build:kaobei": "node scripts/build-kaobei-geojson.mjs"
 	},
 	"dependencies": {
 		"@deck.gl/core": "^9.0.9",

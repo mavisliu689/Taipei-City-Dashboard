@@ -16,6 +16,7 @@ import { useDialogStore } from "./dialogStore";
 import { useAuthStore } from "./authStore";
 import { getComponentDataTimeframe } from "../assets/utilityFunctions/dataTimeframe";
 import { CityManager } from "../dashboardComponent/utilities/cityManager";
+import { loadKaobeiComponents, KAOBEI_DASHBOARD_META } from "../composables/useKaobeiData";
 
 export const useContentStore = defineStore("content", {
 	state: () => ({
@@ -158,6 +159,15 @@ export const useContentStore = defineStore("content", {
 				}
 			});
 
+			// 黑客松「靠北儀表板」：把 fixture-based dashboard 注入 metrotaipei 群組
+			const metrotaipeiDashboards = this.dashboards.get("metrotaipei") || [];
+			if (!metrotaipeiDashboards.some((d) => d.index === KAOBEI_DASHBOARD_META.index)) {
+				this.dashboards.set("metrotaipei", [
+					...metrotaipeiDashboards,
+					{ ...KAOBEI_DASHBOARD_META },
+				]);
+			}
+
 			if (onlyDashboard) return;
 
 			// 2-1. If the current path is /dashboard or /mapview, redirect to the first dashboard
@@ -251,6 +261,18 @@ export const useContentStore = defineStore("content", {
 			// Set the current dashboard info
 			this.currentDashboard.name = currentDashboardInfo.name;
 			this.currentDashboard.icon = currentDashboardInfo.icon;
+
+			// 黑客松「靠北儀表板」：從 fixture 載入，不打 BE API
+			if (this.currentDashboard.index === KAOBEI_DASHBOARD_META.index) {
+				try {
+					this.cityDashboard.components = await loadKaobeiComponents();
+					this.filterCurrentDashboardContent();
+				} catch (error) {
+					console.error("Error loading kaobei components:", error);
+					this.cityDashboard.components = [];
+				}
+				return;
+			}
 
 			// Get the dashboard index data
 			try {
