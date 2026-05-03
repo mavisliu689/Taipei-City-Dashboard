@@ -8,6 +8,7 @@
 
 import axios from "axios";
 import { reactive } from "vue";
+import { booleanPointInPolygon, point as tPoint } from "@turf/turf";
 import { useAuthStore } from "../store/authStore";
 import { CHART_TOKENS, UBIKE_AREA_PALETTE, GREEN_RAMP } from "./chartTokens";
 
@@ -108,6 +109,41 @@ async function fetchGreenResource(resourcePath, cityFilter) {
 		params: { city: CITY_TO_BE_QUERY[cityFilter] },
 		timeout: 10000,
 	});
+}
+
+/* ───── 行政區反查（point-in-polygon）─────
+ * 補新北市公園 row：BE 河濱 CSV 來源只有 name + lat/lng,pm_libie / pm_type / pm_location 全空。
+ * 用本地 metrotaipei_town.geojson(雙北 41 區)做 PIP 反查 TNAME,寫進 pm_type,
+ * 配合 getParkDistrict 第二順位 fallback 撐起新北分組統計圖。
+ */
+let TOWN_FC_PROMISE = null;
+function loadTownFC() {
+	if (!TOWN_FC_PROMISE) {
+		TOWN_FC_PROMISE = fetch("/mapData/metrotaipei_town.geojson")
+			.then((r) => (r.ok ? r.json() : { features: [] }))
+			.catch((e) => {
+				console.warn("[kaobei] 載入 town geojson 失敗", e);
+				TOWN_FC_PROMISE = null;
+				return { features: [] };
+			});
+	}
+	return TOWN_FC_PROMISE;
+}
+async function lookupTownByLatLng(lng, lat) {
+	if (!Number.isFinite(lng) || !Number.isFinite(lat)) return "";
+	const fc = await loadTownFC();
+	const features = fc?.features || [];
+	const pt = tPoint([lng, lat]);
+	for (const f of features) {
+		try {
+			if (booleanPointInPolygon(pt, f)) {
+				return f?.properties?.TNAME || "";
+			}
+		} catch {
+			// 單一 feature 出錯就跳過,不影響其他 row
+		}
+	}
+	return "";
 }
 
 /* ───── chart_data 聚合邏輯 ───── */
@@ -614,6 +650,24 @@ async function fetchAndTransformOne(resourceKey, cityFilter) {
 	} catch (err) {
 		console.error(`[kaobei] ${resourceKey} API failed:`, err?.message || err);
 		return { ok: false, chartData: null, layerIndices: [] };
+	}
+
+	// 新北市 parks rows 通常 pm_libie / pm_type / pm_location 都空,
+	// 用 lat/lng + 本地 town geojson 做 PIP 補上行政區（寫進 pm_type,配合 getParkDistrict 第二順位 fallback）
+	if (resourceKey === "parks") {
+		await Promise.all(
+			rows.map(async (r) => {
+				const hasDistrict =
+					(typeof r.pm_libie === "string" && r.pm_libie.trim()) ||
+					(typeof r.pm_type === "string" && r.pm_type.trim());
+				if (hasDistrict) return;
+				const lng = parseFloat(r.pm_Longitude ?? r.pm_longitude);
+				const lat = parseFloat(r.pm_Latitude ?? r.pm_latitude);
+				if (!Number.isFinite(lng) || !Number.isFinite(lat)) return;
+				const town = await lookupTownByLatLng(lng, lat);
+				if (town) r.pm_type = town;
+			}),
+		);
 	}
 
 	// transform 可回 array（純 series）或 { series, configPatch }（需要動 chart_config 時）
