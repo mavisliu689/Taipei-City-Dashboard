@@ -400,9 +400,17 @@ function ensureSearchPoiMarkers(map, search) {
 		maxLng = Math.max(maxLng, p.lng);
 		maxLat = Math.max(maxLat, p.lat);
 	}
-	// 若搜尋結果都在目前視野外, 自動 fitBounds
-	if (searchPoiMarkers.length && !visibleBounds.contains([(minLng + maxLng) / 2, (minLat + maxLat) / 2])) {
-		map.fitBounds([[minLng, minLat], [maxLng, maxLat]], { padding: 80, duration: 600 });
+	// 若任一 marker 不在目前視野內, fitBounds 把全部結果框進來
+	// (原本只檢查 midpoint, 但 midpoint 在視野內不代表 marker 都在; 大安區 7 點散布
+	// 範圍可能蓋過視野邊界, 必須檢查每一個 marker)
+	if (searchPoiMarkers.length) {
+		const allInside =
+			Number.isFinite(minLng) &&
+			visibleBounds.contains([minLng, minLat]) &&
+			visibleBounds.contains([maxLng, maxLat]);
+		if (!allInside) {
+			map.fitBounds([[minLng, minLat], [maxLng, maxLat]], { padding: 80, duration: 600, maxZoom: 15 });
+		}
 	}
 }
 
@@ -452,15 +460,27 @@ let attachedToMap = null; // 已綁定 click handler 的 map 物件
 
 function makeManualMarkerEl(color, icon) {
 	const el = document.createElement("div");
+	// 比 POI marker (30px) 大一圈, 雙環光暈讓使用者一眼辨識「這顆可拖」
+	// pointer-events:auto + cursor:grab 確保 mousedown 一定打到本 marker, 不會被同位置 POI 攔走。
 	el.style.cssText = `
-		width: 30px; height: 30px; border-radius: 50%;
+		width: 38px; height: 38px; border-radius: 50%;
 		background: ${color}; color: white; border: 3px solid white;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+		box-shadow: 0 0 0 5px rgba(255,255,255,0.22), 0 4px 12px rgba(0,0,0,0.7);
 		display: flex; align-items: center; justify-content: center;
-		font-family: 'Material Icons Round'; font-size: 18px; cursor: grab;
+		font-family: 'Material Icons Round'; font-size: 22px;
+		cursor: grab; pointer-events: auto;
 	`;
 	el.textContent = icon;
 	return el;
+}
+
+// Mapbox 把使用者 element 包進 .mapboxgl-marker 容器, 那層才是真正的 z-index 載體。
+// 把起終點 marker 的容器 z-index 拉到比 POI marker 高, 避免重疊時 POI 偷走 mousedown。
+function elevateMarker(marker) {
+	const wrapper = marker.getElement().parentElement;
+	if (wrapper) {
+		wrapper.style.zIndex = "100";
+	}
 }
 
 function ensureManualMarkers(map) {
@@ -471,6 +491,7 @@ function ensureManualMarkers(map) {
 			originMarker = new mapboxGl.Marker({ element: makeManualMarkerEl("#4fc3f7", "trip_origin"), draggable: true })
 				.setLngLat(ll)
 				.addTo(map);
+			elevateMarker(originMarker);
 			originMarker.on("dragend", () => {
 				const c = originMarker.getLngLat();
 				ecoStore.setManualOrigin({ lat: c.lat, lng: c.lng });
@@ -489,6 +510,7 @@ function ensureManualMarkers(map) {
 			destMarker = new mapboxGl.Marker({ element: makeManualMarkerEl("#ff8a65", "place"), draggable: true })
 				.setLngLat(ll)
 				.addTo(map);
+			elevateMarker(destMarker);
 			destMarker.on("dragend", () => {
 				const c = destMarker.getLngLat();
 				ecoStore.setManualDest({ lat: c.lat, lng: c.lng });

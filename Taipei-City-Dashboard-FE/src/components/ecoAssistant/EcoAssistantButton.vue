@@ -15,15 +15,15 @@ const buddyState = computed(() => {
 	return "idle";
 });
 
-// Show full-decor expression on the launcher only when the panel is closed
-// (so users notice the AI is busy / has news), and only for non-idle states.
-const showDecor = computed(() => !store.open && buddyState.value !== "idle");
+// 只要不是 idle 就把 decor 開起來 — 包含面板打開中, 讓使用者在對話過程
+// 也能從右下角小碳寶看到 thinking / found 等狀態動畫。
+const showDecor = computed(() => buddyState.value !== "idle");
 </script>
 
 <template>
 	<button
 		class="eco-fab"
-		:class="{ 'eco-fab--active': store.open }"
+		:class="[`eco-fab--state-${buddyState}`, { 'eco-fab--active': store.open }]"
 		aria-label="小碳寶"
 		@click="store.togglePanel"
 	>
@@ -60,19 +60,36 @@ const showDecor = computed(() => !store.open && buddyState.value !== "idle");
 		position: absolute;
 		inset: -4px;
 		border-radius: 50%;
-		border: 2px solid rgba(129, 216, 208, 0.6);
+		// pulse 顏色會隨 state 變: idle=青綠 / thinking=紫 / searching=藍 / found=金 / offline=灰
+		border: 2px solid var(--cb-pulse-color, rgba(129, 216, 208, 0.6));
 		animation: ecoPulse 2.4s ease-out infinite;
+		transition: border-color 0.35s ease;
 	}
 
 	&:hover {
 		transform: scale(1.08);
-		box-shadow: 0 6px 22px rgba(0, 184, 169, 0.55);
 	}
 
 	&--active {
-		box-shadow: 0 6px 22px rgba(0, 184, 169, 0.65);
 		transform: scale(1.05);
 	}
+
+	// 各 state 對應的 pulse 顏色 — 與 CarbonBuddy ring 的色系保持一致
+	&--state-idle    { --cb-pulse-color: rgba(129, 216, 208, 0.6); }
+	&--state-typing  { --cb-pulse-color: rgba(120, 210, 145, 0.65); }
+	&--state-thinking {
+		--cb-pulse-color: rgba(160, 130, 240, 0.7);
+		.eco-fab__pulse { animation-duration: 1.6s; }
+	}
+	&--state-searching {
+		--cb-pulse-color: rgba(80, 150, 230, 0.7);
+		.eco-fab__pulse { animation-duration: 1.6s; }
+	}
+	&--state-found {
+		--cb-pulse-color: rgba(255, 195, 70, 0.85);
+		.eco-fab__pulse { animation-duration: 1.4s; }
+	}
+	&--state-offline { --cb-pulse-color: rgba(160, 168, 180, 0.5); }
 }
 
 @keyframes ecoPulse {
