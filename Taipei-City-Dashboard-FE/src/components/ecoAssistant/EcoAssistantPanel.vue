@@ -411,10 +411,10 @@ onBeforeUnmount(() => {
 						decor
 					/>
 				</div>
-				<p class="eco-panel__welcome-greet">嗨，我是雙北小碳寶！</p>
-				<p class="eco-panel__welcome-sub">幫你規劃低碳路線、找環保 POI、算減碳量</p>
-				<p class="eco-panel__welcome-sub eco-panel__welcome-sub--small">支援「從 A 到 B 順路經過一個 X」（X = YouBike / 公園 / 餐廳 / 回收站 / 旅館）</p>
-				<p class="eco-panel__welcome-sub">試試問我：</p>
+				<p class="eco-panel__welcome-greet">嘿～我是小碳寶 🌱</p>
+				<p class="eco-panel__welcome-sub">陪你在雙北走低碳路線、找好店、順手算你今天又少排了多少</p>
+				<p class="eco-panel__welcome-sub eco-panel__welcome-sub--small">想「從 A 到 B 順路看個 YouBike / 公園 / 餐廳 / 回收站 / 旅館」也可以喔</p>
+				<p class="eco-panel__welcome-sub">像這樣問我就好 ↓</p>
 			</div>
 			<EcoMessageList :messages="store.messages" />
 			<div
