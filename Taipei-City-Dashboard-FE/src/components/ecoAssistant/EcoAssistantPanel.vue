@@ -1,6 +1,6 @@
 <!-- 小碳寶對話面板 -->
 <script setup>
-import { computed, nextTick, ref, watch } from "vue";
+import { computed, nextTick, onBeforeUnmount, ref, watch } from "vue";
 
 import {
 	calcDiningSavingG,
@@ -238,16 +238,131 @@ watch(() => store.open, (open) => {
 watch(() => store.currentRoute, (route) => {
 	if (!route) taskTier.value = null;
 });
+
+// --- 拖曳 / 縮放 --------------------------------------------------------
+// panelPos = null 時走 CSS 預設 (bottom: 11rem; right: 1.5rem); 一旦拖過就改成
+// 絕對 top/left 鎖死, 之後重開面板會記住位置。z-index 只在拖曳時暫時提到 9999
+// 以免被 launcher 蓋住。
+const PANEL_W = 480;
+const PANEL_H = 720;
+const MIN_W = 360;
+const MIN_H = 480;
+
+// 動態尺寸 (null = 用 CSS 預設 480 x 720)
+const panelSize = ref(null);
+const isResizing = ref(false);
+let resizeStart = { x: 0, y: 0, w: 0, h: 0 };
+
+const panelPos = ref(null);
+const isDragging = ref(false);
+let dragOffset = { x: 0, y: 0 };
+
+function clampPos(x, y) {
+	const w = window.innerWidth;
+	const h = window.innerHeight;
+	// 至少留 40px 在畫面內, 不讓 header 整條被拖到看不到的地方
+	const minX = 40 - PANEL_W;
+	const maxX = w - 40;
+	const minY = 0;
+	const maxY = h - 40;
+	return {
+		x: Math.min(Math.max(x, minX), maxX),
+		y: Math.min(Math.max(y, minY), maxY),
+	};
+}
+
+function onHeaderPointerDown(e) {
+	// 點到右上角的 icon button (清除/關閉) 時不要觸發拖曳
+	if (e.target.closest(".eco-panel__icon-btn")) return;
+	if (e.button !== 0) return;
+	const panel = e.currentTarget.parentElement;
+	const rect = panel.getBoundingClientRect();
+	dragOffset = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+	// 起手先把面板釘到目前位置 (從 bottom/right 切到 top/left)
+	panelPos.value = { x: rect.left, y: rect.top };
+	isDragging.value = true;
+	e.preventDefault();
+	window.addEventListener("pointermove", onPointerMove);
+	window.addEventListener("pointerup", onPointerUp, { once: true });
+}
+
+function onPointerMove(e) {
+	if (!isDragging.value) return;
+	panelPos.value = clampPos(e.clientX - dragOffset.x, e.clientY - dragOffset.y);
+}
+
+function onPointerUp() {
+	isDragging.value = false;
+	window.removeEventListener("pointermove", onPointerMove);
+}
+
+const panelStyle = computed(() => {
+	const style = {};
+	if (panelPos.value) {
+		style.left = `${panelPos.value.x}px`;
+		style.top = `${panelPos.value.y}px`;
+		style.right = "auto";
+		style.bottom = "auto";
+	}
+	if (panelSize.value) {
+		style.width = `${panelSize.value.w}px`;
+		style.height = `${panelSize.value.h}px`;
+		style.maxHeight = "none";
+	}
+	return Object.keys(style).length ? style : null;
+});
+
+function onResizePointerDown(e) {
+	if (e.button !== 0) return;
+	const panel = e.currentTarget.parentElement;
+	const rect = panel.getBoundingClientRect();
+	resizeStart = { x: e.clientX, y: e.clientY, w: rect.width, h: rect.height };
+	// 拖曳縮放前先把面板釘到當前位置, 避免 right/bottom 錨點導致畫面跳
+	if (!panelPos.value) panelPos.value = { x: rect.left, y: rect.top };
+	isResizing.value = true;
+	e.preventDefault();
+	e.stopPropagation();
+	window.addEventListener("pointermove", onResizePointerMove);
+	window.addEventListener("pointerup", onResizePointerUp, { once: true });
+}
+
+function onResizePointerMove(e) {
+	if (!isResizing.value) return;
+	const dx = e.clientX - resizeStart.x;
+	const dy = e.clientY - resizeStart.y;
+	const maxW = window.innerWidth - (panelPos.value?.x ?? 0) - 8;
+	const maxH = window.innerHeight - (panelPos.value?.y ?? 0) - 8;
+	panelSize.value = {
+		w: Math.min(Math.max(resizeStart.w + dx, MIN_W), maxW),
+		h: Math.min(Math.max(resizeStart.h + dy, MIN_H), maxH),
+	};
+}
+
+function onResizePointerUp() {
+	isResizing.value = false;
+	window.removeEventListener("pointermove", onResizePointerMove);
+}
+
+onBeforeUnmount(() => {
+	window.removeEventListener("pointermove", onPointerMove);
+	window.removeEventListener("pointermove", onResizePointerMove);
+});
 </script>
 
 <template>
 	<div
 		v-if="store.open"
 		class="eco-panel"
+		:class="{ 'eco-panel--dragging': isDragging || isResizing }"
+		:style="panelStyle"
 		role="dialog"
 		aria-label="小碳寶對話"
 	>
-		<header class="eco-panel__header">
+		<header
+			class="eco-panel__header"
+			:class="`eco-panel__header--${headerState}`"
+			@pointerdown="onHeaderPointerDown"
+		>
 			<div class="eco-panel__title">
 				<div class="eco-panel__avatar">
 					<CarbonBuddy
@@ -439,6 +554,12 @@ watch(() => store.currentRoute, (route) => {
 				<span class="material-icons-round">send</span>
 			</button>
 		</footer>
+		<!-- 右下角縮放手把 -->
+		<div
+			class="eco-panel__resize"
+			title="拖曳以調整大小"
+			@pointerdown="onResizePointerDown"
+		/>
 	</div>
 </template>
 
@@ -448,8 +569,9 @@ watch(() => store.currentRoute, (route) => {
 	// 預留下方兩個 launcher (小碳寶 56px + 舊 chatbot 70px + 間距) 的空間
 	bottom: 11rem;
 	right: 1.5rem;
-	width: 380px;
-	height: 560px;
+	width: 480px;
+	height: 720px;
+	max-height: calc(100vh - 13rem);
 	background: #1e1e1e;
 	border-radius: 16px;
 	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
@@ -459,13 +581,61 @@ watch(() => store.currentRoute, (route) => {
 	z-index: 11;
 	border: 1px solid rgba(102, 187, 106, 0.3);
 
+	// 拖曳/縮放中: 提到最上層, 關閉文字選取與 transition 避免抖動
+	&--dragging {
+		z-index: 9999;
+		user-select: none;
+		transition: none;
+
+		.eco-panel__header { cursor: grabbing; }
+	}
+
+	&__resize {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 18px;
+		height: 18px;
+		cursor: nwse-resize;
+		touch-action: none;
+		// 視覺指示: 兩條斜線
+		background:
+			linear-gradient(135deg, transparent 0 45%, rgba(102, 187, 106, 0.55) 45% 55%, transparent 55% 70%, rgba(102, 187, 106, 0.55) 70% 80%, transparent 80%);
+		border-bottom-right-radius: 16px;
+		opacity: 0.7;
+		z-index: 2;
+
+		&:hover { opacity: 1; }
+	}
+
 	&__header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 12px 16px;
+		cursor: grab;
+		touch-action: none;
+		// 預設 (idle) 青綠; thinking/searching/found 等 state 會覆寫成對應色系,
+		// 讓打開面板的使用者一眼就能看出小碳寶在做什麼。
 		background: linear-gradient(135deg, #81d8d0, #00b8a9);
 		color: #fff;
+		transition: background 0.4s ease;
+
+		&--thinking {
+			background: linear-gradient(135deg, #b8a3ff, #8a72e8);
+		}
+		&--searching {
+			background: linear-gradient(135deg, #6fb6ff, #2c7fd6);
+		}
+		&--found {
+			background: linear-gradient(135deg, #ffcd5a, #f5a623);
+		}
+		&--typing {
+			background: linear-gradient(135deg, #88d99b, #4eb56b);
+		}
+		&--offline {
+			background: linear-gradient(135deg, #b0b8c4, #7a8493);
+		}
 	}
 
 	&__title {
@@ -534,6 +704,8 @@ watch(() => store.currentRoute, (route) => {
 		border: none;
 		color: #fff;
 		cursor: pointer;
+		// 防止從 icon button 開始拖曳整個面板
+		touch-action: auto;
 		padding: 4px;
 		display: flex;
 		align-items: center;
@@ -568,8 +740,11 @@ watch(() => store.currentRoute, (route) => {
 	}
 
 	&__welcome-stage {
-		width: 200px;
-		height: 200px;
+		// 用 clamp 跟容器內距同步收縮, 避免在窄 panel / 縮放時被右邊切掉
+		width: min(200px, 70%);
+		aspect-ratio: 1 / 1;
+		max-width: 100%;
+		flex: none;
 		border-radius: 50%;
 		// 強調的青綠 disc 背景, 讓綠身小碳寶有對比度
 		background: radial-gradient(circle at 30% 28%, #a6e8e0 0%, #81d8d0 60%, #5ec4bb 100%);

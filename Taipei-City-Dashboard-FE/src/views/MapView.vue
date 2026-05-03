@@ -639,6 +639,13 @@ function popularBasicLayerGA(map_config) {
 	display: flex;
 	margin: var(--font-m) var(--font-m);
 
+	> .hide-if-mobile {
+		display: flex;
+		flex-direction: column;
+		min-height: 0;
+		max-height: 100%;
+	}
+
 	&-charts {
 		width: 360px;
 		max-height: 100%;
@@ -655,6 +662,19 @@ function popularBasicLayerGA(map_config) {
 
 		@media (min-width: 2000px) {
 			width: 400px;
+		}
+
+		&.eco-layer-mount {
+			flex: 0 0 auto;
+			max-height: none;
+			height: auto;
+			overflow-y: visible;
+			margin-bottom: var(--font-s);
+		}
+
+		&:not(.eco-layer-mount) {
+			flex: 0 1 auto;
+			min-height: 0;
 		}
 
 		&-nodashboard {

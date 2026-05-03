@@ -341,11 +341,14 @@ const faceScale = computed(() => {
 
 	&--ring {
 		border-radius: 50%;
+		// 預設 = idle 的青綠色; 各 state class 會覆寫成自己的顏色, 讓使用者
+		// 一眼看出小碳寶現在的狀態 (而不是只能靠表情變化判斷)。
 		background: radial-gradient(circle at 30% 28%, #a6e8e0 0%, #81d8d0 60%, #5ec4bb 100%);
 		box-shadow:
-			0 4px 12px rgba(0, 119, 182, 0.18),
+			0 4px 12px rgba(0, 119, 182, 0.22),
 			inset 0 -3px 10px rgba(0, 0, 0, 0.08);
 		overflow: hidden;
+		transition: background 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
 	}
 
 	&--ring::after {
@@ -361,8 +364,45 @@ const faceScale = computed(() => {
 		pointer-events: none;
 	}
 
+	// Thinking — 紫色 (聯想到思考 / 大腦活躍中)
+	&--thinking.cb--ring {
+		background: radial-gradient(circle at 30% 28%, #e2d4ff 0%, #b8a3ff 55%, #8a72e8 100%);
+		box-shadow:
+			0 4px 14px rgba(138, 114, 232, 0.42),
+			inset 0 -3px 10px rgba(0, 0, 0, 0.08);
+	}
+
+	// Searching — 藍色 (掃描 / 探索)
+	&--searching.cb--ring {
+		background: radial-gradient(circle at 30% 28%, #cfe8ff 0%, #6fb6ff 55%, #2c7fd6 100%);
+		box-shadow:
+			0 4px 14px rgba(44, 127, 214, 0.45),
+			inset 0 -3px 10px rgba(0, 0, 0, 0.08);
+	}
+
+	// Found — 金黃色 (找到了 / 慶祝)
+	&--found.cb--ring {
+		background: radial-gradient(circle at 30% 28%, #ffeaa3 0%, #ffcd5a 55%, #f5a623 100%);
+		box-shadow:
+			0 4px 18px rgba(255, 195, 70, 0.6),
+			inset 0 -3px 10px rgba(0, 0, 0, 0.08);
+	}
+
+	// Typing — 草綠 (正在說話)
+	&--typing.cb--ring {
+		background: radial-gradient(circle at 30% 28%, #c8f2d5 0%, #88d99b 55%, #4eb56b 100%);
+		box-shadow:
+			0 4px 14px rgba(78, 181, 107, 0.42),
+			inset 0 -3px 10px rgba(0, 0, 0, 0.08);
+	}
+
+	// Offline — 灰色 + 去飽和
 	&--offline.cb--ring {
-		filter: grayscale(0.4);
+		background: radial-gradient(circle at 30% 28%, #dde1e8 0%, #a8b0bc 55%, #6f7886 100%);
+		box-shadow:
+			0 4px 12px rgba(110, 120, 135, 0.35),
+			inset 0 -3px 10px rgba(0, 0, 0, 0.08);
+		filter: grayscale(0.5);
 	}
 }
 

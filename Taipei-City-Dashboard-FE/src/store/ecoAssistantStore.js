@@ -140,10 +140,22 @@ export function detectRouteIntent(text) {
 }
 
 /**
- * 雙北區級中心座標 (供 POI 意圖偵測, 與 BE geocode 字典對齊大略值)
+ * 雙北行政區 + 常見地標 中心座標 (供 POI 意圖偵測, 與 BE geocode 字典對齊大略值)
  * 不需要太精確 — 後端 find-pois 會以這個為圓心 + radius_km 過濾。
+ * 地標排在最前面以便較具體的字串先 match
+ * (例如 chip 「台北車站附近的公園」, 走 FE 直查避免依賴 LLM 加 META 標記)。
  */
 const DISTRICT_COORDS = {
+	// 常見地標 (與 chip / BE placeDictionary 對齊)
+	台北車站: { lat: 25.0478, lng: 121.5170 },
+	"台北101": { lat: 25.0339, lng: 121.5645 },
+	台北市政府: { lat: 25.0376, lng: 121.5644 },
+	新北市政府: { lat: 25.0124, lng: 121.4664 },
+	板橋車站: { lat: 25.0143, lng: 121.4636 },
+	大安森林公園: { lat: 25.0297, lng: 121.5354 },
+	象山: { lat: 25.0269, lng: 121.5710 },
+	陽明山: { lat: 25.1554, lng: 121.5615 },
+	淡水: { lat: 25.1700, lng: 121.4400 },
 	// 台北 12 區
 	信義區: { lat: 25.033, lng: 121.564 },
 	大安區: { lat: 25.026, lng: 121.543 },
@@ -178,15 +190,18 @@ const POI_CATEGORY_KEYWORDS = {
 };
 
 /**
- * 偵測 POI 查詢意圖 (區 + 類別)。回 {center, radiusKm, categories, districts} 或 null。
+ * 偵測 POI 查詢意圖 (區/地標 + 類別)。回 {center, radiusKm, categories, districts} 或 null。
  *
  * 範例:
  *   「信義區的環保餐廳」      → { center: 信義區, categories: [restaurant] }
  *   「大安區附近的回收站」    → { center: 大安區, categories: [recycle] }
- *   「台北車站附近的公園」    → 看不出區, 不偵測 (留給 LLM)
+ *   「台北車站附近的公園」    → { center: 台北車站, categories: [park] }
+ *   「從台北車站到台北101」   → null (route 句型, 讓 plan_eco_route 處理)
  */
 export function detectPOIIntent(text) {
 	if (!text) return null;
+	// route 句型 (從 X 到 Y / X→Y / X 至 Y) 一律讓給 plan_eco_route, 不要重複觸發 POI 搜尋
+	if (/從.+(到|至|→|走到)|→|至/.test(text)) return null;
 	let matchedDistrict = null;
 	for (const d of Object.keys(DISTRICT_COORDS)) {
 		if (text.includes(d) || text.includes(d.replace("區", ""))) {
@@ -211,26 +226,25 @@ export function detectPOIIntent(text) {
 }
 
 /**
- * 從 LLM 回覆抽出最後一行的 [META:...] 標記。
- * 比 regex 偵測使用者意圖可靠：LLM 自己根據實際呼叫的工具產生。
+ * 從 LLM 回覆抽出最後一個 [META:...] 標記。
+ * LLM 不一定會把 META 放單獨一行 (例如直接黏在最後一句後面),
+ * 所以全文掃, 不要求換行錨定。
  */
 export function parseMetaMarker(text) {
 	if (!text) return null;
-	const lines = text.trim().split(/\r?\n/);
-	for (let i = lines.length - 1; i >= 0; i--) {
-		const m = lines[i].match(/^\s*\[META:([^\]]+)\]\s*$/);
-		if (!m) continue;
-		const parts = m[1].split("|");
-		const intent = parts[0].trim();
-		const params = {};
-		for (const p of parts.slice(1)) {
-			const eq = p.indexOf("=");
-			if (eq < 0) continue;
-			params[p.slice(0, eq).trim()] = p.slice(eq + 1).trim();
-		}
-		return { intent, params, raw: lines[i] };
+	let last = null;
+	const re = /\[META:([^\]]+)\]/g;
+	for (const match of text.matchAll(re)) last = match;
+	if (!last) return null;
+	const parts = last[1].split("|");
+	const intent = parts[0].trim();
+	const params = {};
+	for (const p of parts.slice(1)) {
+		const eq = p.indexOf("=");
+		if (eq < 0) continue;
+		params[p.slice(0, eq).trim()] = p.slice(eq + 1).trim();
 	}
-	return null;
+	return { intent, params, raw: last[0] };
 }
 
 /** 各交通方式排放因子 (g CO2e / 人公里), 與 BE eco/carbon.go 同步 */
@@ -374,12 +388,14 @@ export function buildFallbackSummary(result) {
 	return lines.join("\n");
 }
 
-/** 把 META 行從顯示文字中拿掉 */
+/** 把所有 [META:...] 區塊從顯示文字中拿掉 (不論是不是獨立一行) */
 export function stripMetaLine(text) {
 	if (!text) return text;
 	return text
+		.replace(/\[META:[^\]]+\]/g, "")
 		.split(/\r?\n/)
-		.filter((l) => !/^\s*\[META:[^\]]+\]\s*$/.test(l))
+		.map((l) => l.replace(/[ \t]+$/, ""))
+		.filter((l, i, arr) => !(l === "" && (i === 0 || arr[i - 1] === "")))
 		.join("\n")
 		.trim();
 }
@@ -586,9 +602,11 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 			}
 
 			// POI 意圖也直打 BE — 不依賴 LLM 加 META 標記, 確保地圖一定有 marker
+			// LLM 對 POI 查詢常幻覺「沒有」, 用這個 promise 在 onDone 覆蓋 LLM 文字成真實清單
 			const poiIntent = detectPOIIntent(text);
+			let poiFetchPromise = null;
 			if (poiIntent) {
-				fetchFindPOIs({
+				poiFetchPromise = fetchFindPOIs({
 					lat: poiIntent.center.lat,
 					lng: poiIntent.center.lng,
 					radiusKm: poiIntent.radiusKm,
@@ -597,6 +615,12 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 					token,
 				})
 					.then((items) => {
+						const withCoord = (items || []).filter((p) => Number.isFinite(p?.lat) && Number.isFinite(p?.lng));
+						console.info("[eco] FE detectPOIIntent fetch:", {
+							intent: poiIntent,
+							total: items?.length || 0,
+							withCoord: withCoord.length,
+						});
 						this.currentSearchPOIs = {
 							categories: poiIntent.categories,
 							districts: poiIntent.districts,
@@ -604,9 +628,11 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 							radius: poiIntent.radiusKm,
 							items: items || [],
 						};
+						return { items: items || [], withCoord, intent: poiIntent };
 					})
 					.catch((e) => {
 						console.warn("find-pois fetch failed:", e.message);
+						return null;
 					});
 			}
 
@@ -620,14 +646,36 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 			// 顯示用的 content 保持原文乾淨
 			const apiMessages = trimmed.map((m) => ({ role: m.role, content: m.apiContent || m.content }));
 
+			// 60 秒沒收到任何字 / done 事件就 abort, 避免 typing dots 卡死
+			let timeoutId = null;
+			const STREAM_TIMEOUT_MS = 60000;
+			const armTimeout = () => {
+				if (timeoutId) clearTimeout(timeoutId);
+				timeoutId = setTimeout(() => {
+					if (this._currentStream) {
+						this._currentStream.cancel();
+						this.errorMessage = "AI 回應超時 (60 秒)，請再試一次";
+						this.isStreaming = false;
+						this._currentStream = null;
+						const last = this.messages[this.messages.length - 1];
+						if (last && last.role === "assistant" && !last.content) {
+							this.messages.pop();
+						}
+					}
+				}, STREAM_TIMEOUT_MS);
+			};
+			armTimeout();
+
 			this._currentStream = chatTwai({
 				messages: apiMessages,
 				session: this.session,
 				token,
 				onChunk: (chunk) => {
 					this.messages[assistantIndex].content += chunk;
+					armTimeout(); // 每收到一個 chunk 就重設計時, 避免長路線回覆中途被砍
 				},
 				onDone: async (full) => {
+					if (timeoutId) clearTimeout(timeoutId);
 					this.isStreaming = false;
 					this._currentStream = null;
 					const last = this.messages[this.messages.length - 1];
@@ -641,16 +689,38 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 							return;
 						}
 					}
-					// 抓 LLM META 標記 -> 觸發對應 BE fetch
-					const meta = parseMetaMarker(full);
-					if (last && last.role === "assistant" && meta) {
+					// 不論 parseMetaMarker 是否成功, 都把 [META:...] 行從顯示內容剝掉,
+					// 避免 LLM 偶發產生稍微不符 regex 的 META 漏出來給使用者看。
+					if (last && last.role === "assistant" && last.content) {
 						last.content = stripMetaLine(last.content);
 					}
+					// 抓 LLM META 標記 -> 觸發對應 BE fetch
+					const meta = parseMetaMarker(full);
 					await this._handleMeta(meta, token);
 					// 後備: 仍試一次 regex extract
 					if (!this.currentRoute) this._tryExtractRoute(full);
+					// FE detectPOIIntent 拿到的真實清單 > LLM 文字 — LLM 常幻覺「沒有」
+					// 規則: 拿到 ≥1 筆有座標就覆蓋, 直接用 FE 真實清單顯示
+					if (poiFetchPromise) {
+						try {
+							const r = await poiFetchPromise;
+							if (r && r.withCoord?.length && last && last.role === "assistant") {
+								const labelMap = { park: "公園", restaurant: "環保餐廳", hotel: "環保旅館", recycle: "回收站", ubike: "YouBike 站點" };
+								const labels = r.intent.categories.map((c) => labelMap[c] || c).join("・");
+								const districtTag = r.intent.districts?.[0] || "附近";
+								const lines = [`📍 ${districtTag}的${labels}有：`];
+								r.withCoord.slice(0, 10).forEach((p, i) => {
+									lines.push(`${i + 1}. ${p.name || "(未命名)"}`);
+								});
+								last.content = lines.join("\n");
+							}
+						} catch (_) {
+							// 已在 .catch 內 console.warn 過, 此處忽略
+						}
+					}
 				},
 				onError: (err) => {
+					if (timeoutId) clearTimeout(timeoutId);
 					this.errorMessage = err.message || "AI 助手暫時無回應，請稍後再試";
 					this.isStreaming = false;
 					this._currentStream = null;
@@ -775,7 +845,7 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 					this.messages[assistantIndex].content = `半徑 ${radiusKm} km 內沒有找到${label}, 試試擴大範圍?`;
 				} else {
 					const lines = [`📍 ${this.currentRoute?.start_name || "你的起點"}附近的${label}有：`];
-					items.slice(0, 20).forEach((p, i) => {
+					items.slice(0, 10).forEach((p, i) => {
 						lines.push(`${i + 1}. ${p.name || p.Name || "(未命名)"}`);
 					});
 					this.messages[assistantIndex].content = lines.join("\n");
@@ -883,6 +953,18 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 						.filter(Boolean);
 					if (!Number.isFinite(lat) || !Number.isFinite(lng) || !categories.length) return;
 					const items = await fetchFindPOIs({ lat, lng, radiusKm, categories, districts, token });
+					const withCoord = (items || []).filter((p) => Number.isFinite(p?.lat) && Number.isFinite(p?.lng));
+					console.info("[eco] LLM META find_pois fetch:", {
+						meta: meta.params,
+						total: items?.length || 0,
+						withCoord: withCoord.length,
+					});
+					// 若 LLM META 回的結果一筆有座標的也沒有, 但 FE detectPOIIntent 已成功設了 currentSearchPOIs,
+					// 就不要覆寫掉 (避免 LLM 幻覺座標蓋掉 FE 真實搜尋結果)
+					if (!withCoord.length && this.currentSearchPOIs?.items?.some?.((p) => Number.isFinite(p?.lat) && Number.isFinite(p?.lng))) {
+						console.info("[eco] LLM META got 0 coord items, keep FE detectPOIIntent result");
+						return;
+					}
 					this.currentSearchPOIs = {
 						categories,
 						districts,
