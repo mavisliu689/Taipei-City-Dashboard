@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"TaipeiCityDashboardBE/app/models"
+	"TaipeiCityDashboardBE/app/services/geocode"
 	"TaipeiCityDashboardBE/logs"
 
 	"github.com/gin-gonic/gin"
@@ -346,6 +347,26 @@ func fetchRecycleNewTaipei() ([]models.GreenRecycle, error) {
 			State:    cleanField(row[11]),
 		})
 	}
+
+	// 上游無經緯度 → 用 Mapbox forward geocoding 補上(token 缺則跳過,維持 0/0)。
+	// 主路徑由 DE DAG 寫好座標進 DB,此處是 fallback 也能自洽。
+	if token := geocode.Token(); token != "" && len(points) > 0 {
+		addrs := make([]string, len(points))
+		for i, p := range points {
+			addrs[i] = p.Address
+		}
+		coords := geocode.BatchGeocode(addrs, token)
+		ok := 0
+		for i, c := range coords {
+			if c.Longitude != 0 || c.Latitude != 0 {
+				points[i].Longitude = c.Longitude
+				points[i].Latitude = c.Latitude
+				ok++
+			}
+		}
+		logs.FInfo("[recycle NTPC] mapbox geocoded %d/%d", ok, len(points))
+	}
+
 	return points, nil
 }
 

@@ -3,9 +3,71 @@ green_recycles DAG
 
 Extract: 兩個 CSV(臺北市 Big5 + 新北市 UTF-8 BOM)
 Transform: 統一為 BE green_recycles 13 個業務欄位 + updated_at
+  - 新北市來源無經緯度,用 Mapbox forward geocoding 補(需 Airflow Variable: MAPBOX_TOKEN,
+    未設則 lat/lng 仍寫 0.0)
 Load: replace into DBDashboard.green_recycles
 """
 from operators.common_pipeline import CommonDag
+
+
+# Mapbox 配置:遠低於免費額度上限(100k/月)且新北回收點僅數百筆,單次 DAG 跑完即可。
+_MAPBOX_GEOCODE_URL = "https://api.mapbox.com/geocoding/v5/mapbox.places/{addr}.json"
+_MAPBOX_MIN_RELEVANCE = 0.7
+_MAPBOX_WORKERS = 4
+_MAPBOX_TIMEOUT = 10
+
+# 移除地址中半形/全形括號內的補述(如「(永豐公園活動中心旁)」),Mapbox 對這類附註易回 422
+# 或 relevance 過低,80 筆抽樣實測可從 81% 提升到 88%。
+import re as _re
+_PAREN_RE = _re.compile(r"[\(（][^\)）]*[\)）]")
+
+
+def _clean_address(addr):
+    if not addr:
+        return ""
+    return _PAREN_RE.sub("", addr).strip()
+
+
+def _geocode_address(addr, token):
+    """Mapbox forward geocoding,失敗或 relevance 過低回 (0.0, 0.0)。"""
+    import requests
+    from urllib.parse import quote
+
+    addr = _clean_address(addr)
+    if not addr or not token:
+        return 0.0, 0.0
+    try:
+        url = _MAPBOX_GEOCODE_URL.format(addr=quote(addr, safe=""))
+        r = requests.get(
+            url,
+            params={
+                "access_token": token,
+                "country": "tw",
+                "language": "zh-Hant",
+                "limit": 1,
+            },
+            timeout=_MAPBOX_TIMEOUT,
+        )
+        r.raise_for_status()
+        feats = (r.json() or {}).get("features") or []
+        if not feats:
+            return 0.0, 0.0
+        feat = feats[0]
+        if (feat.get("relevance") or 0) < _MAPBOX_MIN_RELEVANCE:
+            return 0.0, 0.0
+        lng, lat = feat["center"]
+        return float(lng), float(lat)
+    except Exception as exc:  # noqa: BLE001 - 外部 API,任何錯都不能讓 DAG 整個失敗
+        print(f"[mapbox] geocode failed: {addr!r} -> {exc}")
+        return 0.0, 0.0
+
+
+def _geocode_batch(addrs, token):
+    """並行 geocoding,回傳 list of (lng, lat),順序與輸入一致。"""
+    import concurrent.futures
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=_MAPBOX_WORKERS) as pool:
+        return list(pool.map(lambda a: _geocode_address(a, token), addrs))
 
 
 def _green_recycles(**kwargs):
@@ -13,6 +75,7 @@ def _green_recycles(**kwargs):
     import pandas as pd
     import requests
     import urllib3
+    from airflow.models import Variable
     from sqlalchemy import create_engine
     from utils.get_time import get_tpe_now_time
     from utils.load_stage import (
@@ -117,9 +180,23 @@ def _green_recycles(**kwargs):
         "mobile": ntpc_src["mobile"].map(_str),
         "open_time": ntpc_src["open_time"].map(_str),
         "state": ntpc_src["state"].map(_str),
-        "longitude": 0.0,  # 來源無經緯度
+        "longitude": 0.0,
         "latitude": 0.0,
     })
+
+    # 來源無經緯度 → 用 Mapbox forward geocoding 補。
+    # token 走 Airflow Variable;未設則直接跳過(維持 0/0,不讓整個 DAG 失敗)。
+    mapbox_token = Variable.get("MAPBOX_TOKEN", default_var="")
+    if mapbox_token and len(ntpc) > 0:
+        addrs = ntpc["address"].tolist()
+        print(f"[green_recycles] geocoding {len(addrs)} 新北 addresses via Mapbox...")
+        coords = _geocode_batch(addrs, mapbox_token)
+        ntpc["longitude"] = [c[0] for c in coords]
+        ntpc["latitude"] = [c[1] for c in coords]
+        ok = sum(1 for c in coords if c != (0.0, 0.0))
+        print(f"[green_recycles] geocoded {ok}/{len(addrs)} ({ok * 100 // max(len(addrs), 1)}%)")
+    else:
+        print("[green_recycles] MAPBOX_TOKEN not set, 新北 lat/lng 保持 0.0")
 
     # === Combine ===
     df = pd.concat([tpe[target_cols], ntpc[target_cols]], ignore_index=True)
