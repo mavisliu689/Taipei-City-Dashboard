@@ -639,7 +639,9 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 			// BE 端會自動注入 system prompt + tools, FE 只送 user/assistant 歷史
 			// 為避免 TWCC 16k context 爆掉, 只送最後 6 輪 (12 則訊息)
 			// 太舊的對話內容對當下查詢價值不大
-			const HISTORY_CAP = 12;
+			// TWCC 16k token 上限; assistant 訊息可能 verbose (列幾家餐廳就 ~600 tokens),
+			// 6 則 = 3 輪 user/assistant 來回, 對話脈絡夠用又不會把 context 撐爆
+			const HISTORY_CAP = 6;
 			const all = this.messages.slice(0, -1);
 			const trimmed = all.length > HISTORY_CAP ? all.slice(-HISTORY_CAP) : all;
 			// medium-confidence 的 user 訊息會帶 apiContent (含 <intent_hint>), 用它送給 LLM;
