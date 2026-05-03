@@ -104,14 +104,43 @@ func FindEcoPOIsTool(_ context.Context, args string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("find_eco_pois: load dataset: %w", err)
 	}
+	// LLM context 16k token, full POI 物件帶 extra/tags/source 動輒 ~300 token/筆,
+	// 5-10 筆就把 context 撐爆。給 LLM 的版本拿掉 extra/tags/source/_en 欄位 + 強制 limit ≤ 5
+	// (LLM 文字回覆本來就只該列 5 筆給使用者看, 多的送過去也是浪費)。
+	limit := in.Limit
+	if limit <= 0 || limit > 5 {
+		limit = 5
+	}
 	res := FindEcoPOIs(pts, FindOptions{
 		Center:     in.Center,
 		RadiusKm:   in.RadiusKm,
 		Categories: in.Categories,
 		Districts:  in.Districts,
-		Limit:      in.Limit,
+		Limit:      limit,
 	})
-	out, err := json.Marshal(res)
+	type slimPOI struct {
+		Name     string  `json:"name"`
+		Category string  `json:"category"`
+		Lat      float64 `json:"lat"`
+		Lng      float64 `json:"lng"`
+		Address  string  `json:"address,omitempty"`
+		District string  `json:"district,omitempty"`
+	}
+	slim := make([]slimPOI, 0, len(res))
+	for _, p := range res {
+		var lat, lng float64
+		if p.Lat != nil {
+			lat = *p.Lat
+		}
+		if p.Lng != nil {
+			lng = *p.Lng
+		}
+		slim = append(slim, slimPOI{
+			Name: p.Name, Category: p.Category, Lat: lat, Lng: lng,
+			Address: p.Address, District: p.District,
+		})
+	}
+	out, err := json.Marshal(slim)
 	if err != nil {
 		return "", err
 	}
