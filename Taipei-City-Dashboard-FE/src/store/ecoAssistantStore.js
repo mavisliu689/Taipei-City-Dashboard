@@ -679,14 +679,10 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 					this.isStreaming = false;
 					this._currentStream = null;
 					const last = this.messages[this.messages.length - 1];
+					// LLM 文字若為空, 先補 routeReady fallback; 不立即 pop, 讓下方 poiFetchPromise / 其他 fallback 有機會接管
 					if (last && last.role === "assistant" && !last.content) {
-						// LLM 沒生成任何文字: 若 FE 已有路線, 顯示 fallback 摘要;
-						// 否則直接移除空訊息
 						if (last.routeReady && this.currentRoute) {
 							last.content = buildFallbackSummary(this.currentRoute);
-						} else {
-							this.messages.pop();
-							return;
 						}
 					}
 					// 不論 parseMetaMarker 是否成功, 都把 [META:...] 行從顯示內容剝掉,
@@ -708,15 +704,22 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 								const labelMap = { park: "公園", restaurant: "環保餐廳", hotel: "環保旅館", recycle: "回收站", ubike: "YouBike 站點" };
 								const labels = r.intent.categories.map((c) => labelMap[c] || c).join("・");
 								const districtTag = r.intent.districts?.[0] || "附近";
-								const lines = [`📍 ${districtTag}的${labels}有：`];
-								r.withCoord.slice(0, 10).forEach((p, i) => {
-									lines.push(`${i + 1}. ${p.name || "(未命名)"}`);
+								const lines = [`📍 ${districtTag}的${labels}：`];
+								r.withCoord.slice(0, 5).forEach((p) => {
+									lines.push(`・${p.name || "(未命名)"}`);
 								});
+								if (r.withCoord.length > 5) {
+									lines.push(`(還有 ${r.withCoord.length - 5} 筆, 想看更多再跟我說)`);
+								}
 								last.content = lines.join("\n");
 							}
 						} catch (_) {
 							// 已在 .catch 內 console.warn 過, 此處忽略
 						}
+					}
+					// 最後保險: 若所有 fallback 都接不到, 給一句友善提示, 別把使用者晾在那
+					if (last && last.role === "assistant" && !last.content) {
+						last.content = "嗯, 這個我這次沒抓到資料 😅 換個問法或重新查詢看看？";
 					}
 				},
 				onError: (err) => {
