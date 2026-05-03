@@ -400,6 +400,22 @@ export function stripMetaLine(text) {
 		.trim();
 }
 
+/**
+ * LLM 偶爾會把 tool call 的 XML 語法當文字混進回覆 (TWCC streamProcessor 沒攔到的 case),
+ * 例如「文字...tool<function=find_eco_pois>{...}</function>」。從顯示內容剝掉避免漏給使用者看。
+ */
+export function stripLeakedToolCall(text) {
+	if (!text) return text;
+	return text
+		// tool<function=name>{json args}</function> 或 <function=name>{...}</function>
+		.replace(/(?:tool\s*)?<function=[^>]*>[\s\S]*?<\/function>/gi, "")
+		// 殘留只剩 <function=...> 開頭沒尾的情況 (streaming 中斷)
+		.replace(/(?:tool\s*)?<function=[^>]*>[\s\S]*$/gi, "")
+		// 連續換行壓縮 + 收尾
+		.replace(/\n{3,}/g, "\n\n")
+		.trim();
+}
+
 // 判斷字串是否為「目前位置」之類的代名詞 (FE 端攔截, 用瀏覽器 GPS 解析)
 const CURRENT_LOC_KEYWORDS = [
 	"目前位置",
@@ -674,6 +690,11 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 				token,
 				onChunk: (chunk) => {
 					this.messages[assistantIndex].content += chunk;
+					// 串流中即時剝 tool call 漏字, 避免使用者看到 <function=...> XML
+					const stripped = stripLeakedToolCall(this.messages[assistantIndex].content);
+					if (stripped !== this.messages[assistantIndex].content) {
+						this.messages[assistantIndex].content = stripped;
+					}
 					armTimeout(); // 每收到一個 chunk 就重設計時, 避免長路線回覆中途被砍
 				},
 				onDone: async (full) => {
@@ -687,10 +708,9 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 							last.content = buildFallbackSummary(this.currentRoute);
 						}
 					}
-					// 不論 parseMetaMarker 是否成功, 都把 [META:...] 行從顯示內容剝掉,
-					// 避免 LLM 偶發產生稍微不符 regex 的 META 漏出來給使用者看。
+					// 串流結束後再剝一次 META + tool call 漏字 (chunk-by-chunk 偶爾抓不全)
 					if (last && last.role === "assistant" && last.content) {
-						last.content = stripMetaLine(last.content);
+						last.content = stripLeakedToolCall(stripMetaLine(last.content));
 					}
 					// 抓 LLM META 標記 -> 觸發對應 BE fetch
 					const meta = parseMetaMarker(full);
