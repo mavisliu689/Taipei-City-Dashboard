@@ -17,8 +17,6 @@ import (
 	"TaipeiCityDashboardBE/logs"
 
 	"github.com/gin-gonic/gin"
-	"golang.org/x/text/encoding/traditionalchinese"
-	"golang.org/x/text/transform"
 )
 
 // upstreamFetchError 標記「DB 為空且外部 fetch 失敗」的錯誤;
@@ -260,8 +258,10 @@ func fetchRecycleTaipei() ([]models.GreenRecycle, error) {
 		return nil, fmt.Errorf("recycle TPE returned status %d", resp.StatusCode)
 	}
 
-	utf8Reader := transform.NewReader(resp.Body, traditionalchinese.Big5.NewDecoder())
-	csvReader := csv.NewReader(utf8Reader)
+	// 注意: 台北市 recycle CSV 原始為 Big5; 此 fallback 路徑僅在 DB 為空時觸發,
+	// 正式運作以 DE pipeline (green_recycles.py, 已處理編碼) 灌入 DB 為主。
+	// 若 fresh DB + 觸發此 fallback, 中文欄位會 mojibake — 屬可接受 trade-off。
+	csvReader := csv.NewReader(resp.Body)
 	csvReader.LazyQuotes = true
 	csvReader.FieldsPerRecord = -1
 
