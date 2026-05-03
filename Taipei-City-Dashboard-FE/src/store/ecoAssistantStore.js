@@ -697,12 +697,15 @@ export const useEcoAssistantStore = defineStore("ecoAssistant", {
 					await this._handleMeta(meta, token);
 					// 後備: 仍試一次 regex extract
 					if (!this.currentRoute) this._tryExtractRoute(full);
-					// FE detectPOIIntent 拿到的真實清單 > LLM 文字 — LLM 常幻覺「沒有」
-					// 規則: 拿到 ≥1 筆有座標就覆蓋, 直接用 FE 真實清單顯示
+					// FE detectPOIIntent 拿到的真實清單 — 只在 LLM 沒寫文字 (空內容 / 太短) 時才覆蓋。
+					// 之前是無條件覆蓋, 結果把 LLM 的個性版回覆都吃掉, 體驗變冷冰冰 bullet list。
+					// 規則: LLM 內容 < 30 字 (純列表 fallback 才會這麼短) 才用 FE 清單; 否則信任 LLM 文字。
 					if (poiFetchPromise) {
 						try {
 							const r = await poiFetchPromise;
-							if (r && r.withCoord?.length && last && last.role === "assistant") {
+							const llmText = (last?.content || "").trim();
+							const llmLooksEmpty = llmText.length < 30;
+							if (r && r.withCoord?.length && last && last.role === "assistant" && llmLooksEmpty) {
 								const labelMap = { park: "公園", restaurant: "環保餐廳", hotel: "環保旅館", recycle: "回收站", ubike: "YouBike 站點" };
 								const labels = r.intent.categories.map((c) => labelMap[c] || c).join("・");
 								const districtTag = r.intent.districts?.[0] || "附近";
