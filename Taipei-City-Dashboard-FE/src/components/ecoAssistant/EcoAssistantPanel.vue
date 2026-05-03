@@ -124,43 +124,16 @@ function isCarbonQuery(text) {
 	return /省了?多少碳|減碳量|相當於.*棵樹|算.*碳/.test(text || "");
 }
 
-// 從文字抽 POI 類別關鍵字 → 對應 BE category。回 null 表非 POI 查詢。
-function detectNearbyCategory(text) {
-	if (!text) return null;
-	if (/公園|綠地/.test(text)) return "park";
-	if (/環保餐廳|餐廳|餐館|咖啡廳|咖啡店|咖啡館/.test(text)) return "restaurant";
-	if (/環保旅館|旅館|飯店|民宿/.test(text)) return "hotel";
-	if (/回收站|回收點|資源回收/.test(text)) return "recycle";
-	if (/YouBike|youbike|Ubike|ubike|UBike|U-bike|微笑單車|共享單車|公共自行車|單車站|腳踏車站/.test(text)) return "ubike";
-	return null;
-}
-
-// 「附近 / 沿途 + 類別」且我們已知起點座標 → 走 FE 直查路徑, 不要餵 LLM
-async function maybeHandleNearbyChip(text) {
-	if (!/附近|沿途/.test(text)) return false;
-	const cat = detectNearbyCategory(text);
-	if (!cat) return false;
-	const haveCoord = store.manualOrigin || store.currentRoute?.start_coord;
-	if (!haveCoord) return false;
-	// 沿途查回收站時擴大半徑到 2km, 一般「附近」用 1km
-	const radiusKm = /沿途/.test(text) ? 2 : 1;
-	return await store.injectNearbyPOIReply(text, cat, { radiusKm });
-}
-
 async function sendSuggestion(s) {
 	switch (s.action) {
 		case "send":
-			// 「省了多少碳」FE 端直接算秒回, 不打 LLM 卡住
+			// 「省了多少碳」FE 端直接算 + 顯示卡片 (LLM 取代不了的 visual)
 			if (isCarbonQuery(s.text) && store.currentRoute) {
 				store.injectCarbonReply(s.text);
 				taskTier.value = null;
 				return;
 			}
-			// 「附近的 X」+ 已有起點座標 → FE 直查, 避免 LLM 不認識 "自訂起點" 亂猜
-			if (await maybeHandleNearbyChip(s.text)) {
-				taskTier.value = null;
-				return;
-			}
+			// 其他 chip (附近 / 沿途 / 區域 POI) 都走 LLM 確保有個性, FE-direct fallback 在 onDone
 			store.send(s.text);
 			taskTier.value = null;
 			break;
@@ -202,7 +175,6 @@ async function handleSubmit() {
 		store.injectCarbonReply(text);
 		return;
 	}
-	if (await maybeHandleNearbyChip(text)) return;
 	await store.send(text);
 }
 
